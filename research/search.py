@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import random
 from dataclasses import asdict, dataclass
 from math import exp, sqrt
 from statistics import mean
@@ -33,7 +32,7 @@ def quantile(values: Sequence[float], q: float) -> float:
 def candidate_grid() -> list[Candidate]:
     return [Candidate(feature, side, q, horizon, regime, vol, stop, take)
             for feature in ("ret_4", "ret_24", "reversal_1", "breakout_48", "vwap_distance_24", "taker_imbalance_24", "relative_strength_24")
-            for side in (-1, 1) for q in (0.65, 0.75, 0.85) for horizon in (4, 12, 24)
+            for side in (-1, 1) for q in (0.75,) for horizon in (4, 12, 24)
             for regime in ("all", "bull", "bear", "range") for vol in ("all", "low", "high")
             for stop, take in ((1.5, 2.0), (2.0, 3.0))]
 
@@ -61,9 +60,12 @@ def _erf(x: float) -> float:
 def bootstrap_ci(values: Sequence[float], seed: int = 6996, samples: int = 1000) -> list[float | None]:
     if len(values) < 10:
         return [None, None]
-    rng = random.Random(seed)
-    means = sorted(mean(rng.choices(values, k=len(values))) for _ in range(samples))
-    return [means[int(samples * 0.025)], means[int(samples * 0.975)]]
+    # A deterministic normal interval keeps the thousands-of-hypotheses screening
+    # tractable. The selected candidate is challenged separately in robustness().
+    avg = mean(values)
+    variance = sum((value - avg) ** 2 for value in values) / (len(values) - 1)
+    half_width = 1.96 * sqrt(variance / len(values))
+    return [avg - half_width, avg + half_width]
 
 
 def evaluate_candidate(candidate: Candidate, bars: Sequence[Bar], features: Sequence[dict], indices: Sequence[int], costs: CostModel,
