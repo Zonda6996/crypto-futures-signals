@@ -1,8 +1,8 @@
-# Phase 2 — walk-forward ETH 1h сигнала
+# Дополнительный повтор Phase 2 — walk-forward ETH 1h сигнала
 
 Дата: 2026-08-21
 
-Статус: завершено
+Статус: дополнительная независимая проверка; каноническая Phase 2 находится в `PHASE2_WALK_FORWARD.md`
 
 Закрытый TEST: **не открыт**
 
@@ -74,13 +74,13 @@ Phase 2 показывает, что path-dependent stop/take стратегия
 
 ## Артефакты и воспроизведение
 
-- `reports/phase2/walk-forward.json` — полный машинный отчёт;
-- `reports/phase2/trades-anchored.json`;
-- `reports/phase2/trades-rolling.json`;
-- `research/phase2_walk_forward.py`;
-- `tests/test_phase2_walk_forward.py`.
+- `reports/phase2-repeat/walk-forward.json` — полный машинный отчёт;
+- `reports/phase2-repeat/trades-anchored.json`;
+- `reports/phase2-repeat/trades-rolling.json`;
+- `research/phase2_walk_forward_repeat.py`;
+- `tests/test_phase2_walk_forward_repeat.py`.
 
 ```bash
 python3 -m unittest discover -s tests -v
-python3 -m research.phase2_walk_forward
+python3 -m research.phase2_walk_forward_repeat
 ```

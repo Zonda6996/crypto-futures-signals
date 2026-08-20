@@ -1,6 +1,6 @@
 import unittest
 
-from research.phase2_walk_forward import concentration, summarize_r, walk_forward_folds
+from research.phase2_walk_forward_repeat import concentration, summarize_r, walk_forward_folds
 
 
 class Phase2WalkForwardTests(unittest.TestCase):

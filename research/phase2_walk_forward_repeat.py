@@ -15,7 +15,7 @@ from .search import calibrate_candidate, evaluate_candidate
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-OUTPUT = ROOT / "reports" / "phase2"
+OUTPUT = ROOT / "reports" / "phase2-repeat"
 YEARS = (2021, 2025)
 BASE_COST = CostModel(taker_fee_bps=5, half_spread_bps=0, slippage_bps=0)
 INITIAL_TRAIN_BARS = 14_000
@@ -128,7 +128,7 @@ def run() -> dict:
 
     modes = {mode: run_mode(mode, eth, features, funding, available) for mode in ("anchored", "rolling")}
     report = {
-        "phase": "phase-2-walk-forward",
+        "phase": "phase-2-walk-forward-repeat-supplement",
         "test_opened": False,
         "scope": {
             "symbols": ["BTCUSDT", "ETHUSDT"],
