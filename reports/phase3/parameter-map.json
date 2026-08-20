@@ -1,0 +1,776 @@
+{
+  "baseline": {
+    "hold_hours": 24,
+    "stop_atr": 1.5,
+    "take_atr": 2.0,
+    "vwap_hours": 24
+  },
+  "calibration_source": "TRAIN only; one feature-specific threshold and shared rv median frozen before VALIDATION",
+  "cluster": {
+    "all_grid": {
+      "median_expectancy_r": 0.1529683922712613,
+      "median_total_r": 3.7063687527653224,
+      "points": 256,
+      "positive_expectancy_share": 0.90234375,
+      "positive_total_r_share": 0.90234375
+    },
+    "axis_slices": {
+      "hold_hours": {
+        "12": {
+          "median_expectancy_r": 0.09666757479971692,
+          "median_total_r": 3.355503583408222,
+          "points": 64,
+          "positive_expectancy_share": 0.859375,
+          "positive_total_r_share": 0.859375
+        },
+        "24": {
+          "median_expectancy_r": 0.14001733356066448,
+          "median_total_r": 3.0747889794441114,
+          "points": 64,
+          "positive_expectancy_share": 0.90625,
+          "positive_total_r_share": 0.90625
+        },
+        "36": {
+          "median_expectancy_r": 0.19333124466920737,
+          "median_total_r": 4.314654989203792,
+          "points": 64,
+          "positive_expectancy_share": 0.953125,
+          "positive_total_r_share": 0.953125
+        },
+        "48": {
+          "median_expectancy_r": 0.18895942915562428,
+          "median_total_r": 4.358988353869391,
+          "points": 64,
+          "positive_expectancy_share": 0.890625,
+          "positive_total_r_share": 0.890625
+        }
+      },
+      "stop_atr": {
+        "1.2": {
+          "median_expectancy_r": 0.10887724902367239,
+          "median_total_r": 3.4626620000940282,
+          "points": 64,
+          "positive_expectancy_share": 0.8125,
+          "positive_total_r_share": 0.8125
+        },
+        "1.5": {
+          "median_expectancy_r": 0.1986680206134298,
+          "median_total_r": 4.959775476475141,
+          "points": 64,
+          "positive_expectancy_share": 1.0,
+          "positive_total_r_share": 1.0
+        },
+        "1.8": {
+          "median_expectancy_r": 0.18240468789303738,
+          "median_total_r": 3.8316732821652035,
+          "points": 64,
+          "positive_expectancy_share": 0.921875,
+          "positive_total_r_share": 0.921875
+        },
+        "2.0": {
+          "median_expectancy_r": 0.1307264290962034,
+          "median_total_r": 2.700862981552315,
+          "points": 64,
+          "positive_expectancy_share": 0.875,
+          "positive_total_r_share": 0.875
+        }
+      },
+      "take_atr": {
+        "1.5": {
+          "median_expectancy_r": 0.1437572408561913,
+          "median_total_r": 3.7135968153818393,
+          "points": 64,
+          "positive_expectancy_share": 0.96875,
+          "positive_total_r_share": 0.96875
+        },
+        "2.0": {
+          "median_expectancy_r": 0.1318249710941765,
+          "median_total_r": 4.021522389807497,
+          "points": 64,
+          "positive_expectancy_share": 0.984375,
+          "positive_total_r_share": 0.984375
+        },
+        "2.5": {
+          "median_expectancy_r": 0.1913522992080091,
+          "median_total_r": 3.888391354291003,
+          "points": 64,
+          "positive_expectancy_share": 0.84375,
+          "positive_total_r_share": 0.84375
+        },
+        "3.0": {
+          "median_expectancy_r": 0.15804588290434773,
+          "median_total_r": 3.0982414909395724,
+          "points": 64,
+          "positive_expectancy_share": 0.8125,
+          "positive_total_r_share": 0.8125
+        }
+      },
+      "vwap_hours": {
+        "12": {
+          "median_expectancy_r": 0.025690395273491734,
+          "median_total_r": 1.6260348118786485,
+          "points": 64,
+          "positive_expectancy_share": 0.71875,
+          "positive_total_r_share": 0.71875
+        },
+        "24": {
+          "median_expectancy_r": 0.22485872028801365,
+          "median_total_r": 6.780689172153942,
+          "points": 64,
+          "positive_expectancy_share": 0.984375,
+          "positive_total_r_share": 0.984375
+        },
+        "48": {
+          "median_expectancy_r": 0.22313508090994688,
+          "median_total_r": 4.587210994947716,
+          "points": 64,
+          "positive_expectancy_share": 0.984375,
+          "positive_total_r_share": 0.984375
+        },
+        "72": {
+          "median_expectancy_r": 0.13910698468984017,
+          "median_total_r": 2.7312124762277277,
+          "points": 64,
+          "positive_expectancy_share": 0.921875,
+          "positive_total_r_share": 0.921875
+        }
+      }
+    },
+    "baseline_neighborhood": {
+      "median_expectancy_r": 0.24591990165403307,
+      "median_total_r": 7.869436852929058,
+      "points": 9,
+      "positive_expectancy_share": 1.0,
+      "positive_total_r_share": 1.0
+    },
+    "cost_scenario": "round_trip_0_10pct",
+    "decision_rule": "Cluster is positive when at least two thirds of center plus immediate axis-neighbors have positive expectancy and their median expectancy is positive.",
+    "positive_cluster": true
+  },
+  "cost_summaries": {
+    "round_trip_0_05pct": {
+      "all_grid": {
+        "median_expectancy_r": 0.1763291740135573,
+        "median_total_r": 4.660030819334552,
+        "points": 256,
+        "positive_expectancy_share": 0.94921875,
+        "positive_total_r_share": 0.94921875
+      },
+      "axis_slices": {
+        "hold_hours": {
+          "12": {
+            "median_expectancy_r": 0.12291205654569706,
+            "median_total_r": 4.356177338249141,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          },
+          "24": {
+            "median_expectancy_r": 0.17115661143820507,
+            "median_total_r": 3.863177569376729,
+            "points": 64,
+            "positive_expectancy_share": 0.96875,
+            "positive_total_r_share": 0.96875
+          },
+          "36": {
+            "median_expectancy_r": 0.2156194815526567,
+            "median_total_r": 5.004569497000957,
+            "points": 64,
+            "positive_expectancy_share": 0.96875,
+            "positive_total_r_share": 0.96875
+          },
+          "48": {
+            "median_expectancy_r": 0.21641458290807997,
+            "median_total_r": 4.967057116313765,
+            "points": 64,
+            "positive_expectancy_share": 0.9375,
+            "positive_total_r_share": 0.9375
+          }
+        },
+        "stop_atr": {
+          "1.2": {
+            "median_expectancy_r": 0.13761202077416224,
+            "median_total_r": 4.304798613435619,
+            "points": 64,
+            "positive_expectancy_share": 0.875,
+            "positive_total_r_share": 0.875
+          },
+          "1.5": {
+            "median_expectancy_r": 0.22339879230266926,
+            "median_total_r": 5.475736677410555,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "1.8": {
+            "median_expectancy_r": 0.20241525550961245,
+            "median_total_r": 4.45896562023152,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "2.0": {
+            "median_expectancy_r": 0.1494748280101162,
+            "median_total_r": 3.2800212162245037,
+            "points": 64,
+            "positive_expectancy_share": 0.9375,
+            "positive_total_r_share": 0.9375
+          }
+        },
+        "take_atr": {
+          "1.5": {
+            "median_expectancy_r": 0.1683289016847428,
+            "median_total_r": 4.720844668954021,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "2.0": {
+            "median_expectancy_r": 0.1574175308668477,
+            "median_total_r": 4.949023315154297,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "2.5": {
+            "median_expectancy_r": 0.21245986193996458,
+            "median_total_r": 4.7057716245272445,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          },
+          "3.0": {
+            "median_expectancy_r": 0.18468560107794735,
+            "median_total_r": 3.8484061113280355,
+            "points": 64,
+            "positive_expectancy_share": 0.875,
+            "positive_total_r_share": 0.875
+          }
+        },
+        "vwap_hours": {
+          "12": {
+            "median_expectancy_r": 0.04650188232539354,
+            "median_total_r": 3.0978203887882065,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          },
+          "24": {
+            "median_expectancy_r": 0.24559140477478592,
+            "median_total_r": 7.263393840930968,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "48": {
+            "median_expectancy_r": 0.250285330138775,
+            "median_total_r": 5.115308135146217,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "72": {
+            "median_expectancy_r": 0.16405100059956074,
+            "median_total_r": 3.260583312186457,
+            "points": 64,
+            "positive_expectancy_share": 0.96875,
+            "positive_total_r_share": 0.96875
+          }
+        }
+      },
+      "baseline_neighborhood": {
+        "median_expectancy_r": 0.2680713808125442,
+        "median_total_r": 8.578284186001415,
+        "points": 9,
+        "positive_expectancy_share": 1.0,
+        "positive_total_r_share": 1.0
+      },
+      "cost_scenario": "round_trip_0_05pct",
+      "decision_rule": "Cluster is positive when at least two thirds of center plus immediate axis-neighbors have positive expectancy and their median expectancy is positive.",
+      "positive_cluster": true
+    },
+    "round_trip_0_10pct": {
+      "all_grid": {
+        "median_expectancy_r": 0.1529683922712613,
+        "median_total_r": 3.7063687527653224,
+        "points": 256,
+        "positive_expectancy_share": 0.90234375,
+        "positive_total_r_share": 0.90234375
+      },
+      "axis_slices": {
+        "hold_hours": {
+          "12": {
+            "median_expectancy_r": 0.09666757479971692,
+            "median_total_r": 3.355503583408222,
+            "points": 64,
+            "positive_expectancy_share": 0.859375,
+            "positive_total_r_share": 0.859375
+          },
+          "24": {
+            "median_expectancy_r": 0.14001733356066448,
+            "median_total_r": 3.0747889794441114,
+            "points": 64,
+            "positive_expectancy_share": 0.90625,
+            "positive_total_r_share": 0.90625
+          },
+          "36": {
+            "median_expectancy_r": 0.19333124466920737,
+            "median_total_r": 4.314654989203792,
+            "points": 64,
+            "positive_expectancy_share": 0.953125,
+            "positive_total_r_share": 0.953125
+          },
+          "48": {
+            "median_expectancy_r": 0.18895942915562428,
+            "median_total_r": 4.358988353869391,
+            "points": 64,
+            "positive_expectancy_share": 0.890625,
+            "positive_total_r_share": 0.890625
+          }
+        },
+        "stop_atr": {
+          "1.2": {
+            "median_expectancy_r": 0.10887724902367239,
+            "median_total_r": 3.4626620000940282,
+            "points": 64,
+            "positive_expectancy_share": 0.8125,
+            "positive_total_r_share": 0.8125
+          },
+          "1.5": {
+            "median_expectancy_r": 0.1986680206134298,
+            "median_total_r": 4.959775476475141,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "1.8": {
+            "median_expectancy_r": 0.18240468789303738,
+            "median_total_r": 3.8316732821652035,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          },
+          "2.0": {
+            "median_expectancy_r": 0.1307264290962034,
+            "median_total_r": 2.700862981552315,
+            "points": 64,
+            "positive_expectancy_share": 0.875,
+            "positive_total_r_share": 0.875
+          }
+        },
+        "take_atr": {
+          "1.5": {
+            "median_expectancy_r": 0.1437572408561913,
+            "median_total_r": 3.7135968153818393,
+            "points": 64,
+            "positive_expectancy_share": 0.96875,
+            "positive_total_r_share": 0.96875
+          },
+          "2.0": {
+            "median_expectancy_r": 0.1318249710941765,
+            "median_total_r": 4.021522389807497,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "2.5": {
+            "median_expectancy_r": 0.1913522992080091,
+            "median_total_r": 3.888391354291003,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          },
+          "3.0": {
+            "median_expectancy_r": 0.15804588290434773,
+            "median_total_r": 3.0982414909395724,
+            "points": 64,
+            "positive_expectancy_share": 0.8125,
+            "positive_total_r_share": 0.8125
+          }
+        },
+        "vwap_hours": {
+          "12": {
+            "median_expectancy_r": 0.025690395273491734,
+            "median_total_r": 1.6260348118786485,
+            "points": 64,
+            "positive_expectancy_share": 0.71875,
+            "positive_total_r_share": 0.71875
+          },
+          "24": {
+            "median_expectancy_r": 0.22485872028801365,
+            "median_total_r": 6.780689172153942,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "48": {
+            "median_expectancy_r": 0.22313508090994688,
+            "median_total_r": 4.587210994947716,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "72": {
+            "median_expectancy_r": 0.13910698468984017,
+            "median_total_r": 2.7312124762277277,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          }
+        }
+      },
+      "baseline_neighborhood": {
+        "median_expectancy_r": 0.24591990165403307,
+        "median_total_r": 7.869436852929058,
+        "points": 9,
+        "positive_expectancy_share": 1.0,
+        "positive_total_r_share": 1.0
+      },
+      "cost_scenario": "round_trip_0_10pct",
+      "decision_rule": "Cluster is positive when at least two thirds of center plus immediate axis-neighbors have positive expectancy and their median expectancy is positive.",
+      "positive_cluster": true
+    },
+    "round_trip_0_12pct": {
+      "all_grid": {
+        "median_expectancy_r": 0.14474492943013556,
+        "median_total_r": 3.3873009754292567,
+        "points": 256,
+        "positive_expectancy_share": 0.88671875,
+        "positive_total_r_share": 0.88671875
+      },
+      "axis_slices": {
+        "hold_hours": {
+          "12": {
+            "median_expectancy_r": 0.08616978210132495,
+            "median_total_r": 2.875884453690083,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          },
+          "24": {
+            "median_expectancy_r": 0.1275616224096483,
+            "median_total_r": 2.8122318813090597,
+            "points": 64,
+            "positive_expectancy_share": 0.890625,
+            "positive_total_r_share": 0.890625
+          },
+          "36": {
+            "median_expectancy_r": 0.18546966642782164,
+            "median_total_r": 4.013950570505327,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          },
+          "48": {
+            "median_expectancy_r": 0.17883370760689182,
+            "median_total_r": 4.115760848891643,
+            "points": 64,
+            "positive_expectancy_share": 0.890625,
+            "positive_total_r_share": 0.890625
+          }
+        },
+        "stop_atr": {
+          "1.2": {
+            "median_expectancy_r": 0.09704069681376609,
+            "median_total_r": 2.951603193461294,
+            "points": 64,
+            "positive_expectancy_share": 0.796875,
+            "positive_total_r_share": 0.796875
+          },
+          "1.5": {
+            "median_expectancy_r": 0.18925917847291224,
+            "median_total_r": 4.759543257528554,
+            "points": 64,
+            "positive_expectancy_share": 1.0,
+            "positive_total_r_share": 1.0
+          },
+          "1.8": {
+            "median_expectancy_r": 0.17440046084640737,
+            "median_total_r": 3.6730301450112433,
+            "points": 64,
+            "positive_expectancy_share": 0.890625,
+            "positive_total_r_share": 0.890625
+          },
+          "2.0": {
+            "median_expectancy_r": 0.12322706953063839,
+            "median_total_r": 2.5664943752408202,
+            "points": 64,
+            "positive_expectancy_share": 0.859375,
+            "positive_total_r_share": 0.859375
+          }
+        },
+        "take_atr": {
+          "1.5": {
+            "median_expectancy_r": 0.13415280635618151,
+            "median_total_r": 3.5193762515606353,
+            "points": 64,
+            "positive_expectancy_share": 0.953125,
+            "positive_total_r_share": 0.953125
+          },
+          "2.0": {
+            "median_expectancy_r": 0.12158794718510804,
+            "median_total_r": 3.7306140623798894,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "2.5": {
+            "median_expectancy_r": 0.18216209862583788,
+            "median_total_r": 3.5912582421528327,
+            "points": 64,
+            "positive_expectancy_share": 0.8125,
+            "positive_total_r_share": 0.8125
+          },
+          "3.0": {
+            "median_expectancy_r": 0.14893741586455875,
+            "median_total_r": 2.9322017900888833,
+            "points": 64,
+            "positive_expectancy_share": 0.796875,
+            "positive_total_r_share": 0.796875
+          }
+        },
+        "vwap_hours": {
+          "12": {
+            "median_expectancy_r": 0.018463008005543558,
+            "median_total_r": 1.1335907832333496,
+            "points": 64,
+            "positive_expectancy_share": 0.65625,
+            "positive_total_r_share": 0.65625
+          },
+          "24": {
+            "median_expectancy_r": 0.21615060795659713,
+            "median_total_r": 6.57166345917274,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "48": {
+            "median_expectancy_r": 0.21366433075165286,
+            "median_total_r": 4.404709189831176,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "72": {
+            "median_expectancy_r": 0.1275616224096483,
+            "median_total_r": 2.5385607500613694,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          }
+        }
+      },
+      "baseline_neighborhood": {
+        "median_expectancy_r": 0.23705930999062863,
+        "median_total_r": 7.585897919700116,
+        "points": 9,
+        "positive_expectancy_share": 1.0,
+        "positive_total_r_share": 1.0
+      },
+      "cost_scenario": "round_trip_0_12pct",
+      "decision_rule": "Cluster is positive when at least two thirds of center plus immediate axis-neighbors have positive expectancy and their median expectancy is positive.",
+      "positive_cluster": true
+    },
+    "round_trip_0_16pct": {
+      "all_grid": {
+        "median_expectancy_r": 0.12420245914157238,
+        "median_total_r": 2.890700622653546,
+        "points": 256,
+        "positive_expectancy_share": 0.8359375,
+        "positive_total_r_share": 0.8359375
+      },
+      "axis_slices": {
+        "hold_hours": {
+          "12": {
+            "median_expectancy_r": 0.06517419670454082,
+            "median_total_r": 1.7947293416562307,
+            "points": 64,
+            "positive_expectancy_share": 0.78125,
+            "positive_total_r_share": 0.78125
+          },
+          "24": {
+            "median_expectancy_r": 0.10490337954878592,
+            "median_total_r": 2.3302282714994274,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          },
+          "36": {
+            "median_expectancy_r": 0.16974650994505014,
+            "median_total_r": 3.53917036449613,
+            "points": 64,
+            "positive_expectancy_share": 0.875,
+            "positive_total_r_share": 0.875
+          },
+          "48": {
+            "median_expectancy_r": 0.15774131354485893,
+            "median_total_r": 3.629305838936144,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          }
+        },
+        "stop_atr": {
+          "1.2": {
+            "median_expectancy_r": 0.07380606999782396,
+            "median_total_r": 2.076623759979282,
+            "points": 64,
+            "positive_expectancy_share": 0.71875,
+            "positive_total_r_share": 0.71875
+          },
+          "1.5": {
+            "median_expectancy_r": 0.1708983549972738,
+            "median_total_r": 4.244617049927953,
+            "points": 64,
+            "positive_expectancy_share": 0.96875,
+            "positive_total_r_share": 0.96875
+          },
+          "1.8": {
+            "median_expectancy_r": 0.1581985302187711,
+            "median_total_r": 3.2197301806864713,
+            "points": 64,
+            "positive_expectancy_share": 0.84375,
+            "positive_total_r_share": 0.84375
+          },
+          "2.0": {
+            "median_expectancy_r": 0.10822835039950818,
+            "median_total_r": 2.103503330074077,
+            "points": 64,
+            "positive_expectancy_share": 0.8125,
+            "positive_total_r_share": 0.8125
+          }
+        },
+        "take_atr": {
+          "1.5": {
+            "median_expectancy_r": 0.11143420758029837,
+            "median_total_r": 2.944327486100356,
+            "points": 64,
+            "positive_expectancy_share": 0.890625,
+            "positive_total_r_share": 0.890625
+          },
+          "2.0": {
+            "median_expectancy_r": 0.10515237975683511,
+            "median_total_r": 3.1796754149584814,
+            "points": 64,
+            "positive_expectancy_share": 0.921875,
+            "positive_total_r_share": 0.921875
+          },
+          "2.5": {
+            "median_expectancy_r": 0.16378169746149535,
+            "median_total_r": 3.0908860317765834,
+            "points": 64,
+            "positive_expectancy_share": 0.796875,
+            "positive_total_r_share": 0.796875
+          },
+          "3.0": {
+            "median_expectancy_r": 0.13269370090236363,
+            "median_total_r": 2.2879768777706535,
+            "points": 64,
+            "positive_expectancy_share": 0.734375,
+            "positive_total_r_share": 0.734375
+          }
+        },
+        "vwap_hours": {
+          "12": {
+            "median_expectancy_r": 0.0037481406934263715,
+            "median_total_r": 0.2405056448758884,
+            "points": 64,
+            "positive_expectancy_share": 0.53125,
+            "positive_total_r_share": 0.53125
+          },
+          "24": {
+            "median_expectancy_r": 0.19901841273249193,
+            "median_total_r": 6.03563795168408,
+            "points": 64,
+            "positive_expectancy_share": 0.953125,
+            "positive_total_r_share": 0.953125
+          },
+          "48": {
+            "median_expectancy_r": 0.19310328615795228,
+            "median_total_r": 4.040534467714993,
+            "points": 64,
+            "positive_expectancy_share": 0.984375,
+            "positive_total_r_share": 0.984375
+          },
+          "72": {
+            "median_expectancy_r": 0.10506536075301354,
+            "median_total_r": 2.097643990869635,
+            "points": 64,
+            "positive_expectancy_share": 0.875,
+            "positive_total_r_share": 0.875
+          }
+        }
+      },
+      "baseline_neighborhood": {
+        "median_expectancy_r": 0.21933812666381972,
+        "median_total_r": 7.018820053242231,
+        "points": 9,
+        "positive_expectancy_share": 1.0,
+        "positive_total_r_share": 1.0
+      },
+      "cost_scenario": "round_trip_0_16pct",
+      "decision_rule": "Cluster is positive when at least two thirds of center plus immediate axis-neighbors have positive expectancy and their median expectancy is positive.",
+      "positive_cluster": true
+    }
+  },
+  "data_quality": {
+    "BTCUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    },
+    "ETHUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    }
+  },
+  "evaluation_range": [
+    26294,
+    35059
+  ],
+  "grid": {
+    "cost_scenarios": [
+      "round_trip_0_05pct",
+      "round_trip_0_10pct",
+      "round_trip_0_12pct",
+      "round_trip_0_16pct"
+    ],
+    "hold_hours": [
+      12,
+      24,
+      36,
+      48
+    ],
+    "points": 256,
+    "stop_atr": [
+      1.2,
+      1.5,
+      1.8,
+      2.0
+    ],
+    "take_atr": [
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "vwap_hours": [
+      12,
+      24,
+      48,
+      72
+    ]
+  },
+  "phase": "phase-3-parameter-stability",
+  "purpose": "Diagnose the pre-registered parameter surface; do not select the historical maximum.",
+  "sealed_test_range": [
+    35059,
+    43824
+  ],
+  "test_opened": false
+}

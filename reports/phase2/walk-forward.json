@@ -1,0 +1,3872 @@
+{
+  "allowed_range": [
+    0,
+    35059
+  ],
+  "candidate": {
+    "feature": "vwap_distance_24",
+    "horizon": 24,
+    "regime": "bear",
+    "side": 1,
+    "stop_atr": 1.5,
+    "take_atr": 2.0,
+    "threshold_q": 0.75,
+    "volatility": "high"
+  },
+  "data_quality": {
+    "BTCUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    },
+    "ETHUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    }
+  },
+  "phase": "phase-2-walk-forward",
+  "schemes": {
+    "anchored_12m_3m": {
+      "round_trip_0_05pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 2.5
+        },
+        "summary": {
+          "compounded_return": 0.16766381524371954,
+          "concentration": {
+            "best_1_share": 0.10625960849702426,
+            "best_3_share": 0.31793637811912934,
+            "best_5_share": 0.5294668190934213
+          },
+          "expectancy_r": 0.2187250290603749,
+          "max_drawdown_r": -3.7412751865122873,
+          "median_window_expectancy_r": 0.28687347901477206,
+          "profit_factor_r": 1.569566949760633,
+          "profitable_window_share": 0.6666666666666666,
+          "total_r": 12.467326656441369,
+          "trades": 57,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.02295552937575196,
+            "concentration": {
+              "best_1_share": 4.44154685430909,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.14851771419109816,
+            "max_drawdown_r": -1.0222613441671007,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2905670160346416,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.2970354283821963,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.20869267527158186,
+            "concentration": {
+              "best_1_share": -0.6100231419836992,
+              "best_3_share": -1.817801638500896,
+              "best_5_share": -0.8836307504670532
+            },
+            "expectancy_r": -0.2394650733183421,
+            "max_drawdown_r": -3.7412751865122873,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.6451134152466418,
+            "rv_median": 0.0418686457834596,
+            "threshold": 0.018199021423260353,
+            "total_r": -2.155185659865079,
+            "trades": 9,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06666566839556021,
+            "concentration": {
+              "best_1_share": 0.5979300502118157,
+              "best_3_share": 1.792699964218289,
+              "best_5_share": 1.4649164740661897
+            },
+            "expectancy_r": 0.36654256827590864,
+            "max_drawdown_r": -1.2188537626180453,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 2.2615113474694515,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 2.1992554096554517,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": 0.004132203178202509,
+            "concentration": {
+              "best_1_share": -1.878424646243363,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.23508586519868677,
+            "max_drawdown_r": -1.0172860898260552,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.6525877440268927,
+            "rv_median": 0.04074835215937162,
+            "threshold": 0.016727192022051307,
+            "total_r": -0.7052575955960603,
+            "trades": 3,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.021219265956719635,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.3026386188805057,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.3026386188805057,
+            "trades": 1,
+            "window": 5
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": 0.0,
+            "concentration": {
+              "best_1_share": null,
+              "best_3_share": null,
+              "best_5_share": null
+            },
+            "expectancy_r": null,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.03706247553479495,
+            "threshold": 0.014555020027725796,
+            "total_r": 0,
+            "trades": 0,
+            "window": 6
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.006634687319937105,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.4660286866753261,
+            "max_drawdown_r": -0.4660286866753261,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": -0.4660286866753261,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.023756969191062627,
+            "concentration": {
+              "best_1_share": 0.8483014220013674,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.5098233900253526,
+            "max_drawdown_r": -1.0454281437749577,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.463008413522581,
+            "rv_median": 0.03324456199029916,
+            "threshold": 0.011898233028001304,
+            "total_r": 1.5294701700760578,
+            "trades": 3,
+            "window": 8
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.12538134877916352,
+            "concentration": {
+              "best_1_share": 0.3010170801144814,
+              "best_3_share": 0.9015107677058565,
+              "best_5_share": 1.4954604229483288
+            },
+            "expectancy_r": 0.5480364517056026,
+            "max_drawdown_r": -1.1415110246333917,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 3.018324680807631,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.3842916136448205,
+            "trades": 8,
+            "window": 9
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.015774256299852407,
+            "concentration": {
+              "best_1_share": 8.95902966668818,
+              "best_3_share": 26.38266816700513,
+              "best_5_share": 28.87794792971258
+            },
+            "expectancy_r": 0.016349777373050565,
+            "max_drawdown_r": -3.0827262160169036,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.0358706459500269,
+            "rv_median": 0.031254544727291826,
+            "threshold": 0.011206124239028004,
+            "total_r": 0.1471479963574551,
+            "trades": 9,
+            "window": 10
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.12835721389300803,
+            "concentration": {
+              "best_1_share": 0.33466900975961544,
+              "best_3_share": 1.002363160118035,
+              "best_5_share": 1.2970127864218124
+            },
+            "expectancy_r": 0.49073062605974294,
+            "max_drawdown_r": -1.0250859212388612,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.366858417266311,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 3.9258450084779435,
+            "trades": 8,
+            "window": 11
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.03760191510707722,
+            "concentration": {
+              "best_1_share": 0.6522827602352983,
+              "best_3_share": 1.9479142184683786,
+              "best_5_share": 2.0190273874108993
+            },
+            "expectancy_r": 0.28687347901477206,
+            "max_drawdown_r": -1.045807880148176,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.9707154380808434,
+            "rv_median": 0.030009810387528656,
+            "threshold": 0.010785108183154035,
+            "total_r": 2.0081143531034042,
+            "trades": 7,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.13299589740919437,
+            "concentration": {
+              "best_1_share": -3.6379636276788148,
+              "best_3_share": -10.872016029999216,
+              "best_5_share": -18.091584883351207
+            },
+            "expectancy_r": -0.018207620871174564,
+            "max_drawdown_r": -3.7412751865122873,
+            "profit_factor_r": 0.9664947790307225,
+            "total_r": -0.36415241742349125,
+            "trades": 20,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.0385439054363812,
+            "concentration": {
+              "best_1_share": 0.5505471338965139,
+              "best_3_share": 1.6388020545006168,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.4732160204562475,
+            "max_drawdown_r": -1.0454281437749575,
+            "profit_factor_r": 2.5654301562660904,
+            "total_r": 2.3660801022812374,
+            "trades": 5,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2967964353763286,
+            "concentration": {
+              "best_1_share": 0.12610571880663504,
+              "best_3_share": 0.3780998484684232,
+              "best_5_share": 0.6291827041242852
+            },
+            "expectancy_r": 0.3270437178619882,
+            "max_drawdown_r": -3.0827262160169036,
+            "profit_factor_r": 2.100561103105965,
+            "total_r": 10.465398971583623,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_10pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.13491790804954373,
+          "concentration": {
+            "best_1_share": 0.11696885240725056,
+            "best_3_share": 0.3490858233385485,
+            "best_5_share": 0.5810090951501374
+          },
+          "expectancy_r": 0.19741545353473022,
+          "max_drawdown_r": -3.8166454800917107,
+          "median_window_expectancy_r": 0.26478644875520835,
+          "profit_factor_r": 1.5020726280690089,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 11.252680851479623,
+          "trades": 57,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.021943762097513586,
+            "concentration": {
+              "best_1_share": 5.006031332158485,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.13036876171552625,
+            "max_drawdown_r": -1.0445226883342034,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2496236092744664,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.2607375234310525,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.21234299105530663,
+            "concentration": {
+              "best_1_share": -0.5623526398029391,
+              "best_3_share": -1.666876022669878,
+              "best_5_share": -0.7872281311093451
+            },
+            "expectancy_r": -0.2560854426580797,
+            "max_drawdown_r": -3.816645480091711,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.6250294383767887,
+            "rv_median": 0.0418686457834596,
+            "threshold": 0.018199021423260353,
+            "total_r": -2.3047689839227172,
+            "trades": 9,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06350276388970166,
+            "concentration": {
+              "best_1_share": 0.6222197987273137,
+              "best_3_share": 1.8659610617194093,
+              "best_5_share": 1.5009262020360787
+            },
+            "expectancy_r": 0.34732326217805176,
+            "max_drawdown_r": -1.2619487844937831,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 2.1547863341735596,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 2.0839395730683106,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": 0.002626822220108016,
+            "concentration": {
+              "best_1_share": -1.7694639732495379,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.24794950817515105,
+            "max_drawdown_r": -1.0345721796521081,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.6389192964201464,
+            "rv_median": 0.04074835215937162,
+            "threshold": 0.016727192022051307,
+            "total_r": -0.7438485245254531,
+            "trades": 3,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.020719265956719468,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2719439044276715,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2719439044276715,
+            "trades": 1,
+            "window": 5
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": 0.0,
+            "concentration": {
+              "best_1_share": null,
+              "best_3_share": null,
+              "best_5_share": null
+            },
+            "expectancy_r": null,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.03706247553479495,
+            "threshold": 0.014555020027725796,
+            "total_r": 0,
+            "trades": 0,
+            "window": 6
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.00713468731993705,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.5011493083566916,
+            "max_drawdown_r": -0.5011493083566916,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": -0.5011493083566916,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.022233868082754737,
+            "concentration": {
+              "best_1_share": 0.8896793311317142,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.47490907923752035,
+            "max_drawdown_r": -1.0818294833596864,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.3169609995172116,
+            "rv_median": 0.03324456199029916,
+            "threshold": 0.011898233028001304,
+            "total_r": 1.424727237712561,
+            "trades": 3,
+            "window": 8
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.12095170762018914,
+            "concentration": {
+              "best_1_share": 0.30879276180311255,
+              "best_3_share": 0.9231848792866517,
+              "best_5_share": 1.5264784789873003
+            },
+            "expectancy_r": 0.528736481248476,
+            "max_drawdown_r": -1.1706051143772394,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 2.8994128723429218,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.229891849987808,
+            "trades": 8,
+            "window": 9
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.02020370823129891,
+            "concentration": {
+              "best_1_share": -14.176864160711803,
+              "best_3_share": -41.14993890000533,
+              "best_5_share": -44.43847948600304
+            },
+            "expectancy_r": -0.010234031014767676,
+            "max_drawdown_r": -3.15181276451659,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9779922213218415,
+            "rv_median": 0.031254544727291826,
+            "threshold": 0.011206124239028004,
+            "total_r": -0.09210627913290909,
+            "trades": 9,
+            "window": 10
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.12391824019541642,
+            "concentration": {
+              "best_1_share": 0.34335534945601387,
+              "best_3_share": 1.02722034806729,
+              "best_5_share": 1.3274817103657588
+            },
+            "expectancy_r": 0.4712260896879415,
+            "max_drawdown_r": -1.0501718424777255,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.053605646810373,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 3.769808717503532,
+            "trades": 8,
+            "window": 11
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.03399404721377497,
+            "concentration": {
+              "best_1_share": 0.6940274317203372,
+              "best_3_share": 2.070704400602577,
+              "best_5_share": 2.1290214411156927
+            },
+            "expectancy_r": 0.26478644875520835,
+            "max_drawdown_r": -1.0813151748974055,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.8713807729667429,
+            "rv_median": 0.030009810387528656,
+            "threshold": 0.010785108183154035,
+            "total_r": 1.8535051412864583,
+            "trades": 7,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.14169413420717902,
+            "concentration": {
+              "best_1_share": -1.8697792360844512,
+              "best_3_share": -5.566013504374939,
+              "best_5_share": -9.249119634308602
+            },
+            "expectancy_r": -0.03519702059744036,
+            "max_drawdown_r": -3.8166454800917107,
+            "profit_factor_r": 0.9363279913277314,
+            "total_r": -0.7039404119488072,
+            "trades": 20,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.035969372232494745,
+            "concentration": {
+              "best_1_share": 0.5793355751947734,
+              "best_3_share": 1.7210034386168829,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.4391043667567082,
+            "max_drawdown_r": -1.0818294833596864,
+            "profit_factor_r": 2.3869559372952813,
+            "total_r": 2.195521833783541,
+            "trades": 5,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2763666625909891,
+            "concentration": {
+              "best_1_share": 0.13381279392763348,
+              "best_3_share": 0.4012290388282689,
+              "best_5_share": 0.6664346000171677
+            },
+            "expectancy_r": 0.3050343571764028,
+            "max_drawdown_r": -3.15181276451659,
+            "profit_factor_r": 1.9987057101678452,
+            "total_r": 9.76109942964489,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_12pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 1,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.12207366887182358,
+          "concentration": {
+            "best_1_share": 0.12192911405200377,
+            "best_3_share": 0.36355039969577835,
+            "best_5_share": 0.6048822254243743
+          },
+          "expectancy_r": 0.1888916233244724,
+          "max_drawdown_r": -3.84679359752348,
+          "median_window_expectancy_r": 0.25595163665138293,
+          "profit_factor_r": 1.4759492760664297,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 10.766822529494927,
+          "trades": 57,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.021539195186218052,
+            "concentration": {
+              "best_1_share": 5.278426758243292,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.12310918072529753,
+            "max_drawdown_r": -1.0534272260010444,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.233730774536058,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.24621836145059506,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.21379892205440099,
+            "concentration": {
+              "best_1_share": -0.5449731790606409,
+              "best_3_share": -1.6118523561392368,
+              "best_5_share": -0.7520821716178965
+            },
+            "expectancy_r": -0.2627335903939747,
+            "max_drawdown_r": -3.8467935975234804,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.6171299661523859,
+            "rv_median": 0.0418686457834596,
+            "threshold": 0.018199021423260353,
+            "total_r": -2.364602313545772,
+            "trades": 9,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06223979211310193,
+            "concentration": {
+              "best_1_share": 0.632989559555982,
+              "best_3_share": 1.8975870933807784,
+              "best_5_share": 1.5164712161805307
+            },
+            "expectancy_r": 0.33963553973890903,
+            "max_drawdown_r": -1.2791867932440786,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 2.1140980160860843,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 2.037813238433454,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": 0.002025090820235942,
+            "concentration": {
+              "best_1_share": -1.7289809647529144,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.25309496536573667,
+            "max_drawdown_r": -1.041486615582529,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.6335628526120769,
+            "rv_median": 0.04074835215937162,
+            "threshold": 0.016727192022051307,
+            "total_r": -0.7592848960972101,
+            "trades": 3,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.02051926595671949,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2596660186465378,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2596660186465378,
+            "trades": 1,
+            "window": 5
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": 0.0,
+            "concentration": {
+              "best_1_share": null,
+              "best_3_share": null,
+              "best_5_share": null
+            },
+            "expectancy_r": null,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.03706247553479495,
+            "threshold": 0.014555020027725796,
+            "total_r": 0,
+            "trades": 0,
+            "window": 6
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.007334687319937028,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.5151975570292378,
+            "max_drawdown_r": -0.5151975570292378,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": -0.5151975570292378,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.021625050824683356,
+            "concentration": {
+              "best_1_share": 0.9079856376917002,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.4609433549223876,
+            "max_drawdown_r": -1.0963900191935778,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.261257436276434,
+            "rv_median": 0.03324456199029916,
+            "threshold": 0.011898233028001304,
+            "total_r": 1.3828300647671627,
+            "trades": 3,
+            "window": 8
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.11918412703273251,
+            "concentration": {
+              "best_1_share": 0.3120643334780559,
+              "best_3_share": 0.9323041324102675,
+              "best_5_share": 1.5395291409887135
+            },
+            "expectancy_r": 0.5210164930656256,
+            "max_drawdown_r": -1.1822427502747788,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 2.853468003910689,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.168131944525005,
+            "trades": 8,
+            "window": 9
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.02197052197519922,
+            "concentration": {
+              "best_1_share": -6.926053515641907,
+              "best_3_share": -19.985157030593083,
+              "best_5_share": -21.46104293955832
+            },
+            "expectancy_r": -0.020867554369894896,
+            "max_drawdown_r": -3.179447383916464,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9554784698693218,
+            "rv_median": 0.031254544727291826,
+            "threshold": 0.011206124239028004,
+            "total_r": -0.18780798932905407,
+            "trades": 9,
+            "window": 10
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.12214693355670359,
+            "concentration": {
+              "best_1_share": 0.34703461542981345,
+              "best_3_share": 1.0377490873317647,
+              "best_5_share": 1.3403874081675302
+            },
+            "expectancy_r": 0.4634242751392209,
+            "max_drawdown_r": -1.0602062109732713,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 3.9378290030864607,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 3.7073942011137673,
+            "trades": 8,
+            "window": 11
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.032553913642427545,
+            "concentration": {
+              "best_1_share": 0.7127425910307702,
+              "best_3_share": 2.1257542486106566,
+              "best_5_share": 2.1783344711397357
+            },
+            "expectancy_r": 0.25595163665138293,
+            "max_drawdown_r": -1.0955180927970969,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.8331574484748647,
+            "rv_median": 0.030009810387528656,
+            "threshold": 0.010785108183154035,
+            "total_r": 1.7916614565596805,
+            "trades": 7,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.14515016476623377,
+            "concentration": {
+              "best_1_share": -1.5631128933618545,
+              "best_3_share": -4.64645253128875,
+              "best_5_share": -7.7160043655115675
+            },
+            "expectancy_r": -0.041992780487946656,
+            "max_drawdown_r": -3.84679359752348,
+            "profit_factor_r": 0.9245453984484552,
+            "total_r": -0.8398556097589331,
+            "trades": 20,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.034940989622715746,
+            "concentration": {
+              "best_1_share": 0.5921435111354374,
+              "best_3_share": 1.7575747156473873,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.4254597052768926,
+            "max_drawdown_r": -1.0963900191935778,
+            "profit_factor_r": 2.320001815458489,
+            "total_r": 2.127298526384463,
+            "trades": 5,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2682823567077184,
+            "concentration": {
+              "best_1_share": 0.13722081379589265,
+              "best_3_share": 0.4114430492336279,
+              "best_5_share": 0.6828852948469278
+            },
+            "expectancy_r": 0.2962306129021687,
+            "max_drawdown_r": -3.179447383916464,
+            "profit_factor_r": 1.9594912055699738,
+            "total_r": 9.479379612869398,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_16pct": {
+        "cost_model": {
+          "half_spread_bps": 1,
+          "slippage_bps": 2,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.0968121440189249,
+          "concentration": {
+            "best_1_share": 0.13332587522652553,
+            "best_3_share": 0.3967843970209708,
+            "best_5_share": 0.6597334376606312
+          },
+          "expectancy_r": 0.1718439629039567,
+          "max_drawdown_r": -3.907089832387019,
+          "median_window_expectancy_r": 0.23828201244373193,
+          "profit_factor_r": 1.425126603163935,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 9.795105885525532,
+          "trades": 57,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.0207303013636273,
+            "concentration": {
+              "best_1_share": 5.932480506573395,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.10859001874484009,
+            "max_drawdown_r": -1.0712363013347266,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2027377500361784,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.21718003748968018,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.21670361102628488,
+            "concentration": {
+              "best_1_share": -0.5127257513345391,
+              "best_3_share": -1.5097564547771478,
+              "best_5_share": -0.6868691707445959
+            },
+            "expectancy_r": -0.27602988586576477,
+            "max_drawdown_r": -3.907089832387019,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.6015549643884492,
+            "rv_median": 0.0418686457834596,
+            "threshold": 0.018199021423260353,
+            "total_r": -2.4842689727918827,
+            "trades": 9,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.05971759744262184,
+            "concentration": {
+              "best_1_share": 0.6561373029291613,
+              "best_3_share": 1.9653379924921506,
+              "best_5_share": 1.5497725388460644
+            },
+            "expectancy_r": 0.32426009486062357,
+            "max_drawdown_r": -1.3136628107446697,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 2.03590660243089,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.9455605691637414,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": 0.0008223494422618938,
+            "concentration": {
+              "best_1_share": -1.652760158566693,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.263385879746908,
+            "max_drawdown_r": -1.0553154874433714,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.623034145484035,
+            "rv_median": 0.04074835215937162,
+            "threshold": 0.016727192022051307,
+            "total_r": -0.7901576392407241,
+            "trades": 3,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.020119265956719534,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2351102470842705,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2351102470842705,
+            "trades": 1,
+            "window": 5
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": 0.0,
+            "concentration": {
+              "best_1_share": null,
+              "best_3_share": null,
+              "best_5_share": null
+            },
+            "expectancy_r": null,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.03706247553479495,
+            "threshold": 0.014555020027725796,
+            "total_r": 0,
+            "trades": 0,
+            "window": 6
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.007734687319937095,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.5432940543743302,
+            "max_drawdown_r": -0.5432940543743302,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": -0.5432940543743302,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.020408141504971944,
+            "concentration": {
+              "best_1_share": 0.948140797706066,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.4330119062921218,
+            "max_drawdown_r": -1.125511090861361,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.1541740720495297,
+            "rv_median": 0.03324456199029916,
+            "threshold": 0.011898233028001304,
+            "total_r": 1.2990357188763653,
+            "trades": 3,
+            "window": 8
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.11565628004617579,
+            "concentration": {
+              "best_1_share": 0.3189072118097188,
+              "best_3_share": 0.9513781267471394,
+              "best_5_share": 1.5668261410536362
+            },
+            "expectancy_r": 0.5055765166999244,
+            "max_drawdown_r": -1.2055180220698571,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 2.764209389039759,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.044612133599395,
+            "trades": 8,
+            "window": 9
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.02549565643970808,
+            "concentration": {
+              "best_1_share": -3.4037692589238344,
+              "best_3_share": -9.703771731117477,
+              "best_5_share": -10.299109885588665
+            },
+            "expectancy_r": -0.04213460108014948,
+            "max_drawdown_r": -3.2347166227162134,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9114974533281209,
+            "rv_median": 0.031254544727291826,
+            "threshold": 0.011206124239028004,
+            "total_r": -0.3792114097213453,
+            "trades": 9,
+            "window": 10
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.11861164638702704,
+            "concentration": {
+              "best_1_share": 0.3547777426530891,
+              "best_3_share": 1.0599071395644861,
+              "best_5_share": 1.3675478419866343
+            },
+            "expectancy_r": 0.4478206460417798,
+            "max_drawdown_r": -1.0802749479643627,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 3.720734243996363,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 3.5825651683342383,
+            "trades": 8,
+            "window": 11
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.029678803227823902,
+            "concentration": {
+              "best_1_share": 0.7543363355260061,
+              "best_3_share": 2.2481004854002724,
+              "best_5_share": 2.287930843635615
+            },
+            "expectancy_r": 0.23828201244373193,
+            "max_drawdown_r": -1.1239239285964808,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.759148891265753,
+            "rv_median": 0.030009810387528656,
+            "threshold": 0.010785108183154035,
+            "total_r": 1.6679740871061235,
+            "trades": 7,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.15202260906944487,
+            "concentration": {
+              "best_1_share": -1.1747391428920066,
+              "best_3_share": -3.482019427927115,
+              "best_5_share": -5.774409726989733
+            },
+            "expectancy_r": -0.055584300268959275,
+            "max_drawdown_r": -3.907089832387019,
+            "profit_factor_r": 0.9014494967429794,
+            "total_r": -1.1116860053791855,
+            "trades": 20,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.0328866743057028,
+            "concentration": {
+              "best_1_share": 0.6203928277619293,
+              "best_3_share": 1.8382367043593875,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.39817038231726115,
+            "max_drawdown_r": -1.125511090861361,
+            "profit_factor_r": 2.192980449077613,
+            "total_r": 1.9908519115863057,
+            "trades": 5,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2522622904641918,
+            "concentration": {
+              "best_1_share": 0.1447685989404068,
+              "best_3_share": 0.43380748223192156,
+              "best_5_share": 0.7189054718092026
+            },
+            "expectancy_r": 0.27862312435370035,
+            "max_drawdown_r": -3.2347166227162134,
+            "profit_factor_r": 1.8835299601091429,
+            "total_r": 8.915939979318411,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    "anchored_18m_6m": {
+      "round_trip_0_05pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 2.5
+        },
+        "summary": {
+          "compounded_return": 0.44028667081610684,
+          "concentration": {
+            "best_1_share": 0.09399400861760475,
+            "best_3_share": 0.2812097950977185,
+            "best_5_share": 0.468045402030876
+          },
+          "expectancy_r": 0.3203234268481992,
+          "max_drawdown_r": -3.082726216016903,
+          "median_window_expectancy_r": 0.3955972907720898,
+          "profit_factor_r": 2.025142495955023,
+          "profitable_window_share": 1.0,
+          "total_r": 14.094230781320766,
+          "trades": 44,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.0710733476605836,
+            "concentration": {
+              "best_1_share": 0.8867303800923165,
+              "best_3_share": 2.646646757275001,
+              "best_5_share": 3.3942450276721448
+            },
+            "expectancy_r": 0.16599975711771017,
+            "max_drawdown_r": -2.2361398524441007,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.395930864199395,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.4939978140593915,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.021219265956719635,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.3026386188805057,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.3026386188805057,
+            "trades": 1,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.015404120513799135,
+            "concentration": {
+              "best_1_share": 1.559999129614088,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.41609768839862327,
+            "max_drawdown_r": -0.4660286866753261,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.7857170611838797,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": 0.8321953767972465,
+            "trades": 2,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.10762929494844742,
+            "concentration": {
+              "best_1_share": 0.29124224826845024,
+              "best_3_share": 0.8732248702119133,
+              "best_5_share": 1.4506816306876666
+            },
+            "expectancy_r": 0.26655527117660444,
+            "max_drawdown_r": -3.0827262160169036,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.7222077005842116,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.531439610002275,
+            "trades": 17,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.17078560606027127,
+            "concentration": {
+              "best_1_share": 0.22141349163316662,
+              "best_3_share": 0.6632484643420032,
+              "best_5_share": 1.103876797355461
+            },
+            "expectancy_r": 0.3955972907720898,
+            "max_drawdown_r": -1.1638275489918275,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 2.834457660746059,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 5.933959361581348,
+            "trades": 15,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.0710733476605836,
+            "concentration": {
+              "best_1_share": 0.8867303800923165,
+              "best_3_share": 2.646646757275001,
+              "best_5_share": 3.3942450276721448
+            },
+            "expectancy_r": 0.16599975711771017,
+            "max_drawdown_r": -2.2361398524441007,
+            "profit_factor_r": 1.395930864199395,
+            "total_r": 1.4939978140593915,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.036950250600530365,
+            "concentration": {
+              "best_1_share": 0.6101826284937687,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.7116113318925841,
+            "max_drawdown_r": -0.46602868667532604,
+            "profit_factor_r": 5.5809068341002215,
+            "total_r": 2.1348339956777522,
+            "trades": 3,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2967964353763286,
+            "concentration": {
+              "best_1_share": 0.12610571880663504,
+              "best_3_share": 0.3780998484684232,
+              "best_5_share": 0.6291827041242852
+            },
+            "expectancy_r": 0.3270437178619882,
+            "max_drawdown_r": -3.0827262160169036,
+            "profit_factor_r": 2.100561103105965,
+            "total_r": 10.465398971583623,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_10pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.409183302957848,
+          "concentration": {
+            "best_1_share": 0.10016117740271156,
+            "best_3_share": 0.29892442612369013,
+            "best_5_share": 0.49686799413147653
+          },
+          "expectancy_r": 0.29865798665562115,
+          "max_drawdown_r": -3.15181276451659,
+          "median_window_expectancy_r": 0.3748875905859993,
+          "profit_factor_r": 1.9293741228817003,
+          "profitable_window_share": 1.0,
+          "total_r": 13.14095141284733,
+          "trades": 44,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06629639658103348,
+            "concentration": {
+              "best_1_share": 0.9821818951285389,
+              "best_3_share": 2.9173211445444824,
+              "best_5_share": 3.7211758264951835
+            },
+            "expectancy_r": 0.14889900539365084,
+            "max_drawdown_r": -2.2965209641458912,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.3467541291534688,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.3400910485428574,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.020719265956719468,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2719439044276715,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2719439044276715,
+            "trades": 1,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.014396594854938938,
+            "concentration": {
+              "best_1_share": 1.6526936608912204,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.38390851511595603,
+            "max_drawdown_r": -0.5011493083566916,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.5321123214749015,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": 0.7678170302319121,
+            "trades": 2,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.09830432637805475,
+            "concentration": {
+              "best_1_share": 0.3156664269135506,
+              "best_3_share": 0.9465054375097587,
+              "best_5_share": 1.5680525379784827
+            },
+            "expectancy_r": 0.2433991512267588,
+            "max_drawdown_r": -3.15181276451659,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.6453073175422936,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 4.137785570854899,
+            "trades": 17,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.16212476991704206,
+            "concentration": {
+              "best_1_share": 0.23018170816794403,
+              "best_3_share": 0.688839067251499,
+              "best_5_share": 1.1452568562809442
+            },
+            "expectancy_r": 0.3748875905859993,
+            "max_drawdown_r": -1.230146174487062,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 2.672792222662143,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 5.62331385878999,
+            "trades": 15,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.06629639658103348,
+            "concentration": {
+              "best_1_share": 0.9821818951285389,
+              "best_3_share": 2.9173211445444824,
+              "best_5_share": 3.7211758264951835
+            },
+            "expectancy_r": 0.14889900539365084,
+            "max_drawdown_r": -2.2965209641458912,
+            "profit_factor_r": 1.3467541291534688,
+            "total_r": 1.3400910485428574,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.035414147689329045,
+            "concentration": {
+              "best_1_share": 0.6235749899975148,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.6799203115531945,
+            "max_drawdown_r": -0.5011493083566916,
+            "profit_factor_r": 5.070166117455338,
+            "total_r": 2.0397609346595837,
+            "trades": 3,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2763666625909891,
+            "concentration": {
+              "best_1_share": 0.13381279392763348,
+              "best_3_share": 0.4012290388282689,
+              "best_5_share": 0.6664346000171677
+            },
+            "expectancy_r": 0.3050343571764028,
+            "max_drawdown_r": -3.15181276451659,
+            "profit_factor_r": 1.9987057101678452,
+            "total_r": 9.76109942964489,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_12pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 1,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.3969266056784584,
+          "concentration": {
+            "best_1_share": 0.10288606626802835,
+            "best_3_share": 0.3067706249297835,
+            "best_5_share": 0.5096482862910444
+          },
+          "expectancy_r": 0.28999181057858997,
+          "max_drawdown_r": -3.1794473839164645,
+          "median_window_expectancy_r": 0.36660371051156315,
+          "profit_factor_r": 1.8925336308590637,
+          "profitable_window_share": 1.0,
+          "total_r": 12.759639665457959,
+          "trades": 44,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06439092416499936,
+            "concentration": {
+              "best_1_share": 1.0267970515050313,
+              "best_3_share": 3.0441555301844874,
+              "best_5_share": 3.8739871119760503
+            },
+            "expectancy_r": 0.14205870470402712,
+            "max_drawdown_r": -2.3206734088266074,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.3277278743603325,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.2785283423362441,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.02051926595671949,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2596660186465378,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2596660186465378,
+            "trades": 1,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.01399372459139503,
+            "concentration": {
+              "best_1_share": 1.694274863879485,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.3710328458028893,
+            "max_drawdown_r": -0.5151975570292378,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.4403517281501124,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": 0.7420656916057786,
+            "trades": 2,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.09459506757546521,
+            "concentration": {
+              "best_1_share": 0.3267995769691305,
+              "best_3_share": 0.9798762353678987,
+              "best_5_share": 1.6215013712238482
+            },
+            "expectancy_r": 0.2341367032468206,
+            "max_drawdown_r": -3.179447383916464,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.6154640189511673,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 3.98032395519595,
+            "trades": 17,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.15867720792582385,
+            "concentration": {
+              "best_1_share": 0.23396637548756358,
+              "best_3_share": 0.6998848618138009,
+              "best_5_share": 1.1631179294054554
+            },
+            "expectancy_r": 0.36660371051156315,
+            "max_drawdown_r": -1.2566736246851553,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 2.6114930828604623,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 5.4990556576734475,
+            "trades": 15,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.06439092416499936,
+            "concentration": {
+              "best_1_share": 1.0267970515050313,
+              "best_3_share": 3.0441555301844874,
+              "best_5_share": 3.8739871119760503
+            },
+            "expectancy_r": 0.14205870470402712,
+            "max_drawdown_r": -2.3206734088266074,
+            "profit_factor_r": 1.3277278743603325,
+            "total_r": 1.2785283423362441,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.03480013150473038,
+            "concentration": {
+              "best_1_share": 0.6292881369640481,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.6672439034174388,
+            "max_drawdown_r": -0.5151975570292378,
+            "profit_factor_r": 4.885367240083239,
+            "total_r": 2.0017317102523164,
+            "trades": 3,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2682823567077184,
+            "concentration": {
+              "best_1_share": 0.13722081379589265,
+              "best_3_share": 0.4114430492336279,
+              "best_5_share": 0.6828852948469278
+            },
+            "expectancy_r": 0.2962306129021687,
+            "max_drawdown_r": -3.179447383916464,
+            "profit_factor_r": 1.9594912055699738,
+            "total_r": 9.479379612869398,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_16pct": {
+        "cost_model": {
+          "half_spread_bps": 1,
+          "slippage_bps": 2,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.37272494998989925,
+          "concentration": {
+            "best_1_share": 0.10885548927706806,
+            "best_3_share": 0.32395931848817155,
+            "best_5_share": 0.5376584737448489
+          },
+          "expectancy_r": 0.2726594584245275,
+          "max_drawdown_r": -3.2347166227162134,
+          "median_window_expectancy_r": 0.3452815071767555,
+          "profit_factor_r": 1.8212191877988533,
+          "profitable_window_share": 1.0,
+          "total_r": 11.99701617067921,
+          "trades": 44,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.0605890556178339,
+            "concentration": {
+              "best_1_share": 1.1302905949971893,
+              "best_3_share": 3.338372587181095,
+              "best_5_share": 4.2284626468492075
+            },
+            "expectancy_r": 0.1283781033247797,
+            "max_drawdown_r": -2.368978298188041,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.2907242878211211,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.1554029299230173,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.020119265956719534,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 1.2351102470842705,
+            "max_drawdown_r": 0.0,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": null,
+            "rv_median": 0.038793087499129984,
+            "threshold": 0.015438276101015891,
+            "total_r": 1.2351102470842705,
+            "trades": 1,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.013188224064306864,
+            "concentration": {
+              "best_1_share": 1.7867407363004366,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.3452815071767555,
+            "max_drawdown_r": -0.5432940543743302,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.2710667617166895,
+            "rv_median": 0.03517827499143888,
+            "threshold": 0.013365522312688283,
+            "total_r": 0.690563014353511,
+            "trades": 2,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.08721189082531633,
+            "concentration": {
+              "best_1_share": 0.35214379989455963,
+              "best_3_share": 1.0552192694682665,
+              "best_5_share": 1.7421756590532638
+            },
+            "expectancy_r": 0.21561180728694412,
+            "max_drawdown_r": -3.2347166227162134,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.5572767863919685,
+            "rv_median": 0.03189387192757824,
+            "threshold": 0.011221110225208664,
+            "total_r": 3.66540072387805,
+            "trades": 17,
+            "window": 4
+          },
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.1518107013284995,
+            "concentration": {
+              "best_1_share": 0.24207311315923213,
+              "best_3_share": 0.7235448961918621,
+              "best_5_share": 1.2013762549402496
+            },
+            "expectancy_r": 0.3500359503626908,
+            "max_drawdown_r": -1.3097285250813426,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 2.4942082334958298,
+            "rv_median": 0.03049836906673233,
+            "threshold": 0.010889341083051063,
+            "total_r": 5.250539255440362,
+            "trades": 15,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.0605890556178339,
+            "concentration": {
+              "best_1_share": 1.1302905949971893,
+              "best_3_share": 3.338372587181095,
+              "best_5_share": 4.2284626468492075
+            },
+            "expectancy_r": 0.1283781033247797,
+            "max_drawdown_r": -2.368978298188041,
+            "profit_factor_r": 1.2907242878211211,
+            "total_r": 1.1554029299230173,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.033572827408473005,
+            "concentration": {
+              "best_1_share": 0.641391388569258,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.6418910871459271,
+            "max_drawdown_r": -0.5432940543743302,
+            "profit_factor_r": 4.544440153418264,
+            "total_r": 1.9256732614377814,
+            "trades": 3,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.2522622904641918,
+            "concentration": {
+              "best_1_share": 0.1447685989404068,
+              "best_3_share": 0.43380748223192156,
+              "best_5_share": 0.7189054718092026
+            },
+            "expectancy_r": 0.27862312435370035,
+            "max_drawdown_r": -3.2347166227162134,
+            "profit_factor_r": 1.8835299601091429,
+            "total_r": 8.915939979318411,
+            "trades": 32,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    "rolling_12m_3m": {
+      "round_trip_0_05pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 2.5
+        },
+        "summary": {
+          "compounded_return": 0.12938985526262003,
+          "concentration": {
+            "best_1_share": 0.1053578768805396,
+            "best_3_share": 0.31523833237780075,
+            "best_5_share": 0.524711067062636
+          },
+          "expectancy_r": 0.11862293750167285,
+          "max_drawdown_r": -5.391456739829561,
+          "median_window_expectancy_r": 0.1030573619536604,
+          "profit_factor_r": 1.2749430724468558,
+          "profitable_window_share": 0.6666666666666666,
+          "total_r": 12.574031375177322,
+          "trades": 106,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.02295552937575196,
+            "concentration": {
+              "best_1_share": 4.44154685430909,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.14851771419109816,
+            "max_drawdown_r": -1.0222613441671007,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2905670160346416,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.2970354283821963,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-04-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.2437183227928844,
+            "concentration": {
+              "best_1_share": -0.415179887040634,
+              "best_3_share": -1.237190242456816,
+              "best_5_share": -0.6013963896050768
+            },
+            "expectancy_r": -0.3166610832620693,
+            "max_drawdown_r": -4.752700359267902,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.553010744896764,
+            "rv_median": 0.039839193121952166,
+            "threshold": 0.017099510772168758,
+            "total_r": -3.166610832620693,
+            "trades": 10,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.14707963973135185,
+            "concentration": {
+              "best_1_share": 0.23844247212094621,
+              "best_3_share": 0.7147523316608038,
+              "best_5_share": 1.1886339721558674
+            },
+            "expectancy_r": 0.6127734272184333,
+            "max_drawdown_r": -1.0224700706280068,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.74113648530805,
+            "rv_median": 0.036522808097565335,
+            "threshold": 0.01399323117586726,
+            "total_r": 5.514960844965899,
+            "trades": 9,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-10-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": -0.01178268658708348,
+            "concentration": {
+              "best_1_share": -0.7623136893370417,
+              "best_3_share": 0.4058260685950767,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.4344580413707658,
+            "max_drawdown_r": -2.049860659713058,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.4325641308635659,
+            "rv_median": 0.03597968116512935,
+            "threshold": 0.013324572832723591,
+            "total_r": -1.7378321654830633,
+            "trades": 4,
+            "window": 4
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.004584444762130158,
+            "concentration": {
+              "best_1_share": 4.807292675318762,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.1354856784119276,
+            "max_drawdown_r": -1.0316672620566505,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.262653829184875,
+            "rv_median": 0.03405252165810479,
+            "threshold": 0.011431985724523308,
+            "total_r": 0.2709713568238552,
+            "trades": 2,
+            "window": 5
+          },
+          {
+            "calibration_start": "2022-04-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": -0.003968296031722884,
+            "concentration": {
+              "best_1_share": 14.254050438809553,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.03010564650646107,
+            "max_drawdown_r": -1.0275064369602906,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.0754486339565958,
+            "rv_median": 0.030951055318177313,
+            "threshold": 0.009810605881710455,
+            "total_r": 0.09031693951938322,
+            "trades": 3,
+            "window": 6
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.004342183235055086,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.2614427725722322,
+            "max_drawdown_r": -0.2614427725722322,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.02581037886277187,
+            "threshold": 0.0087056237010108,
+            "total_r": -0.2614427725722322,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2022-10-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.08785718200179571,
+            "concentration": {
+              "best_1_share": 0.18279498765241672,
+              "best_3_share": 0.5477599665370877,
+              "best_5_share": 0.9110786538522928
+            },
+            "expectancy_r": 0.5915555242689615,
+            "max_drawdown_r": -2.0708963235967683,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.227825984847427,
+            "rv_median": 0.01891389145192618,
+            "threshold": 0.005531351537876983,
+            "total_r": 7.098666291227539,
+            "trades": 12,
+            "window": 8
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.10431735415583865,
+            "concentration": {
+              "best_1_share": 0.4659287493145438,
+              "best_3_share": 1.3954018301255076,
+              "best_5_share": 2.320251812946809
+            },
+            "expectancy_r": 0.15736152575203965,
+            "max_drawdown_r": -3.2129529462634085,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.4387172123651526,
+            "rv_median": 0.018701477653569318,
+            "threshold": 0.0054518342492813066,
+            "total_r": 2.832507463536714,
+            "trades": 18,
+            "window": 9
+          },
+          {
+            "calibration_start": "2023-04-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.04992167351108523,
+            "concentration": {
+              "best_1_share": -1.2163682506461528,
+              "best_3_share": -3.6270816696892414,
+              "best_5_share": -6.01534410478055
+            },
+            "expectancy_r": -0.05132142695299134,
+            "max_drawdown_r": -3.840851248847251,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9050619323981585,
+            "rv_median": 0.018972445767982363,
+            "threshold": 0.005875559877624781,
+            "total_r": -1.0777499660128183,
+            "trades": 21,
+            "window": 10
+          },
+          {
+            "calibration_start": "2023-07-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.106789604188547,
+            "concentration": {
+              "best_1_share": 0.6785446112336821,
+              "best_3_share": 2.0335305967217234,
+              "best_5_share": 3.050625154901438
+            },
+            "expectancy_r": 0.14894532976624744,
+            "max_drawdown_r": -2.0750967860821588,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 1.3744305939861845,
+            "rv_median": 0.021351140422050097,
+            "threshold": 0.006417512187578467,
+            "total_r": 1.9362892869612167,
+            "trades": 13,
+            "window": 11
+          },
+          {
+            "calibration_start": "2023-10-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.023287191608338587,
+            "concentration": {
+              "best_1_share": 1.6859640829620866,
+              "best_3_share": 5.037992593846673,
+              "best_5_share": 6.677834547395326
+            },
+            "expectancy_r": 0.0706290454953932,
+            "max_drawdown_r": -3.1177505877573344,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.1752347741898697,
+            "rv_median": 0.02429108814951584,
+            "threshold": 0.008789579082230992,
+            "total_r": 0.7769195004493252,
+            "trades": 11,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.12302671759625272,
+            "concentration": {
+              "best_1_share": 1.459719540058194,
+              "best_3_share": 4.362356489237801,
+              "best_5_share": 7.258329156800569
+            },
+            "expectancy_r": 0.036302131009773565,
+            "max_drawdown_r": -4.752700359267902,
+            "profit_factor_r": 1.0717812575986172,
+            "total_r": 0.9075532752443392,
+            "trades": 25,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.08378117328425061,
+            "concentration": {
+              "best_1_share": 0.18095943333264766,
+              "best_3_share": 0.5414399103502916,
+              "best_5_share": 0.9004898024470938
+            },
+            "expectancy_r": 0.3999173230554747,
+            "max_drawdown_r": -2.0883306980528475,
+            "profit_factor_r": 2.2681160855324203,
+            "total_r": 7.198511814998545,
+            "trades": 18,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.18827214699060835,
+            "concentration": {
+              "best_1_share": 0.29537972664651335,
+              "best_3_share": 0.8846354045557074,
+              "best_5_share": 1.4724872030786165
+            },
+            "expectancy_r": 0.07092009976086408,
+            "max_drawdown_r": -5.391456739829561,
+            "profit_factor_r": 1.1629849963026722,
+            "total_r": 4.4679662849344375,
+            "trades": 63,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_10pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.07112133750407357,
+          "concentration": {
+            "best_1_share": 0.13434323641821352,
+            "best_3_share": 0.40088565539919857,
+            "best_5_share": 0.6664098116905177
+          },
+          "expectancy_r": 0.0924282134916148,
+          "max_drawdown_r": -6.306465268741523,
+          "median_window_expectancy_r": 0.07484978690703592,
+          "profit_factor_r": 1.207938929851337,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 9.797390630111169,
+          "trades": 106,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.021943762097513586,
+            "concentration": {
+              "best_1_share": 5.006031332158485,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.13036876171552625,
+            "max_drawdown_r": -1.0445226883342034,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2496236092744664,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.2607375234310525,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-04-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.24760089310092637,
+            "concentration": {
+              "best_1_share": -0.38949555040160005,
+              "best_3_share": -1.1545083066179658,
+              "best_5_share": -0.5452483593310853
+            },
+            "expectancy_r": -0.3327619329433945,
+            "max_drawdown_r": -4.839495825602938,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.5358569763094821,
+            "rv_median": 0.039839193121952166,
+            "threshold": 0.017099510772168758,
+            "total_r": -3.3276193294339453,
+            "trades": 10,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.1420047548511023,
+            "concentration": {
+              "best_1_share": 0.2429470747327595,
+              "best_3_share": 0.7282785315790332,
+              "best_5_share": 1.2089345184818008
+            },
+            "expectancy_r": 0.5930274059990577,
+            "max_drawdown_r": -1.0438999356097964,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.52541354788507,
+            "rv_median": 0.036522808097565335,
+            "threshold": 0.01399323117586726,
+            "total_r": 5.337246653991519,
+            "trades": 9,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-10-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": -0.0137655215760919,
+            "concentration": {
+              "best_1_share": -0.7275925180435903,
+              "best_3_share": 0.4111937451359355,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.452249416074864,
+            "max_drawdown_r": -2.099721319426111,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.42115979922600694,
+            "rv_median": 0.03597968116512935,
+            "threshold": 0.013324572832723591,
+            "total_r": -1.808997664299456,
+            "trades": 4,
+            "window": 4
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.0035822297175611695,
+            "concentration": {
+              "best_1_share": 6.09725172717955,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.10430469015718691,
+            "max_drawdown_r": -1.0633345241132977,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.1961841505036535,
+            "rv_median": 0.03405252165810479,
+            "threshold": 0.011431985724523308,
+            "total_r": 0.20860938031437382,
+            "trades": 2,
+            "window": 5
+          },
+          {
+            "calibration_start": "2022-04-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": -0.005463674830477383,
+            "concentration": {
+              "best_1_share": -88.64697478861677,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.004668070897336822,
+            "max_drawdown_r": -1.0648833759758027,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9888451339004137,
+            "rv_median": 0.030951055318177313,
+            "threshold": 0.009810605881710455,
+            "total_r": -0.014004212692010465,
+            "trades": 3,
+            "window": 6
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.004842183235055031,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.291547763359075,
+            "max_drawdown_r": -0.291547763359075,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.02581037886277187,
+            "threshold": 0.0087056237010108,
+            "total_r": -0.291547763359075,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2022-10-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.08139259137426924,
+            "concentration": {
+              "best_1_share": 0.1902308340380351,
+              "best_3_share": 0.5688504850737285,
+              "best_5_share": 0.9433646654805726
+            },
+            "expectancy_r": 0.5553881244236164,
+            "max_drawdown_r": -2.1301446034122375,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.01225122507663,
+            "rv_median": 0.01891389145192618,
+            "threshold": 0.005531351537876983,
+            "total_r": 6.664657493083396,
+            "trades": 12,
+            "window": 8
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.09447200553371093,
+            "concentration": {
+              "best_1_share": 0.5461003822746324,
+              "best_3_share": 1.6326536041348336,
+              "best_5_share": 2.7082569232330673
+            },
+            "expectancy_r": 0.13287748195932594,
+            "max_drawdown_r": -3.384961551014924,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.35566150628172,
+            "rv_median": 0.018701477653569318,
+            "threshold": 0.0054518342492813066,
+            "total_r": 2.391794675267867,
+            "trades": 18,
+            "window": 9
+          },
+          {
+            "calibration_start": "2023-04-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.05987393247441797,
+            "concentration": {
+              "best_1_share": -0.7490756235495228,
+              "best_3_share": -2.2101093241641157,
+              "best_5_share": -3.651083251579039
+            },
+            "expectancy_r": -0.08244736466053633,
+            "max_drawdown_r": -3.9980018286671095,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.8516190159375928,
+            "rv_median": 0.018972445767982363,
+            "threshold": 0.005875559877624781,
+            "total_r": -1.731394657871263,
+            "trades": 21,
+            "window": 10
+          },
+          {
+            "calibration_start": "2023-07-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.09967095120903524,
+            "concentration": {
+              "best_1_share": 0.8046825221866999,
+              "best_3_share": 2.410655656446356,
+              "best_5_share": 3.60933348482948
+            },
+            "expectancy_r": 0.12373575472715187,
+            "max_drawdown_r": -2.1501935721643157,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 1.3016257872370482,
+            "rv_median": 0.021351140422050097,
+            "threshold": 0.006417512187578467,
+            "total_r": 1.6085648114529743,
+            "trades": 13,
+            "window": 11
+          },
+          {
+            "calibration_start": "2023-10-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.01768375511059661,
+            "concentration": {
+              "best_1_share": 2.576148173658731,
+              "best_3_share": 7.697673491948447,
+              "best_5_share": 10.172730119501615
+            },
+            "expectancy_r": 0.045394883656884925,
+            "max_drawdown_r": -3.2050156897323294,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.1082051285255397,
+            "rv_median": 0.02429108814951584,
+            "threshold": 0.008789579082230992,
+            "total_r": 0.4993437202257342,
+            "trades": 11,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.13398909287783345,
+            "concentration": {
+              "best_1_share": 2.852853892160144,
+              "best_3_share": 8.492458886763876,
+              "best_5_share": 14.112033355899523
+            },
+            "expectancy_r": 0.018454687347566823,
+            "max_drawdown_r": -4.839495825602938,
+            "profit_factor_r": 1.035895535677163,
+            "total_r": 0.4613671836891706,
+            "trades": 25,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.07411049862489483,
+            "concentration": {
+              "best_1_share": 0.19366612654601204,
+              "best_3_share": 0.579665915061441,
+              "best_5_share": 0.9617787605157546
+            },
+            "expectancy_r": 0.3648730498525936,
+            "max_drawdown_r": -2.270349789038077,
+            "profit_factor_r": 2.1089695745075923,
+            "total_r": 6.567714897346685,
+            "trades": 18,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.15150637722516658,
+            "concentration": {
+              "best_1_share": 0.4718260133692481,
+              "best_3_share": 1.4115492540411356,
+              "best_5_share": 2.3466682287393517
+            },
+            "expectancy_r": 0.04394140554087798,
+            "max_drawdown_r": -6.306465268741523,
+            "profit_factor_r": 1.0976776692978027,
+            "total_r": 2.7683085490753125,
+            "trades": 63,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_12pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 1,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.0486567676167049,
+          "concentration": {
+            "best_1_share": 0.15112573747393707,
+            "best_3_share": 0.4504753900774339,
+            "best_5_share": 0.7486402310511877
+          },
+          "expectancy_r": 0.08195032388759164,
+          "max_drawdown_r": -6.853047142284573,
+          "median_window_expectancy_r": 0.06356675688838623,
+          "profit_factor_r": 1.1822262261530574,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 8.686734332084715,
+          "trades": 106,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.021539195186218052,
+            "concentration": {
+              "best_1_share": 5.278426758243292,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.12310918072529753,
+            "max_drawdown_r": -1.0534272260010444,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.233730774536058,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.24621836145059506,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-04-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.2491488924553099,
+            "concentration": {
+              "best_1_share": -0.37990454171470034,
+              "best_3_share": -1.1236333349951864,
+              "best_5_share": -0.5242816412227521
+            },
+            "expectancy_r": -0.3392022728159246,
+            "max_drawdown_r": -4.874214012136954,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.5291089174759697,
+            "rv_median": 0.039839193121952166,
+            "threshold": 0.017099510772168758,
+            "total_r": -3.3920227281592457,
+            "trades": 10,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.13998039529156148,
+            "concentration": {
+              "best_1_share": 0.24494399425685123,
+              "best_3_share": 0.7339446297668777,
+              "best_5_share": 1.2174383768784671
+            },
+            "expectancy_r": 0.5851289975113075,
+            "max_drawdown_r": -1.0524718816025125,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.442266738745154,
+            "rv_median": 0.036522808097565335,
+            "threshold": 0.01399323117586726,
+            "total_r": 5.266160977601768,
+            "trades": 9,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-10-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": -0.014557820048682113,
+            "concentration": {
+              "best_1_share": -0.7144571156044117,
+              "best_3_share": 0.4132243964331403,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.4593659659565032,
+            "max_drawdown_r": -2.119665583311332,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.41672498489560544,
+            "rv_median": 0.03597968116512935,
+            "threshold": 0.013324572832723591,
+            "total_r": -1.8374638638260128,
+            "trades": 4,
+            "window": 4
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.0031814836997339224,
+            "concentration": {
+              "best_1_share": 6.858513231274021,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.09183229485529076,
+            "max_drawdown_r": -1.0760014289359563,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.1706917711923535,
+            "rv_median": 0.03405252165810479,
+            "threshold": 0.011431985724523308,
+            "total_r": 0.18366458971058153,
+            "trades": 2,
+            "window": 5
+          },
+          {
+            "calibration_start": "2022-04-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": -0.006061407046544676,
+            "concentration": {
+              "best_1_share": -21.944948307293348,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.01857755785885587,
+            "max_drawdown_r": -1.0798341515820074,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9564174219698662,
+            "rv_median": 0.030951055318177313,
+            "threshold": 0.009810605881710455,
+            "total_r": -0.05573267357656761,
+            "trades": 3,
+            "window": 6
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.005042183235055009,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.3035897596738121,
+            "max_drawdown_r": -0.3035897596738121,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.02581037886277187,
+            "threshold": 0.0087056237010108,
+            "total_r": -0.3035897596738121,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2022-10-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.07881662965728875,
+            "concentration": {
+              "best_1_share": 0.19348359343872298,
+              "best_3_share": 0.5782156290202399,
+              "best_5_share": 0.9574879572201278
+            },
+            "expectancy_r": 0.5409211644854784,
+            "max_drawdown_r": -2.153843915338425,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.9305336351377114,
+            "rv_median": 0.01891389145192618,
+            "threshold": 0.005531351537876983,
+            "total_r": 6.491053973825741,
+            "trades": 12,
+            "window": 8
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.09055712525136106,
+            "concentration": {
+              "best_1_share": 0.5870998440377208,
+              "best_3_share": 1.7539832400368822,
+              "best_5_share": 2.9066812298825737
+            },
+            "expectancy_r": 0.12308386444224054,
+            "max_drawdown_r": -3.4537649929155294,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.3242675718780825,
+            "rv_median": 0.018701477653569318,
+            "threshold": 0.0054518342492813066,
+            "total_r": 2.2155095599603296,
+            "trades": 18,
+            "window": 9
+          },
+          {
+            "calibration_start": "2023-04-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.0638269692718949,
+            "concentration": {
+              "best_1_share": -0.6479894459776703,
+              "best_3_share": -1.9035855105441377,
+              "best_5_share": -3.139786298754608
+            },
+            "expectancy_r": -0.09489773974355423,
+            "max_drawdown_r": -4.060862060595051,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.8310447526699211,
+            "rv_median": 0.018972445767982363,
+            "threshold": 0.005875559877624781,
+            "total_r": -1.9928525346146388,
+            "trades": 21,
+            "window": 10
+          },
+          {
+            "calibration_start": "2023-07-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.09683534220426138,
+            "concentration": {
+              "best_1_share": 0.8708060050599097,
+              "best_3_share": 2.6083505622788152,
+              "best_5_share": 3.902217205560172
+            },
+            "expectancy_r": 0.11365192471151365,
+            "max_drawdown_r": -2.180232286597178,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 1.2737251853764884,
+            "rv_median": 0.021351140422050097,
+            "threshold": 0.006417512187578467,
+            "total_r": 1.4774750212496774,
+            "trades": 13,
+            "window": 11
+          },
+          {
+            "calibration_start": "2023-10-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.015450201575831102,
+            "concentration": {
+              "best_1_share": 3.288563830250444,
+              "best_3_share": 9.826220084892805,
+              "best_5_share": 12.96970026280431
+            },
+            "expectancy_r": 0.0353012189214817,
+            "max_drawdown_r": -3.239921730522327,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.0828443244849728,
+            "rv_median": 0.02429108814951584,
+            "threshold": 0.008789579082230992,
+            "total_r": 0.3883134081362987,
+            "trades": 11,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.13833710748411854,
+            "concentration": {
+              "best_1_share": 4.640589572503487,
+              "best_3_share": 13.794447769831953,
+              "best_5_share": 22.90737255897948
+            },
+            "expectancy_r": 0.011315709882684172,
+            "max_drawdown_r": -4.874214012136953,
+            "profit_factor_r": 1.0218670433820982,
+            "total_r": 0.2828927470671043,
+            "trades": 25,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.07026509565015737,
+            "concentration": {
+              "best_1_share": 0.19945954183391879,
+              "best_3_share": 0.5970944557817165,
+              "best_5_share": 0.9897224891233994
+            },
+            "expectancy_r": 0.35085534057144124,
+            "max_drawdown_r": -2.3431574254321683,
+            "profit_factor_r": 2.0489497252186193,
+            "total_r": 6.315396130285943,
+            "trades": 18,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.1371155836818616,
+            "concentration": {
+              "best_1_share": 0.6228198654505496,
+              "best_3_share": 1.8630144584379311,
+              "best_5_share": 3.0950811534566944
+            },
+            "expectancy_r": 0.03314992785288361,
+            "max_drawdown_r": -6.853047142284574,
+            "profit_factor_r": 1.0727366448681104,
+            "total_r": 2.088445454731667,
+            "trades": 63,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_16pct": {
+        "cost_model": {
+          "half_spread_bps": 1,
+          "slippage_bps": 2,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.005118397228048632,
+          "concentration": {
+            "best_1_share": 0.2019885350782571,
+            "best_3_share": 0.6007672106956014,
+            "best_5_share": 0.9978563140994121
+          },
+          "expectancy_r": 0.06099454467954518,
+          "max_drawdown_r": -7.9462108893706835,
+          "median_window_expectancy_r": 0.04100069685108667,
+          "profit_factor_r": 1.1325511117372253,
+          "profitable_window_share": 0.5833333333333334,
+          "total_r": 6.465421736031789,
+          "trades": 106,
+          "windows": 12
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2021-12-31T23:00:00+00:00",
+            "compounded_return": 0.0207303013636273,
+            "concentration": {
+              "best_1_share": 5.932480506573395,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.10859001874484009,
+            "max_drawdown_r": -1.0712363013347266,
+            "oos_start": "2022-01-01T00:00:00+00:00",
+            "oos_stop": "2022-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2027377500361784,
+            "rv_median": 0.04322712021612439,
+            "threshold": 0.01940523603707689,
+            "total_r": 0.21718003748968018,
+            "trades": 2,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-04-01T00:00:00+00:00",
+            "calibration_stop": "2022-03-31T23:00:00+00:00",
+            "compounded_return": -0.2522362964106687,
+            "concentration": {
+              "best_1_share": -0.3617751630196223,
+              "best_3_share": -1.065272001894351,
+              "best_5_share": -0.48464935800960923
+            },
+            "expectancy_r": -0.3520829525609847,
+            "max_drawdown_r": -4.9436503852049825,
+            "oos_start": "2022-04-01T00:00:00+00:00",
+            "oos_stop": "2022-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.5158022773354989,
+            "rv_median": 0.039839193121952166,
+            "threshold": 0.017099510772168758,
+            "total_r": -3.520829525609847,
+            "trades": 10,
+            "window": 2
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.13594124232968263,
+            "concentration": {
+              "best_1_share": 0.24913299167359285,
+              "best_3_share": 0.7457484645942402,
+              "best_5_share": 1.2351539434962273
+            },
+            "expectancy_r": 0.5693321805358071,
+            "max_drawdown_r": -1.0696157735879437,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-09-30T23:00:00+00:00",
+            "profit_factor_r": 4.281058044885988,
+            "rv_median": 0.036522808097565335,
+            "threshold": 0.01399323117586726,
+            "total_r": 5.123989624822264,
+            "trades": 9,
+            "window": 3
+          },
+          {
+            "calibration_start": "2021-10-01T00:00:00+00:00",
+            "calibration_stop": "2022-09-30T23:00:00+00:00",
+            "compounded_return": -0.01614098572207645,
+            "concentration": {
+              "best_1_share": -0.6893705877245543,
+              "best_3_share": 0.41710261718941144,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.4735990657197817,
+            "max_drawdown_r": -2.159554111081774,
+            "oos_start": "2022-10-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 0.4080635668299877,
+            "rv_median": 0.03597968116512935,
+            "threshold": 0.013324572832723591,
+            "total_r": -1.8943962628791269,
+            "trades": 4,
+            "window": 4
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.002380231664078858,
+            "concentration": {
+              "best_1_share": 9.232742803799594,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.06688750425149825,
+            "max_drawdown_r": -1.101335238581274,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.1214662019489394,
+            "rv_median": 0.03405252165810479,
+            "threshold": 0.011431985724523308,
+            "total_r": 0.1337750085029965,
+            "trades": 2,
+            "window": 5
+          },
+          {
+            "calibration_start": "2022-04-01T00:00:00+00:00",
+            "calibration_stop": "2023-03-31T23:00:00+00:00",
+            "compounded_return": -0.007256152936791049,
+            "concentration": {
+              "best_1_share": -8.522833478772156,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.0463965317818942,
+            "max_drawdown_r": -1.109735702794417,
+            "oos_start": "2023-04-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.8949892380005224,
+            "rv_median": 0.030951055318177313,
+            "threshold": 0.009810605881710455,
+            "total_r": -0.1391895953456826,
+            "trades": 3,
+            "window": 6
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": -0.005442183235055076,
+            "concentration": {
+              "best_1_share": 1.0,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.3276737523032864,
+            "max_drawdown_r": -0.3276737523032864,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-09-30T23:00:00+00:00",
+            "profit_factor_r": 0.0,
+            "rv_median": 0.02581037886277187,
+            "threshold": 0.0087056237010108,
+            "total_r": -0.3276737523032864,
+            "trades": 1,
+            "window": 7
+          },
+          {
+            "calibration_start": "2022-10-01T00:00:00+00:00",
+            "calibration_stop": "2023-09-30T23:00:00+00:00",
+            "compounded_return": 0.07368157242878737,
+            "concentration": {
+              "best_1_share": 0.20054058152493304,
+              "best_3_share": 0.5985336732144086,
+              "best_5_share": 0.9889583477513669
+            },
+            "expectancy_r": 0.5119872446092022,
+            "max_drawdown_r": -2.2012425391908006,
+            "oos_start": "2023-10-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 2.7742162288913295,
+            "rv_median": 0.01891389145192618,
+            "threshold": 0.005531351537876983,
+            "total_r": 6.143846935310426,
+            "trades": 12,
+            "window": 8
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.08276700537239745,
+            "concentration": {
+              "best_1_share": 0.6923768037208563,
+              "best_3_share": 2.065529163762378,
+              "best_5_share": 3.416188107119216
+            },
+            "expectancy_r": 0.10349662940806954,
+            "max_drawdown_r": -3.6010165341257703,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-03-31T23:00:00+00:00",
+            "profit_factor_r": 1.2643512179281806,
+            "rv_median": 0.018701477653569318,
+            "threshold": 0.0054518342492813066,
+            "total_r": 1.8629393293452519,
+            "trades": 18,
+            "window": 9
+          },
+          {
+            "calibration_start": "2023-04-01T00:00:00+00:00",
+            "calibration_stop": "2024-03-31T23:00:00+00:00",
+            "compounded_return": -0.07168560398854062,
+            "concentration": {
+              "best_1_share": -0.5088509818668777,
+              "best_3_share": -1.4816756741557622,
+              "best_5_share": -2.436019726218494
+            },
+            "expectancy_r": -0.11979848990959027,
+            "max_drawdown_r": -4.186582524450938,
+            "oos_start": "2024-04-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.791193101652774,
+            "rv_median": 0.018972445767982363,
+            "threshold": 0.005875559877624781,
+            "total_r": -2.5157682881013956,
+            "trades": 21,
+            "window": 10
+          },
+          {
+            "calibration_start": "2023-07-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.09118436101356409,
+            "concentration": {
+              "best_1_share": 1.0458480634531697,
+              "best_3_share": 3.1316884408525967,
+              "best_5_share": 4.677538878268795
+            },
+            "expectancy_r": 0.0934842646802372,
+            "max_drawdown_r": -2.240309715462904,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-09-30T23:00:00+00:00",
+            "profit_factor_r": 1.2198829234085462,
+            "rv_median": 0.021351140422050097,
+            "threshold": 0.006417512187578467,
+            "total_r": 1.2152954408430836,
+            "trades": 13,
+            "window": 11
+          },
+          {
+            "calibration_start": "2023-10-01T00:00:00+00:00",
+            "calibration_stop": "2024-09-30T23:00:00+00:00",
+            "compounded_return": 0.010996457931551573,
+            "concentration": {
+              "best_1_share": 7.568074534873187,
+              "best_3_share": 22.612488670528492,
+              "best_5_share": 29.77121712732477
+            },
+            "expectancy_r": 0.015113889450675082,
+            "max_drawdown_r": -3.3097338121023228,
+            "oos_start": "2024-10-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.034405031542864,
+            "rv_median": 0.02429108814951584,
+            "threshold": 0.008789579082230992,
+            "total_r": 0.1662527839574259,
+            "trades": 11,
+            "window": 12
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": -0.14697035397594038,
+            "concentration": {
+              "best_1_share": -17.63447715321151,
+              "best_3_share": -52.269980463623774,
+              "best_5_share": -86.68196426416672
+            },
+            "expectancy_r": -0.0029622450470811966,
+            "max_drawdown_r": -4.943650385204983,
+            "profit_factor_r": 0.9943489020971729,
+            "total_r": -0.07405612617702992,
+            "trades": 25,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.06261326161830039,
+            "concentration": {
+              "best_1_share": 0.2125557664535467,
+              "best_3_share": 0.6364923019091134,
+              "best_5_share": 1.052890297466009
+            },
+            "expectancy_r": 0.32281992200913634,
+            "max_drawdown_r": -2.4887726982203526,
+            "profit_factor_r": 1.9346053076289786,
+            "total_r": 5.810758596164454,
+            "trades": 18,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.10886293182327966,
+            "concentration": {
+              "best_1_share": 1.7700313940916341,
+              "best_3_share": 5.293128202310326,
+              "best_5_share": 8.781325484500238
+            },
+            "expectancy_r": 0.011566972476894694,
+            "max_drawdown_r": -7.946210889370684,
+            "profit_factor_r": 1.0247402987315584,
+            "total_r": 0.7287192660443658,
+            "trades": 63,
+            "year": 2024
+          }
+        ]
+      }
+    },
+    "rolling_18m_6m": {
+      "round_trip_0_05pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 2.5
+        },
+        "summary": {
+          "compounded_return": 0.37941956098527374,
+          "concentration": {
+            "best_1_share": 0.12715664823753473,
+            "best_3_share": 0.38042525818494044,
+            "best_5_share": 0.6327962975955864
+          },
+          "expectancy_r": 0.13187892156564404,
+          "max_drawdown_r": -4.6048658239947375,
+          "median_window_expectancy_r": 0.12167598983799072,
+          "profit_factor_r": 1.3056563229723206,
+          "profitable_window_share": 1.0,
+          "total_r": 10.418434803685878,
+          "trades": 79,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.0710733476605836,
+            "concentration": {
+              "best_1_share": 0.8867303800923165,
+              "best_3_share": 2.646646757275001,
+              "best_5_share": 3.3942450276721448
+            },
+            "expectancy_r": 0.16599975711771017,
+            "max_drawdown_r": -2.2361398524441007,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.395930864199395,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.4939978140593915,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": 0.0012914305435955953,
+            "concentration": {
+              "best_1_share": 42.53321951197141,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": 0.01020879392489804,
+            "max_drawdown_r": -1.2720122371058116,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.0240771125318557,
+            "rv_median": 0.03538856675746148,
+            "threshold": 0.012871453817677514,
+            "total_r": 0.030626381774694122,
+            "trades": 3,
+            "window": 2
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.054834502488052994,
+            "concentration": {
+              "best_1_share": 0.33675753934435837,
+              "best_3_share": 1.007637545335558,
+              "best_5_share": 1.2713573029321377
+            },
+            "expectancy_r": 0.6420981564887794,
+            "max_drawdown_r": -1.0454281437749575,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.947949097911655,
+            "rv_median": 0.029462211578075558,
+            "threshold": 0.009551374982428973,
+            "total_r": 3.8525889389326764,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.10297158452463107,
+            "concentration": {
+              "best_1_share": 0.3389500523241556,
+              "best_3_share": 1.0151155601153192,
+              "best_5_share": 1.6889387355828547
+            },
+            "expectancy_r": 0.12167598983799072,
+            "max_drawdown_r": -4.604865823994739,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.277762972803353,
+            "rv_median": 0.022083754758708992,
+            "threshold": 0.006725458955176844,
+            "total_r": 3.893631674815703,
+            "trades": 32,
+            "window": 4
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.10552359914345599,
+            "concentration": {
+              "best_1_share": 1.1448850793471148,
+              "best_3_share": 3.4311065183314056,
+              "best_5_share": 5.713410942797899
+            },
+            "expectancy_r": 0.0395720687621867,
+            "max_drawdown_r": -4.512251757012712,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.0836718215152195,
+            "rv_median": 0.021226841543895997,
+            "threshold": 0.006662939158713188,
+            "total_r": 1.1475899941034142,
+            "trades": 29,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.0710733476605836,
+            "concentration": {
+              "best_1_share": 0.8867303800923165,
+              "best_3_share": 2.646646757275001,
+              "best_5_share": 3.3942450276721448
+            },
+            "expectancy_r": 0.16599975711771017,
+            "max_drawdown_r": -2.2361398524441007,
+            "profit_factor_r": 1.395930864199395,
+            "total_r": 1.4939978140593915,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.056196747983004336,
+            "concentration": {
+              "best_1_share": 0.33545361544443425,
+              "best_3_share": 1.0026405712172706,
+              "best_5_share": 1.6641102644246957
+            },
+            "expectancy_r": 0.43146836896748564,
+            "max_drawdown_r": -1.5334550096780437,
+            "profit_factor_r": 2.5057740462214935,
+            "total_r": 3.8832153207073707,
+            "trades": 9,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.21936111587663087,
+            "concentration": {
+              "best_1_share": 0.2617910392725773,
+              "best_3_share": 0.7840403421224074,
+              "best_5_share": 1.3050454057425465
+            },
+            "expectancy_r": 0.08264297817900192,
+            "max_drawdown_r": -4.604865823994739,
+            "profit_factor_r": 1.1817757514518907,
+            "total_r": 5.041221668919117,
+            "trades": 61,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_10pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 0,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.3261799020870779,
+          "concentration": {
+            "best_1_share": 0.15903452167841348,
+            "best_3_share": 0.47447339609738026,
+            "best_5_share": 0.7878528484602856
+          },
+          "expectancy_r": 0.10476295317707635,
+          "max_drawdown_r": -5.350965462891358,
+          "median_window_expectancy_r": 0.09424549259576594,
+          "profit_factor_r": 1.2351073492077473,
+          "profitable_window_share": 0.8,
+          "total_r": 8.27627330098903,
+          "trades": 79,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06629639658103348,
+            "concentration": {
+              "best_1_share": 0.9821818951285389,
+              "best_3_share": 2.9173211445444824,
+              "best_5_share": 3.7211758264951835
+            },
+            "expectancy_r": 0.14889900539365084,
+            "max_drawdown_r": -2.2965209641458912,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.3467541291534688,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.3400910485428574,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": -0.00020927658900904422,
+            "concentration": {
+              "best_1_share": -21.799689386856897,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.019448960668747423,
+            "max_drawdown_r": -1.3302907864339137,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9561397533522339,
+            "rv_median": 0.03538856675746148,
+            "threshold": 0.012871453817677514,
+            "total_r": -0.05834688200624227,
+            "trades": 3,
+            "window": 2
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.05170163177948006,
+            "concentration": {
+              "best_1_share": 0.3479408490322958,
+              "best_3_share": 1.0368880090477806,
+              "best_5_share": 1.2969879290310469
+            },
+            "expectancy_r": 0.607111927011795,
+            "max_drawdown_r": -1.0818294833596864,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.652345938287349,
+            "rv_median": 0.029462211578075558,
+            "threshold": 0.009551374982428973,
+            "total_r": 3.6426715620707695,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.08550850781080954,
+            "concentration": {
+              "best_1_share": 0.43309763102164417,
+              "best_3_share": 1.2956865892791607,
+              "best_5_share": 2.1532665165705525
+            },
+            "expectancy_r": 0.09424549259576594,
+            "max_drawdown_r": -4.8490372302292455,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.2086557065688128,
+            "rv_median": 0.022083754758708992,
+            "threshold": 0.006725458955176844,
+            "total_r": 3.01585576306451,
+            "trades": 32,
+            "window": 4
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.08965651099161409,
+            "concentration": {
+              "best_1_share": 3.852312558111982,
+              "best_3_share": 11.540699347335064,
+              "best_5_share": 19.19432710782571
+            },
+            "expectancy_r": 0.011586269286797813,
+            "max_drawdown_r": -4.737492600406515,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.0236954373190768,
+            "rv_median": 0.021226841543895997,
+            "threshold": 0.006662939158713188,
+            "total_r": 0.3360018093171366,
+            "trades": 29,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.06629639658103348,
+            "concentration": {
+              "best_1_share": 0.9821818951285389,
+              "best_3_share": 2.9173211445444824,
+              "best_5_share": 3.7211758264951835
+            },
+            "expectancy_r": 0.14889900539365084,
+            "max_drawdown_r": -2.2965209641458912,
+            "profit_factor_r": 1.3467541291534688,
+            "total_r": 1.3400910485428574,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.05148153524932564,
+            "concentration": {
+              "best_1_share": 0.354862915042834,
+              "best_3_share": 1.058898276703366,
+              "best_5_share": 1.7543033275389555
+            },
+            "expectancy_r": 0.3982582977849474,
+            "max_drawdown_r": -1.6218385497929888,
+            "profit_factor_r": 2.325726618842677,
+            "total_r": 3.584324680064527,
+            "trades": 9,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.1828314132728408,
+            "concentration": {
+              "best_1_share": 0.3896824248287276,
+              "best_3_share": 1.165802479079213,
+              "best_5_share": 1.9381198571771807
+            },
+            "expectancy_r": 0.054948484793141746,
+            "max_drawdown_r": -5.350965462891357,
+            "profit_factor_r": 1.1170596233823857,
+            "total_r": 3.3518575723816464,
+            "trades": 61,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_12pct": {
+        "cost_model": {
+          "half_spread_bps": 0,
+          "slippage_bps": 1,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.30545672547533975,
+          "concentration": {
+            "best_1_share": 0.17693985939773646,
+            "best_3_share": 0.5272988668527872,
+            "best_5_share": 0.8752055557112517
+          },
+          "expectancy_r": 0.09391656582164934,
+          "max_drawdown_r": -5.731073822257989,
+          "median_window_expectancy_r": 0.08327329369887612,
+          "profit_factor_r": 1.2081252759089256,
+          "profitable_window_share": 0.8,
+          "total_r": 7.4194086999102975,
+          "trades": 79,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.06439092416499936,
+            "concentration": {
+              "best_1_share": 1.0267970515050313,
+              "best_3_share": 3.0441555301844874,
+              "best_5_share": 3.8739871119760503
+            },
+            "expectancy_r": 0.14205870470402712,
+            "max_drawdown_r": -2.3206734088266074,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.3277278743603325,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.2785283423362441,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": -0.0008091393825362392,
+            "concentration": {
+              "best_1_share": -13.409805655534973,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.03131206250620552,
+            "max_drawdown_r": -1.3536022061651543,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.9306028114531936,
+            "rv_median": 0.03538856675746148,
+            "threshold": 0.012871453817677514,
+            "total_r": -0.09393618751861654,
+            "trades": 3,
+            "window": 2
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.050450656442433406,
+            "concentration": {
+              "best_1_share": 0.3527835881646513,
+              "best_3_share": 1.0495544172231275,
+              "best_5_share": 1.3080868290400347
+            },
+            "expectancy_r": 0.5931174352210011,
+            "max_drawdown_r": -1.0963900191935778,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.5419685805784042,
+            "rv_median": 0.029462211578075558,
+            "threshold": 0.009551374982428973,
+            "total_r": 3.558704611326007,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.07859853477647016,
+            "concentration": {
+              "best_1_share": 0.4881236751230874,
+              "best_3_share": 1.46010349814761,
+              "best_5_share": 2.424650245261557
+            },
+            "expectancy_r": 0.08327329369887612,
+            "max_drawdown_r": -4.946705792723046,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.1821660706631856,
+            "rv_median": 0.022083754758708992,
+            "threshold": 0.006725458955176844,
+            "total_r": 2.664745398364036,
+            "trades": 32,
+            "window": 4
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.08337143748851172,
+            "concentration": {
+              "best_1_share": 113.19140575877245,
+              "best_3_share": 339.0455108720932,
+              "best_5_share": 563.6193063765977
+            },
+            "expectancy_r": 0.0003919494966423201,
+            "max_drawdown_r": -4.827588937764035,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 1.000791217371702,
+            "rv_median": 0.021226841543895997,
+            "threshold": 0.006662939158713188,
+            "total_r": 0.011366535402627283,
+            "trades": 29,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.06439092416499936,
+            "concentration": {
+              "best_1_share": 1.0267970515050313,
+              "best_3_share": 3.0441555301844874,
+              "best_5_share": 3.8739871119760503
+            },
+            "expectancy_r": 0.14205870470402712,
+            "max_drawdown_r": -2.3206734088266074,
+            "profit_factor_r": 1.3277278743603325,
+            "total_r": 1.2785283423362441,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.04960069544689483,
+            "concentration": {
+              "best_1_share": 0.36356427459654195,
+              "best_3_share": 1.0843799644730752,
+              "best_5_share": 1.79473767023271
+            },
+            "expectancy_r": 0.38497426931193224,
+            "max_drawdown_r": -1.6571919658389664,
+            "profit_factor_r": 2.258276834552446,
+            "total_r": 3.4647684238073904,
+            "trades": 9,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.16852284509378612,
+            "concentration": {
+              "best_1_share": 0.48605041541965727,
+              "best_3_share": 1.4539018449604675,
+              "best_5_share": 2.415410239535176
+            },
+            "expectancy_r": 0.043870687438797754,
+            "max_drawdown_r": -5.73107382225799,
+            "profit_factor_r": 1.0922988422398545,
+            "total_r": 2.676111933766663,
+            "trades": 61,
+            "year": 2024
+          }
+        ]
+      },
+      "round_trip_0_16pct": {
+        "cost_model": {
+          "half_spread_bps": 1,
+          "slippage_bps": 2,
+          "taker_fee_bps": 5
+        },
+        "summary": {
+          "compounded_return": 0.26496486063940927,
+          "concentration": {
+            "best_1_share": 0.22888440643021188,
+            "best_3_share": 0.6805489866316301,
+            "best_5_share": 1.1286474171679635
+          },
+          "expectancy_r": 0.07222379111079515,
+          "max_drawdown_r": -6.491290540991263,
+          "median_window_expectancy_r": 0.06132889590509626,
+          "profit_factor_r": 1.1561399657668752,
+          "profitable_window_share": 0.6,
+          "total_r": 5.705679497752817,
+          "trades": 79,
+          "windows": 5
+        },
+        "windows": [
+          {
+            "calibration_start": "2021-01-01T00:00:00+00:00",
+            "calibration_stop": "2022-06-30T23:00:00+00:00",
+            "compounded_return": 0.0605890556178339,
+            "concentration": {
+              "best_1_share": 1.1302905949971893,
+              "best_3_share": 3.338372587181095,
+              "best_5_share": 4.2284626468492075
+            },
+            "expectancy_r": 0.1283781033247797,
+            "max_drawdown_r": -2.368978298188041,
+            "oos_start": "2022-07-01T00:00:00+00:00",
+            "oos_stop": "2022-12-31T23:00:00+00:00",
+            "profit_factor_r": 1.2907242878211211,
+            "rv_median": 0.04083439712497367,
+            "threshold": 0.0167624136641491,
+            "total_r": 1.1554029299230173,
+            "trades": 9,
+            "window": 1
+          },
+          {
+            "calibration_start": "2021-07-01T00:00:00+00:00",
+            "calibration_stop": "2022-12-31T23:00:00+00:00",
+            "compounded_return": -0.002008145131566219,
+            "concentration": {
+              "best_1_share": -7.480312231128589,
+              "best_3_share": 1.0,
+              "best_5_share": 1.0
+            },
+            "expectancy_r": -0.05503826618112186,
+            "max_drawdown_r": -1.4002250456276362,
+            "oos_start": "2023-01-01T00:00:00+00:00",
+            "oos_stop": "2023-06-30T23:00:00+00:00",
+            "profit_factor_r": 0.882079813485014,
+            "rv_median": 0.03538856675746148,
+            "threshold": 0.012871453817677514,
+            "total_r": -0.16511479854336558,
+            "trades": 3,
+            "window": 2
+          },
+          {
+            "calibration_start": "2022-01-01T00:00:00+00:00",
+            "calibration_stop": "2023-06-30T23:00:00+00:00",
+            "compounded_return": 0.04795242540484512,
+            "concentration": {
+              "best_1_share": 0.36318860202700676,
+              "best_3_share": 1.0767692122076824,
+              "best_5_share": 1.3319337068697394
+            },
+            "expectancy_r": 0.5651284516394134,
+            "max_drawdown_r": -1.125511090861361,
+            "oos_start": "2023-07-01T00:00:00+00:00",
+            "oos_stop": "2023-12-31T23:00:00+00:00",
+            "profit_factor_r": 3.3333375143469635,
+            "rv_median": 0.029462211578075558,
+            "threshold": 0.009551374982428973,
+            "total_r": 3.3907707098364805,
+            "trades": 6,
+            "window": 3
+          },
+          {
+            "calibration_start": "2022-07-01T00:00:00+00:00",
+            "calibration_stop": "2023-12-31T23:00:00+00:00",
+            "compounded_return": 0.0649061932613555,
+            "concentration": {
+              "best_1_share": 0.6572431922903926,
+              "best_3_share": 1.9654298158220385,
+              "best_5_share": 3.258733194758593
+            },
+            "expectancy_r": 0.06132889590509626,
+            "max_drawdown_r": -5.142042917710651,
+            "oos_start": "2024-01-01T00:00:00+00:00",
+            "oos_stop": "2024-06-30T23:00:00+00:00",
+            "profit_factor_r": 1.1310372368552242,
+            "rv_median": 0.022083754758708992,
+            "threshold": 0.006725458955176844,
+            "total_r": 1.9625246689630804,
+            "trades": 32,
+            "window": 4
+          },
+          {
+            "calibration_start": "2023-01-01T00:00:00+00:00",
+            "calibration_stop": "2024-06-30T23:00:00+00:00",
+            "compounded_return": 0.07090612734038215,
+            "concentration": {
+              "best_1_share": -1.9924853247037078,
+              "best_3_share": -5.966299960761402,
+              "best_5_share": -9.90829184605887
+            },
+            "expectancy_r": -0.021996690083668818,
+            "max_drawdown_r": -5.007781612479077,
+            "oos_start": "2024-07-01T00:00:00+00:00",
+            "oos_stop": "2024-12-31T18:00:00+00:00",
+            "profit_factor_r": 0.956715891527035,
+            "rv_median": 0.021226841543895997,
+            "threshold": 0.006662939158713188,
+            "total_r": -0.6379040124263957,
+            "trades": 29,
+            "window": 5
+          }
+        ],
+        "years": [
+          {
+            "compounded_return": 0.0605890556178339,
+            "concentration": {
+              "best_1_share": 1.1302905949971893,
+              "best_3_share": 3.338372587181095,
+              "best_5_share": 4.2284626468492075
+            },
+            "expectancy_r": 0.1283781033247797,
+            "max_drawdown_r": -2.368978298188041,
+            "profit_factor_r": 1.2907242878211211,
+            "total_r": 1.1554029299230173,
+            "trades": 9,
+            "year": 2022
+          },
+          {
+            "compounded_return": 0.045847984843655265,
+            "concentration": {
+              "best_1_share": 0.38290204567700903,
+              "best_3_share": 1.1410100855240546,
+              "best_5_share": 1.884598347518225
+            },
+            "expectancy_r": 0.35840621236590164,
+            "max_drawdown_r": -1.7278987979309226,
+            "profit_factor_r": 2.1304565544413903,
+            "total_r": 3.225655911293115,
+            "trades": 9,
+            "year": 2023
+          },
+          {
+            "compounded_return": 0.14041456740630665,
+            "concentration": {
+              "best_1_share": 0.9737549931845104,
+              "best_3_share": 2.9119314119343804,
+              "best_5_share": 4.830908404140893
+            },
+            "expectancy_r": 0.021715092730109586,
+            "max_drawdown_r": -6.491290540991264,
+            "profit_factor_r": 1.044578332884802,
+            "total_r": 1.3246206565366847,
+            "trades": 61,
+            "year": 2024
+          }
+        ]
+      }
+    }
+  },
+  "sealed_test_range": [
+    35059,
+    43824
+  ],
+  "test_opened": false
+}
