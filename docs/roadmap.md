@@ -9,14 +9,17 @@ ETHUSDT 1h кандидат повторно проверен walk-forward то�
 - anchored: 42 сделки, `+0,221R` expectancy, `+9,279R`, PF `1,602`, 3/4 положительных окон;
 - rolling: 75 сделок, `+0,086R` expectancy, `+6,476R`, PF `1,195`, 2/4 положительных окон.
 
-Положительный результат зафиксирован, но не считается подтверждённым edge: rolling-результат исчезает после удаления лучших пяти сделок, 2022 год отрицателен, а Phase 4 не подтвердила простой 24h continuation-механизм. Закрытый TEST не открывался.
+Положительный результат зафиксирован, но не считается подтверждённым edge: rolling-результат исчезает после удаления лучших пяти сделок, 2022 год отрицателен, а Phase 4 не подтвердила простой 24h continuation-механизм (`−0,018%` gross через 24 часа и `−0,547` п.п. относительно главного контроля). Закрытый TEST не открывался.
 
 Актуальные материалы:
 
 - `reports/PHASE1_AUDIT.md`;
 - `reports/PHASE2_WALK_FORWARD.md`;
 - `reports/PHASE4_ECONOMIC_MECHANISM.md`;
-- `reports/phase2/walk-forward.json`.
+- `reports/phase2/walk-forward.json`;
+- `reports/phase4/mechanism.json`.
+
+`reports/BEST_RESULT_SO_FAR.md` и исходный diagnostic JSON сохранены только как исторические артефакты до исправления утечки VALIDATION-калибровки.
 
 ## Важное уточнение по комиссиям BingX
 
