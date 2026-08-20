@@ -1,7 +1,7 @@
 from __future__ import annotations
 
+import html
 import json
-import os
 import subprocess
 from dataclasses import asdict
 from datetime import datetime, timezone
@@ -28,6 +28,27 @@ def git_sha() -> str:
 def write_json(path: Path, value: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True), encoding="utf-8")
+
+
+def write_html(path: Path, report: dict) -> None:
+    """Write a dependency-free, immutable human-readable report artifact."""
+    verdict = html.escape(str(report["verdict"]))
+    reason = html.escape(str(report["reason"]))
+    scope = report["scope"]
+    selection = report["selection"]
+    rows = sum(item["quality"]["rows"] for item in report["data_quality"].values())
+    tested = sum(item["candidates_tested"] for item in selection.values()) if not report["test_opened"] else selection["candidates_tested"]
+    test_state = "OPENED ONCE" if report["test_opened"] else "SEALED"
+    document = f"""<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{html.escape(str(report['experiment_id']))} — {verdict}</title>
+<style>body{{margin:0;background:#0a0d10;color:#eef2f3;font:16px/1.6 system-ui,sans-serif}}main{{max-width:920px;margin:auto;padding:48px 24px}}code,.label{{font-family:ui-monospace,monospace}}.label{{color:#6ee7df;font-size:12px;letter-spacing:.14em;text-transform:uppercase}}h1{{font-size:clamp(36px,7vw,72px);line-height:1.05;margin:.25em 0}}.verdict{{color:#ff8075}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border-block:1px solid #30383d;margin:36px 0}}.stat{{padding:22px 0}}.value{{font-size:28px;font-weight:650}}p{{max-width:720px;color:#aab4b9}}a{{color:#6ee7df}}</style></head>
+<body><main><div class="label">Quant research / immutable artifact</div><h1>Edge не подтверждён</h1><strong class="verdict">{verdict}</strong><p>{reason}</p>
+<section class="grid"><div class="stat"><div class="label">Гипотез</div><div class="value">{tested:,}</div></div><div class="stat"><div class="label">Баров</div><div class="value">{rows:,}</div></div><div class="stat"><div class="label">TEST</div><div class="value">{test_state}</div></div></section>
+<h2>Что проверялось</h2><p>{html.escape(', '.join(scope['symbols']))}, {html.escape(scope['timeframe'])}, {scope['years'][0]}–{scope['years'][1]}, {html.escape(scope['source'])}. Отбор выполнялся только на TRAIN/VALIDATION с BH-FDR и реалистичными издержками.</p>
+<h2>Практический вывод</h2><p>Эту спецификацию не следует торговать: статистического основания ожидать положительный результат после издержек не найдено. Закрытый TEST не использован, потому что ни один кандидат не заслужил финальной проверки.</p><p><a href="latest.json">Машиночитаемый JSON</a></p></main></body></html>"""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(document, encoding="utf-8")
 
 
 def run() -> dict:
@@ -113,6 +134,7 @@ def run() -> dict:
             "data_quality": manifests,
         }
     write_json(PUBLIC / "latest.json", report)
+    write_html(PUBLIC / "latest.html", report)
     return report
 
 

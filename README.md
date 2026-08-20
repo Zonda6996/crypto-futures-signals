@@ -1,33 +1,30 @@
-# crypto-futures-signals
+# Crypto Futures Edge Research
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Воспроизводимое исследование простых сигналов для Binance USD-M perpetual futures: BTCUSDT и ETHUSDT, часовые данные за 2021–2025 годы.
 
-## Built with v0
+## Текущий результат
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Вердикт эксперимента `binance-btc-eth-1h-v1`: **REJECTED**. Ни один из 2016 кандидатов не прошёл одновременно TRAIN/VALIDATION, BH-FDR, минимум сделок и положительную нижнюю границу 95% CI. Поэтому стратегия не заморожена, а закрытый TEST корректно не вскрыт.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_tEp8vopRnEja44IhhSsI5aGw6wDZ)
-
-## Getting Started
-
-First, run the development server:
+## Воспроизведение
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+python3 -m unittest discover -s tests -v
+python3 -m research.pipeline
+pnpm build
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pipeline загружает реальные публичные архивы Binance, проверяет контрольные суммы и качество баров, строит только лагированные признаки и сохраняет отчёты в `public/reports/`. Сырые данные исключены из Git; `data-manifest.json` содержит происхождение и SHA-256 каждого файла.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Методология
 
-## Learn More
+- решение на баре исполняется на open следующего бара;
+- funding присоединяется только backward as-of, OI не подменяется синтетикой;
+- long/short, BTC-режим, волатильность и горизонты исследуются раздельно;
+- отбор выполняется только по TRAIN/VALIDATION;
+- издержки: taker 5 bps + half-spread 1 bp + slippage 2 bps на каждую сторону;
+- TEST открывается один раз только для прошедшей и замороженной спецификации.
 
-To learn more, take a look at the following resources:
+Интерфейс Next.js объясняет результат человеку, `latest.json` предназначен для машинной проверки, а `latest.html` — автономная версия отчёта. Это исследование, а не инвестиционная рекомендация.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
