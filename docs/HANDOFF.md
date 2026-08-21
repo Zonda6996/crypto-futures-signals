@@ -22,13 +22,20 @@
 - План независимого исследования альткоинов для нового чата: [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md)
 - Frozen altcoin protocol: [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md)
 - Altcoin Phase A audit: [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md)
+- Altcoin frozen TRAIN/VALIDATION result: [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md)
 
 ## Новый altcoin Phase A status
 
 Protocol `ALT-XSMOM-001-A` зафиксирован: cross-sectional long/short, point-in-time Top 30 и HOLDOUT с `2026-01-01`. Строгая Phase A завершена с verdict **STOP**: полного датированного pre-2026 lifecycle registry Binance USD-M perpetuals с delisted-контрактами нет; current roster создал бы survivorship bias. По явному решению владельца зафиксирован отдельный exploratory amendment `ALT-XSMOM-001-B`: вместо Top 30 используется неизменяемая корзина из 10 заранее выбранных ликвидных контрактов — `ETHUSDT`, `BNBUSDT`, `SOLUSDT`, `XRPUSDT`, `ADAUSDT`, `DOGEUSDT`, `LINKUSDT`, `LTCUSDT`, `AVAXUSDT`, `DOTUSDT`. Это осознанно допускает survivorship/selection bias, поэтому будущий результат будет exploratory и не отменит Phase A STOP. HOLDOUT не загружался; signal/PnL и parameter search ещё не запускались.
 - Единственный TEST result/audit: [`reports/private/test-opening/result.json`](../reports/private/test-opening/result.json)
 
-Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
+## Altcoin Phase B frozen TRAIN/VALIDATION status
+
+Exploratory fixed-basket experiment `ALT-XSMOM-001-B` завершён с **FAIL / STOP**. Pre-HOLDOUT audit прошёл gate: максимум одновременно eligible активов — 10; все series заканчиваются `2025-12-31T23:00:00Z`, HOLDOUT не читался. Frozen calendar: TRAIN `[2020-05-05, 2024-04-20)`, VALIDATION `[2024-04-20, 2026-01-01)`. TRAIN-only selection выбрал `30d momentum / 24h rebalance`; на единственной VALIDATION при 0,12% получены net Sharpe `−0,817`, compounded return `−35,90%`, max drawdown `−46,78%`, bootstrap CI95 `[−2,449; +0,632]`. При 0,20% результат `−60,99%`; concentration limit также нарушен. Полные ledgers и machine artifacts находятся в `reports/altcoin-phase-b/`.
+
+Это только **exploratory fixed-basket evidence with survivorship/selection bias**. Нельзя переотбирать другую grid point по VALIDATION, менять корзину, открывать HOLDOUT, возвращаться к старому ETH TEST или переходить к paper/live trading.
+
+Новый чат сначала читает этот файл, итоговый altcoin Phase B report и roadmap.
 
 ## Цель
 
@@ -79,7 +86,7 @@ Protocol `ALT-XSMOM-001-A` зафиксирован: cross-sectional long/short,
 - rolling без top-5 отрицателен при 0,10%, 0,12% и 0,16%; при 0,16% `−2,385R`;
 - единственный отрицательный rolling-сосед — take `3,0 ATR`, `−1,497R`.
 
-Предварительно заданный strict rule требовал положительный frozen результат после удаления top-5 в обеих схемах. Требование не выполнено, поэтому `strict pass = false`. Не выбирать новый лучший вариант из карты соседей.
+Предварительно заданный strict rule требовал положительный frozen результ��т после удаления top-5 в обеих схемах. Требование не выполнено, поэтому `strict pass = false`. Не выбирать новый лучший вариант из карты соседей.
 
 ## Дополнительная M15/M30 robustness-проверка
 
@@ -152,9 +159,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**В новом чате выполнить только exploratory Phase B для frozen fixed basket `ALT-XSMOM-001-B`.**
+**Остановиться после FAIL frozen TRAIN/VALIDATION `ALT-XSMOM-001-B`.**
 
-Начать с [`docs/ALTCOIN_FIXED_BASKET_NEXT_CHAT.md`](./ALTCOIN_FIXED_BASKET_NEXT_CHAT.md). Скачать и проверить только pre-HOLDOUT данные 10 зафиксированных контрактов, зафиксировать TRAIN/VALIDATION границы по coverage, затем выполнить только preregistered cross-sectional grid и controls. Не менять корзину, не переносить старые ETH-параметры, не открывать HOLDOUT с `2026-01-01` и не использовать TEST 2025 для настройки.
+Не выбирать другую конфигурацию из уже просмотренной grid, не менять frozen basket и не открывать HOLDOUT с `2026-01-01`. Любая будущая новая гипотеза требует отдельного owner decision, нового protocol ID и нового будущего sealed holdout; текущая версия не допускается к paper/live trading.
 
 ## Правила для следующих чатов
 
