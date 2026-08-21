@@ -13,7 +13,8 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
-__pycache__/
-*.pyc
+
+# Reproducible research inputs remain local; manifests are committed.
 data/cache/
 data/normalized/
+reports/private/

@@ -1,0 +1,26 @@
+{
+  "candidate": null,
+  "costs": {
+    "half_spread_bps": 1.0,
+    "slippage_bps": 2.0,
+    "taker_fee_bps": 5.0
+  },
+  "experiment_id": "binance-btc-eth-1h-v1",
+  "feature_catalog": {
+    "abnormal_volume_24": "Relative volume tests whether moves carry unusual participation.",
+    "atr_24": "Range-scaled volatility supports comparable exits across instruments.",
+    "breakout_48": "Distance from prior 48-hour range tests slow stop/attention cascades.",
+    "btc_regime": "BTC lagged daily trend conditions broad crypto risk appetite.",
+    "funding": "Last actually published funding rate tests crowded positioning; backward as-of joined.",
+    "relative_strength_24": "Alt return minus BTC return separates idiosyncratic strength.",
+    "ret_24": "Daily momentum captures persistent information diffusion.",
+    "ret_4": "Short-horizon continuation/reversal from four fully closed hourly bars.",
+    "reversal_1": "One-bar reversal tests temporary liquidity pressure.",
+    "rv_24": "Realized volatility identifies risk and forced-flow regimes.",
+    "taker_imbalance_24": "Aggressive flow imbalance tests persistent urgency.",
+    "vwap_distance_24": "Distance from trailing VWAP tests anchoring and inventory mean reversion."
+  },
+  "selected_symbol": null,
+  "selection_rule": "BH-FDR significant; >=30 validation trades; positive TRAIN expectancy and validation CI lower bound",
+  "status": "NO_CANDIDATE"
+}
