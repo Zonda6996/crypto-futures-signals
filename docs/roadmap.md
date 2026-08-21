@@ -1,6 +1,6 @@
 # Roadmap поиска торгового edge
 
-Дата фиксации: 21 августа 2026 года.
+Дата фиксации: 22 августа 2026 года.
 
 ## Текущий статус
 
@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых��������да;
+- причину вых����������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -273,11 +273,11 @@ Long и short проверять отдельно.
 
 - идентификатор эксперимента;
 - экономическую гипотезу;
-- дост��пн��е на ��омент сигнала данные;
+- д��ст��пн��е на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
 - train/validation/test границы;
-- критери�� принятия решения;
+- кр��тери�� принятия решения;
 - все отрицательные результаты.
 
 Использовать:
@@ -414,4 +414,18 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 
 Владелец отдельно одобрил только план нового исследовательского контура, описанный в [`docs/ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md`](./ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md). Он не изменяет `ALT-LOMOM-002-A`: текущая версия остаётся baseline и не подвергается retuning. Новый контур раздельно сравнит portfolio signals и trade signals с TP/SL на Binance USD-M perpetuals, primary lifecycle universe и TF `5m`, `15m`, `30m`, `1h`, `2h`, `4h`, `1d`.
 
-Поиск будет контролируемо широким, с раздельными leaderboard, nested walk-forward и multiple-testing correction. Весь доступный диапазон 2026 года должен быть заранее запечатан как untouched holdout и открываться один раз только после freeze по одному победителю каждого семейства. **Статус: PLAN ONLY.** Код, data download, manifests, backtests и расчёты ещё не начинались. Следующий разрешённый шаг — только документационная Phase 0 по [`docs/ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md); она должна уточнить все незаданные числа и завершиться новым owner gate.
+Поиск будет контролируемо широким, с раздельными leaderboard, nested walk-forward и multiple-testing correction. Весь frozen диапазон 2026 года должен оставаться untouched и открываться один раз только после freeze по одному победителю каждого семейства.
+
+### Новый engine: пофазный статус
+
+0. **Phase 0 — protocol freeze (DONE):** создан [`docs/ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`](./ALTCOIN_MULTITF_FROZEN_PROTOCOL.md). Зафиксированы development `[2019-09-08, 2026-01-01)`, sealed holdout `[2026-01-01, 2026-08-01)`, пять annual outer folds с expanding annual inner folds, purge `97d`, embargo `7d`, point-in-time lifecycle universe, moderate liquidity filter, конечный search manifest обоих семейств, execution/cost/risk model, score, SPA `5%`, DSR `95%`, robustness/concentration и mechanical PASS/FAIL.
+1. **Owner gate (WAITING):** требуется отдельное явное разрешение на Phase 1.
+2. **Phase 1 — data/lifecycle audit (NOT APPROVED):** после разрешения допустимы только получение и нормализация development/lifecycle данных, физическое sealing holdout, manifests и hashes. Signal/PnL/backtest запрещены.
+3. **Phase 2 — causal engine (NOT APPROVED):** отдельный будущий gate; implementation и tests без parameter selection.
+4. **Phase 3 — nested walk-forward sweep (NOT APPROVED):** два полных leaderboard без holdout.
+5. **Phase 4 — frozen robustness (NOT APPROVED):** только заранее заданные stresses/gates, без расширения grid.
+6. **Phase 5 — shortlist freeze (NOT APPROVED):** ровно один PASS winner каждого семейства; если family FAIL, winner отсутствует.
+7. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
+8. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
+
+**Текущая точка — STOP после Phase 0.** Код, data download, backtest, grid search, holdout и paper/live не запускались. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.

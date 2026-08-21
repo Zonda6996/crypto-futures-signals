@@ -1,6 +1,6 @@
 # Project handoff
 
-Обновлено: 21 августа 2026 года.
+Обновлено: 22 августа 2026 года.
 
 ## Где продолжать
 
@@ -22,6 +22,7 @@
 - План независимого исследования альткоинов для нового чата: [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md)
 - Утверждённый план нового multi-timeframe research engine: [`docs/ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md`](./ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md)
 - Готовый handoff для его документационной Phase 0: [`docs/ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md)
+- Frozen Phase 0 protocol нового engine: [`docs/ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`](./ALTCOIN_MULTITF_FROZEN_PROTOCOL.md)
 - Frozen altcoin protocol: [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md)
 - Altcoin Phase A audit: [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md)
 - Altcoin frozen TRAIN/VALIDATION result: [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md)
@@ -52,7 +53,9 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 Все данные `< 2026-01-01` считаются DEVELOPMENT/TRAIN, а не новым OOS. Новый prospective VALIDATION — `[2026-09-01, 2027-09-01)`, новый sealed HOLDOUT начинается `2027-09-01`. Старый HOLDOUT не открывался и не переопределён.
 
-**Текущая точка остановки:** Фаза 3 DONE. TRAIN diagnostic: PASS — Sharpe `1,1508`, compounded return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap CI95 `[0,2308; 2,0609]`, 0 нарушений; ledger reconciliation PASS. Это contaminated DEVELOPMENT/TRAIN evidence на fixed basket с survivorship/selection bias, не prospective подтверждение. `ALT-LOMOM-002-A` остаётся неизменяемым baseline. Отдельно утверждён PLAN ONLY нового research engine на TF `5m/15m/30m/1h/2h/4h/1d`; его код и расчёты не начаты. Разрешена только документационная Phase 0 из нового handoff; VALIDATION, HOLDOUT, paper/live, retuning baseline и реализация до нового owner gate запрещены.
+**Текущая точка остановки baseline:** Фаза 3 DONE. TRAIN diagnostic: PASS — Sharpe `1,1508`, compounded return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap CI95 `[0,2308; 2,0609]`, 0 нарушений; ledger reconciliation PASS. Это contaminated DEVELOPMENT/TRAIN evidence на fixed basket с survivorship/selection bias, не prospective подтверждение. `ALT-LOMOM-002-A` остаётся неизменяемым baseline; VALIDATION и любое изменение baseline запрещены.
+
+**Новый engine — Phase 0 DONE / STOP:** отдельный protocol `ALT-MULTITF-003` заморожен в [`docs/ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`](./ALTCOIN_MULTITF_FROZEN_PROTOCOL.md). Development: `[2019-09-08T00:00:00Z, 2026-01-01T00:00:00Z)`; sealed holdout: `[2026-01-01T00:00:00Z, 2026-08-01T00:00:00Z)`. Зафиксированы annual nested walk-forward, lifecycle/liquidity eligibility, конечные grids для двух независимых семейств на `5m/15m/30m/1h/2h/4h/1d`, costs/funding/execution, risk limits, score, SPA+Deflated Sharpe, robustness/concentration и mechanical PASS/FAIL. Код, данные и расчёты не начинались; holdout не открывался. Оставшееся owner decision: отдельное явное разрешение Phase 1. До него запрещены data download, implementation, backtest, grid search, holdout и paper/live.
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
