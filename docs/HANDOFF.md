@@ -8,8 +8,10 @@
 - Рабочая ветка: `crypto-futures-signals` (содержит результаты Phase 1–4 после rebase на remote)
 - Roadmap: [`docs/roadmap.md`](./roadmap.md)
 - Phase 1: [`reports/PHASE1_AUDIT.md`](../reports/PHASE1_AUDIT.md)
-- Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
-- Phase 3: [`reports/PHASE3_ROBUSTNESS.md`](../reports/PHASE3_ROBUSTNESS.md)
+- Оригинальная Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
+- Дополнительный повтор Phase 2: [`reports/PHASE2_WALK_FORWARD_REPEAT.md`](../reports/PHASE2_WALK_FORWARD_REPEAT.md)
+- Оригинальная Phase 3: [`reports/PHASE3_PARAMETER_STABILITY.md`](../reports/PHASE3_PARAMETER_STABILITY.md)
+- Дополнительная повторная robustness-проверка: [`reports/PHASE3_ROBUSTNESS.md`](../reports/PHASE3_ROBUSTNESS.md)
 - Phase 4: [`reports/PHASE4_ECONOMIC_MECHANISM.md`](../reports/PHASE4_ECONOMIC_MECHANISM.md)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
@@ -32,23 +34,25 @@
 ## Статус фаз
 
 - Phase 1 завершена: аудит исполнения, причинности, данных и TRAIN-only calibration.
-- Phase 2 завершена: anchored/rolling walk-forward только внутри TRAIN+VALIDATION.
-- Phase 3 завершена: costs, window boundaries, top-trade concentration и one-factor neighbor map.
+- Оригинальная Phase 2 завершена: четыре anchored/rolling walk-forward-схемы только внутри TRAIN+VALIDATION; дополнительный повтор хранится отдельно.
+- Оригинальная Phase 3 завершена: декартова карта из 256 VALIDATION-конфигураций; дополнительная повторная robustness-проверка costs/windows/concentration/one-factor neighbors хранится отдельно.
 - Phase 4 завершена: простой специфический 24h continuation-механизм не подтверждён.
 - Закрытый TEST ни в одной фазе не оценивался.
 
-## Результат Phase 2
+## Результаты Phase 2
 
-При 0,10% round trip:
+Оригинальная Phase 2: все четыре заданные walk-forward-схемы дали положительный объединённый OOS. Следующие числа относятся только к дополнительному повтору Phase 2 при 0,10% round trip:
 
 - anchored: 42 сделки, expectancy `+0,221R`, total `+9,279R`, PF `1,602`, 3/4 положительных окон;
 - rolling: 75 сделок, expectancy `+0,086R`, total `+6,476R`, PF `1,195`, 2/4 положительных окон.
 
 Объединённый OOS положителен, но rolling без лучших пяти сделок даёт `−0,044R`.
 
-## Результат Phase 3
+## Результаты Phase 3
 
-Только TRAIN+VALIDATION `[0, 35059)`:
+Оригинальная Phase 3: на одной VALIDATION-выборке положительны 231/256 точек при 0,10%, а локальный кластер — 9/9; это диагностика поверхности, не новый поиск кандидата.
+
+Следующие результаты относятся только к дополнительной повторной robustness-проверке на TRAIN+VALIDATION `[0, 35059)`:
 
 - при costs 0,05–0,16% untrimmed anchored и rolling остаются положительными;
 - при 0,16%: anchored `+8,170R`, rolling `+4,053R`;
@@ -76,6 +80,8 @@ Phase 4 не обнаружила специфический положител�
 ```bash
 python3 -m unittest discover -s tests -v
 python3 -m research.phase2_walk_forward
+python3 -m research.phase2_walk_forward_repeat
+python3 -m research.phase3_parameter_map
 python3 -m research.phase3_robustness
 python3 -m research.phase4_mechanism
 ```
