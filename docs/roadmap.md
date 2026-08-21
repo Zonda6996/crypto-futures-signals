@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых������да;
+- причину вых��������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -273,11 +273,11 @@ Long и short проверять отдельно.
 
 - идентификатор эксперимента;
 - экономическую гипотезу;
-- доступн��е на ��омент сигнала данные;
+- дост��пн��е на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
 - train/validation/test границы;
-- критерии принятия решения;
+- критери�� принятия решения;
 - все отрицательные результаты.
 
 Использовать:
@@ -324,7 +324,7 @@ $$Concentration_5 = \frac{PnL\ лучших\ 5\ сдел��к}{TotalPnL}$$
 
 - аудита движка;
 - walk-forward;
-- анали��а соседних параметров;
+- ��нали��а соседних параметров;
 - фиксации расходов;
 - заморозки спецификации.
 
@@ -394,7 +394,7 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 2. Frozen exploratory `ALT-XSMOM-001-B` завершён с FAIL; не выбирать другую конфигурацию из просмотренной grid и не менять basket.
 3. HOLDOUT с `2026-01-01` не открывать и не анализировать.
 4. Не переходить к paper/live trading для этой версии.
-5. Любая новая гипотеза возможна только пос��е отдельного owner decision, с новым protocol ID и новым будущим sealed holdout.
+5. Любая новая гипотеза возм��жна только пос��е отдельного owner decision, с новым protocol ID и новым будущим sealed holdout.
 
 ## Зафиксированный пофазный план после FAIL
 
@@ -409,3 +409,9 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 ## Текущее решение
 
 Старые altcoin маршруты остаются остановленными. Новая adaptive гипотеза зафиксирована в [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md): fixed basket, `30d` momentum, long-only top 4, weekly rebalance, portfolio-level 20% volatility target, один candidate без grid. Все данные до 2026 года contaminated и считаются DEVELOPMENT/TRAIN; prospective VALIDATION начинается `2026-09-01`, новый sealed HOLDOUT — `2027-09-01`. **Фаза 3 DONE; TRAIN diagnostic PASS; текущая точка — STOP перед Фазой 4.** На TRAIN: Sharpe `1,1508`, return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap lower `+0,2308`, 0 нарушений. Это fixed-basket evidence с survivorship/selection bias. Prospective VALIDATION и любые следующие действия не разрешены без нового owner decision.
+
+## Новый независимый multi-timeframe research plan
+
+Владелец отдельно одобрил только план нового исследовательского контура, описанный в [`docs/ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md`](./ALTCOIN_RESEARCH_ENGINE_PROTOCOL.md). Он не изменяет `ALT-LOMOM-002-A`: текущая версия остаётся baseline и не подвергается retuning. Новый контур раздельно сравнит portfolio signals и trade signals с TP/SL на Binance USD-M perpetuals, primary lifecycle universe и TF `5m`, `15m`, `30m`, `1h`, `2h`, `4h`, `1d`.
+
+Поиск будет контролируемо широким, с раздельными leaderboard, nested walk-forward и multiple-testing correction. Весь доступный диапазон 2026 года должен быть заранее запечатан как untouched holdout и открываться один раз только после freeze по одному победителю каждого семейства. **Статус: PLAN ONLY.** Код, data download, manifests, backtests и расчёты ещё не начинались. Следующий разрешённый шаг — только документационная Phase 0 по [`docs/ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_ENGINE_NEXT_CHAT.md); она должна уточнить все незаданные числа и завершиться новым owner gate.
