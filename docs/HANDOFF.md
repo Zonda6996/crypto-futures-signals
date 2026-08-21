@@ -5,7 +5,7 @@
 ## Где продолжать
 
 - Репозиторий: `Zonda6996/crypto-futures-signals`
-- Рабочая ветка: `v0/crypto-futures-signals-59e5aef9`
+- Рабочая ветка: `v0/crypto-futures-analysis-88d9d19a`
 - Roadmap: [`docs/roadmap.md`](./roadmap.md)
 - Phase 1: [`reports/PHASE1_AUDIT.md`](../reports/PHASE1_AUDIT.md)
 - Оригинальная Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
@@ -15,6 +15,8 @@
 - Phase 4: [`reports/PHASE4_ECONOMIC_MECHANISM.md`](../reports/PHASE4_ECONOMIC_MECHANISM.md)
 - Дополнительная M15/M30 robustness-проверка: [`reports/TIMEFRAME_ROBUSTNESS_M15_M30.md`](../reports/TIMEFRAME_ROBUSTNESS_M15_M30.md)
 - Отдельная regime/concentration-диагностика: [`reports/REGIME_CONCENTRATION.md`](../reports/REGIME_CONCENTRATION.md)
+- Phase 5 protocol: [`docs/PHASE5_PROTOCOL.md`](./PHASE5_PROTOCOL.md)
+- Phase 5 falsification: [`reports/PHASE5_FALSIFICATION.md`](../reports/PHASE5_FALSIFICATION.md)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
 
@@ -39,6 +41,7 @@
 - Оригинальная Phase 2 завершена: четыре anchored/rolling walk-forward-схемы только внутри TRAIN+VALIDATION; дополнительный повтор хранится отдельно.
 - Оригинальная Phase 3 завершена: декартова карта из 256 VALIDATION-конфигураций; дополнительная повторная robustness-проверка costs/windows/concentration/one-factor neighbors хранится отдельно.
 - Phase 4 завершена: простой специфический 24h continuation-механизм не подтверждён.
+- Phase 5 завершена: frozen 1h прошёл все 7 заранее зафиксированных pre-TEST falsification-критериев; отдельный one-bar-delay stress отрицателен.
 - Закрытый TEST ни в одной фазе не оценивался.
 
 ## Результаты Phase 2
@@ -83,6 +86,20 @@
 
 Вывод: 1h сохраняет положительный запас после top-5 на полном pre-TEST срезе, M30 имеет слабый положительный остаток, M15 полностью зависит от экстремальных сделок. Это не отменяет отрицательные trimmed-результаты исходных дополнительных rolling/timeframe экспериментов: эксперименты и их выборки нельзя смешивать.
 
+## Phase 5 — финальная pre-TEST falsification
+
+Protocol был зафиксирован до расчётов. Frozen 1h-кандидат получил **PASS 7/7** на описательном полном TRAIN+VALIDATION-срезе 2021–2024:
+
+- baseline: 185 сделок, `+16,387R`; без top-5 `+9,808R`;
+- без лучшего года (2024): `+7,294R`;
+- без лучшего непрерывного 90-day кластера: `+8,330R`;
+- costs 0,16%: `+12,210R`;
+- положительны 78,4% rolling 12-month окон;
+- каждый обязательный leave-one-causal-regime-out положителен;
+- combined execution stress: `+4,792R`.
+
+Важная отрицательная диагностика, которая не входила в семь verdict-критериев: дополнительная задержка входа на один 1h-бар дала `−2,358R`. Максимальный период без нового equity high — около 970 дней. Поэтому PASS разрешает только подготовить immutable TEST-opening memo, но не означает подтверждённый edge и не разрешает открывать TEST.
+
 ## Связь с Phase 4
 
 Phase 4 не обнаружила специфический положительный 24h drift: средний gross return полного сигнала через 24 часа `−0,018%`, преимущество над главным контролем `−0,547` п.п. Возможный эффект Phase 2/3 может быть path-dependent и связан с stop/take, а не с простым continuation.
@@ -105,6 +122,7 @@ python3 -m research.phase3_robustness
 python3 -m research.phase4_mechanism
 python3 -m research.timeframe_robustness
 python3 -m research.regime_concentration
+python3 -m research.phase5_falsification
 ```
 
 Market cache скачивается в `data/cache/` и исключён из Git.
@@ -122,9 +140,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**Принять отдельное решение по frozen candidate: остановить текущую версию либо явно разрешить единственное открытие закрыт��го TEST в следующей фазе.**
+**Подготовить отдельный immutable TEST-opening memo без загрузки или просмотра TEST.**
 
-Если открытие разрешено, до просмотра зафиксировать критерий успеха и выполнить один прогон без изменения параметров. Если разрешения нет — TEST не трогать и текущую версию не продвигать в paper trading.
+Memo должен зафиксировать commit и hashes артефактов, единственный frozen запуск, критерий успеха и запрет повторной настройки. После memo всё ещё требуется новое явное разрешение владельца; без него TEST не трогать и кандидата не продвигать в paper trading.
 
 ## Правила для следующих чатов
 

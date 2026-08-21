@@ -21,7 +21,8 @@ ETHUSDT 1h кандидат повторно проверен walk-forward то�
 - `reports/PHASE4_ECONOMIC_MECHANISM.md`;
 - `reports/TIMEFRAME_ROBUSTNESS_M15_M30.md`;
 - `reports/REGIME_CONCENTRATION.md` — отдельная pre-TEST regime/concentration-диагностика, не Phase 2–4;
-- машинные артефакты в `reports/phase2/`, `reports/phase2-repeat/`, `reports/phase3/`, `reports/phase4/`, `reports/timeframe-robustness/` и `reports/regime-concentration/`.
+- `docs/PHASE5_PROTOCOL.md` и `reports/PHASE5_FALSIFICATION.md`;
+- машинные артефакты в `reports/phase2/`, `reports/phase2-repeat/`, `reports/phase3/`, `reports/phase4/`, `reports/timeframe-robustness/`, `reports/regime-concentration/` и `reports/phase5/`.
 
 `reports/BEST_RESULT_SO_FAR.md` и исходный diagnostic JSON сохранены только как исторические артефакты до исправления утечки VALIDATION-калибровки.
 
@@ -127,7 +128,7 @@ $$R_i = \frac{NetPnL_i}{InitialRisk_i}$$
 
 ## 2.1. Схема проверки
 
-Базовая схема:
+Базова�� схема:
 
 - train: 12 месяцев;
 - validation: следующие 3 месяца;
@@ -309,7 +310,7 @@ $$Expectancy_R = WinRate \times AvgWin_R - LossRate \times AvgLoss_R$$
 
 Концентрация прибыли:
 
-$$Concentration_5 = \frac{PnL\ лучших\ 5\ сделок}{TotalPnL}$$
+$$Concentration_5 = \frac{PnL\ лучших\ 5\ сдел��к}{TotalPnL}$$
 
 Если несколько сделок создают почти весь результат, уверенность в edge снижается.
 
@@ -379,14 +380,15 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 - Phase 4: анализ экономического механизма; простой специфический 24h continuation не подтверждён.
 - Дополнительный frozen перенос на M30/M15: оба TF положительны при 0,10% до trimming, но оба отрицательны без top-5; M15 отрицателен при 0,16%. Строгий критерий поддержки не пройден, TEST закрыт.
 - Отдельная regime/concentration-диагностика на полном TRAIN+VALIDATION 2021–2024: 1h `+16,387R` и `+9,808R` без top-5; M30 `+7,926R` и `+1,348R` без top-5; M15 `+0,654R` и `−5,910R` без top-5. Режимы и их thresholds каузальны; leave-one-year/regime-out сохранены отдельно. Это описательный pre-TEST срез, не новая OOS-оценка и не замена результатам Phase 2–4.
+- Phase 5: frozen 1h получил PASS 7/7 по заранее зафиксированному protocol: без top-5 `+9,808R`, без 2024 `+7,294R`, без лучшего 90-day кластера `+8,330R`, при 0,16% `+12,210R`, rolling 12m positive share 78,4%, все обязательные leave-one-regime-out положительны, combined stress `+4,792R`. Отдельный one-bar-delay stress отрицателен (`−2,358R`), а longest no-new-high около 970 дней. TEST не открыт.
 
 # Ближайшая последовательность работ
 
 1. Не менять frozen candidate и не выбирать лучший вариант из Phase 3.
-2. Принять отдельное явное решение: остановить текущую версию либо разрешить единственное открытие TEST.
-3. Если TEST будет разрешён, заранее зафиксировать критерий успеха и не возвращаться к настройке после просмотра.
-4. До такого решения TEST и paper trading не открывать.
+2. Подготовить immutable TEST-opening memo: commit, hashes входов/артефактов, единственный запуск и критерий успеха.
+3. После memo запросить отдельное явное разрешение на единственное открытие TEST.
+4. До такого разрешения TEST и paper trading не открывать.
 
 ## Текущее решение
 
-Положительный результат устойчив по untrimmed costs, границам окон и 10/11 соседним вариантам. Однако frozen rolling после удаления top-5 отрицателен при расходах 0,10–0,16%, поэтому строгий критерий Phase 3 не выполнен. Отдельный полный pre-TEST concentration-срез показывает положительный остаток без top-5 для 1h и M30, но отрицательный для M15; это не меняет заранее заданный strict verdict и не должно смешиваться с оригинальными или повторными Phase 2–3 экспериментами. Кандидат остаётся исследовательским; TEST закрыт до отдельного явного решения.
+Phase 5 прошла все семь заранее зафиксированных критериев, поэтому следующий допустимый шаг — только подготовка immutable TEST-opening memo. Это не отменяет strict fail дополнительной Phase 3, отрицательный one-bar-delay stress Phase 5 (`−2,358R`) и длительный период без нового high; эксперименты нельзя смешивать. Кандидат остаётся исследовательским, TEST закрыт до нового явного разрешения после фиксации memo.
