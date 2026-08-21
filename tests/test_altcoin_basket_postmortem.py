@@ -12,7 +12,7 @@ from research.altcoin_basket_postmortem import diagnose, load_ledger
 FIELDS = ["decision_iso", "status", "reason", "eligible_count", "eligible", "symbol", "side", "weight", "entry_iso", "exit_iso", "entry_price", "exit_price", "leg_gross_return", "leg_funding_return", "momentum", "volatility", "period_net_return"]
 
 
-def row(symbol="ETHUSDT", side=1, weight=0.5, gross=0.02, funding=-0.001, net=0.0088):
+def row(symbol="ETHUSDT", side=1, weight=0.5, gross=0.02, funding=-0.001, net=0.0083):
     return {"decision_iso": "2025-01-01T00:00:00Z", "status": "active", "reason": "", "eligible_count": "10", "eligible": "", "symbol": symbol, "side": str(side), "weight": str(weight), "entry_iso": "2025-01-01T00:00:00Z", "exit_iso": "2025-01-02T00:00:00Z", "entry_price": "1", "exit_price": "1", "leg_gross_return": str(gross), "leg_funding_return": str(funding), "momentum": "0", "volatility": "0.01", "period_net_return": str(net)}
 
 
