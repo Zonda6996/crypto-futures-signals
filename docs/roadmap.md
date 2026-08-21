@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых��да;
+- причину вых����да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -394,18 +394,18 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 2. Frozen exploratory `ALT-XSMOM-001-B` завершён с FAIL; не выбирать другую конфигурацию из просмотренной grid и не менять basket.
 3. HOLDOUT с `2026-01-01` не открывать и не анализировать.
 4. Не переходить к paper/live trading для этой версии.
-5. Любая новая гипотеза возможна только после отдельного owner decision, с новым protocol ID и новым будущим sealed holdout.
+5. Любая новая гипотеза возможна только пос��е отдельного owner decision, с новым protocol ID и новым будущим sealed holdout.
 
 ## Зафиксированный пофазный план после FAIL
 
 1. **Фаза 0 — закрытие `ALT-XSMOM-001-B` (DONE):** окончательный FAIL / STOP; retuning, paper/live и повторный выбор grid запрещены.
 2. **Фаза 1 — read-only post-mortem (DONE):** существующие ledgers разложены по costs, turnover, legs, symbols, funding, concentration и календарным срезам без новых backtests.
-3. **Gate 1 — owner decision (CURRENT):** остановиться и отдельно решить, достаточно ли оснований для новой независимой гипотезы.
-4. **Фаза 2 — новый protocol (NOT STARTED):** при разрешении создать новый protocol ID и заранее зафиксировать signal, universe, parameters, costs, risk limits, PASS/FAIL и новый будущий sealed HOLDOUT.
-5. **Фаза 3 — реализация и TRAIN (NOT STARTED):** реализовать только preregistered вариант, проверить causality и корректность.
-6. **Фаза 4 — единичная VALIDATION (NOT STARTED):** один заранее определённый запуск с механическим gate, без возврата к подбору.
+3. **Gate 1 — owner decision (DONE):** владелец разрешил только документационную Фазу 2.
+4. **Фаза 2 — новый protocol (DONE):** до реализации frozen `ALT-LOMOM-002-A` с единственным low-turnover long-only кандидатом, mechanical PASS/FAIL и новым prospective calendar.
+5. **Фаза 3 — реализация и TRAIN (NOT STARTED):** отдельное разрешение обязательно; реализовать только preregistered вариант и использовать только timestamps `< 2026-01-01`.
+6. **Фаза 4 — prospective VALIDATION (NOT STARTED):** `[2026-09-01, 2027-09-01)`, один заранее определённый запуск с механическим gate без retuning.
 7. **Фаза 5 — paper trading (CONDITIONAL):** только после уверенного PASS и отдельного разрешения; live остаётся отдельным решением.
 
 ## Текущее решение
 
-Оба altcoin маршрута остановлены: strict point-in-time Top 30 — `STOP` из-за survivorship, fixed-basket — `FAIL / STOP`. Read-only post-mortem завершён: VALIDATION gross `+0,3563` и funding `+0,0070` не покрыли cost drag `0,7440`; short leg дал net `−0,4534`; concentration limit нарушался во всех 620 active periods. HOLDOUT не открывался. Текущая позиция — **Gate 1**, до отдельного owner decision Фаза 2 не начинается. См. [`reports/ALTCOIN_PHASE_B_POSTMORTEM.md`](../reports/ALTCOIN_PHASE_B_POSTMORTEM.md).
+Старые altcoin маршруты остаются остановленными. Новая adaptive гипотеза зафиксирована в [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md): fixed basket, `30d` momentum, long-only top 4, weekly rebalance, portfolio-level 20% volatility target, один candidate без grid. Все данные до 2026 года contaminated и считаются DEVELOPMENT/TRAIN; prospective VALIDATION начинается `2026-09-01`, новый sealed HOLDOUT — `2027-09-01`. **Фаза 2 DONE; текущая точка — STOP перед Фазой 3.** Код и расчёты не разрешены без нового owner decision.

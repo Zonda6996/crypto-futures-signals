@@ -40,13 +40,19 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 Зафиксированные следующие фазы:
 1. **Фаза 0 — закрытие:** `ALT-XSMOM-001-B` окончательно FAIL / STOP (завершена).
 2. **Фаза 1 — read-only post-mortem:** диагностика существующих TRAIN/VALIDATION ledgers без parameter search (завершена).
-3. **Gate 1 — owner decision:** текущая точка остановки; новая гипотеза требует отдельного решения.
-4. **Фаза 2 — новый protocol:** новый ID, signal, universe, costs, risk limits, PASS/FAIL и новый будущий sealed HOLDOUT (не начата).
-5. **Фаза 3 — реализация и TRAIN:** только preregistered вариант (не начата).
-6. **Фаза 4 — единичная VALIDATION:** один запуск и механический gate без retuning (не начата).
+3. **Gate 1 — owner decision:** владелец разрешил только документационную Фазу 2 (пройден).
+4. **Фаза 2 — новый protocol:** frozen `ALT-LOMOM-002-A` создан до реализации и расчётов (завершена).
+5. **Фаза 3 — реализация и TRAIN:** только preregistered вариант (не начата; отдельное разрешение обязательно).
+6. **Фаза 4 — prospective VALIDATION:** `[2026-09-01, 2027-09-01)`, один механический gate без retuning (не начата).
 7. **Фаза 5 — paper trading:** только после уверенного PASS и отдельного разрешения; live — отдельное решение (не начата).
 
-Новый чат сначала читает этот файл, итоговый Phase B report, post-mortem и roadmap.
+Новый frozen protocol: [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md). Это adaptive low-turnover long-only гипотеза на той же fixed basket: `30d` momentum, top 4 по 25%, weekly rebalance, causal portfolio-vol scaling до 20% с multiplier `[0,1]`, realistic/stress costs 0,12%/0,20%. Grid search запрещён.
+
+Все данные `< 2026-01-01` считаются DEVELOPMENT/TRAIN, а не новым OOS. Новый prospective VALIDATION — `[2026-09-01, 2027-09-01)`, новый sealed HOLDOUT начинается `2027-09-01`. Старый HOLDOUT не открывался и не переопределён.
+
+**Текущая точка остановки:** Фаза 2 DONE. Не писать код, не запускать backtest и не переходить к Фазе 3 без отдельного явного решения владельца.
+
+Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
 ## Цель
 
