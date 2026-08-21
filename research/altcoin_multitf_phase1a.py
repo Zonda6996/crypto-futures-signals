@@ -7,18 +7,25 @@ import tempfile
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Sequence
 
 PROTOCOL_ID = "ALT-MULTITF-003"
-DEVELOPMENT_START_MS = 1_567_900_800_000  # 2019-09-08T00:00:00Z
-HOLDOUT_START_MS = 1_767_225_600_000  # 2026-01-01T00:00:00Z
-HOLDOUT_END_MS = 1_785_542_400_000  # 2026-08-01T00:00:00Z
+DEVELOPMENT_START_MS = 1_567_900_800_000
+HOLDOUT_START_MS = 1_767_225_600_000
+HOLDOUT_END_MS = 1_785_542_400_000
 RAW_ROOT_NAME = "altcoin-multitf-003"
 DEVELOPMENT_DIR = "development"
 SEALED_DIR = "sealed-holdout"
+OFFICIAL_EXCHANGE_INFO_URLS = (
+    "https://fapi.binance.com/fapi/v1/exchangeInfo",
+    "https://fapi1.binance.com/fapi/v1/exchangeInfo",
+    "https://fapi2.binance.com/fapi/v1/exchangeInfo",
+    "https://fapi3.binance.com/fapi/v1/exchangeInfo",
+    "https://fapi4.binance.com/fapi/v1/exchangeInfo",
+)
 
 
-class LifecycleGateError(RuntimeError):
+class RosterGateError(RuntimeError):
     pass
 
 
@@ -27,20 +34,16 @@ class SealedPayloadAccessError(PermissionError):
 
 
 @dataclass(frozen=True)
-class LifecycleRecord:
+class RosterRecord:
     symbol: str
     pair: str
     base_asset: str
     quote_asset: str
     margin_asset: str
     contract_type: str
+    status: str
     onboard_ms: int | None
     delivery_ms: int | None
-    status: str
-    source_url: str
-    source_sha256: str
-    acquired_at: str
-    historical_terminal_evidence: str | None = None
 
 
 @dataclass(frozen=True)
@@ -66,39 +69,65 @@ def sha256_bytes(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
-def lifecycle_gate_issues(records: Iterable[LifecycleRecord], *, source_set_complete: bool) -> list[str]:
-    rows = list(records)
-    issues: list[str] = []
-    if not source_set_complete:
-        issues.append("official source set does not prove exhaustive historical contract discovery")
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def freeze_current_roster(payload: bytes, *, source_url: str, acquired_at: str) -> tuple[list[RosterRecord], dict]:
+    """Validate official exchangeInfo bytes and derive the immutable A1 roster.
+
+    This must run before any market-data request. Coverage must never be used to
+    add or remove symbols from the returned roster.
+    """
+    if source_url not in OFFICIAL_EXCHANGE_INFO_URLS:
+        raise RosterGateError("roster source is not an approved official Binance USD-M endpoint")
+    if not payload:
+        raise RosterGateError("official current roster response is empty")
+    try:
+        document = json.loads(payload)
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise RosterGateError("official current roster response is not valid JSON") from error
+    symbols = document.get("symbols")
+    if not isinstance(symbols, list):
+        raise RosterGateError("official current roster response has no symbols array")
+    rows: list[RosterRecord] = []
+    for item in symbols:
+        if not isinstance(item, dict):
+            continue
+        if (
+            item.get("contractType") == "PERPETUAL"
+            and item.get("quoteAsset") == "USDT"
+            and item.get("marginAsset") == "USDT"
+            and item.get("status") == "TRADING"
+        ):
+            rows.append(RosterRecord(
+                symbol=str(item["symbol"]), pair=str(item.get("pair", item["symbol"])),
+                base_asset=str(item["baseAsset"]), quote_asset="USDT", margin_asset="USDT",
+                contract_type="PERPETUAL", status="TRADING", onboard_ms=item.get("onboardDate"),
+                delivery_ms=item.get("deliveryDate"),
+            ))
+    rows.sort(key=lambda row: row.symbol)
     if not rows:
-        issues.append("lifecycle registry is empty")
-        return issues
-    seen: set[tuple[str, int | None]] = set()
-    for row in rows:
-        key = (row.symbol, row.onboard_ms)
-        if key in seen:
-            issues.append(f"duplicate lifecycle: {row.symbol}/{row.onboard_ms}")
-        seen.add(key)
-        if row.contract_type != "PERPETUAL" or row.quote_asset != "USDT" or row.margin_asset != "USDT":
-            issues.append(f"out-of-scope contract: {row.symbol}")
-        if row.onboard_ms is None:
-            issues.append(f"missing authoritative onboard time: {row.symbol}")
-        if not row.source_url.startswith("https://") or len(row.source_sha256) != 64:
-            issues.append(f"invalid provenance: {row.symbol}")
-        if row.delivery_ms is not None and row.onboard_ms is not None and row.delivery_ms <= row.onboard_ms:
-            issues.append(f"invalid lifecycle bounds: {row.symbol}")
-        if row.status != "TRADING" and row.delivery_ms is None:
-            issues.append(f"terminal contract missing authoritative delist time: {row.symbol}")
-    if not any(row.status != "TRADING" for row in rows):
-        issues.append("registry has no delisted/expired/failed contract evidence")
-    return issues
-
-
-def require_lifecycle_gate(records: Iterable[LifecycleRecord], *, source_set_complete: bool) -> None:
-    issues = lifecycle_gate_issues(records, source_set_complete=source_set_complete)
-    if issues:
-        raise LifecycleGateError("; ".join(issues))
+        raise RosterGateError("official current roster contains no in-scope trading contracts")
+    names = [row.symbol for row in rows]
+    if len(names) != len(set(names)):
+        raise RosterGateError("official current roster contains duplicate symbols")
+    snapshot = {
+        "protocol_id": PROTOCOL_ID,
+        "owner_amendment": "A1",
+        "source_url": source_url,
+        "acquisition_timestamp": acquired_at,
+        "raw_size": len(payload),
+        "raw_sha256": sha256_bytes(payload),
+        "selection": "TRADING PERPETUAL quoteAsset=USDT marginAsset=USDT",
+        "symbol_count": len(rows),
+        "symbols": [asdict(row) for row in rows],
+    }
+    return rows, snapshot
 
 
 def classify_partition(start_ms: int, end_exclusive_ms: int) -> str:
@@ -123,19 +152,9 @@ def safe_target(root: Path, partition: str, relative_path: Path) -> Path:
     return target
 
 
-def atomic_store_raw(
-    root: Path,
-    relative_path: Path,
-    payload: bytes,
-    *,
-    source: str,
-    symbol: str,
-    datatype: str,
-    timeframe: str | None,
-    start_ms: int,
-    end_exclusive_ms: int,
-    acquired_at: str | None = None,
-) -> RawFileRecord:
+def atomic_store_raw(root: Path, relative_path: Path, payload: bytes, *, source: str, symbol: str,
+                     datatype: str, timeframe: str | None, start_ms: int, end_exclusive_ms: int,
+                     acquired_at: str | None = None) -> RawFileRecord:
     partition = classify_partition(start_ms, end_exclusive_ms)
     target = safe_target(root, partition, relative_path)
     digest = sha256_bytes(payload)
@@ -147,64 +166,47 @@ def atomic_store_raw(
         fd, temporary = tempfile.mkstemp(prefix=f".{target.name}.", suffix=".part", dir=target.parent)
         try:
             with os.fdopen(fd, "wb") as handle:
-                handle.write(payload)
-                handle.flush()
-                os.fsync(handle.fileno())
+                handle.write(payload); handle.flush(); os.fsync(handle.fileno())
             os.replace(temporary, target)
         finally:
             if os.path.exists(temporary):
                 os.unlink(temporary)
-    return RawFileRecord(
-        path=str(target.relative_to(root)), size=len(payload), sha256=digest, source=source,
-        symbol=symbol, datatype=datatype, timeframe=timeframe, start_ms=start_ms,
-        end_exclusive_ms=end_exclusive_ms, acquisition_timestamp=acquired_at or utc_now(), partition=partition,
-    )
+    return RawFileRecord(str(target.relative_to(root)), len(payload), digest, source, symbol, datatype,
+                         timeframe, start_ms, end_exclusive_ms, acquired_at or utc_now(), partition)
 
 
-def _sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
-def validate_manifest(records: Iterable[RawFileRecord]) -> list[str]:
-    rows = list(records)
-    issues: list[str] = []
-    paths: set[str] = set()
-    logical: set[tuple[str, str, str | None, int, int]] = set()
+def validate_manifest(records: Iterable[RawFileRecord], *, root: Path | None = None) -> list[str]:
+    rows = list(records); issues: list[str] = []; paths: set[str] = set(); logical: set[tuple] = set()
     for row in rows:
-        if row.path in paths:
-            issues.append(f"duplicate path: {row.path}")
+        if row.path in paths: issues.append(f"duplicate path: {row.path}")
         paths.add(row.path)
         key = (row.symbol, row.datatype, row.timeframe, row.start_ms, row.end_exclusive_ms)
-        if key in logical:
-            issues.append(f"duplicate logical file: {key}")
+        if key in logical: issues.append(f"duplicate logical file: {key}")
         logical.add(key)
-        try:
-            expected = classify_partition(row.start_ms, row.end_exclusive_ms)
+        try: expected = classify_partition(row.start_ms, row.end_exclusive_ms)
         except ValueError as error:
-            issues.append(f"invalid boundary {row.path}: {error}")
-            continue
+            issues.append(f"invalid boundary {row.path}: {error}"); continue
         if row.partition != expected or f"/{expected}/" not in f"/{row.path}":
             issues.append(f"partition mismatch: {row.path}")
-        if row.size < 0 or len(row.sha256) != 64:
-            issues.append(f"invalid inventory fields: {row.path}")
+        if row.size < 0 or len(row.sha256) != 64: issues.append(f"invalid inventory fields: {row.path}")
+        if root is not None:
+            path = root / row.path
+            if not path.is_file(): issues.append(f"missing file: {row.path}")
+            elif path.stat().st_size != row.size or _sha256_file(path) != row.sha256:
+                issues.append(f"filesystem checksum mismatch: {row.path}")
     return issues
 
 
-def write_manifest(path: Path, records: Iterable[RawFileRecord]) -> str:
-    rows = sorted((asdict(row) for row in records), key=lambda row: row["path"])
-    payload = (json.dumps({"protocol_id": PROTOCOL_ID, "files": rows}, indent=2, sort_keys=True) + "\n").encode()
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(payload)
+def write_manifest(path: Path, records: Sequence[RawFileRecord]) -> str:
+    issues = validate_manifest(records)
+    if issues: raise ValueError("; ".join(issues))
+    payload = (json.dumps({"protocol_id": PROTOCOL_ID, "files": sorted((asdict(r) for r in records), key=lambda r: r["path"])}, indent=2, sort_keys=True) + "\n").encode()
+    path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(payload)
     return sha256_bytes(payload)
 
 
 def research_read(path: Path, *, raw_root: Path) -> bytes:
-    sealed = (raw_root / RAW_ROOT_NAME / SEALED_DIR).resolve()
-    resolved = path.resolve()
+    sealed = (raw_root / RAW_ROOT_NAME / SEALED_DIR).resolve(); resolved = path.resolve()
     if resolved == sealed or sealed in resolved.parents:
         raise SealedPayloadAccessError("research code cannot read sealed holdout payload")
     return path.read_bytes()

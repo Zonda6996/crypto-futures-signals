@@ -1,6 +1,6 @@
 # ALT-MULTITF-003 — frozen protocol
 
-Статус: **FROZEN WITH OWNER AMENDMENT A1 / PHASE 1A RE-APPROVED**
+Статус: **FROZEN WITH OWNER AMENDMENTS A1–A2 / PHASE 1A RE-APPROVED**
 
 Дата freeze: 22 августа 2026 года
 
@@ -47,9 +47,9 @@ Purge равен `97d` (`90d` maximum lookback + `7d` maximum holding); embargo 
 
 1. это Binance USD-M linear USDT-margined perpetual (`contractType=PERPETUAL`, quote/settle asset `USDT`), не delivery, не coin-margined и не synthetic index;
 2. для timestamp существуют реальные raw `5m` bars; входы до первого доступного observation запрещены;
-3. возраст от первого доступного tradable `5m` observation не менее `90d`;
-4. присутствует не менее `99%` ожидаемых закрытых базовых `5m` bars за trailing `30d`, без gap длиннее `30m`;
-5. median causal daily quote volume за последние 30 полных UTC-дней не менее `$25m`;
+3. возраст от первого доступного tradable `5m` observation не менее `30d`;
+4. присутствует не менее `99%` ожидаемых закрытых базовых `5m` bars за trailing `30d`, без gap длиннее `30m`; gap исключает только затронутый период/decision до восстановления полного clean trailing window, но не удаляет актив из frozen roster навсегда;
+5. median causal daily quote volume за последние 30 полных UTC-дней определяет две заранее зафиксированные liquidity cohorts: `$10m–25m` и `≥$25m`; результаты публикуются отдельно по cohort, а порог не подбирается после расчётов;
 6. доступны causal price, current snapshot contract filters и funding, необходимые для решения/удержания.
 
 Delisted/expired/failed contracts, отсутствующие в frozen current roster, намеренно не входят в исследование. Исторические point-in-time изменения tick/step/minNotional могут быть недоступны; использование current snapshot filters должно маркироваться как отдельное ограничение. Symbol rename/migration не склеивается без однозначной официальной идентичности. Результаты отвечают только на вопрос о поведении текущих доступных контрактов на их доступной истории и не являются survivorship-unbiased оценкой всех когда-либо существовавших Binance contracts.
@@ -60,7 +60,7 @@ Bars, volume, funding и lifecycle timestamps не импутируются. П�
 
 Обязательные TF: `5m`, `15m`, `30m`, `1h`, `2h`, `4h`, `1d`. Старшие bars агрегируются из закрытых `5m` bars по UTC; решение принимается после закрытия bar, fill — не ранее следующего доступного open. Lookback задаётся физическим временем и требует полного окна. Momentum — total price return `close(t-1 closed)/close(t-lookback)-1`; funding не входит в rank, но входит в PnL.
 
-Каждая `(family, TF, lookback, execution/risk choices)` — отдельная hypothesis. Все допустимые конфигурации до первого backtest сериализуются в immutable machine-readable manifest с canonical config ID и SHA-256. Cartesian product используется только в пределах явно перечисленных значений; неописанные фильтры, indicators, assets и значения запрещены.
+Каждая `(family, TF, lookback, execution/risk choices)` — отдельная hypothesis. Все допустимые конфигурации до первого backtest сериализуются в immutable machine-readable manifest с canonical config ID и SHA-256. Cartesian product используется только в пределах явно перечисленных значени��; неописанные фильтры, indicators, assets и значения з��прещены.
 
 ## 5. Семейство A — portfolio momentum
 
@@ -151,9 +151,19 @@ Multiple-testing correction применяется отдельно к полн�
 
 При total PnL `<=0` concentration gate автомати��ески FAIL; отрицательные contributors не вычитаются из denominator положительного PnL.
 
-## 11. Mechanical PASS/FAIL
+## 11. Development gates и diagnostic scorecard
 
-Family получает PASS только если существует конфигурация, которая одновременно:
+Параметры могут различаться только между заранее заданными TF-группами (`5m–30m`, `1h–4h`, `1d`), но никогда между символами одной TF-группы. Это различие фиксируется в config manifest до расчётов и не разрешает symbol-specific tuning.
+
+Hard safety gates (zero look-ahead, корректные boundaries, отсутствие impossible fills/limit breaches/negative cash, funding и ledger reconciliation) обязательны и не смешиваются с diagnostic scorecard. Scorecard описывает expectancy, drawdown, устойчивость annual outer windows, costs, concentration и turnover; он не может компенсировать hard violation.
+
+Family проходит development, если существует конфигурация с положительной net expectancy после costs, приемлемым max drawdown (не хуже `−30%`) и положительной/устойчивой net expectancy в большинстве доступных outer windows, при zero hard safety violations. Sharpe, Calmar, SPA, DSR, concentration, neighbour и stress metrics публикуются как diagnostic scorecard и robustness evidence, а не как дополнительные механические пороги, способные отклонить иначе устойчивый development-кандидат.
+
+Ранее перечисленный более жёсткий mechanical checklist заменён этим owner amendment до первого backtest. Он не ослабляет sealed holdout: одноразовый holdout и его строгие gates раздела 12 остаются неизменными.
+
+Исторический checklist, используемый только как diagnostic scorecard:
+
+Family получает diagnostic PASS только если существует конфигурация, которая одновременно:
 
 - имеет все 5 outer folds (минимум 4 допускается только если один fold объективно unavailable из-за отсутствия eligible lifecycle universe, не из-за слабого результата);
 - positive outer-fold share `>=60%`;
