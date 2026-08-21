@@ -70,20 +70,33 @@ def parse_funding(payload: bytes) -> list[tuple[int, float]]:
         return result
 
 
-def validate_bars(bars: list[Bar]) -> dict:
+INTERVAL_MS = {"15m": 900_000, "30m": 1_800_000, "1h": 3_600_000}
+
+
+def validate_bars(bars: list[Bar], interval: str = "1h") -> dict:
+    if interval not in INTERVAL_MS:
+        raise ValueError(f"unsupported interval: {interval}")
     duplicates = len(bars) - len({b.ts for b in bars})
-    gaps = sum(1 for a, b in zip(bars, bars[1:]) if b.ts - a.ts != 3_600_000)
+    gaps = sum(1 for a, b in zip(bars, bars[1:]) if b.ts - a.ts != INTERVAL_MS[interval])
     invalid = sum(1 for b in bars if b.low > min(b.open, b.close) or b.high < max(b.open, b.close) or b.low > b.high)
     monotonic = all(a.ts < b.ts for a, b in zip(bars, bars[1:]))
     return {"rows": len(bars), "duplicates": duplicates, "gaps": gaps, "invalid_ohlc": invalid, "monotonic": monotonic}
 
 
-def download_symbol(symbol: str, start_year: int, end_year: int, root: Path) -> tuple[list[Bar], list[tuple[int, float]], dict]:
+def download_symbol(
+    symbol: str,
+    start_year: int,
+    end_year: int,
+    root: Path,
+    interval: str = "1h",
+) -> tuple[list[Bar], list[tuple[int, float]], dict]:
+    if interval not in INTERVAL_MS:
+        raise ValueError(f"unsupported interval: {interval}")
     bars, funding, files, missing = [], [], [], []
     for period in months(start_year, end_year):
-        kline_url = f"{BASE}/klines/{symbol}/1h/{symbol}-1h-{period}.zip"
+        kline_url = f"{BASE}/klines/{symbol}/{interval}/{symbol}-{interval}-{period}.zip"
         try:
-            payload, digest = cached_zip(kline_url, root / "cache" / "klines" / symbol)
+            payload, digest = cached_zip(kline_url, root / "cache" / "klines" / interval / symbol)
             parsed = parse_klines(payload)
             bars.extend(parsed)
             files.append({"kind": "klines", "period": period, "sha256": digest, "rows": len(parsed)})
@@ -107,10 +120,11 @@ def download_symbol(symbol: str, start_year: int, end_year: int, root: Path) -> 
     funding = sorted(set(funding))
     manifest = {
         "symbol": symbol,
+        "interval": interval,
         "source": "Binance USD-M public monthly archive",
         "files": files,
         "missing": missing,
-        "quality": validate_bars(bars),
+        "quality": validate_bars(bars, interval),
         "funding_rows": len(funding),
         "open_interest": {"available": False, "reason": "No point-in-time-safe full-history OI series used in this experiment"},
     }

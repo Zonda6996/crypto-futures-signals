@@ -13,6 +13,7 @@
 - Оригинальная Phase 3: [`reports/PHASE3_PARAMETER_STABILITY.md`](../reports/PHASE3_PARAMETER_STABILITY.md)
 - Дополнительная повторная robustness-проверка: [`reports/PHASE3_ROBUSTNESS.md`](../reports/PHASE3_ROBUSTNESS.md)
 - Phase 4: [`reports/PHASE4_ECONOMIC_MECHANISM.md`](../reports/PHASE4_ECONOMIC_MECHANISM.md)
+- Дополнительная M15/M30 robustness-проверка: [`reports/TIMEFRAME_ROBUSTNESS_M15_M30.md`](../reports/TIMEFRAME_ROBUSTNESS_M15_M30.md)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
 
@@ -64,6 +65,10 @@
 
 Предварительно заданный strict rule требовал положительный frozen результат после удаления top-5 в обеих схемах. Требование не выполнено, поэтому `strict pass = false`. Не выбирать новый лучший вариант из карты соседей.
 
+## Дополнительная M15/M30 robustness-проверка
+
+При механическом сохранении часовых горизонтов M30 и M15 положительны на VALIDATION при 0,10%: соответственно `+2,675R` и `+4,233R`. Но без top-5 результаты равны `−3,791R` и `−2,173R`; при 0,16% M15 также становится отрицательным (`−0,238R`). Заранее заданный строгий критерий поддержки не пройден; параметры не переотбирались, TEST закрыт.
+
 ## Связь с Phase 4
 
 Phase 4 не обнаружила специфический положительный 24h drift: средний gross return полного сигнала через 24 часа `−0,018%`, преимущество над главным контролем `−0,547` п.п. Возможный эффект Phase 2/3 может быть path-dependent и связан с stop/take, а не с простым continuation.
@@ -84,6 +89,7 @@ python3 -m research.phase2_walk_forward_repeat
 python3 -m research.phase3_parameter_map
 python3 -m research.phase3_robustness
 python3 -m research.phase4_mechanism
+python3 -m research.timeframe_robustness
 ```
 
 Market cache скачивается в `data/cache/` и исключён из Git.
@@ -111,4 +117,4 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 - не называть положительный walk-forward подтверждённым edge;
 - не выбирать новый candidate из Phase 3 neighbor map;
 - не открывать TEST до отдельного явного решения;
-- в конце каждой фазы обновлять handoff, отчёт, артефакты и следующий единственный шаг.
+- в конце к��ждой фазы обновлять handoff, отчёт, артефакты и следующий единственный шаг.
