@@ -60,6 +60,10 @@ Gross return sum до costs был `+0.3563`, funding sum `+0.0070`, но cost d
 - VALIDATION, bootstrap, attribution и controls: `validation-result.json`;
 - frozen calendar: `splits.json`.
 
+## Read-only post-mortem
+
+Последующая диагностика существующих TRAIN/VALIDATION ledgers, не меняющая verdict и не открывающая HOLDOUT, сохранена в [`ALTCOIN_PHASE_B_POSTMORTEM.md`](./ALTCOIN_PHASE_B_POSTMORTEM.md). Она не является новым parameter search или разрешением на retuning.
+
 ## Final decision
 
 **FAIL / STOP.** Frozen 30d/24h primary показал отрицательный net Sharpe и отрицательную compounded доходность на VALIDATION при всех трёх заранее заданных cost scenarios; bootstrap CI пересекает ноль, stress отрицателен, concentration rule нарушен. Исследование останавливается после TRAIN/VALIDATION. HOLDOUT остаётся закрытым; retuning этой версии, замена состава basket, повторный выбор по VALIDATION и переход к paper/live trading запрещены.

@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину выхода;
+- причину вых��да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -273,7 +273,7 @@ Long и short проверять отдельно.
 
 - идентификатор эксперимента;
 - экономическую гипотезу;
-- доступные на момент сигнала данные;
+- доступные на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
 - train/validation/test границы;
@@ -396,6 +396,16 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 4. Не переходить к paper/live trading для этой версии.
 5. Любая новая гипотеза возможна только после отдельного owner decision, с новым protocol ID и новым будущим sealed holdout.
 
+## Зафиксированный пофазный план после FAIL
+
+1. **Фаза 0 — закрытие `ALT-XSMOM-001-B` (DONE):** окончательный FAIL / STOP; retuning, paper/live и повторный выбор grid запрещены.
+2. **Фаза 1 — read-only post-mortem (DONE):** существующие ledgers разложены по costs, turnover, legs, symbols, funding, concentration и календарным срезам без новых backtests.
+3. **Gate 1 — owner decision (CURRENT):** остановиться и отдельно решить, достаточно ли оснований для новой независимой гипотезы.
+4. **Фаза 2 — новый protocol (NOT STARTED):** при разрешении создать новый protocol ID и заранее зафиксировать signal, universe, parameters, costs, risk limits, PASS/FAIL и новый будущий sealed HOLDOUT.
+5. **Фаза 3 — реализация и TRAIN (NOT STARTED):** реализовать только preregistered вариант, проверить causality и корректность.
+6. **Фаза 4 — единичная VALIDATION (NOT STARTED):** один заранее определённый запуск с механическим gate, без возврата к подбору.
+7. **Фаза 5 — paper trading (CONDITIONAL):** только после уверенного PASS и отдельного разрешения; live остаётся отдельным решением.
+
 ## Текущее решение
 
-Оба altcoin маршрута остановлены: strict point-in-time Top 30 — `STOP` из-за survivorship, fixed-basket TRAIN/VALIDATION — `FAIL / STOP` из-за отрицательного net VALIDATION. Текущая работа завершена на pre-HOLDOUT отчёте.
+Оба altcoin маршрута остановлены: strict point-in-time Top 30 — `STOP` из-за survivorship, fixed-basket — `FAIL / STOP`. Read-only post-mortem завершён: VALIDATION gross `+0,3563` и funding `+0,0070` не покрыли cost drag `0,7440`; short leg дал net `−0,4534`; concentration limit нарушался во всех 620 active periods. HOLDOUT не открывался. Текущая позиция — **Gate 1**, до отдельного owner decision Фаза 2 не начинается. См. [`reports/ALTCOIN_PHASE_B_POSTMORTEM.md`](../reports/ALTCOIN_PHASE_B_POSTMORTEM.md).

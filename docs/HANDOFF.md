@@ -35,7 +35,18 @@ Exploratory fixed-basket experiment `ALT-XSMOM-001-B` завершён с **FAIL
 
 Это только **exploratory fixed-basket evidence with survivorship/selection bias**. Нельзя переотбирать другую grid point по VALIDATION, менять корзину, открывать HOLDOUT, возвращаться к старому ETH TEST или переходить к paper/live trading.
 
-Новый чат сначала читает этот файл, итоговый altcoin Phase B report и roadmap.
+Read-only post-mortem завершён: cost drag превысил VALIDATION gross effect, short leg был отрицателен уже gross, а frozen concentration limit нарушался во всех active periods. Подробности: [`reports/ALTCOIN_PHASE_B_POSTMORTEM.md`](../reports/ALTCOIN_PHASE_B_POSTMORTEM.md).
+
+Зафиксированные следующие фазы:
+1. **Фаза 0 — закрытие:** `ALT-XSMOM-001-B` окончательно FAIL / STOP (завершена).
+2. **Фаза 1 — read-only post-mortem:** диагностика существующих TRAIN/VALIDATION ledgers без parameter search (завершена).
+3. **Gate 1 — owner decision:** текущая точка остановки; новая гипотеза требует отдельного решения.
+4. **Фаза 2 — новый protocol:** новый ID, signal, universe, costs, risk limits, PASS/FAIL и новый будущий sealed HOLDOUT (не начата).
+5. **Фаза 3 — реализация и TRAIN:** только preregistered вариант (не начата).
+6. **Фаза 4 — единичная VALIDATION:** один запуск и механический gate без retuning (не начата).
+7. **Фаза 5 — paper trading:** только после уверенного PASS и отдельного разрешения; live — отдельное решение (не начата).
+
+Новый чат сначала читает этот файл, итоговый Phase B report, post-mortem и roadmap.
 
 ## Цель
 
@@ -68,7 +79,7 @@ Exploratory fixed-basket experiment `ALT-XSMOM-001-B` завершён с **FAIL
 Оригинальная Phase 2: все четыре заданные walk-forward-схемы дали положительный объединённый OOS. Следующие числа относятся только к дополнительному повтору Phase 2 при 0,10% round trip:
 
 - anchored: 42 сделки, expectancy `+0,221R`, total `+9,279R`, PF `1,602`, 3/4 положительных окон;
-- rolling: 75 сделок, expectancy `+0,086R`, total `+6,476R`, PF `1,195`, 2/4 положительных окон.
+- rolling: 75 сдело��, expectancy `+0,086R`, total `+6,476R`, PF `1,195`, 2/4 положительных окон.
 
 Объединённый OOS положителен, но rolling без лучших пяти сделок даёт `−0,044R`.
 
