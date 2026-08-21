@@ -1,6 +1,6 @@
 # ALT-MULTITF-003 — Phase 1A acquisition gate
 
-Статус: **BLOCKED BEFORE DOWNLOAD (lifecycle registry не доказуем)**
+Статус: **PREVIOUS BLOCK RESOLVED BY OWNER AMENDMENT A1 / ACQUISITION NOT YET RUN**
 
 Дата: 22 августа 2026 года
 
@@ -8,10 +8,12 @@
 
 ## Scope
 
-Phase 1 разделена без изменения frozen research protocol:
+Первоначально Phase 1 была разделена так:
 
 - **Phase 1A:** доказать наличие полного point-in-time lifecycle registry, затем получить raw development/holdout snapshots, физически изолировать holdout и записать SHA-256 inventory.
 - **Phase 1B:** только после PASS Phase 1A нормализовать development payload, проверить качество/eligibility, агрегировать старшие TF (`15m/30m/1h/2h/4h/1d` строятся из `5m`) и выпустить итоговый data audit.
+
+Разделы ниже до «Owner amendment A1» сохраняют исторический отчёт о первоначальном blocked gate. Amendment A1 заменяет lifecycle gate на immutable current-roster snapshot, но не меняет calendar, TF derivation или запрет на расчёты в Phase 1A.
 
 Обе части запрещают signals, ranking, PnL, backtest, parameter selection и чтение holdout payload исследовательским процессом. По owner-решению в этом чате Phase 1A скачивает только raw `5m`; старшие TF не скачиваются и не агрегируются здесь.
 
@@ -48,16 +50,12 @@ Phase 1 разделена без изменения frozen research protocol:
 - signal/PnL/backtest/grid search/TF-или-asset selection: `0`;
 - изменение `ALT-LOMOM-002-A`, frozen search space или PASS/FAIL criteria: отсутствует.
 
-## Verdict
+## Owner amendment A1 и текущий verdict
 
-**Phase 1A = BLOCKED.** Lifecycle gate не пройден, поэтому acquisition и sealing не выполнялись, а Phase 1B остаётся запрещённой. Инфраструктура и тесты sealing готовы и активируются автоматически, как только появится доказуемый registry.
+22 августа 2026 года владелец явно разрешил использовать текущий Binance USD-M USDT perpetual roster и принял survivorship/coverage bias. Требование доказать полный список delisted/expired/failed contracts снято. Amendment внесён до market-data acquisition, до чтения holdout и до любых signals/PnL/backtest.
 
-## Что требуется для снятия блокера (owner decision)
+Это снимает предыдущий lifecycle blocker, но само по себе не завершает Phase 1A. Следующий запуск должен сначала сохранить immutable current-roster snapshot с provenance/timestamp/SHA-256, затем скачать только raw `5m` klines, funding и необходимые metadata для всех символов этого frozen roster, физически разделить development и holdout и создать проверенный manifest.
 
-Безопасные варианты, требующие решения владельца:
+**Phase 1A = READY TO RESUME, NOT DONE.** На момент этого отчёта raw market files всё ещё `0`, sealed holdout не создан и не прочитан, Phase 1B запрещена до фактического PASS acquisition/sealing.
 
-1. **Предоставить versioned lifecycle registry.** Владелец прикладывает или явно называет snapshot/versioned источник, который: покрывает весь development `[2019-09-08, 2026-01-01)`; перечисляет delisted/expired/failed USD-M USDT perpetuals; содержит authoritative onboard/open и delivery/delist timestamps с provenance; независимо проверяем на полноту; не подменяется current roster или современной basket. После этого Phase 1A gate повторяется, и при PASS запускается raw `5m` + funding + point-in-time contract filters acquisition, физическое sealing и SHA-256 manifest.
-2. **Разблокировать официальный Binance доступ.** Дать окружение без `HTTP 451`, где можно собрать исторические `exchangeInfo`/`contractInfo` snapshots и полный announcement-архив, а затем детерминированно построить registry из первичных официальных данных с сохранением raw metadata и hashes.
-3. **Явно одобрить документированный biased-universe диагностический прогон.** Только при письменном owner-approval, с явной маркировкой survivorship bias, вне frozen primary evidence. По умолчанию запрещено и здесь не выполнялось.
-
-Пока ни один из вариантов не предоставлен, единственный разрешённый следующий шаг — получить owner decision. Phase 1B до PASS 1A запрещена.
+Ограничение будущего evidence: результаты относятся только к контрактам, активным в snapshot Phase 1A; delisted assets исключены, поэтому итог нельзя называть survivorship-unbiased исследованием всего исторического Binance universe.

@@ -1,8 +1,10 @@
 # ALT-MULTITF-003 — frozen protocol
 
-Статус: **FROZEN / PHASE 0 COMPLETE / IMPLEMENTATION NOT APPROVED**
+Статус: **FROZEN WITH OWNER AMENDMENT A1 / PHASE 1A RE-APPROVED**
 
 Дата freeze: 22 августа 2026 года
+
+Дата owner amendment A1: 22 августа 2026 года
 
 Рынок: Binance USD-M linear USDT perpetual futures
 
@@ -37,18 +39,20 @@
 
 Purge равен `97d` (`90d` maximum lookback + `7d` maximum holding); embargo после каждого validation/test равен `7d`. Сигнал до границы не может открыть или удерживать позицию после неё. Outer test никогда не участвует в выборе своего кандидата.
 
-## 3. Point-in-time lifecycle universe
+## 3. Owner amendment A1 — current-roster universe
 
-На каждом decision timestamp контракт eligible только если одновременно:
+Владелец явно отменил требование полного исторического lifecycle registry и принял survivorship/coverage bias. Primary universe фиксируется один раз в Phase 1A как текущий на момент acquisition список Binance USD-M linear USDT-margined perpetual contracts. Snapshot roster, полный raw API response или официальный эквивалент, source URL, acquisition timestamp и SHA-256 обязательны; roster после начала расчётов менять нельзя.
+
+На каждом historical decision timestamp контракт из frozen current roster eligible только если одновременно:
 
 1. это Binance USD-M linear USDT-margined perpetual (`contractType=PERPETUAL`, quote/settle asset `USDT`), не delivery, не coin-margined и не synthetic index;
-2. timestamp находится между authoritative onboard/open и delist/close timestamps Binance;
-3. возраст после первого tradable timestamp не менее `90d`;
+2. для timestamp существуют реальные raw `5m` bars; входы до первого доступного observation запрещены;
+3. возраст от первого доступного tradable `5m` observation не менее `90d`;
 4. присутствует не менее `99%` ожидаемых закрытых базовых `5m` bars за trailing `30d`, без gap длиннее `30m`;
 5. median causal daily quote volume за последние 30 полных UTC-дней не менее `$25m`;
-6. доступны causal price, contract filters и funding, необходимые для решения/удержания.
+6. доступны causal price, current snapshot contract filters и funding, необходимые для решения/удержания.
 
-Lifecycle registry строится по историческим Binance metadata/archives и сохраняет delisted/failed contracts. Текущий roster не может заменять registry. Symbol rename/migration считается новым lifecycle, если Binance не даёт однозначную непрерывную идентичность; склейка запрещена. После delist новые входы запрещены, открытая позиция закрывается по последнему реально исполнимому observation с costs и отдельным `forced_delist` reason.
+Delisted/expired/failed contracts, отсутствующие в frozen current roster, намеренно не входят в исследование. Исторические point-in-time изменения tick/step/minNotional могут быть недоступны; использование current snapshot filters должно маркироваться как отдельное ограничение. Symbol rename/migration не склеивается без однозначной официальной идентичности. Результаты отвечают только на вопрос о поведении текущих доступных контрактов на их доступной истории и не являются survivorship-unbiased оценкой всех когда-либо существовавших Binance contracts.
 
 Bars, volume, funding и lifecycle timestamps не импутируются. При missing/duplicate/out-of-order bar актив исключается с первого затронутого decision до первого следующего decision после полного clean trailing window. Duplicate разрешено только детерминированно удалить при byte-identical payload; конфликтующие duplicates блокируют актив. Неполный последний bar не используется. Отсутствующий funding timestamp при открытой позиции делает конкретный replay/config invalid (не нулевой funding). Universe membership и причины исключения логируются на каждом decision.
 
@@ -145,7 +149,7 @@ Multiple-testing correction применяется отдельно к полн�
 8. Family B: те же limits и top 5 trades `<=40%` положительного PnL;
 9. turnover, capacity, funding attribution и equity/fill ledger полностью reconciled.
 
-При total PnL `<=0` concentration gate автоматически FAIL; отрицательные contributors не вычитаются из denominator положительного PnL.
+При total PnL `<=0` concentration gate автомати��ески FAIL; отрицательные contributors не вычитаются из denominator положительного PnL.
 
 ## 11. Mechanical PASS/FAIL
 
@@ -176,8 +180,8 @@ Phase 0 завершает только документацию. После о�
 
 Для операционной безопасности Phase 1 разделена без изменения research rules:
 
-- **Phase 1A — acquisition/sealing:** сначала PASS полного point-in-time lifecycle registry, затем raw acquisition, физическое разделение development/holdout и immutable file inventory с SHA-256. Symbol-addressed market data нельзя массово загружать до PASS registry gate.
-- **Phase 1B — normalization/eligibility:** только после PASS Phase 1A и отдельного owner approval разрешены чтение development payload, quality audit, canonical lifecycle registry, causal eligibility и агрегация старших TF. Holdout payload остаётся недоступным.
+- **Phase 1A — acquisition/sealing:** получить и заморозить current-roster snapshot по amendment A1, затем выполнить raw acquisition, физическое разделение development/holdout и immutable file inventory с SHA-256. Полный historical lifecycle gate больше не требуется; roster должен быть зафиксирован до market-data acquisition и не изменяться по результатам coverage.
+- **Phase 1B — normalization/eligibility:** только после PASS Phase 1A и отдельного owner approval разрешены чтение development payload, quality audit, causal eligibility внутри frozen current roster и агрегация старших TF. Holdout payload остаётся недоступным.
 
 STOP любой части запрещает переход к следующей. Это разделение не разрешает новые источники, параметры, signals, PnL или backtest и не изменяет frozen calendar/search space.
 

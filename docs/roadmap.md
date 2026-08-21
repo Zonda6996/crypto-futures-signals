@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых��������������да;
+- причину вых����������������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -420,9 +420,9 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 
 0. **Phase 0 — protocol freeze (DONE):** создан [`docs/ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`](./ALTCOIN_MULTITF_FROZEN_PROTOCOL.md). Зафиксированы development `[2019-09-08, 2026-01-01)`, sealed holdout `[2026-01-01, 2026-08-01)`, пять annual outer folds с expanding annual inner folds, purge `97d`, embargo `7d`, point-in-time lifecycle universe, moderate liquidity filter, конечный search manifest обоих семейств, execution/cost/risk model, score, SPA `5%`, DSR `95%`, robustness/concentration и mechanical PASS/FAIL.
 1. **Owner gate Phase 1 (DONE):** владелец разрешил разделить Phase 1 и выполнить первую часть.
-2. **Phase 1A — acquisition/sealing gate (BLOCKED):** повторный gate проверил официальные Binance sources. Vision listing перечисляет 986 kline-prefixes (832 `*USDT`; XML SHA-256 `d24a13b22caa8e2251aab3abe76762a76d2e909f636bbf393d4dd9e842dcc38f`), но не даёт authoritative lifecycle dates/полноту; current `exchangeInfo` post-holdout и отвечает HTTP 451 из sandbox; единого официального machine-readable delisting registry нет. Поэтому biased universe не скачан: market files `0`, holdout reads `0`. Fail-closed acquisition/sealing infrastructure и tests добавлены. См. [`reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md`](../reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md).
-3. **Owner/input gate (WAITING):** требуется полный versioned lifecycle registry source с provenance либо owner-approved способ собрать исчерпывающие historical snapshots/announcements. После его предоставления повторяется Phase 1A; только PASS разрешит raw `5m`, funding, contract-filter acquisition и physical sealing.
-4. **Phase 1B — normalization/eligibility audit (BLOCKED):** только после PASS 1A и отдельного owner approval; development-only quality audit, causal eligibility и агрегация `15m/30m/1h/2h/4h/1d` из raw `5m`, manifests/hashes. Prompt: [`docs/ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md`](./ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md).
+2. **Owner amendment A1 (DONE):** владелец разрешил current-roster universe и принял survivorship/coverage bias. Полный historical registry delisted/failed contracts больше не gate; roster snapshot должен быть заморожен до acquisition и не меняться по результатам coverage.
+3. **Phase 1A — acquisition/sealing (READY TO RESUME):** market files `0`, holdout reads `0`; fail-closed infrastructure и 14 tests готовы. Следующий чат сохраняет roster snapshot/provenance/hash, скачивает raw `5m`, funding и metadata, физически изолирует holdout и выпускает manifest/report.
+4. **Phase 1B — normalization/eligibility audit (BLOCKED):** только после фактического PASS 1A и отдельного owner approval; development-only quality audit, causal eligibility внутри frozen roster и агрегация `15m/30m/1h/2h/4h/1d` из raw `5m`, manifests/hashes. Prompt Phase 1A continuation: [`docs/ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md`](./ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md).
 5. **Phase 2 — causal engine (NOT APPROVED):** отдельный будущий gate; implementation и tests без parameter selection.
 6. **Phase 3 — nested walk-forward sweep (NOT APPROVED):** два полных leaderboard без holdout.
 7. **Phase 4 — frozen robustness (NOT APPROVED):** только заранее заданные stresses/gates, без расширения grid.
@@ -430,4 +430,4 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 9. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
 10. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
 
-**Текущая точка — STOP на pre-download gate Phase 1A.** Полный lifecycle registry отсутствует; data download, holdout reads, backtest, grid search и paper/live не запускались. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.
+**Текущая точка — READY TO RESUME Phase 1A после amendment A1.** Нужно выполнить acquisition/sealing по current frozen roster; data download и holdout reads ещё не запускались. Backtest, grid search, Phase 1B и paper/live запрещены. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.
