@@ -4,6 +4,10 @@
 
 ## Текущий статус
 
+**Независимое altcoin-исследование:** protocol `ALT-XSMOM-001-A` зафиксирован до анализа. Phase A data/survivorship audit получил **STOP**: complete historical Binance USD-M perpetual lifecycle registry, включая delistings, отсутствует, поэтому point-in-time Top 30 нельзя сертифицировать без survivorship bias. HOLDOUT с `2026-01-01` не загружался; signal/PnL и parameter search не запускались. Следующий допустимый шаг — независимый датированный pre-2026 registry и повтор только Phase A после решения владельца. См. [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md) и [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md).
+
+## Legacy ETH status
+
 ETHUSDT 1h кандидат повторно проверен walk-forward только на TRAIN+VALIDATION. Объединённый OOS-результат положителен в обеих схемах:
 
 - anchored: 42 сделки, `+0,221R` expectancy, `+9,279R`, PF `1,602`, 3/4 положительных окон;
@@ -124,7 +128,7 @@ $$R_i = \frac{NetPnL_i}{InitialRisk_i}$$
 
 Сохранять top-20 даже при непрохождении формального gate.
 
-# Этап 2. Walk-forward те��ущего кандидата
+# Этап 2. Walk-forward те����ущего кандидата
 
 ## 2.1. Схема проверки
 
@@ -308,7 +312,7 @@ $$Expectancy_R = WinRate \times AvgWin_R - LossRate \times AvgLoss_R$$
 - результат по режимам;
 - доля прибыли лучших сделок.
 
-Концент��ация прибыли:
+Кон��ент��ация прибыли:
 
 $$Concentration_5 = \frac{PnL\ лучших\ 5\ сдел��к}{TotalPnL}$$
 

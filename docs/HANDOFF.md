@@ -20,6 +20,12 @@
 - Immutable TEST-opening memo: [`docs/TEST_OPENING_MEMO.md`](./TEST_OPENING_MEMO.md)
 - Pre-TEST/hash allowlist: [`docs/test-opening-hashes.json`](./test-opening-hashes.json)
 - План независимого исследования альткоинов для нового чата: [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md)
+- Frozen altcoin protocol: [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md)
+- Altcoin Phase A audit: [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md)
+
+## Новый altcoin Phase A status
+
+Protocol `ALT-XSMOM-001-A` зафиксирован: cross-sectional long/short, point-in-time Top 30 и HOLDOUT с `2026-01-01`. Phase A завершена с verdict **STOP**: полного датированного pre-2026 lifecycle registry Binance USD-M perpetuals с delisted-контрактами нет; current roster создал бы survivorship bias и post-HOLDOUT leakage. HOLDOUT не загружался, сетевых запросов не было, signal/PnL не вычислялись. Подбор стратегии запрещён до независимого historical registry и отдельного решения владельца на повтор только Phase A.
 - Единственный TEST result/audit: [`reports/private/test-opening/result.json`](../reports/private/test-opening/result.json)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
