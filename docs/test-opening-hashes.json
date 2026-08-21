@@ -21,8 +21,8 @@
     },
     {
       "path": "research/test_opening_integrity.py",
-      "sha256": "8e5fb70a1e1fec94ed34e198fbeba6cc5ddeb4dcd6c16026b82adf1a9510c0d7",
-      "size": 2764,
+      "sha256": "62f0854a6e4cceabaa9f9d0fce65dc2871a96c8d6dae02ccba0179ea991a97e4",
+      "size": 2872,
       "source": "governance_worktree"
     }
   ],
