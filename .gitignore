@@ -17,3 +17,4 @@ __pycache__/
 *.pyc
 data/cache/
 data/normalized/
+data/altcoin-multitf-003/

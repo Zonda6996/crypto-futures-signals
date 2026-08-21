@@ -16,13 +16,14 @@
 
 - Phase 0 protocol `ALT-MULTITF-003` frozen.
 - Phase 1 разделена на Phase 1A acquisition/sealing и Phase 1B normalization/eligibility audit.
-- Первая попытка Phase 1A остановлена до загрузки: в versioned inputs нет полного point-in-time Binance USD-M lifecycle registry с delisted/failed contracts.
-- Network market-data requests: 0.
-- Holdout payload reads: 0.
+- Повторная попытка Phase 1A также остановлена до market-data download: официальный Vision listing перечисляет архивные symbol-prefixes, но не даёт authoritative onboard/delist timestamps и не доказывает полноту; current `exchangeInfo` является post-holdout roster (и отвечает HTTP 451 из sandbox); единого официального machine-readable delisting registry нет.
+- Добавлена fail-closed acquisition/sealing infrastructure в `research/altcoin_multitf_phase1a.py`; 14 data/sealing tests проходят.
+- Raw market-data files: 0.
+- Holdout payload reads: 0; sealed payload не создавался.
 - Signal/PnL/backtest runs: 0.
 - `ALT-LOMOM-002-A` неизменяем и не относится к этому исследованию.
 
-Перед началом владелец должен приложить или явно назвать одобренный источник полного lifecycle registry. Если такого ввода нет, остановись и запроси его; current exchange roster, современная fixed basket и реконструкция только по известным symbols запрещены.
+Перед началом владелец должен приложить или явно назвать одобренный versioned источник полного lifecycle registry либо одобрить воспроизводимый способ собрать исчерпывающие historical Binance snapshots/announcements с authoritative датами. Если такого ввода нет, остановись и запроси его; current exchange roster, современная fixed basket и реконструкция только по известным symbols запрещены.
 
 ## Цель
 
