@@ -14,10 +14,12 @@ ETHUSDT 1h кандидат повторно проверен walk-forward то�
 Актуальные материалы:
 
 - `reports/PHASE1_AUDIT.md`;
-- `reports/PHASE2_WALK_FORWARD.md`;
+- `reports/PHASE2_WALK_FORWARD.md` — оригинальная Phase 2;
+- `reports/PHASE2_WALK_FORWARD_REPEAT.md` — дополнительный повтор Phase 2;
+- `reports/PHASE3_PARAMETER_STABILITY.md` — оригинальная Phase 3;
+- `reports/PHASE3_ROBUSTNESS.md` — дополнительная повторная robustness-проверка;
 - `reports/PHASE4_ECONOMIC_MECHANISM.md`;
-- `reports/phase2/walk-forward.json`;
-- `reports/phase4/mechanism.json`.
+- машинные артефакты в `reports/phase2/`, `reports/phase2-repeat/`, `reports/phase3/` и `reports/phase4/`.
 
 `reports/BEST_RESULT_SO_FAR.md` и исходный diagnostic JSON сохранены только как исторические артефакты до исправления утечки VALIDATION-калибровки.
 
@@ -370,8 +372,8 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 # Выполненные фазы
 
 - Phase 1: аудит движка, причинности, TRAIN-only calibration и журналов сделок.
-- Phase 2: anchored/rolling walk-forward; объединённый OOS положителен в обеих схемах, TEST закрыт.
-- Phase 3: robustness по расходам, окнам, концентрации и однофакторным соседям завершена; strict pass не пройден.
+- Оригинальная Phase 2: четыре anchored/rolling walk-forward-схемы дали положительный объединённый OOS; дополнительный повтор Phase 2 также положителен, но rolling без top-5 равен `−0,044R`; TEST закрыт.
+- Оригинальная Phase 3: завершена карта 256 VALIDATION-конфигураций с широким положительным кластером. Отдельная повторная robustness-проверка по расходам, окнам, концентрации и однофакторным соседям завершена; её strict pass не пройден.
 - Phase 4: анализ экономического механизма; простой специфический 24h continuation не подтверждён.
 
 # Ближайшая последовательность работ

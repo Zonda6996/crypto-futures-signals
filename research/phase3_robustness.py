@@ -9,7 +9,7 @@ from .core import CostModel, chronological_splits
 from .data import download_symbol
 from .features import make_features
 from .phase1_audit import CANDIDATE, r_metrics
-from .phase2_walk_forward import concentration, summarize_r, walk_forward_folds
+from .phase2_walk_forward_repeat import concentration, summarize_r, walk_forward_folds
 from .search import Candidate, calibrate_candidate, evaluate_candidate
 
 ROOT = Path(__file__).resolve().parents[1]
