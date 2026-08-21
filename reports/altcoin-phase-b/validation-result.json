@@ -1,0 +1,174 @@
+{
+  "attribution": {
+    "by_symbol": {
+      "ADAUSDT": 0.17556213728430373,
+      "AVAXUSDT": 0.06937215630857298,
+      "BNBUSDT": -0.28392386342740195,
+      "DOGEUSDT": 0.16100073691462935,
+      "DOTUSDT": -0.17091046941529908,
+      "ETHUSDT": -0.029128043234955887,
+      "LINKUSDT": -0.2625598437036524,
+      "LTCUSDT": -0.29678300459085966,
+      "SOLUSDT": -0.03657338119694082,
+      "XRPUSDT": 0.2931889131024466
+    },
+    "by_year": {
+      "2024": 0.03890994785218458,
+      "2025": -0.4196646098113419
+    },
+    "max_symbol_share": 0.7700205470731607,
+    "max_year_share": 0.10219165184209451,
+    "net_total": -0.3807546619591572
+  },
+  "bootstrap_net_sharpe": {
+    "block_length": 14,
+    "ci95_high": 0.6316264522190413,
+    "ci95_low": -2.448868736313552,
+    "expected_block_days": 14,
+    "iterations": 2000,
+    "median": -0.8412655189105434
+  },
+  "by_cost": {
+    "base_0_10pct": {
+      "active_periods": 620,
+      "cost_drag": 0.62,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.006955257513641648,
+      "gross_return_sum": 0.3562900805272008,
+      "max_drawdown": -0.42663350202745354,
+      "net_mean_period_return": -0.0004141204225147705,
+      "net_sharpe": -0.5509448279790777,
+      "net_total_return": -0.2743623990080748,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.4612903225806452,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    },
+    "realistic_0_12pct": {
+      "active_periods": 620,
+      "cost_drag": 0.7439999999999999,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.006955257513641648,
+      "gross_return_sum": 0.3562900805272008,
+      "max_drawdown": -0.4678104474149616,
+      "net_mean_period_return": -0.0006141204225147701,
+      "net_sharpe": -0.8170243536558999,
+      "net_total_return": -0.35904364941977773,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.45645161290322583,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    },
+    "stress_0_20pct": {
+      "active_periods": 620,
+      "cost_drag": 1.24,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.006955257513641648,
+      "gross_return_sum": 0.3562900805272008,
+      "max_drawdown": -0.6267605854520649,
+      "net_mean_period_return": -0.0014141204225147704,
+      "net_sharpe": -1.8813424563631909,
+      "net_total_return": -0.609918627894924,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.4258064516129032,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    }
+  },
+  "configuration": {
+    "ranking_horizon_days": 30,
+    "rebalance_hours": 24
+  },
+  "controls": {
+    "baseline": {
+      "active_periods": 620,
+      "cost_drag": 0.7439999999999999,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.006955257513641648,
+      "gross_return_sum": 0.3562900805272008,
+      "max_drawdown": -0.4678104474149616,
+      "net_mean_period_return": -0.0006141204225147701,
+      "net_sharpe": -0.8170243536558999,
+      "net_total_return": -0.35904364941977773,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.45645161290322583,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    },
+    "execution_delayed_one_bar": {
+      "active_periods": 620,
+      "cost_drag": 0.7439999999999999,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.00825665830646332,
+      "gross_return_sum": 0.34101317775993034,
+      "max_drawdown": -0.4179279030264613,
+      "net_mean_period_return": -0.0006366615547316229,
+      "net_sharpe": -0.850922338802778,
+      "net_total_return": -0.3674531494301112,
+      "net_volatility_annualised": 0.273093626621668,
+      "positive_period_share": 0.4467741935483871,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    },
+    "interpretation": {
+      "delay": "a fragile edge decays sharply when execution is pushed one hour later",
+      "sign_flip": "a genuine cross-sectional effect should roughly invert when the ranking is inverted",
+      "zero_cost": "gap between zero-cost and net shows how much of the result costs consume"
+    },
+    "sign_flipped_ranking": {
+      "active_periods": 620,
+      "cost_drag": 0.7439999999999999,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": -0.006955257513641648,
+      "gross_return_sum": -0.3562900805272008,
+      "max_drawdown": -0.7004379393411032,
+      "net_mean_period_return": -0.0017858795774852293,
+      "net_sharpe": -2.3759299544659718,
+      "net_total_return": -0.6904477438806471,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.4467741935483871,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    },
+    "zero_cost_reference": {
+      "active_periods": 620,
+      "cost_drag": 0.0,
+      "daily_equivalent_observations": 620.0,
+      "decisions": 620,
+      "funding_return_sum": 0.006955257513641648,
+      "gross_return_sum": 0.3562900805272008,
+      "max_drawdown": -0.2221312200673501,
+      "net_mean_period_return": 0.0005858795774852298,
+      "net_sharpe": 0.7794528004050361,
+      "net_total_return": 0.3490085231373019,
+      "net_volatility_annualised": 0.2743540669441248,
+      "positive_period_share": 0.49516129032258066,
+      "skipped_periods": 0,
+      "turnover_sum": 620.0
+    }
+  },
+  "evidence_label": "exploratory fixed-basket evidence with survivorship/selection bias",
+  "protocol_id": "ALT-XSMOM-001-B",
+  "train_reference": {
+    "active_periods": 1441,
+    "cost_drag": 1.7291999999999998,
+    "daily_equivalent_observations": 1441.0,
+    "decisions": 1445,
+    "funding_return_sum": 0.038306606317586374,
+    "gross_return_sum": 3.266132361966404,
+    "max_drawdown": -0.5558829383680159,
+    "net_mean_period_return": 0.0010931568135211596,
+    "net_sharpe": 0.7530359015472696,
+    "net_total_return": 1.8219403515636832,
+    "net_volatility_annualised": 0.529858186197218,
+    "positive_period_share": 0.4712005551700208,
+    "skipped_periods": 4,
+    "turnover_sum": 1441.0
+  }
+}

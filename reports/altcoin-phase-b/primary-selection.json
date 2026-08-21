@@ -1,0 +1,59 @@
+{
+  "cost_scenario": "realistic_0_12pct",
+  "grid_points_evaluated": 9,
+  "metric": "net_sharpe",
+  "note": "one configuration only; VALIDATION is used once for confirmation",
+  "ranking_horizon_days": 30,
+  "rebalance_hours": 24,
+  "selected_on": "TRAIN only",
+  "train_summary": {
+    "base_0_10pct": {
+      "active_periods": 1441,
+      "cost_drag": 1.441,
+      "daily_equivalent_observations": 1441.0,
+      "decisions": 1445,
+      "funding_return_sum": 0.038306606317586374,
+      "gross_return_sum": 3.266132361966404,
+      "max_drawdown": -0.5106183402962601,
+      "net_mean_period_return": 0.0012931568135211592,
+      "net_sharpe": 0.8908086148914184,
+      "net_total_return": 2.7640422263430837,
+      "net_volatility_annualised": 0.529858186197218,
+      "positive_period_share": 0.4774462179042332,
+      "skipped_periods": 4,
+      "turnover_sum": 1441.0
+    },
+    "realistic_0_12pct": {
+      "active_periods": 1441,
+      "cost_drag": 1.7291999999999998,
+      "daily_equivalent_observations": 1441.0,
+      "decisions": 1445,
+      "funding_return_sum": 0.038306606317586374,
+      "gross_return_sum": 3.266132361966404,
+      "max_drawdown": -0.5558829383680159,
+      "net_mean_period_return": 0.0010931568135211596,
+      "net_sharpe": 0.7530359015472696,
+      "net_total_return": 1.8219403515636832,
+      "net_volatility_annualised": 0.529858186197218,
+      "positive_period_share": 0.4712005551700208,
+      "skipped_periods": 4,
+      "turnover_sum": 1441.0
+    },
+    "stress_0_20pct": {
+      "active_periods": 1441,
+      "cost_drag": 2.882,
+      "daily_equivalent_observations": 1441.0,
+      "decisions": 1445,
+      "funding_return_sum": 0.038306606317586374,
+      "gross_return_sum": 3.266132361966404,
+      "max_drawdown": -0.7395662477672313,
+      "net_mean_period_return": 0.0002931568135211592,
+      "net_sharpe": 0.2019450481706739,
+      "net_total_return": -0.10901422215172119,
+      "net_volatility_annualised": 0.529858186197218,
+      "positive_period_share": 0.4448299791811242,
+      "skipped_periods": 4,
+      "turnover_sum": 1441.0
+    }
+  }
+}

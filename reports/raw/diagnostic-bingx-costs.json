@@ -1,0 +1,4635 @@
+{
+  "scope": {
+    "years": [
+      2021,
+      2025
+    ],
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ]
+  },
+  "cost_scenarios": {
+    "round_trip_0.10pct": {
+      "round_trip_return": 0.001,
+      "candidates_tested": 2016,
+      "positive_expectancy_with_30_trades": 358,
+      "top20": [
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.2727272727272727,
+            "average_win": 0.04210620662641325,
+            "average_loss": -0.03562461190031097,
+            "expectancy": -0.014425297756658913,
+            "profit_factor": 0.4432280561845823,
+            "sharpe": -11.561083228859623,
+            "max_drawdown": -0.21923010559992262,
+            "average_holding_bars": 10.090909090909092,
+            "total_return": -0.154109991871761,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.03721135773622189,
+              0.008360762222904064
+            ],
+            "p_value": 0.8926653034236931
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.046423285756936994,
+            "average_loss": 0.0,
+            "expectancy": 0.046423285756936994,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 15,
+            "total_return": 0.046423285756937105,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.4683699689707708,
+            "total_r": 1.4683699689707708,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 29,
+            "win_rate": 0.5517241379310345,
+            "average_win": 0.042408073588513305,
+            "average_loss": -0.04132390849763957,
+            "expectancy": 0.004873047136099946,
+            "profit_factor": 1.2630594250764255,
+            "sharpe": 2.6740213673994075,
+            "max_drawdown": -0.2351061298312378,
+            "average_holding_bars": 12.379310344827585,
+            "total_return": 0.11314385279930939,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.013083243344557238,
+              0.02282933761675713
+            ],
+            "p_value": 0.2973933388903222
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.02097131147623408,
+            "average_loss": 0.0,
+            "expectancy": 0.02097131147623408,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 22,
+            "total_return": 0.02097131147623399,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.418814004217595,
+            "total_r": 1.418814004217595,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.026643701537438336,
+            "average_loss": -0.028172221675595847,
+            "expectancy": -0.008239158689037964,
+            "profit_factor": 0.5404249789890101,
+            "sharpe": -11.295723763112582,
+            "max_drawdown": -0.1541267290624323,
+            "average_holding_bars": 6,
+            "total_return": -0.09092569753758106,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.025513492340418845,
+              0.009035174962342915
+            ],
+            "p_value": 0.8250648281499858
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.030615523837957848,
+            "average_loss": 0.0,
+            "expectancy": 0.030615523837957848,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 14,
+            "total_return": 0.03061552383795796,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.2911599586276874,
+            "total_r": 1.2911599586276874,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.03443785793229564,
+            "average_loss": -0.033245171259440466,
+            "expectancy": -0.0024801579904695087,
+            "profit_factor": 0.8632295715856904,
+            "sharpe": -2.0877376367869678,
+            "max_drawdown": -0.18229477636889213,
+            "average_holding_bars": 8.606060606060606,
+            "total_return": -0.1001828765880961,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.01561226344817678,
+              0.010651947467237763
+            ],
+            "p_value": 0.6443719744759344
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.013580874317489312,
+            "average_loss": 0.0,
+            "expectancy": 0.013580874317489312,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 19,
+            "total_return": 0.013580874317489222,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.2250853389567853,
+            "total_r": 1.2250853389567853,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "ret_24",
+            "side": -1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bull",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 6,
+            "win_rate": 0.5,
+            "average_win": 0.02311919542445917,
+            "average_loss": -0.017304364960792278,
+            "expectancy": 0.0029074152318334452,
+            "profit_factor": 1.3360325835037554,
+            "sharpe": 3.49871455996408,
+            "max_drawdown": -0.03820092283501042,
+            "average_holding_bars": 12,
+            "total_return": 0.016038342865070776,
+            "threshold": -0.018244864438349162,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.3860781566084999
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.018542576026922983,
+            "average_loss": 0.0,
+            "expectancy": 0.018542576026922983,
+            "profit_factor": null,
+            "sharpe": 43.11127450565726,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 16.5,
+            "total_return": 0.037330764009191775,
+            "threshold": -0.015344579780398604,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.030670389427056688,
+            "expectancy_r": 0.9713621837691955,
+            "total_r": 1.942724367538391,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.23529411764705882,
+            "average_win": 0.03541371219251876,
+            "average_loss": -0.02816253733422894,
+            "expectancy": -0.0132034197985236,
+            "profit_factor": 0.38691566385332743,
+            "sharpe": -11.23705532141273,
+            "max_drawdown": -0.2316919564961094,
+            "average_holding_bars": 12.882352941176471,
+            "total_return": -0.20867261485690625,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.028217006253783938,
+              0.0018101666567367364
+            ],
+            "p_value": 0.957617727729296
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.03310483745499525,
+            "average_loss": -0.0012054608379703394,
+            "expectancy": 0.021668071357340054,
+            "profit_factor": 54.924782974674784,
+            "sharpe": 22.889122942028752,
+            "max_drawdown": -0.0012054608379702403,
+            "average_holding_bars": 20.666666666666668,
+            "total_return": 0.06584184282448602,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.057943903697831034,
+            "expectancy_r": 0.9305288060119757,
+            "total_r": 2.7915864180359273,
+            "max_drawdown_r": -0.10224544868294405
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.2857142857142857,
+            "average_win": 0.025720699465832657,
+            "average_loss": -0.016223218028497695,
+            "expectancy": -0.004239241601546165,
+            "profit_factor": 0.6341700991912134,
+            "sharpe": -4.879519491019435,
+            "max_drawdown": -0.04405639945914941,
+            "average_holding_bars": 15.714285714285714,
+            "total_return": -0.0307269419627052,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.6936524362170102
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.019786389153053505,
+            "average_loss": -0.0012054608379703394,
+            "expectancy": 0.009290464157541582,
+            "profit_factor": 16.413962635541342,
+            "sharpe": 17.089714818265378,
+            "max_drawdown": -0.0012054608379703513,
+            "average_holding_bars": 23.5,
+            "total_return": 0.018557076597834232,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.18803793195482976,
+            "expectancy_r": 0.6616082245325784,
+            "total_r": 1.3232164490651568,
+            "max_drawdown_r": -0.10224544868294383
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.032494776444905824,
+            "average_loss": -0.031080320970252377,
+            "expectancy": -0.002182549417907741,
+            "profit_factor": 0.871258067015225,
+            "sharpe": -2.1359669395737657,
+            "max_drawdown": -0.18359421348775795,
+            "average_holding_bars": 6.696969696969697,
+            "total_return": -0.09020587991804785,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.014987076053388244,
+              0.01062197721757276
+            ],
+            "p_value": 0.6308421220668429
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.006776463750978935,
+            "average_loss": 0.0,
+            "expectancy": 0.006776463750978935,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006776463750978845,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.6112821750073552,
+            "total_r": 0.6112821750073552,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.012049872840807607,
+            "average_loss": -0.01203348557441631,
+            "expectancy": 0.0017284335199973574,
+            "profit_factor": 1.3351490739503482,
+            "sharpe": 4.47369684022548,
+            "max_drawdown": -0.012876061083698764,
+            "average_holding_bars": 6.714285714285714,
+            "total_return": 0.011477233651939756,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.3807993903009368
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012880686102035743,
+            "average_loss": -0.0007435831348768518,
+            "expectancy": 0.006068551483579446,
+            "profit_factor": 17.32245595399225,
+            "sharpe": 27.792820168035746,
+            "max_drawdown": -0.0007435831348768795,
+            "average_holding_bars": 9,
+            "total_return": 0.012127525106207626,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.18650631274020224,
+            "expectancy_r": 0.5765918687894721,
+            "total_r": 1.1531837375789442,
+            "max_drawdown_r": -0.08409286458619825
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.47058823529411764,
+            "average_win": 0.016750085284057768,
+            "average_loss": -0.021457779261126526,
+            "expectancy": -0.003477607710451566,
+            "profit_factor": 0.6938725818618833,
+            "sharpe": -6.013655269002482,
+            "max_drawdown": -0.12948125884090356,
+            "average_holding_bars": 6,
+            "total_return": -0.06143341651494427,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.014304768075792139,
+              0.007349552654889006
+            ],
+            "p_value": 0.7355016752105636
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.012351974804487909,
+            "average_loss": -0.0007435831348768518,
+            "expectancy": 0.007986788824699656,
+            "profit_factor": 33.22284819311717,
+            "sharpe": 37.57742525348482,
+            "max_drawdown": -0.0007435831348768795,
+            "average_holding_bars": 10.333333333333334,
+            "total_return": 0.024094175538165175,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.033985457764877824,
+            "expectancy_r": 0.5506035532335539,
+            "total_r": 1.6518106597006617,
+            "max_drawdown_r": -0.08409286458619825
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.011827560372712596,
+            "average_loss": -0.008378895483263316,
+            "expectancy": 0.0031676507201514907,
+            "profit_factor": 1.8821192516902214,
+            "sharpe": 12.24860061980853,
+            "max_drawdown": -0.012220733296935848,
+            "average_holding_bars": 3.5714285714285716,
+            "total_return": 0.021804217287549,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.2723229188599248
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012880686102035743,
+            "average_loss": -0.0014794248506562182,
+            "expectancy": 0.005700630625689762,
+            "profit_factor": 8.706549775963508,
+            "sharpe": 33.23243414170435,
+            "max_drawdown": -0.0014794248506563301,
+            "average_holding_bars": 5,
+            "total_return": 0.011382205244266475,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.21361117163147525,
+            "expectancy_r": 0.5349831804938734,
+            "total_r": 1.0699663609877468,
+            "max_drawdown_r": -0.16731024117739568
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.021907594187290345,
+            "average_loss": -0.026169926104481638,
+            "expectancy": -0.004316507790039828,
+            "profit_factor": 0.6976071853058156,
+            "sharpe": -6.866423830958447,
+            "max_drawdown": -0.11871126424363132,
+            "average_holding_bars": 5.090909090909091,
+            "total_return": -0.050057579102391614,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.02047915061819234,
+              0.011846135038112686
+            ],
+            "p_value": 0.6996698731245099
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011823263506940074,
+            "average_loss": 0.0,
+            "expectancy": 0.011823263506940074,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011823263506939963,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.49862692212171744,
+            "total_r": 0.49862692212171744,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.35294117647058826,
+            "average_win": 0.02455338245467975,
+            "average_loss": -0.02131516548298253,
+            "expectancy": -0.005126266210866431,
+            "profit_factor": 0.6283204358362303,
+            "sharpe": -7.226840424878594,
+            "max_drawdown": -0.16446392070956695,
+            "average_holding_bars": 7.411764705882353,
+            "total_return": -0.08832629557575311,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.017075498718789054,
+              0.006822966297056192
+            ],
+            "p_value": 0.7997833509773604
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.021748104969996795,
+            "average_loss": -0.010177974626550172,
+            "expectancy": 0.011106078437814472,
+            "profit_factor": 4.273562426313165,
+            "sharpe": 18.221945264075302,
+            "max_drawdown": -0.010177974626550013,
+            "average_holding_bars": 11.666666666666666,
+            "total_return": 0.033265867271097704,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.17349595130793766,
+            "expectancy_r": 0.4591316891324939,
+            "total_r": 1.3773950673974817,
+            "max_drawdown_r": -1.1510414933953481
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 30,
+            "win_rate": 0.5333333333333333,
+            "average_win": 0.03499518870729121,
+            "average_loss": -0.03929028411909414,
+            "expectancy": 0.0003286347216447133,
+            "profit_factor": 1.0179234453620305,
+            "sharpe": 0.23285980999014091,
+            "max_drawdown": -0.2351061298312378,
+            "average_holding_bars": 8.466666666666667,
+            "total_return": -0.020615297406276878,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.016193714692183492,
+              0.01685098413547292
+            ],
+            "p_value": 0.4844511063293498
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.006776463750978935,
+            "average_loss": 0.0,
+            "expectancy": 0.006776463750978935,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006776463750978845,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.45846163125551637,
+            "total_r": 0.45846163125551637,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 41,
+            "win_rate": 0.36585365853658536,
+            "average_win": 0.025097835553605712,
+            "average_loss": -0.02312107209946381,
+            "expectancy": -0.005480008323950571,
+            "profit_factor": 0.6262477989518224,
+            "sharpe": -8.870399157927137,
+            "max_drawdown": -0.27445014388779443,
+            "average_holding_bars": 3.926829268292683,
+            "total_return": -0.2155894962811291,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.014522646927473109,
+              0.003562630279571967
+            ],
+            "p_value": 0.882543179844989
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004738726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004738726742262046,
+            "profit_factor": null,
+            "sharpe": 814.8574715898512,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.009499849764873947,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.43803515592325326,
+            "total_r": 0.8760703118465065,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.02763720183355865,
+            "average_loss": -0.025502244660037126,
+            "expectancy": -0.006178809571456845,
+            "profit_factor": 0.619266538007189,
+            "sharpe": -6.511529936660509,
+            "max_drawdown": -0.12947253787718926,
+            "average_holding_bars": 7.818181818181818,
+            "total_return": -0.07112669782655112,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.02586569484699948,
+              0.013508075704085791
+            ],
+            "p_value": 0.7307735505524021
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011823263506940074,
+            "average_loss": 0.0,
+            "expectancy": 0.011823263506940074,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011823263506939963,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.3739701915912881,
+            "total_r": 0.3739701915912881,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 68,
+            "win_rate": 0.4264705882352941,
+            "average_win": 0.03829578289469851,
+            "average_loss": -0.031904333046097105,
+            "expectancy": -0.0019660483066401514,
+            "profit_factor": 0.8925543543597411,
+            "sharpe": -1.6815299099525622,
+            "max_drawdown": -0.3567569923588454,
+            "average_holding_bars": 8.191176470588236,
+            "total_return": -0.16757059007834063,
+            "threshold": 0.00746185506998712,
+            "expectancy_ci95": [
+              -0.01112165587786242,
+              0.007189559264582116
+            ],
+            "p_value": 0.6630803024526226
+          },
+          "validation": {
+            "trades": 19,
+            "win_rate": 0.631578947368421,
+            "average_win": 0.020190458794357873,
+            "average_loss": -0.019693271429758855,
+            "expectancy": 0.0054964529223148675,
+            "profit_factor": 1.757565531937925,
+            "sharpe": 8.680850903068931,
+            "max_drawdown": -0.04599130741926316,
+            "average_holding_bars": 8.68421052631579,
+            "total_return": 0.10553455910804255,
+            "threshold": 0.0020357107503932745,
+            "expectancy_ci95": [
+              -0.003793786696464954,
+              0.014786692541094689
+            ],
+            "p_value": 0.1231040266473526,
+            "expectancy_r": 0.3575796166520398,
+            "total_r": 6.794012716388757,
+            "max_drawdown_r": -2.1392135813448263
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 39,
+            "win_rate": 0.4358974358974359,
+            "average_win": 0.0284819023221132,
+            "average_loss": -0.026316044687025142,
+            "expectancy": -0.002429760093298171,
+            "profit_factor": 0.836324111970455,
+            "sharpe": -3.0354832014683204,
+            "max_drawdown": -0.2447526872149165,
+            "average_holding_bars": 4.358974358974359,
+            "total_return": -0.11316372253748852,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.013839079277798693,
+              0.008979559091202351
+            ],
+            "p_value": 0.661809593462606
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004738726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004738726742262046,
+            "profit_factor": null,
+            "sharpe": 814.8574715898512,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.009499849764873947,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.32852636694244,
+            "total_r": 0.65705273388488,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.0055648564798190785,
+            "average_loss": -0.008244461656317943,
+            "expectancy": -0.00035342272138250234,
+            "profit_factor": 0.8999749103172529,
+            "sharpe": -1.7896956124362675,
+            "max_drawdown": -0.01596097772924787,
+            "average_holding_bars": 4.571428571428571,
+            "total_return": -0.002732781698591924,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.5398854010954781
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.010529278713244605,
+            "average_loss": -0.0014794248506562182,
+            "expectancy": 0.004524926931294193,
+            "profit_factor": 7.1171433334881495,
+            "sharpe": 31.54368976928304,
+            "max_drawdown": -0.0014794248506563301,
+            "average_holding_bars": 5,
+            "total_return": 0.009034276586000312,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.22554228236825857,
+            "expectancy_r": 0.3165366950908991,
+            "total_r": 0.6330733901817982,
+            "max_drawdown_r": -0.12548268088304682
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "vwap_distance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 153,
+            "win_rate": 0.48366013071895425,
+            "average_win": 0.03568663997793744,
+            "average_loss": -0.03190167293092136,
+            "expectancy": 0.0007880993256508675,
+            "profit_factor": 1.0478444798318773,
+            "sharpe": 0.5698864452026384,
+            "max_drawdown": -0.3598923469139431,
+            "average_holding_bars": 11.156862745098039,
+            "total_return": 0.006080291197155585,
+            "threshold": 0.011212620517575989,
+            "expectancy_ci95": [
+              -0.0053722865130659304,
+              0.006948485164367666
+            ],
+            "p_value": 0.4010063959242005
+          },
+          "validation": {
+            "trades": 43,
+            "win_rate": 0.5813953488372093,
+            "average_win": 0.025752621999771998,
+            "average_loss": -0.017542742113157827,
+            "expectancy": 0.0076289812083130005,
+            "profit_factor": 2.038879117330903,
+            "sharpe": 8.655052784100569,
+            "max_drawdown": -0.06703782968014838,
+            "average_holding_bars": 11.744186046511627,
+            "total_return": 0.3695792441754513,
+            "threshold": 0.009790978125263194,
+            "expectancy_ci95": [
+              0.0003483531961404789,
+              0.014909609220485523
+            ],
+            "p_value": 0.0199984615871453,
+            "expectancy_r": 0.2860736449204911,
+            "total_r": 12.301166731581118,
+            "max_drawdown_r": -3.15181276451659
+          }
+        }
+      ]
+    },
+    "round_trip_0.12pct": {
+      "round_trip_return": 0.0012,
+      "candidates_tested": 2016,
+      "positive_expectancy_with_30_trades": 252,
+      "top20": [
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.2727272727272727,
+            "average_win": 0.04190620662641325,
+            "average_loss": -0.03582461190031097,
+            "expectancy": -0.014625297756658912,
+            "profit_factor": 0.4386600901255977,
+            "sharpe": -11.721372235352023,
+            "max_drawdown": -0.22020606158422784,
+            "average_holding_bars": 10.090909090909092,
+            "total_return": -0.15599883491907618,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.03741135773622189,
+              0.008160762222904065
+            ],
+            "p_value": 0.8958097680088668
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.046223285756936995,
+            "average_loss": 0.0,
+            "expectancy": 0.046223285756936995,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 15,
+            "total_return": 0.046223285756936905,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.4620439627649247,
+            "total_r": 1.4620439627649247,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 29,
+            "win_rate": 0.5517241379310345,
+            "average_win": 0.0422080735885133,
+            "average_loss": -0.041523908497639574,
+            "expectancy": 0.004673047136099945,
+            "profit_factor": 1.2510478936668161,
+            "sharpe": 2.564273963250983,
+            "max_drawdown": -0.23576025663252875,
+            "average_holding_bars": 12.379310344827585,
+            "total_return": 0.10672188154427653,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.013283243344557239,
+              0.02262933761675713
+            ],
+            "p_value": 0.3049971601897076
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.02077131147623408,
+            "average_loss": 0.0,
+            "expectancy": 0.02077131147623408,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 22,
+            "total_return": 0.02077131147623401,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.405283004920527,
+            "total_r": 1.405283004920527,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.026443701537438337,
+            "average_loss": -0.028372221675595846,
+            "expectancy": -0.008439158689037963,
+            "profit_factor": 0.5325873583533731,
+            "sharpe": -11.569919811263498,
+            "max_drawdown": -0.15500107664444795,
+            "average_holding_bars": 6,
+            "total_return": -0.0929418221233802,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.025713492340418843,
+              0.008835174962342917
+            ],
+            "p_value": 0.8308509526915016
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.03041552383795785,
+            "average_loss": 0.0,
+            "expectancy": 0.03041552383795785,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 14,
+            "total_return": 0.03041552383795776,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.2827252836865592,
+            "total_r": 1.2827252836865592,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.03423785793229564,
+            "average_loss": -0.033445171259440465,
+            "expectancy": -0.002680157990469508,
+            "profit_factor": 0.8530842331644369,
+            "sharpe": -2.256092850028181,
+            "max_drawdown": -0.1862467166548183,
+            "average_holding_bars": 8.606060606060606,
+            "total_return": -0.1061258133181261,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.01581226344817678,
+              0.010451947467237764
+            ],
+            "p_value": 0.655429193350721
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.013380874317489312,
+            "average_loss": 0.0,
+            "expectancy": 0.013380874317489312,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 19,
+            "total_return": 0.013380874317489244,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.2070440065606944,
+            "total_r": 1.2070440065606944,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "ret_24",
+            "side": -1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bull",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 6,
+            "win_rate": 0.5,
+            "average_win": 0.022919195424459173,
+            "average_loss": -0.017504364960792277,
+            "expectancy": 0.0027074152318334464,
+            "profit_factor": 1.309341725666454,
+            "sharpe": 3.25803930163452,
+            "max_drawdown": -0.03878552111325784,
+            "average_holding_bars": 12,
+            "total_return": 0.014822625746613971,
+            "threshold": -0.018244864438349162,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.39371973186970116
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.018342576026922984,
+            "average_loss": 0.0,
+            "expectancy": 0.018342576026922984,
+            "profit_factor": null,
+            "sharpe": 42.646276822023,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 16.5,
+            "total_return": 0.03692338697878106,
+            "threshold": -0.015344579780398604,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.03209556329220831,
+            "expectancy_r": 0.9607540316887594,
+            "total_r": 1.9215080633775188,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.23529411764705882,
+            "average_win": 0.03521371219251876,
+            "average_loss": -0.02836253733422894,
+            "expectancy": -0.0134034197985236,
+            "profit_factor": 0.3820175973414336,
+            "sharpe": -11.407269636989806,
+            "max_drawdown": -0.2328082940563676,
+            "average_holding_bars": 12.882352941176471,
+            "total_return": -0.21139728276171732,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.028417006253783936,
+              0.0016101666567367376
+            ],
+            "p_value": 0.9599232196330352
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.03290483745499525,
+            "average_loss": -0.0014054608379703393,
+            "expectancy": 0.021468071357340055,
+            "profit_factor": 46.824267978201284,
+            "sharpe": 22.67785242732025,
+            "max_drawdown": -0.0014054608379702183,
+            "average_holding_bars": 20.666666666666668,
+            "total_return": 0.06521579598382021,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.05964528423696969,
+            "expectancy_r": 0.9179627302579062,
+            "total_r": 2.7538881907737185,
+            "max_drawdown_r": -0.11920916006407767
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.2857142857142857,
+            "average_win": 0.025520699465832658,
+            "average_loss": -0.016423218028497694,
+            "expectancy": -0.0044392416015461645,
+            "profit_factor": 0.6215760984613111,
+            "sharpe": -5.109726681345164,
+            "max_drawdown": -0.04482970311767476,
+            "average_holding_bars": 15.714285714285714,
+            "total_return": -0.03208944999849983,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.7019832708684913
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.019586389153053507,
+            "average_loss": -0.0014054608379703393,
+            "expectancy": 0.009090464157541583,
+            "profit_factor": 13.935919538916997,
+            "sharpe": 16.721816841835587,
+            "max_drawdown": -0.0014054608379703293,
+            "average_holding_bars": 23.5,
+            "total_return": 0.018153400412171283,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.19321909668485193,
+            "expectancy_r": 0.6459221140043968,
+            "total_r": 1.2918442280087936,
+            "max_drawdown_r": -0.11920916006407789
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.032294776444905825,
+            "average_loss": -0.03128032097025238,
+            "expectancy": -0.002382549417907741,
+            "profit_factor": 0.8603592568529533,
+            "sharpe": -2.3316983096905863,
+            "max_drawdown": -0.18753993849946438,
+            "average_holding_bars": 6.696969696969697,
+            "total_return": -0.09621249630916606,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.015187076053388242,
+              0.01042197721757276
+            ],
+            "p_value": 0.6423318508143625
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.0065764637509789356,
+            "average_loss": 0.0,
+            "expectancy": 0.0065764637509789356,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006576463750978867,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.5932408426112644,
+            "total_r": 0.5932408426112644,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.011849872840807608,
+            "average_loss": -0.012233485574416308,
+            "expectancy": 0.0015284335199973582,
+            "profit_factor": 1.2915232014865883,
+            "sharpe": 3.9560377242147813,
+            "max_drawdown": -0.013076061083698742,
+            "average_holding_bars": 6.714285714285714,
+            "total_return": 0.010064182782287823,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.3942430059554374
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012680686102035744,
+            "average_loss": -0.0009435831348768517,
+            "expectancy": 0.005868551483579446,
+            "profit_factor": 13.43886472037328,
+            "sharpe": 26.876857924220598,
+            "max_drawdown": -0.0009435831348768575,
+            "average_holding_bars": 9,
+            "total_return": 0.011725137685614229,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.19448545916231075,
+            "expectancy_r": 0.5556770547518967,
+            "total_r": 1.1113541095037933,
+            "max_drawdown_r": -0.1067111464277104
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.47058823529411764,
+            "average_win": 0.016550085284057766,
+            "average_loss": -0.021657779261126525,
+            "expectancy": -0.003677607710451565,
+            "profit_factor": 0.6792564806294575,
+            "sharpe": -6.359505391828531,
+            "max_drawdown": -0.13037595029545157,
+            "average_holding_bars": 6,
+            "total_return": -0.0646321127042595,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.014504768075792138,
+              0.007149552654889008
+            ],
+            "p_value": 0.7472125177372393
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.01215197480448791,
+            "average_loss": -0.0009435831348768517,
+            "expectancy": 0.007786788824699656,
+            "profit_factor": 25.757083515643547,
+            "sharpe": 36.636435674862824,
+            "max_drawdown": -0.0009435831348769685,
+            "average_holding_bars": 10.333333333333334,
+            "total_return": 0.02348468555752925,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.03757940547041383,
+            "expectancy_r": 0.5338487855614609,
+            "total_r": 1.6015463566843826,
+            "max_drawdown_r": -0.1067111464277104
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.011627560372712595,
+            "average_loss": -0.008578895483263314,
+            "expectancy": 0.0029676507201514915,
+            "profit_factor": 1.8071573270159642,
+            "sharpe": 11.475245114298586,
+            "max_drawdown": -0.012420733296935826,
+            "average_holding_bars": 3.5714285714285716,
+            "total_return": 0.020378830064979203,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.2851691833239534
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012680686102035744,
+            "average_loss": -0.001679424850656218,
+            "expectancy": 0.005500630625689763,
+            "profit_factor": 7.550612399882553,
+            "sharpe": 32.06651281391501,
+            "max_drawdown": -0.001679424850656197,
+            "average_holding_bars": 5,
+            "total_return": 0.010979964992016367,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.22180874458028055,
+            "expectancy_r": 0.514068366456298,
+            "total_r": 1.028136732912596,
+            "max_drawdown_r": -0.1899285230189076
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.021707594187290347,
+            "average_loss": -0.026369926104481637,
+            "expectancy": -0.004516507790039826,
+            "profit_factor": 0.6859959239577683,
+            "sharpe": -7.184571007562757,
+            "max_drawdown": -0.11943873365456281,
+            "average_holding_bars": 5.090909090909091,
+            "total_return": -0.052155841358149324,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.020679150618192338,
+              0.011646135038112687
+            ],
+            "p_value": 0.708052680046495
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011623263506940075,
+            "average_loss": 0.0,
+            "expectancy": 0.011623263506940075,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011623263506939985,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.49019224718058924,
+            "total_r": 0.49019224718058924,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 30,
+            "win_rate": 0.5333333333333333,
+            "average_win": 0.03479518870729121,
+            "average_loss": -0.03949028411909414,
+            "expectancy": 0.00012863472164471312,
+            "profit_factor": 1.0069800924010708,
+            "sharpe": 0.09114635450086632,
+            "max_drawdown": -0.23576025663252875,
+            "average_holding_bars": 8.466666666666667,
+            "total_return": -0.026484602252198397,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.016393714692183495,
+              0.016650984135472918
+            ],
+            "p_value": 0.4939125131889641
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.0065764637509789356,
+            "average_loss": 0.0,
+            "expectancy": 0.0065764637509789356,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006576463750978867,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.4449306319584483,
+            "total_r": 0.4449306319584483,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.35294117647058826,
+            "average_win": 0.024353382454679752,
+            "average_loss": -0.021515165482982528,
+            "expectancy": -0.00532626621086643,
+            "profit_factor": 0.6174092952064343,
+            "sharpe": -7.508793804886812,
+            "max_drawdown": -0.16549658290764524,
+            "average_holding_bars": 7.411764705882353,
+            "total_return": -0.09143881630732553,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.017275498718789053,
+              0.006622966297056193
+            ],
+            "p_value": 0.8088463878044457
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.021548104969996797,
+            "average_loss": -0.010377974626550171,
+            "expectancy": 0.010906078437814474,
+            "profit_factor": 4.152660946938504,
+            "sharpe": 17.893801619743883,
+            "max_drawdown": -0.010377974626550213,
+            "average_holding_bars": 11.666666666666666,
+            "total_return": 0.03265267097257518,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.17787219018459,
+            "expectancy_r": 0.442376921460401,
+            "total_r": 1.327130764381203,
+            "max_drawdown_r": -1.17365977523686
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 41,
+            "win_rate": 0.36585365853658536,
+            "average_win": 0.02489783555360571,
+            "average_loss": -0.02332107209946381,
+            "expectancy": -0.005680008323950571,
+            "profit_factor": 0.6159294836467334,
+            "sharpe": -9.19413586172588,
+            "max_drawdown": -0.2791278246269724,
+            "average_holding_bars": 3.926829268292683,
+            "total_return": -0.22203662872580265,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.014722646927473108,
+              0.0033626302795719673
+            ],
+            "p_value": 0.8908659652651733
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004538726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004538726742262046,
+            "profit_factor": null,
+            "sharpe": 780.46606157996,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.009097994274176902,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.41952353649421903,
+            "total_r": 0.8390470729884381,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.02743720183355865,
+            "average_loss": -0.025702244660037125,
+            "expectancy": -0.006378809571456844,
+            "profit_factor": 0.6100012374454283,
+            "sharpe": -6.722299660548444,
+            "max_drawdown": -0.13036741819861397,
+            "average_holding_bars": 7.818181818181818,
+            "total_return": -0.07318294670715941,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.026065694846999478,
+              0.013308075704085792
+            ],
+            "p_value": 0.7373072952098058
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011623263506940075,
+            "average_loss": 0.0,
+            "expectancy": 0.011623263506940075,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011623263506939985,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.36764418538544197,
+            "total_r": 0.36764418538544197,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 68,
+            "win_rate": 0.4264705882352941,
+            "average_win": 0.03809578289469851,
+            "average_loss": -0.032104333046097104,
+            "expectancy": -0.002166048306640151,
+            "profit_factor": 0.882361686001858,
+            "sharpe": -1.8525867353899987,
+            "max_drawdown": -0.35925682731822006,
+            "average_holding_bars": 8.191176470588236,
+            "total_return": -0.17885439994023955,
+            "threshold": 0.00746185506998712,
+            "expectancy_ci95": [
+              -0.011321655877862418,
+              0.006989559264582116
+            ],
+            "p_value": 0.6785686117397925
+          },
+          "validation": {
+            "trades": 19,
+            "win_rate": 0.631578947368421,
+            "average_win": 0.019990458794357874,
+            "average_loss": -0.019893271429758854,
+            "expectancy": 0.005296452922314869,
+            "profit_factor": 1.722660752616109,
+            "sharpe": 8.364979884950108,
+            "max_drawdown": -0.04676341258655814,
+            "average_holding_bars": 8.68421052631579,
+            "total_return": 0.10136228602767683,
+            "threshold": 0.0020357107503932745,
+            "expectancy_ci95": [
+              -0.003993786696464953,
+              0.01458669254109469
+            ],
+            "p_value": 0.13190863492126548,
+            "expectancy_r": 0.3455273411808153,
+            "total_r": 6.56501948243549,
+            "max_drawdown_r": -2.1663645031343877
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 39,
+            "win_rate": 0.4358974358974359,
+            "average_win": 0.028281902322113202,
+            "average_loss": -0.02651604468702514,
+            "expectancy": -0.0026297600932981705,
+            "profit_factor": 0.8241876760601243,
+            "sharpe": -3.2853418776265855,
+            "max_drawdown": -0.2464570209118071,
+            "average_holding_bars": 4.358974358974359,
+            "total_return": -0.12008045100670073,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.014039079277798693,
+              0.00877955909120235
+            ],
+            "p_value": 0.6742807913513102
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004538726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004538726742262046,
+            "profit_factor": null,
+            "sharpe": 780.46606157996,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.009097994274176902,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.31464265237066424,
+            "total_r": 0.6292853047413285,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.005364856479819079,
+            "average_loss": -0.008444461656317943,
+            "expectancy": -0.0005534227213825018,
+            "profit_factor": 0.847080875515646,
+            "sharpe": -2.8024746468092787,
+            "max_drawdown": -0.01616097772924785,
+            "average_holding_bars": 4.571428571428571,
+            "total_return": -0.004128715970363794,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.5623052024784704
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.010329278713244607,
+            "average_loss": -0.001679424850656218,
+            "expectancy": 0.004324926931294194,
+            "profit_factor": 6.1504858101918325,
+            "sharpe": 30.14947102284857,
+            "max_drawdown": -0.001679424850656197,
+            "average_holding_bars": 5,
+            "total_return": 0.008632506615227964,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.23567047547641173,
+            "expectancy_r": 0.3008505845627176,
+            "total_r": 0.6017011691254353,
+            "max_drawdown_r": -0.14244639226418077
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "vwap_distance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 153,
+            "win_rate": 0.48366013071895425,
+            "average_win": 0.03548663997793743,
+            "average_loss": -0.03210167293092136,
+            "expectancy": 0.0005880993256508681,
+            "profit_factor": 1.0354803058845452,
+            "sharpe": 0.4252634448639477,
+            "max_drawdown": -0.3683494016783876,
+            "average_holding_bars": 11.156862745098039,
+            "total_return": -0.024263630380059076,
+            "threshold": 0.011212620517575989,
+            "expectancy_ci95": [
+              -0.00557228651306593,
+              0.006748485164367666
+            ],
+            "p_value": 0.42578689781946744
+          },
+          "validation": {
+            "trades": 43,
+            "win_rate": 0.5813953488372093,
+            "average_win": 0.025552621999772,
+            "average_loss": -0.017742742113157826,
+            "expectancy": 0.007428981208313002,
+            "profit_factor": 2.0002405801266923,
+            "sharpe": 8.428153476112511,
+            "max_drawdown": -0.06761058870475756,
+            "average_holding_bars": 11.744186046511627,
+            "total_return": 0.3579319906785483,
+            "threshold": 0.009790978125263194,
+            "expectancy_ci95": [
+              0.0001483531961404801,
+              0.014709609220485524
+            ],
+            "p_value": 0.022753421340384106,
+            "expectancy_r": 0.27622232074632547,
+            "total_r": 11.877559792091995,
+            "max_drawdown_r": -3.179447383916464
+          }
+        }
+      ]
+    },
+    "round_trip_0.16pct": {
+      "round_trip_return": 0.0016,
+      "candidates_tested": 2016,
+      "positive_expectancy_with_30_trades": 136,
+      "top20": [
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.2727272727272727,
+            "average_win": 0.04150620662641325,
+            "average_loss": -0.03622461190031097,
+            "expectancy": -0.015025297756658909,
+            "profit_factor": 0.42967547941545664,
+            "sharpe": -12.041950248336825,
+            "max_drawdown": -0.22215492403340054,
+            "average_holding_bars": 10.090909090909092,
+            "total_return": -0.15976502433155748,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.037811357736221886,
+              0.007760762222904068
+            ],
+            "p_value": 0.9018972846627598
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.045823285756937,
+            "average_loss": 0.0,
+            "expectancy": 0.045823285756937,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 15,
+            "total_return": 0.04582328575693695,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.4493919503532324,
+            "total_r": 1.4493919503532324,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 29,
+            "win_rate": 0.5517241379310345,
+            "average_win": 0.0418080735885133,
+            "average_loss": -0.04192390849763957,
+            "expectancy": 0.004273047136099946,
+            "profit_factor": 1.2273686403397963,
+            "sharpe": 2.3447791549541352,
+            "max_drawdown": -0.23706725151484076,
+            "average_holding_bars": 12.379310344827585,
+            "total_return": 0.0939850758279841,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.013683243344557238,
+              0.02222933761675713
+            ],
+            "p_value": 0.3204574782571399
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.02037131147623408,
+            "average_loss": 0.0,
+            "expectancy": 0.02037131147623408,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 22,
+            "total_return": 0.020371311476234055,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.3782210063263909,
+            "total_r": 1.3782210063263909,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.026043701537438336,
+            "average_loss": -0.028772221675595847,
+            "expectancy": -0.008839158689037962,
+            "profit_factor": 0.5172389998952795,
+            "sharpe": -12.118311907565335,
+            "max_drawdown": -0.1567476027843615,
+            "average_holding_bars": 6,
+            "total_return": -0.09696188266317418,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.02611349234041884,
+              0.008435174962342917
+            ],
+            "p_value": 0.842049927326818
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.030015523837957848,
+            "average_loss": 0.0,
+            "expectancy": 0.030015523837957848,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 14,
+            "total_return": 0.030015523837957803,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.2658559338043027,
+            "total_r": 1.2658559338043027,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.03383785793229564,
+            "average_loss": -0.03384517125944046,
+            "expectancy": -0.0030801579904695072,
+            "profit_factor": 0.833153265126834,
+            "sharpe": -2.592803276510607,
+            "max_drawdown": -0.1940957596223859,
+            "average_holding_bars": 8.606060606060606,
+            "total_return": -0.117897721153434,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.016212263448176778,
+              0.010051947467237763
+            ],
+            "p_value": 0.6771418695464597
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.01298087431748931,
+            "average_loss": 0.0,
+            "expectancy": 0.01298087431748931,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 19,
+            "total_return": 0.012980874317489288,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 1.1709613417685127,
+            "total_r": 1.1709613417685127,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "ret_24",
+            "side": -1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bull",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 6,
+            "win_rate": 0.5,
+            "average_win": 0.02251919542445917,
+            "average_loss": -0.017904364960792278,
+            "expectancy": 0.0023074152318334454,
+            "profit_factor": 1.2577489050168849,
+            "sharpe": 2.776688784975396,
+            "max_drawdown": -0.03995400703148,
+            "average_holding_bars": 12,
+            "total_return": 0.012394827495701755,
+            "threshold": -0.018244864438349162,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.4091234820745035
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.01794257602692298,
+            "average_loss": 0.0,
+            "expectancy": 0.01794257602692298,
+            "profit_factor": null,
+            "sharpe": 41.71628145475446,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 16.5,
+            "total_return": 0.03610887291795928,
+            "threshold": -0.015344579780398604,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.03511006366906255,
+            "expectancy_r": 0.9395377275278868,
+            "total_r": 1.8790754550557736,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.23529411764705882,
+            "average_win": 0.03481371219251876,
+            "average_loss": -0.02876253733422894,
+            "expectancy": -0.013803419798523599,
+            "profit_factor": 0.37242581624063414,
+            "sharpe": -11.747698268143964,
+            "max_drawdown": -0.23503679901328856,
+            "average_holding_bars": 12.882352941176471,
+            "total_return": -0.21682015271232646,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.028817006253783937,
+              0.0012101666567367383
+            ],
+            "p_value": 0.9642285026865596
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.03250483745499525,
+            "average_loss": -0.0018054608379703394,
+            "expectancy": 0.021068071357340054,
+            "profit_factor": 36.007247314803564,
+            "sharpe": 22.255311397903245,
+            "max_drawdown": -0.0018054608379702852,
+            "average_holding_bars": 20.666666666666668,
+            "total_return": 0.06396443771150007,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.06316525931955236,
+            "expectancy_r": 0.8928305787497667,
+            "total_r": 2.6784917362493,
+            "max_drawdown_r": -0.1531365828263458
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.2857142857142857,
+            "average_win": 0.02512069946583266,
+            "average_loss": -0.016823218028497695,
+            "expectancy": -0.004839241601546165,
+            "profit_factor": 0.5972864269672888,
+            "sharpe": -5.5701410619966225,
+            "max_drawdown": -0.04637490297779634,
+            "average_holding_bars": 15.714285714285714,
+            "total_return": -0.03480954206530251,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.7183272113090733
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.019186389153053506,
+            "average_loss": -0.0018054608379703394,
+            "expectancy": 0.008690464157541582,
+            "profit_factor": 10.626865313025807,
+            "sharpe": 15.986020888975997,
+            "max_drawdown": -0.0018054608379702852,
+            "average_holding_bars": 23.5,
+            "total_return": 0.01734628804084526,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.20383956038764495,
+            "expectancy_r": 0.6145498929480337,
+            "total_r": 1.2290997858960675,
+            "max_drawdown_r": -0.1531365828263458
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 33,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.03189477644490582,
+            "average_loss": -0.031680320970252376,
+            "expectancy": -0.00278254941790774,
+            "profit_factor": 0.8389744660640386,
+            "sharpe": -2.723161049924229,
+            "max_drawdown": -0.19537663602930389,
+            "average_holding_bars": 6.696969696969697,
+            "total_return": -0.10811058442291266,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.015587076053388242,
+              0.010021977217572762
+            ],
+            "p_value": 0.6649195347036749
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.006176463750978935,
+            "average_loss": 0.0,
+            "expectancy": 0.006176463750978935,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006176463750978911,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.5571581778190828,
+            "total_r": 0.5571581778190828,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.011449872840807607,
+            "average_loss": -0.01263348557441631,
+            "expectancy": 0.0011284335199973573,
+            "profit_factor": 1.208415288967641,
+            "sharpe": 2.9207194921933772,
+            "max_drawdown": -0.01347606108369892,
+            "average_holding_bars": 6.714285714285714,
+            "total_return": 0.00724315634901429,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.4214961298531607
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012280686102035743,
+            "average_loss": -0.0013435831348768518,
+            "expectancy": 0.005468551483579446,
+            "profit_factor": 9.140250263085766,
+            "sharpe": 25.044933436590313,
+            "max_drawdown": -0.0013435831348768135,
+            "average_holding_bars": 9,
+            "total_return": 0.01092060284442753,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.21105487883690333,
+            "expectancy_r": 0.5138474266767458,
+            "total_r": 1.0276948533534915,
+            "max_drawdown_r": -0.15194771011073427
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.47058823529411764,
+            "average_win": 0.01615008528405777,
+            "average_loss": -0.022057779261126526,
+            "expectancy": -0.004077607710451565,
+            "profit_factor": 0.6508194317143483,
+            "sharpe": -7.051205637480633,
+            "max_drawdown": -0.13216312639461703,
+            "average_holding_bars": 6,
+            "total_return": -0.07099875039570047,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.014904768075792139,
+              0.006749552654889007
+            ],
+            "p_value": 0.7697896152507349
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.011751974804487909,
+            "average_loss": -0.0013435831348768518,
+            "expectancy": 0.007386788824699655,
+            "profit_factor": 17.493483654906182,
+            "sharpe": 34.754456517618834,
+            "max_drawdown": -0.0013435831348768135,
+            "average_holding_bars": 10.333333333333334,
+            "total_return": 0.022266431154745137,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.04569767111873724,
+            "expectancy_r": 0.5003392502172748,
+            "total_r": 1.5010177506518243,
+            "max_drawdown_r": -0.15194771011073427
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.45454545454545453,
+            "average_win": 0.021307594187290346,
+            "average_loss": -0.026769926104481635,
+            "expectancy": -0.004916507790039827,
+            "profit_factor": 0.6632938925608756,
+            "sharpe": -7.820865360771382,
+            "max_drawdown": -0.12089232130680316,
+            "average_holding_bars": 5.090909090909091,
+            "total_return": -0.05633973170222706,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.02107915061819234,
+              0.011246135038112687
+            ],
+            "p_value": 0.7244831106336982
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011223263506940074,
+            "average_loss": 0.0,
+            "expectancy": 0.011223263506940074,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011223263506940029,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.4733228972983327,
+            "total_r": 0.4733228972983327,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.011227560372712596,
+            "average_loss": -0.008978895483263315,
+            "expectancy": 0.002567650720151491,
+            "profit_factor": 1.6672518936047755,
+            "sharpe": 9.928534103278688,
+            "max_drawdown": -0.012820733296935893,
+            "average_holding_bars": 3.5714285714285716,
+            "total_return": 0.01753316776381042,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.3116939568543891
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.012280686102035743,
+            "average_loss": -0.002079424850656218,
+            "expectancy": 0.005100630625689762,
+            "profit_factor": 5.905809050113182,
+            "sharpe": 29.73467015833629,
+            "max_drawdown": -0.002079424850656264,
+            "average_holding_bars": 5,
+            "total_return": 0.010175724487515803,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.2387314798458935,
+            "expectancy_r": 0.47223873838114705,
+            "total_r": 0.9444774767622941,
+            "max_drawdown_r": -0.2351650867019317
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 30,
+            "win_rate": 0.5333333333333333,
+            "average_win": 0.034395188707291205,
+            "average_loss": -0.039890284119094135,
+            "expectancy": -0.0002713652783552862,
+            "profit_factor": 0.9854225900394451,
+            "sharpe": -0.19228055647768216,
+            "max_drawdown": -0.23706725151484076,
+            "average_holding_bars": 8.466666666666667,
+            "total_return": -0.03812138469190518,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.016793714692183492,
+              0.01625098413547292
+            ],
+            "p_value": 0.5128403092924303
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.006176463750978935,
+            "average_loss": 0.0,
+            "expectancy": 0.006176463750978935,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.006176463750978911,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.4178686333643121,
+            "total_r": 0.4178686333643121,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "all",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 17,
+            "win_rate": 0.35294117647058826,
+            "average_win": 0.02395338245467975,
+            "average_loss": -0.02191516548298253,
+            "expectancy": -0.00572626621086643,
+            "profit_factor": 0.5961844709346037,
+            "sharpe": -8.07270056490325,
+            "max_drawdown": -0.16755871687106505,
+            "average_holding_bars": 7.411764705882353,
+            "total_return": -0.09763387912701993,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.017675498718789054,
+              0.006222966297056193
+            ],
+            "p_value": 0.8262023594053751
+          },
+          "validation": {
+            "trades": 3,
+            "win_rate": 0.6666666666666666,
+            "average_win": 0.021148104969996796,
+            "average_loss": -0.010777974626550172,
+            "expectancy": 0.010506078437814472,
+            "profit_factor": 3.9243189379758094,
+            "sharpe": 17.23751433108104,
+            "max_drawdown": -0.010777974626550058,
+            "average_holding_bars": 11.666666666666666,
+            "total_return": 0.031427006179907346,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.18683140471229887,
+            "expectancy_r": 0.4088673861162148,
+            "total_r": 1.2266021583486444,
+            "max_drawdown_r": -1.2188963389198841
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 41,
+            "win_rate": 0.34146341463414637,
+            "average_win": 0.026270458678858646,
+            "average_loss": -0.022854324547629423,
+            "expectancy": -0.00608000832395057,
+            "profit_factor": 0.5960237103737404,
+            "sharpe": -9.841609269323364,
+            "max_drawdown": -0.28839570258608727,
+            "average_holding_bars": 3.926829268292683,
+            "total_return": -0.2347761789300522,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.015122646927473109,
+              0.002962630279571968
+            ],
+            "p_value": 0.906222538041774
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004138726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004138726742262046,
+            "profit_factor": null,
+            "sharpe": 711.6832415601776,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.008294523292783351,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.38250029763615034,
+            "total_r": 0.7650005952723007,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 12,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 11,
+            "win_rate": 0.36363636363636365,
+            "average_win": 0.02703720183355865,
+            "average_loss": -0.026102244660037126,
+            "expectancy": -0.006778809571456844,
+            "profit_factor": 0.591896590519292,
+            "sharpe": -7.143839108324318,
+            "max_drawdown": -0.1321549713467184,
+            "average_holding_bars": 7.818181818181818,
+            "total_return": -0.07728303638978462,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              -0.02646569484699948,
+              0.012908075704085791
+            ],
+            "p_value": 0.7501269934358689
+          },
+          "validation": {
+            "trades": 1,
+            "win_rate": 1.0,
+            "average_win": 0.011223263506940074,
+            "average_loss": 0.0,
+            "expectancy": 0.011223263506940074,
+            "profit_factor": null,
+            "sharpe": null,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 13,
+            "total_return": 0.011223263506940029,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 1.0,
+            "expectancy_r": 0.3549921729737495,
+            "total_r": 0.3549921729737495,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 68,
+            "win_rate": 0.4264705882352941,
+            "average_win": 0.03769578289469851,
+            "average_loss": -0.0325043330460971,
+            "expectancy": -0.0025660483066401504,
+            "profit_factor": 0.8623526437946457,
+            "sharpe": -2.1947003862648713,
+            "max_drawdown": -0.3642289154111005,
+            "average_holding_bars": 8.191176470588236,
+            "total_return": -0.2009718054187688,
+            "threshold": 0.00746185506998712,
+            "expectancy_ci95": [
+              -0.011721655877862417,
+              0.006589559264582117
+            ],
+            "p_value": 0.7086107040817022
+          },
+          "validation": {
+            "trades": 19,
+            "win_rate": 0.631578947368421,
+            "average_win": 0.019590458794357873,
+            "average_loss": -0.020293271429758855,
+            "expectancy": 0.004896452922314868,
+            "profit_factor": 1.6549152148146136,
+            "sharpe": 7.733237848712458,
+            "max_drawdown": -0.04830621694874426,
+            "average_holding_bars": 8.68421052631579,
+            "total_return": 0.09306244944365005,
+            "threshold": 0.0020357107503932745,
+            "expectancy_ci95": [
+              -0.004393786696464954,
+              0.014186692541094689
+            ],
+            "p_value": 0.1507961737580621,
+            "expectancy_r": 0.32142279023836595,
+            "total_r": 6.1070330145289535,
+            "max_drawdown_r": -2.2206663467135113
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "taker_imbalance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 39,
+            "win_rate": 0.41025641025641024,
+            "average_win": 0.02964445172974124,
+            "average_loss": -0.025759646578890804,
+            "expectancy": -0.0030297600932981702,
+            "profit_factor": 0.8005632851793093,
+            "sharpe": -3.785059229943116,
+            "max_drawdown": -0.24985520517381898,
+            "average_holding_bars": 4.358974358974359,
+            "total_return": -0.13375658298152593,
+            "threshold": 0.010901077577200775,
+            "expectancy_ci95": [
+              -0.014439079277798693,
+              0.008379559091202351
+            ],
+            "p_value": 0.6986357042161911
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 1.0,
+            "average_win": 0.004138726742262046,
+            "average_loss": 0.0,
+            "expectancy": 0.004138726742262046,
+            "profit_factor": null,
+            "sharpe": 711.6832415601776,
+            "max_drawdown": 0.0,
+            "average_holding_bars": 5,
+            "total_return": 0.008294523292783351,
+            "threshold": 0.008523443229667532,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.0,
+            "expectancy_r": 0.2868752232271128,
+            "total_r": 0.5737504464542256,
+            "max_drawdown_r": 0.0
+          }
+        },
+        {
+          "symbol": "BTCUSDT",
+          "candidate": {
+            "feature": "breakout_48",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 4,
+            "regime": "bear",
+            "volatility": "low",
+            "stop_atr": 2.0,
+            "take_atr": 3.0
+          },
+          "train": {
+            "trades": 7,
+            "win_rate": 0.5714285714285714,
+            "average_win": 0.004964856479819078,
+            "average_loss": -0.008844461656317942,
+            "expectancy": -0.0009534227213825022,
+            "profit_factor": 0.7484693695325124,
+            "sharpe": -4.828032715555309,
+            "max_drawdown": -0.016560977729247917,
+            "average_holding_bars": 4.571428571428571,
+            "total_return": -0.006915560747079219,
+            "threshold": 0.24379947229551516,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.6064810438893458
+          },
+          "validation": {
+            "trades": 2,
+            "win_rate": 0.5,
+            "average_win": 0.009929278713244605,
+            "average_loss": -0.002079424850656218,
+            "expectancy": 0.003924926931294193,
+            "profit_factor": 4.775012047254872,
+            "sharpe": 27.3610335299796,
+            "max_drawdown": -0.002079424850656264,
+            "average_holding_bars": 5,
+            "total_return": 0.00782920667368292,
+            "threshold": 0.29415501905972047,
+            "expectancy_ci95": [
+              null,
+              null
+            ],
+            "p_value": 0.25665881131123275,
+            "expectancy_r": 0.26947836350635446,
+            "total_r": 0.5389567270127089,
+            "max_drawdown_r": -0.17637381502644878
+          }
+        },
+        {
+          "symbol": "ETHUSDT",
+          "candidate": {
+            "feature": "vwap_distance_24",
+            "side": 1,
+            "threshold_q": 0.75,
+            "horizon": 24,
+            "regime": "bear",
+            "volatility": "high",
+            "stop_atr": 1.5,
+            "take_atr": 2.0
+          },
+          "train": {
+            "trades": 153,
+            "win_rate": 0.48366013071895425,
+            "average_win": 0.035086639977937435,
+            "average_loss": -0.03250167293092136,
+            "expectancy": 0.00018809932565086874,
+            "profit_factor": 1.0112084578373917,
+            "sharpe": 0.13601744418656586,
+            "max_drawdown": -0.38493473930402455,
+            "average_holding_bars": 11.156862745098039,
+            "total_return": -0.0822504173643569,
+            "threshold": 0.011212620517575989,
+            "expectancy_ci95": [
+              -0.005972286513065929,
+              0.006348485164367667
+            ],
+            "p_value": 0.47613906006085
+          },
+          "validation": {
+            "trades": 43,
+            "win_rate": 0.5813953488372093,
+            "average_win": 0.025152621999771998,
+            "average_loss": -0.018142742113157827,
+            "expectancy": 0.0070289812083130015,
+            "profit_factor": 1.925519141705151,
+            "sharpe": 7.974354860136398,
+            "max_drawdown": -0.06875540340823061,
+            "average_holding_bars": 11.744186046511627,
+            "total_return": 0.33492699541949555,
+            "threshold": 0.009790978125263194,
+            "expectancy_ci95": [
+              -0.0002516468038595201,
+              0.014309609220485523
+            ],
+            "p_value": 0.029228456072664333,
+            "expectancy_r": 0.25651967239799417,
+            "total_r": 11.030345913113749,
+            "max_drawdown_r": -3.2347166227162134
+          }
+        }
+      ]
+    }
+  },
+  "data_quality": {
+    "BTCUSDT": {
+      "symbol": "BTCUSDT",
+      "source": "Binance USD-M public monthly archive",
+      "files": [
+        {
+          "kind": "klines",
+          "period": "2021-01",
+          "sha256": "00de1eb2f3e3bc7f21b7ab321f1681385726fe7ba55306a7337acfd8f81fedfa",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-01",
+          "sha256": "cff916dc4b638ec3de97828e8911cd91cf7d7a3d0836ec0175869c374e66823d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-02",
+          "sha256": "c5739d16db0aa917f9b4f196cf1dc3c9741b2889253c029571dcd2d00e83ccbb",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2021-02",
+          "sha256": "819a7b107443686adb313fc5fc223302a29f3981e1d1bd9828ad0ade65a8a8af",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2021-03",
+          "sha256": "518891de0fa643092cac84143c9b35a7cbcebfc75ae0846ce36c8e3adab1929f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-03",
+          "sha256": "2125fd300848938c7b992b8f7b7b5007d5b277a4ff1ebda7da083b40242729da",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-04",
+          "sha256": "0fdf8d01fa2eae368a63dcf709e6e6c5b0fd79bbe83b2f086aefbe2a7890924f",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-04",
+          "sha256": "9cd888e3b0a1954813d0062c2e60426fdc8e34a7f258f6838371ec67f535b028",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-05",
+          "sha256": "c209747915a1451a7b51d80d92e68332622c1dd1b9517dc7723f78cfa4f28ab9",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-05",
+          "sha256": "ed934afb9cf84df6ecae742e755147333a84244836a66b51523abc66dd5f63af",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-06",
+          "sha256": "5134cef4361e0819b721776da6e99f715141d122e3cfbf4be729e3dfc153ac33",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-06",
+          "sha256": "7b8d9bfb8816636b800764dafb2aa2307d19166c695bfa245adbf7d01d61f766",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-07",
+          "sha256": "97241c02191fd4694daf9836269e6f8ed04ef5bf858414de5a3354678552b54d",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-07",
+          "sha256": "8ab3df641d3bcf40527491f8e26d046ad2b662d1950ead9555ad32975571b7fe",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-08",
+          "sha256": "4c8290ad0baa9fcf37d45b893e8cae1a1e3b9ef77987a9d9abd64e44ab7deb09",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-08",
+          "sha256": "7eb681cc45b94176f4b9192a62c3a1925d79031ba001cea2d8dec6ff6e5b9c35",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-09",
+          "sha256": "22c55191129632daf70611af13e8f2b0f34a5e79f4876f41744a9848c43b9864",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-09",
+          "sha256": "03f25a7c25eef18d5f5b5b7bb0b664cab7a210b409f37e95a54e141808a0752d",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-10",
+          "sha256": "d3b55f8ae3689efe9bccc1d9b7082bda39fa7fa194e4c1197a63d1473ca57b4e",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-10",
+          "sha256": "f25820d6add687addbca3ef43bee58f70853a6da53832a0c1bc22d00dc8ec64a",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-11",
+          "sha256": "a013f6adfd3012130c0b0bc58895373ae478cd38c646ac87957b855682c7f069",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-11",
+          "sha256": "e2e6b2d7218607e7e4a38137d50f553c2cfb901275c19edf567024c1cc6de85f",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-12",
+          "sha256": "f1dff81c6e322f7d5cee3c0808efd4e35b33e371f04ba613054264d9621318f1",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-12",
+          "sha256": "bf3ce484faf41d7dccfd38c5cc3d8de34d8297df30ab10784e874cc10fd1b310",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-01",
+          "sha256": "5281a9c866e7d54b0a5b5e6a7dad5575ad7b96df67f05f74d614c54190ffff5f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-01",
+          "sha256": "22ee19079b620f5c6d820e7d7f8bafa7fde866d89bd664863b8bd527749c12cb",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-02",
+          "sha256": "b3a199287b2a8fed2c261999205d56cfd72ef9675c4b498a399601978d666228",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2022-02",
+          "sha256": "fa95088258a905c79ab79e8984d2f6f66933ec2e814dbab4ef9da89b01ab484a",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2022-03",
+          "sha256": "f61ebcacd9a38f20b0ad89c64bbeb56baf368641fbbd6e25e987db2b96ede5ff",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-03",
+          "sha256": "4cf0883bc07f4ed4cdd3b0d8c0d166b4d15d21e666ab752f9f44401af4d6172f",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-04",
+          "sha256": "db7f9dbcc60cf68051b755346a5be32d27b0d3565cf6c02341b050a234ef44df",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-04",
+          "sha256": "57e2776cc68b3169fc9f8632dad67278f470cd453407a8ebe6c87963c8a31357",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-05",
+          "sha256": "b1512041ade711819be114fee30668fbdd2783b73fa55607991ae14d1d43653f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-05",
+          "sha256": "bced8a5013d09742b96682e6fd01ad4456213515a03d7586ec2b1f2689af5255",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-06",
+          "sha256": "1006ae5b8b4704da69f8f14fb4711d075d689fcf44cd0a98317df97953f1332d",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-06",
+          "sha256": "0cd0708f8903829eb46f98cf60f4b2516c986e1ccddf6620a5912b48e16baf93",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-07",
+          "sha256": "72060f8608459b04817f652cbb945be28afef0ae54ccf38113911c194630c184",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-07",
+          "sha256": "29d58cce0cd45f74c6a112039835c6d9ee5a7e60e7c38c2503beb7930453a4fe",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-08",
+          "sha256": "a1ad9eafd3dfecccfbc60c07de33ec2f7c33eab96f8ec04f88360b73b55dad76",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-08",
+          "sha256": "6f4f0c6c84c05694b4b4a5c085776730fd4059723eecd98ee6ffeb3fde4da811",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-09",
+          "sha256": "92753ae32ed042ab7f10b90e3b9a49ddafc695c8e60eb563713855c73e2e6e82",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-09",
+          "sha256": "d62cd4e13009de37add446dc4f63ead4c56dcc4955a1e60f6726bcadc5a68fa9",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-10",
+          "sha256": "d85a5f4bdbe93df2babdecf3b37f866655fa23c3fb31eeca96c3e3f6a1e9b872",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-10",
+          "sha256": "ad9efed10d4ca1567b865d7a158790977cec1b925395634217069df6696c8bc9",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-11",
+          "sha256": "e9b3f3b1929e3f6f255269c2d2eb564d9d9bcacbfc16651888e95765df383888",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-11",
+          "sha256": "8febe5bec1a029e993bbf27490761f8c47c32849bf7dd13441b2b2f6ec1ffb51",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-12",
+          "sha256": "d313c2cb509cba13eff6538829245aedc993f18eff4a7bd48fe0eb6c3a9fa158",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-12",
+          "sha256": "4218c78331bcc4dbeb5768fa112242a880971c1f2cfd1d3f32aaa26ca34069af",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-01",
+          "sha256": "b9ac60cc3ffc1e16db96ca2314120ff7531988108ebef1733ee54234f4fedf7f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-01",
+          "sha256": "05e3df32f28d0d50f4c5a280adee9368b4a66fc68c6ddca1b3277087ac0d19f5",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-02",
+          "sha256": "1ace9802f4da961db025a7b76a6171ef2c516c5307e5dee24267182f059110e0",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2023-02",
+          "sha256": "5227accd9aaa59f71f5e682abffb58be5f99573ed208ab968b1704c81ac11345",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2023-03",
+          "sha256": "35f0068cc41887ea11960c4bb10e251a404fef5ad4cb4c88699cc2419b6bc38b",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-03",
+          "sha256": "ab022adff9b853d2f33cf80154e77c770f57c3392f0bbc36564b2e2cdbd0e872",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-04",
+          "sha256": "ed6f0a84d1b2ed8f73fbdd4df10703e2ab49864fc4d657b0d8a9464a49dd4a29",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-04",
+          "sha256": "2931039d26818edc65d4faefba84945fd1ba52989dd58fb127dc3cd7a12c7fbf",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-05",
+          "sha256": "2f278ad3ea09cc42e577ad7185de74391a1eb09b9d9836d375e2c540aef1667f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-05",
+          "sha256": "5d026fece46df86293054c8c56c2c8de575d30161b82979b11831831217a246e",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-06",
+          "sha256": "19bd435cdf58b426642c24a0df3b5fa755433f52a8c39f05dc5cfdeffa453aa0",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-06",
+          "sha256": "3ffdde6f1dc9c3c065d77ae43f3ba64d19d4cb76512d4bc1d541933d4fb2e6f7",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-07",
+          "sha256": "ae9ebc03dff2bdeb805a1401b5cf1256b2b84283f5f9d92b1f454f33b223f499",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-07",
+          "sha256": "0304baed9fd407293a8a8040b30a1b68bd344803b630d33530375b421733a930",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-08",
+          "sha256": "599daa607ff593666036fe742d8272de6e0e9d284cd7d41d6585cf53baa20ca2",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-08",
+          "sha256": "516a8f50631c6ede6a9642f6d1590b6a22c33ba09935501d2ace8dc1396501fd",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-09",
+          "sha256": "7849f82af86aabcb9a79f64d0527480f22117656a68f98280fe8b840a6ee1339",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-09",
+          "sha256": "3fd9df6fd1eef33cf5fe625c27012359bc6d64a68c109305d7b44a0354f533c2",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-10",
+          "sha256": "bbf0ef273c80f696ed9eb129a257812162487486692f124b9631ec38a924f6ae",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-10",
+          "sha256": "03105cc140150bffca834bcccbddc6cfee245e079d2df1759653243bd6e92448",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-11",
+          "sha256": "26f1a2870f57925303edcf75581f0a33ff5e145c2126e15afc5fc1b400522428",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-11",
+          "sha256": "8015d2997f8d5e757ff3707ee87800ca30a74da0129daa747b64117f07bcc186",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-12",
+          "sha256": "5377bec9e6dc04027717836cc1c2a3789da4e4122d57e8395265a0414b766b7c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-12",
+          "sha256": "8f02fdd2a2da261bbf13ab301c74bdb57fae005f19d5088e9ece5f8824c1a2a7",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-01",
+          "sha256": "bf673f3d10804a951e8bac56dd2473486f113025971d43ebe5258ec40f9bfeb3",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-01",
+          "sha256": "3e0d30870672aa8f0f937881056e3cfd55913ae5c780cd50b33f2763aa0ba58e",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-02",
+          "sha256": "655ff5ac0fc570956756944c7afef4895c9bd149342f1e437de97292cbd1fe22",
+          "rows": 696
+        },
+        {
+          "kind": "funding",
+          "period": "2024-02",
+          "sha256": "daf1e4901e3d6436d82ad60f90d007eb5300be8047cfef121007203a7212cde6",
+          "rows": 87
+        },
+        {
+          "kind": "klines",
+          "period": "2024-03",
+          "sha256": "8138642b757ddf5a42207130277be4569afb4c581a0a1817be9f5f35a4415498",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-03",
+          "sha256": "711dcaf2a341aedfd06447b4117b540f60adb0784c5e64a313c718e4cf092bc3",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-04",
+          "sha256": "4bf3ca3574e0075c1b79f5b22c4253e26f6260f3621943205e3a8016c4c12318",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-04",
+          "sha256": "6d220b8e2815362a11d294d35dbca28568370d8295351937eceec10f2b359b85",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-05",
+          "sha256": "1d607e3b26e6886ba742477bc97687f0b86c4c26ac564325dc5f1667e0362d35",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-05",
+          "sha256": "aef8c5fdce1493fd570b5829a72f2f17c7e459483390f25544d16c2a30be592e",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-06",
+          "sha256": "7dba8642e56641fca2c7f3f363050ae88bf0d6c87d28e14b747fbd3267d4d3a8",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-06",
+          "sha256": "43fc4473820d1fb4fe340d1b1951a87555f6841aa352e684fa95d6adffce04c6",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-07",
+          "sha256": "920aacb84b2745ee8f31806a753cdc5b2d672e6814d9c50c0bf524ad45eb5611",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-07",
+          "sha256": "acab0593c1452660ce74a6c239fb215c1192b0a9c6e8c1689e6495de40a0174b",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-08",
+          "sha256": "8d8465eb4c8a4fd05ebc0126e4c14a217edb2039441546bf095229e975268de6",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-08",
+          "sha256": "7003d29a43dd5f9357f838da8766834954939e22c1d80af682d9f33984f67b71",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-09",
+          "sha256": "0a8118b3601f18ddad04a8afcf887fdc01661f66824a0ce49e0419be1f97f907",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-09",
+          "sha256": "6ef23b02392b481ef9c3855434bf3644289fb6e228b4f7d9a0dfc6d3cdff1116",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-10",
+          "sha256": "e3dcb9fe9d70fea19dfbdc5294044da69b9061c6f7411e99468825fac1ce8d61",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-10",
+          "sha256": "26db65ac8020d80ece35df79c254c5f7e24427529bcceeb2972748c4fe2d2707",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-11",
+          "sha256": "0675e55056748489b8750cf6088a666f65dd4fd932d7ca5bd30491f5996b5f3d",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-11",
+          "sha256": "e1b19cccfe2cdcba48b022790789b7b01edd86c075f39bc152e44c267d43bd51",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-12",
+          "sha256": "b072f3147b3e390c81dcbf35830a12ff7d53a73236aa44a9eea78199502529cb",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-12",
+          "sha256": "069409f525ebf6370ee1c7defe475167de4b97284c5ac8e68768652968cd3dc9",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-01",
+          "sha256": "9ebc05c9b3d5ab3591edf65bc5c7e5dbc2f96c1efc4adc4ea198c651a99a41b1",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-01",
+          "sha256": "df725010d55458866eb5a47e9ee708c6796c9d7e77b14c38342cea11f381815e",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-02",
+          "sha256": "077d761098eb5f2dbde65457833b9edab41ea6475284a77fcce0d4bec1bfb5cf",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2025-02",
+          "sha256": "e918b90fb33df3a3317feea13807a892047f1ec86eeac100bdb7b3dd83285d46",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2025-03",
+          "sha256": "08043384c3336b0fa3eeee06e113a6f1eceb6d3fbe7b2971e9b9fa83625fdfb9",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-03",
+          "sha256": "a3b95cfb315641fbfddc61eb32adf2a2588afb7a3973a61f464aca007ad43e3f",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-04",
+          "sha256": "2adf7c1be412e43b04a128e997f4cb1e5e7f895f55b6e1bf66621807f221f274",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-04",
+          "sha256": "01dbb7bd0135f98bd63bdde6b943cde1accc1770cabf92f68a1ec0653ced3888",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-05",
+          "sha256": "2e736b9e792d5ae9d4607d7426e4530020762cb898d580b18d3fb0faf9d2ba8e",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-05",
+          "sha256": "e7355e2775b88009c984db1783bb8ed6b5f24ede2b52bb764151b5722d6a5e42",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-06",
+          "sha256": "d1d9d5dbc540c19dd882305937f864f59ffffe3f5449a6b05b3f95efe7ca4fbc",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-06",
+          "sha256": "a1f4a40953740fa83ee9ad97776ff8325d1958654a67f1325614071a983819d4",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-07",
+          "sha256": "3f471677b97cd3c5c21e9c1420bd7d58c1fe4041a3d2e195369277298ca01ea2",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-07",
+          "sha256": "b097dff828f6e43fece23db0d3cb98042a9d7bc19693b8cbfd051d88eb973b7b",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-08",
+          "sha256": "a240d3f766cd5c3db4e0702cf660ae54e327ec67aba169dda55abc90cae055f2",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-08",
+          "sha256": "1180129860b6e196e8d70bb9719e81573aa6b4acb423ba5ee7f82f10c836f7ab",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-09",
+          "sha256": "b15817c45e6ca13a907772591664a57e00b711fecbd4285f2a16ced3c7023019",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-09",
+          "sha256": "21dc6570fc6bffad0e7b5f9e99211b82ad07c95ab4f18c3a2daa3b95ec98344c",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-10",
+          "sha256": "b173469216acad36058ecfb0a5432471ec58b3c49032246d4d687dd3af8ae34a",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-10",
+          "sha256": "9ecdedab6344fc4cdb154763266b8e09627a71c3cc5574cf868158b541c259c2",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-11",
+          "sha256": "75c4069b8ff93aa5e4064e885077426fd60f1cf6239a728b2d4ca543c0210d5a",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-11",
+          "sha256": "23735400405627d610123e3a43db3e98ae7addb93459cd670e65a7659a5f081b",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-12",
+          "sha256": "41e977a06b7806ce1398aca5f9075befffd1e6303db891795f3b179c762709ec",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-12",
+          "sha256": "35318b789f020b0e04c9043112480743855554e52e1d188437cbdaa67246d51d",
+          "rows": 93
+        }
+      ],
+      "missing": [],
+      "quality": {
+        "rows": 43824,
+        "duplicates": 0,
+        "gaps": 0,
+        "invalid_ohlc": 0,
+        "monotonic": true
+      },
+      "funding_rows": 5478,
+      "open_interest": {
+        "available": false,
+        "reason": "No point-in-time-safe full-history OI series used in this experiment"
+      }
+    },
+    "ETHUSDT": {
+      "symbol": "ETHUSDT",
+      "source": "Binance USD-M public monthly archive",
+      "files": [
+        {
+          "kind": "klines",
+          "period": "2021-01",
+          "sha256": "52b01b6937e57c3299003a91ec93fe8c2560b1ee6cacb24a60c110bf696b6118",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-01",
+          "sha256": "4c18c1df8904dea9770aeba5326d26b3fa9a3ffac4891f5f7125d4be2da847c0",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-02",
+          "sha256": "d2833fb9bbbf66cf2f829af2c767f70283e01c3c471858a038e342798aae7d24",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2021-02",
+          "sha256": "15e9a939f253a11fc1af2858bb3844f3d39019ccf7efa66a9456f0f60afba3dd",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2021-03",
+          "sha256": "4f5a456703c8d48f947917dd7cb5f07503bd31bfdb60ec9a68b391b70f52666c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-03",
+          "sha256": "2bcaadc8206cb8d76a26f0f3cbf97020b747545b0e75c3dd8a3b195b435478a5",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-04",
+          "sha256": "b522173710fb0aa70bff13c54ad6b3b889edb79b42278246796c5da7c4bfce7f",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-04",
+          "sha256": "2fee34e8b9b6e828d01bab0df1c67104f7a98f3c063668c8db627b802ffa5a95",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-05",
+          "sha256": "e43c840fdde7903f99fcbc1311e75cd6cc58b4c302c48a017100747922eefd8c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-05",
+          "sha256": "21809ef6691a1441bd55ba4af4494a038d1a399ae0ae432e80cb41b47d71f3bd",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-06",
+          "sha256": "625a8c04b76cc9fa096599bd1498b24b28ea31d9900dfddb86995046bd6b2ebf",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-06",
+          "sha256": "8e58ccf8f52c69c55754492daafadab92d4ca8c8bd027f4532582d06e9f36063",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-07",
+          "sha256": "bd4ffb6a1e7eb374915222129b5270ff0e7eb94c5b355ecc75ba491e4cc7b0b9",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-07",
+          "sha256": "f8f538bedf642052e428cd25f3134784de6e62a136e76f6a07ea6e79dfc9c39d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-08",
+          "sha256": "56bfd83ab6a604ffb57aa318805e813c04335a08219eac63f3c4750442c1a9c9",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-08",
+          "sha256": "0120b284bde23d077e1e26e5e4b56fd3e2d1d82a3a7fe0e9de26825b9fc9c0db",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-09",
+          "sha256": "e29a6a88a2c28b30651cf45e46d5b67f1bd8f8ec42812ad5b4a7a72468dfa3c6",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-09",
+          "sha256": "4b4a94cdafbb8fea7762c266aa79b183700b7c9dcf7e981f7fdbe9372f2eec66",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-10",
+          "sha256": "515de2962ce7c53706f6dcd489b50bade65148e8d59af1d0711134a6450e912c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-10",
+          "sha256": "4dfb8698f6951b2c66229e1c687977eae0778bb703d6268232da2ceb3e9b5e6d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2021-11",
+          "sha256": "d61dcde383cefa67bd3febb54690d28db408cc7cfb4b4c99f4c00710f5e5b3ad",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2021-11",
+          "sha256": "d9a7e22a237717f23d4b0505f14613359b7ea7831b23a78653a891cbbe3d521c",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2021-12",
+          "sha256": "764bae4807411d6683b72085aeeb1bcd168654fbcb88e8f1a81a307240761c1a",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2021-12",
+          "sha256": "788d5c57e7cbc8e6b94ed4d7672618a85311edf1d7f0888083410d0d3389d811",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-01",
+          "sha256": "6d96a19efda6917a3912377ef8e1a5eadc8f1a273f91afa069ae70bd679301bc",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-01",
+          "sha256": "9f5bd01450b05a8c5e48cdc99fa147e85c82ecf7ee7919fa543a4e6039a2b98d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-02",
+          "sha256": "14f8e42d6d7696d2f622301612a8f4ba6623658732cc5840ef0582b2ee05598e",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2022-02",
+          "sha256": "9c35e30327ac8915cc1333415b7d5018425781c81918e349d26b734525fcdfe5",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2022-03",
+          "sha256": "1b9fcc8ead1a066017e8c40617a78d1b9ee7b7fdad5f9d5353b04a59883274ce",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-03",
+          "sha256": "3de0714a2b2582029b32147815298b6e67e972e776ca3f68a4208823b4109404",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-04",
+          "sha256": "45bc22bd8603876174adfd1f6273021eeaf76084629030a53cca40f379b8fb0b",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-04",
+          "sha256": "7c306ac8b6275a857b064916080e0b6ec502b25a4501c84c3fd2c0b077425de3",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-05",
+          "sha256": "7adea64d8d82d2017c1b7c3fcc6848f685370b524e0a1512bb443980a487f4b8",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-05",
+          "sha256": "c458330243c9d8e048ffc7168c9e3c077c01bb82b1644097a4893fee34069b78",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-06",
+          "sha256": "582aa0b2c72641cb5e93318a92beee0bbc93e968ccd10b0d89ea755a60f9fb62",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-06",
+          "sha256": "f6f3a69b656b91500b41501a230e663ccc3c1a65f46273595b00682d8f6fabb1",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-07",
+          "sha256": "07781d1411a4b793ca5c4daaee70c9e2c1a3200fe12c954c39b3ad6c37badd42",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-07",
+          "sha256": "17826e5591af8660a7fed74d60e24eee77c822cf0d901dd8af355a10a36699aa",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-08",
+          "sha256": "4182681e2b2fc23bbb348411ca8bdb41894609be1f94a0d9939616bf91cc9f25",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-08",
+          "sha256": "a2680549de5e087566f4d323b3a812c2b9863528c6bc49b0e551cb42c381bb4d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-09",
+          "sha256": "75aa0182242ac65110a1dd1737a2062ee9815032d746a57d3191c44c15eacff2",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-09",
+          "sha256": "816e4de946d9f854cc457c86ca396b9cb49b46e80cf44941b59b9ad2124f2ef8",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-10",
+          "sha256": "04246418d55fc96753ee5b4be0718796aeb9421af40042b4e145db02e1cfaf3a",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-10",
+          "sha256": "e434c29eb544cc57ff574e38685535bb7d04703aee54bc5d52f53cea372810e6",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2022-11",
+          "sha256": "e2e15ddc21d24ac6c3ca56ab77f065eda88252a37f2f778505a332e31fcc5b3c",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2022-11",
+          "sha256": "4f4e52f176f69e99353959d287874a4d4a135b5bb4ea85514dd5a3e65958b2d7",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2022-12",
+          "sha256": "1ba6559930f09fb8bd68a6592c4059526901939317eea4db8fc2d59cf5688957",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2022-12",
+          "sha256": "8cd0e885d63b85ee602d80eaae956f9ee3e0e25db264eb5c74026a9ae0d71f4e",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-01",
+          "sha256": "247b85e0a8806e139f263831445e1d7bb91f9f56e6ab32e1f285038cdd1ceff4",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-01",
+          "sha256": "5647d5978092d220eb14e11c7854d86815d0eb6204197e37b4808cc599e986f3",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-02",
+          "sha256": "f01571f2420b9eb6486e69b884fe1572abfa59bc226c4003c9d78735c559acc5",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2023-02",
+          "sha256": "7da37820c15fb08600ae668551d0b724326b8f71d761582990721059280a221b",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2023-03",
+          "sha256": "4d5266f12a8a3394ee23516de99fc380e928dbdb79cbf083fd3ddc3242073790",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-03",
+          "sha256": "5110b60cbbc5f26048ce02575c26444ea2ed497baed9a5609e118359e1ca3b51",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-04",
+          "sha256": "4ac96035c3867e0bfeff4f2f526812ee4b73a0b87b3962bb40934e2614917395",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-04",
+          "sha256": "fa3a3cf7c3b8285687ae8c8014eed8bc58ad3ceb33ccb62ff4298048213c0e6c",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-05",
+          "sha256": "a47a9fc2936bcadc99aadfe48858e7d3e31093a9321d9bc083b886b72924f568",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-05",
+          "sha256": "bf890ea68d979942ed296b058390eb98b0b495547fee2117d3b76d5e7f629b24",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-06",
+          "sha256": "fe108dc555560ded46bb0807d0c2e0bc7722900213a96e4e86bf355f84fbcafa",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-06",
+          "sha256": "b3ddac1309f9a684f4e811776a6c09fb2239bb8d1ae0ff4bd342a1c32a5e171f",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-07",
+          "sha256": "911d3674c71a561df5ca5085426e9c61195bf5669bc7da7488ec9548ae476ca1",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-07",
+          "sha256": "82577976d8acd886fda84179ee38c9e7ef445732c3b6a062d6ffd2a9e3cc30bf",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-08",
+          "sha256": "74210a689eb85c8908ae05cff3297b9dc6eda76a0b41a3f9d72fdde0c14e3b2f",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-08",
+          "sha256": "cf749429c366cef3302a804b3e702937e5f1a77aeddc5b628dca7da547a8935a",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-09",
+          "sha256": "38883595a881aadfbfd8c256e5170c8b016e9927119250f5128abfba96aba9c5",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-09",
+          "sha256": "41ac7eb67a46d14d97daec4c37e8229df5ac6b165639ad4b2c54bc7374930341",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-10",
+          "sha256": "61d6692284b406c9f9f655aef68e151a1eeb90509ddcd7f4a97233b1a002ef9e",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-10",
+          "sha256": "ccaf4474f0dc94adedd4330c14995f338186caa2cc9fd0d2e2c55f74cf263a5c",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2023-11",
+          "sha256": "d57c333ac46e779b2399c498cc8fedfbc8804deb688873585ded09aceec1fa16",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2023-11",
+          "sha256": "153ec1450eb5d999ce253e2c7ca2e81b79a523ff52dd18b14faefab8212b999b",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2023-12",
+          "sha256": "8f581fcee21156d501435fc88db1d99515e6d7432fa7ae2993de3b5f95bb0069",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2023-12",
+          "sha256": "91bdf41566cebb86c6f0e3646b0037de9c22e14ee2f592c5722c7e4a19c91119",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-01",
+          "sha256": "2f3d1a6d9292f13b1d6cf86716cbda5b3f6119a310daed1dde5ee3d0d71e2fab",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-01",
+          "sha256": "5a71469b0b363886df904e784dddefc484dd943334b1fb7454713ce4ed715a4b",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-02",
+          "sha256": "bde9a1b0824b212ef6cea97065543fda0fc57c33479709d34e5db995fc79af01",
+          "rows": 696
+        },
+        {
+          "kind": "funding",
+          "period": "2024-02",
+          "sha256": "915fad950c48935f3875d88992b8d78290bc8a6fada44408e3ed14aef9a56670",
+          "rows": 87
+        },
+        {
+          "kind": "klines",
+          "period": "2024-03",
+          "sha256": "24af0ecf9db1953e8c83e94823f4aae368ff70ba54106ef121c204cb046f9e41",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-03",
+          "sha256": "e9c1d0f3e7e3b493277c7f826afb223482d56bdc7611144d398ac10e47307907",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-04",
+          "sha256": "290b594fa46ef95ab9c1486e2640ce2d1894eecd4d71b79bcd30d6632ca75b9f",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-04",
+          "sha256": "b54c9f05af116ccd921b32b25960ae26954c4983992d44f2390bf1de08b2c724",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-05",
+          "sha256": "a9b42949325fd4f236c7c88b63f35d94910109218ce2db80b8e29f7a2b2d623b",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-05",
+          "sha256": "8350ab4d61b12ec61539611e30809039f54814213bc4c937609360b1ff28b5e0",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-06",
+          "sha256": "479dced4a591035987e084dc8a5e5f3f1f2593704c0aeecdebc20c89b35c1d98",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-06",
+          "sha256": "def13f4a478c28b0111fb24c57f95fcee80e71982ed74f12e465d20d328e2275",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-07",
+          "sha256": "8cc8d8b6ef13fa0393f53690e5d569afb8a50488e4d7852e20ac22d7bcf17cf5",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-07",
+          "sha256": "9d236281ab6430250ad2b472cbbf03812a40aed42e73c8339fc6be55a2417a82",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-08",
+          "sha256": "00eddbb3297515be14426119f07468846cd04dc527dbc19834dd45294740a67c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-08",
+          "sha256": "e17684bc761924eb5e1912c52cfa997eddeb99da303e68e28f6f37369f672b9d",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-09",
+          "sha256": "37bea2dbe4281fbcaa45a849b6eed4393713b7236c5cb35cff63876e96df5677",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-09",
+          "sha256": "ffb6e7441053137cb7ca81cc83bcdd996612f7dbb15aa2e168a7ee521f8cbbca",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-10",
+          "sha256": "b4cda93568426a315e1de2fc7ca0ffb56586495680b233ffd7ce6bec11d18713",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-10",
+          "sha256": "2124978c335473a5d9c0f0e9f238193d56c21ac7e250e065a36e9d1201beb049",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2024-11",
+          "sha256": "3e8286eb77062f7c1047ee32aa1ce98dbf42f8e8029acebe38cc1bdd33967c63",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2024-11",
+          "sha256": "636a4c7c86445c2774b4eae8598c480fcbc57de7dde5d40f6937c7fac510797c",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2024-12",
+          "sha256": "330397f0cfd0dc62253ce6cf61ec142714fe65592a9f8447e4b88ca428bb4c9c",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2024-12",
+          "sha256": "11a0847e8aacb32eeb725611fda4fe6a8419c03eb0c16e14dfc3b9287e78ecc9",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-01",
+          "sha256": "99928eb8fdc5d565d317b0e9685e07fc5f9487510a39b8675d7374cfdfcbec82",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-01",
+          "sha256": "88c95b99d2784a7baac529fe578563d7e05038a1b8a498b2f59bf81b216fee20",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-02",
+          "sha256": "d7466620f50bb4048080ece1deab8eb0298274413a3eb2a9f4c728536ab3c647",
+          "rows": 672
+        },
+        {
+          "kind": "funding",
+          "period": "2025-02",
+          "sha256": "9e116dd6754484a19ecc41ced40b8dfa7f62c33d41cdc3317336b1e1f043767f",
+          "rows": 84
+        },
+        {
+          "kind": "klines",
+          "period": "2025-03",
+          "sha256": "9dbad1e542ff8344fe8610450cf71d5cb98e1af2e8f2d7a31dbe8679ef263535",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-03",
+          "sha256": "62464a8bfb7ba515628acb76d3e2172d33b88805faa2e701a22537c51a17d139",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-04",
+          "sha256": "238c691129962d9fe08aaca46ea367f911e62c58a820a8e5ded371bff7f4eec4",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-04",
+          "sha256": "7db62cb5e9f32397dacabb3d571b96397024bda3810bde0799c90f61cb773679",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-05",
+          "sha256": "201829c864a26677ad0b53df5b0491e9eab00e6f48e1a8bf5204dc7d794dd7ea",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-05",
+          "sha256": "996aff38f046b50510301532ac5cbdca115afca971c49cb548f50e5d70e18d99",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-06",
+          "sha256": "45763ee27ad110703c6f71d9ec80711de151b8211b14ad98cc978c4d5ede82ce",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-06",
+          "sha256": "ae7ca242249ca3df06d1222a0c264fe83b18c4b2c19fe656e864f7d081d5e198",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-07",
+          "sha256": "e9c3dcdc09de72386d465800c665169c9bb011f35d350f9ba9bc7b4d7a69876a",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-07",
+          "sha256": "5f2d840c5669ca946529c33f6df32433c5d0cd973eb4adfd40459270c460e7f8",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-08",
+          "sha256": "51e3ca163e71691ebb43b55d32698fc5c25506ee2e663a195d8e5863194908c2",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-08",
+          "sha256": "c3fca21c71afb4962e89f8e3d84afe5832019ed8f570ee7c7c299f2436a28b62",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-09",
+          "sha256": "9bab9763c1cb2514df907fe6e746405428c6b92cbba12ff987e4820b2a8726f0",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-09",
+          "sha256": "2fa09df245aadc73cf43f837a72c3009fcd7d10c8c4e3db48b2d1021c331841a",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-10",
+          "sha256": "6c51ad0250f4174431c659a3c78f604be087e844c6357e5feb48ba66e6bb1862",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-10",
+          "sha256": "1ae86c5fb1f15d8792906b746cc7598ebe7e6e7194b74501db79c874e37d7e14",
+          "rows": 93
+        },
+        {
+          "kind": "klines",
+          "period": "2025-11",
+          "sha256": "4b5622c5a4021b1a0bbd2d1fa754bb9d13f16b996d79b153b423bce0ec154f26",
+          "rows": 720
+        },
+        {
+          "kind": "funding",
+          "period": "2025-11",
+          "sha256": "a3a8abb219373ec1e02e8d1a47015665d180d6130cfe1df71d2fa8fc9de59e59",
+          "rows": 90
+        },
+        {
+          "kind": "klines",
+          "period": "2025-12",
+          "sha256": "80080e1303ab2c291e53103d703b5364ef7a3da36dff5eaf45044cca74e764ca",
+          "rows": 744
+        },
+        {
+          "kind": "funding",
+          "period": "2025-12",
+          "sha256": "ef9e84f53a5fa07702958c8700077c8be0a90ec8b3e25110f5611109c3c0090c",
+          "rows": 93
+        }
+      ],
+      "missing": [],
+      "quality": {
+        "rows": 43824,
+        "duplicates": 0,
+        "gaps": 0,
+        "invalid_ohlc": 0,
+        "monotonic": true
+      },
+      "funding_rows": 5478,
+      "open_interest": {
+        "available": false,
+        "reason": "No point-in-time-safe full-history OI series used in this experiment"
+      }
+    }
+  }
+}

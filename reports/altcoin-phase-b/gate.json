@@ -1,0 +1,8 @@
+{
+  "evidence_label": "exploratory fixed-basket evidence with survivorship/selection bias",
+  "gate_passed": true,
+  "holdout_start": "2026-01-01T00:00:00Z",
+  "max_simultaneously_eligible": 10,
+  "min_cross_section": 5,
+  "protocol_id": "ALT-XSMOM-001-B"
+}

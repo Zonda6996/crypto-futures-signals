@@ -1,0 +1,23 @@
+{
+  "boundary_rule": "derived from coverage-based usable span, frozen before any PnL",
+  "test": "SEALED HOLDOUT >= 2026-01-01T00:00:00Z",
+  "train": {
+    "end": 1713571200000,
+    "start": 1588636800000
+  },
+  "train_days": 1446.0,
+  "train_fraction": 0.7,
+  "train_iso": [
+    "2020-05-05T00:00:00Z",
+    "2024-04-20T00:00:00Z"
+  ],
+  "validation": {
+    "end": 1767225600000,
+    "start": 1713571200000
+  },
+  "validation_days": 621.0,
+  "validation_iso": [
+    "2024-04-20T00:00:00Z",
+    "2026-01-01T00:00:00Z"
+  ]
+}
