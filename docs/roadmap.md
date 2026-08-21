@@ -124,7 +124,7 @@ $$R_i = \frac{NetPnL_i}{InitialRisk_i}$$
 
 Сохранять top-20 даже при непрохождении формального gate.
 
-# Этап 2. Walk-forward текущего кандидата
+# Этап 2. Walk-forward те��ущего кандидата
 
 ## 2.1. Схема проверки
 
@@ -308,7 +308,7 @@ $$Expectancy_R = WinRate \times AvgWin_R - LossRate \times AvgLoss_R$$
 - результат по режимам;
 - доля прибыли лучших сделок.
 
-Концентрация прибыли:
+Концент��ация прибыли:
 
 $$Concentration_5 = \frac{PnL\ лучших\ 5\ сдел��к}{TotalPnL}$$
 
@@ -381,14 +381,16 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 - Дополнительный frozen перенос на M30/M15: оба TF положительны при 0,10% до trimming, но оба отрицательны без top-5; M15 отрицателен при 0,16%. Строгий критерий поддержки не пройден, TEST закрыт.
 - Отдельная regime/concentration-диагностика на полном TRAIN+VALIDATION 2021–2024: 1h `+16,387R` и `+9,808R` без top-5; M30 `+7,926R` и `+1,348R` без top-5; M15 `+0,654R` и `−5,910R` без top-5. Режимы и их thresholds каузальны; leave-one-year/regime-out сохранены отдельно. Это описательный pre-TEST срез, не новая OOS-оценка и не замена результатам Phase 2–4.
 - Phase 5: frozen 1h получил PASS 7/7 по заранее зафиксированному protocol: без top-5 `+9,808R`, без 2024 `+7,294R`, без лучшего 90-day кластера `+8,330R`, при 0,16% `+12,210R`, rolling 12m positive share 78,4%, все обязательные leave-one-regime-out положительны, combined stress `+4,792R`. Отдельный one-bar-delay stress отрицателен (`−2,358R`), а longest no-new-high около 970 дней. TEST не открыт.
+- Governance gate завершён: immutable memo и SHA-256 manifest фиксируют research commit `81f5ea590edbc04fadce762452801c1d365470d0`, 192 исходных pre-TEST ZIP, research artifacts, единственную TEST-команду и CI95 verdict. Frozen strategy/cost/execution не менялись.
 
 # Ближайшая последовательность работ
 
 1. Не менять frozen candidate и не выбирать лучший вариант из Phase 3.
-2. Подготовить immutable TEST-opening memo: commit, hashes входов/артефактов, единственный запуск и критерий успеха.
-3. После memo запросить отдельное явное разрешение на единственное открытие TEST.
-4. До такого разрешения TEST и paper trading не открывать.
+2. Immutable TEST-opening memo, hashes и integrity gate — **завершено**; TEST при подготовке не загружался и не анализировался.
+3. Остановиться и запросить отдельное новое явное разрешение владельца с exact phrase + full frozen SHA.
+4. Только после него допускается одна заранее зафиксированная команда; повторное открытие и retuning запрещены независимо от результата.
+5. До такого разрешения TEST и paper trading не открывать.
 
 ## Текущее решение
 
-Phase 5 прошла все семь заранее зафиксированных критериев, поэтому следующий допустимый шаг — только подготовка immutable TEST-opening memo. Это не отменяет strict fail дополнительной Phase 3, отрицательный one-bar-delay stress Phase 5 (`−2,358R`) и длительный период без нового high; эксперименты нельзя смешивать. Кандидат остаётся исследовательским, TEST закрыт до нового явного разрешения после фиксации memo.
+Phase 5 прошла все семь заранее зафиксированных критериев, а governance memo подготовлен. Это не отменяет strict fail дополнительной Phase 3, отрицательный one-bar-delay stress Phase 5 (`−2,358R`) и длительный период без нового high; эксперименты нельзя смешивать. **TEST SEALED — awaiting a new explicit owner approval.** Текущее/предыдущее утверждение плана не является таким разрешением.

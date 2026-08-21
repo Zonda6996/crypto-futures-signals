@@ -17,6 +17,8 @@
 - Отдельная regime/concentration-диагностика: [`reports/REGIME_CONCENTRATION.md`](../reports/REGIME_CONCENTRATION.md)
 - Phase 5 protocol: [`docs/PHASE5_PROTOCOL.md`](./PHASE5_PROTOCOL.md)
 - Phase 5 falsification: [`reports/PHASE5_FALSIFICATION.md`](../reports/PHASE5_FALSIFICATION.md)
+- Immutable TEST-opening memo: [`docs/TEST_OPENING_MEMO.md`](./TEST_OPENING_MEMO.md)
+- Pre-TEST/hash allowlist: [`docs/test-opening-hashes.json`](./test-opening-hashes.json)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
 
@@ -42,7 +44,8 @@
 - Оригинальная Phase 3 завершена: декартова карта из 256 VALIDATION-конфигураций; дополнительная повторная robustness-проверка costs/windows/concentration/one-factor neighbors хранится отдельно.
 - Phase 4 завершена: простой специфический 24h continuation-механизм не подтверждён.
 - Phase 5 завершена: frozen 1h прошёл все 7 заранее зафиксированных pre-TEST falsification-критериев; отдельный one-bar-delay stress отрицателен.
-- Закрытый TEST ни в одной фазе не оценивался.
+- Immutable TEST-opening memo и SHA-256 allowlist подготовлены на frozen research commit `81f5ea590edbc04fadce762452801c1d365470d0`; integrity/one-time gate добавлены без изменения стратегии.
+- **TEST SEALED — awaiting a new explicit owner approval.** Закрытый TEST ни в одной фазе не оценивался.
 
 ## Результаты Phase 2
 
@@ -140,9 +143,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**Подготовить отдельный immutable TEST-opening memo без загрузки или просмотра TEST.**
+**Остановиться и запросить новое явное разрешение владельца на единственное открытие TEST.**
 
-Memo должен зафиксировать commit и hashes артефактов, единственный frozen запуск, критерий успеха и запрет повторной настройки. После memo всё ещё требуется новое явное разрешение владельца; без него TEST не трогать и кандидата не продвигать в paper trading.
+Immutable memo, SHA-256 исходных pre-TEST ZIP/исследовательских артефактов, единственная команда, CI95 criterion и fail-closed audit gate уже зафиксированы. Утверждение плана подготовки memo не является разрешением TEST; без новой точной approval phrase с полным frozen SHA TEST не трогать и кандидата не продвигать в paper trading.
 
 ## Правила для следующих чатов
 
