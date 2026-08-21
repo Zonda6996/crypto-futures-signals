@@ -42,15 +42,15 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 2. **Фаза 1 — read-only post-mortem:** диагностика существующих TRAIN/VALIDATION ledgers без parameter search (завершена).
 3. **Gate 1 — owner decision:** владелец разрешил только документационную Фазу 2 (пройден).
 4. **Фаза 2 — новый protocol:** frozen `ALT-LOMOM-002-A` создан до реализации и расчётов (завершена).
-5. **Фаза 3 — реализация и TRAIN:** только preregistered вариант (не начата; отдельное разрешение обязательно).
-6. **Фаза 4 — prospective VALIDATION:** `[2026-09-01, 2027-09-01)`, один механический gate без retuning (не начата).
+5. **Фаза 3 — реализация и TRAIN (DONE):** реализован ровно один preregistered вариант; DEVELOPMENT/TRAIN diagnostic получил PASS. Отчёт: [`reports/ALTCOIN_LOMOM_PHASE3_TRAIN.md`](../reports/ALTCOIN_LOMOM_PHASE3_TRAIN.md).
+6. **Фаза 4 — prospective VALIDATION:** `[2026-09-01, 2027-09-01)`, один механический gate без retuning (не начата; отдельное разрешение обязательно).
 7. **Фаза 5 — paper trading:** только после уверенного PASS и отдельного разрешения; live — отдельное решение (не начата).
 
 Новый frozen protocol: [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md). Это adaptive low-turnover long-only гипотеза на той же fixed basket: `30d` momentum, top 4 по 25%, weekly rebalance, causal portfolio-vol scaling до 20% с multiplier `[0,1]`, realistic/stress costs 0,12%/0,20%. Grid search запрещён.
 
 Все данные `< 2026-01-01` считаются DEVELOPMENT/TRAIN, а не новым OOS. Новый prospective VALIDATION — `[2026-09-01, 2027-09-01)`, новый sealed HOLDOUT начинается `2027-09-01`. Старый HOLDOUT не открывался и не переопределён.
 
-**Текущая точка остановки:** Фаза 2 DONE. Не писать код, не запускать backtest и не переходить к Фазе 3 без отдельного явного решения владельца.
+**Текущая точка остановки:** Фаза 3 DONE. TRAIN diagnostic: PASS — Sharpe `1,1508`, compounded return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap CI95 `[0,2308; 2,0609]`, 0 нарушений; ledger reconciliation PASS. Это contaminated DEVELOPMENT/TRAIN evidence на fixed basket с survivorship/selection bias, не prospective подтверждение. Остановиться перед Фазой 4; VALIDATION, HOLDOUT, paper/live и retuning запрещены без отдельного решения владельца.
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
@@ -60,7 +60,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 ## Цель
 
-Искать воспроизводимый edge для crypto perpetual futures небольшими фазами. Не выдавать положительный исторический результат за подтверждённую стратегию; учитывать исполнение BingX, funding, multiple testing и закрытый holdout.
+Искать воспроизводимый edge для crypto perpetual futures небольшими фазами. Не выдавать положительный исто��ический результат за подтверждённую стратегию; учитывать исполнение BingX, funding, multiple testing и закрытый holdout.
 
 ## Текущий кандидат
 
@@ -138,7 +138,7 @@ Protocol был зафиксирован до расчётов. Frozen 1h-кан
 - каждый обязательный leave-one-causal-regime-out положителен;
 - combined execution stress: `+4,792R`.
 
-Важная отрицательная диагностика, которая не входила в семь verdict-критериев: дополнительная задержка входа на один 1h-бар дала `−2,358R`. Максимальный период без нового equity high — около 970 дн��й. Поэтому PASS разрешает только подготовить immutable TEST-opening memo, но не означает подтверждённый edge и не разрешает открывать TEST.
+Важная отрицательная диагностика, которая не входила в семь verdict-кри��ериев: дополнительная задержка входа на один 1h-бар дала `−2,358R`. Максимальный период без нового equity high — около 970 дн��й. Поэтому PASS разрешает только подготовить immutable TEST-opening memo, но не означает подтверждённый edge и не разрешает открывать TEST.
 
 ## Связь с Phase 4
 

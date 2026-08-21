@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых����да;
+- причину вых������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -273,7 +273,7 @@ Long и short проверять отдельно.
 
 - идентификатор эксперимента;
 - экономическую гипотезу;
-- доступные на ��омент сигнала данные;
+- доступн��е на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
 - train/validation/test границы;
@@ -324,7 +324,7 @@ $$Concentration_5 = \frac{PnL\ лучших\ 5\ сдел��к}{TotalPnL}$$
 
 - аудита движка;
 - walk-forward;
-- анализа соседних параметров;
+- анали��а соседних параметров;
 - фиксации расходов;
 - заморозки спецификации.
 
@@ -402,10 +402,10 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 2. **Фаза 1 — read-only post-mortem (DONE):** существующие ledgers разложены по costs, turnover, legs, symbols, funding, concentration и календарным срезам без новых backtests.
 3. **Gate 1 — owner decision (DONE):** владелец разрешил только документационную Фазу 2.
 4. **Фаза 2 — новый protocol (DONE):** до реализации frozen `ALT-LOMOM-002-A` с единственным low-turnover long-only кандидатом, mechanical PASS/FAIL и новым prospective calendar.
-5. **Фаза 3 — реализация и TRAIN (NOT STARTED):** отдельное разрешение обязательно; реализовать только preregistered вариант и использовать только timestamps `< 2026-01-01`.
-6. **Фаза 4 — prospective VALIDATION (NOT STARTED):** `[2026-09-01, 2027-09-01)`, один заранее определённый запуск с механическим gate без retuning.
+5. **Фаза 3 — реализация и TRAIN (DONE):** один preregistered вариант реализован и рассчитан только на timestamps `< 2026-01-01`; TRAIN diagnostic PASS, ledger reconciliation PASS.
+6. **Фаза 4 — prospective VALIDATION (NOT STARTED):** `[2026-09-01, 2027-09-01)`, один заранее определённый запуск с механическим gate без retuning; отдельное разрешение обязательно.
 7. **Фаза 5 — paper trading (CONDITIONAL):** только после уверенного PASS и отдельного разрешения; live остаётся отдельным решением.
 
 ## Текущее решение
 
-Старые altcoin маршруты остаются остановленными. Новая adaptive гипотеза зафиксирована в [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md): fixed basket, `30d` momentum, long-only top 4, weekly rebalance, portfolio-level 20% volatility target, один candidate без grid. Все данные до 2026 года contaminated и считаются DEVELOPMENT/TRAIN; prospective VALIDATION начинается `2026-09-01`, новый sealed HOLDOUT — `2027-09-01`. **Фаза 2 DONE; текущая точка — STOP перед Фазой 3.** Код и расчёты не разрешены без нового owner decision.
+Старые altcoin маршруты остаются остановленными. Новая adaptive гипотеза зафиксирована в [`docs/ALTCOIN_LONG_ONLY_PROTOCOL.md`](./ALTCOIN_LONG_ONLY_PROTOCOL.md): fixed basket, `30d` momentum, long-only top 4, weekly rebalance, portfolio-level 20% volatility target, один candidate без grid. Все данные до 2026 года contaminated и считаются DEVELOPMENT/TRAIN; prospective VALIDATION начинается `2026-09-01`, новый sealed HOLDOUT — `2027-09-01`. **Фаза 3 DONE; TRAIN diagnostic PASS; текущая точка — STOP перед Фазой 4.** На TRAIN: Sharpe `1,1508`, return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap lower `+0,2308`, 0 нарушений. Это fixed-basket evidence с survivorship/selection bias. Prospective VALIDATION и любые следующие действия не разрешены без нового owner decision.

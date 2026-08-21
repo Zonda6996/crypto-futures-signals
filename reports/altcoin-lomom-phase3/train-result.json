@@ -1,0 +1,116 @@
+{
+  "attribution": {
+    "by_quarter": {
+      "2020-Q2": 0.07273427611213755,
+      "2020-Q3": 0.18920695217182706,
+      "2020-Q4": 0.1758320423651857,
+      "2021-Q1": 0.18746561084391167,
+      "2021-Q2": 0.21075912929564983,
+      "2021-Q3": 0.1807487599179612,
+      "2021-Q4": 0.016262666181522382,
+      "2022-Q1": -0.034732374578851664,
+      "2022-Q2": -0.1934233558374556,
+      "2022-Q3": 0.030096570756722577,
+      "2022-Q4": 0.06637170535464575,
+      "2023-Q1": 0.15345276561647314,
+      "2023-Q2": -0.05723791138025427,
+      "2023-Q3": -0.05859471143533644,
+      "2023-Q4": 0.3413465209733499,
+      "2024-Q1": 0.11372144081193718,
+      "2024-Q2": -0.10347917294879246,
+      "2024-Q3": -0.06283480608157009,
+      "2024-Q4": 0.2407994230612,
+      "2025-Q1": -0.05112714795029259,
+      "2025-Q2": 0.021150019681027872,
+      "2025-Q3": 0.12505875095849092,
+      "2025-Q4": -0.1133969571599534
+    },
+    "by_symbol": {
+      "ADAUSDT": 0.10885437867639668,
+      "AVAXUSDT": 0.09717155226930813,
+      "BNBUSDT": 0.2041107370765295,
+      "DOGEUSDT": 0.06008155277545611,
+      "DOTUSDT": 0.09170341581249881,
+      "ETHUSDT": 0.22035999573198062,
+      "LINKUSDT": 0.167766389380906,
+      "LTCUSDT": 0.14691705816641734,
+      "SOLUSDT": 0.221016889959823,
+      "XRPUSDT": 0.13287109279800075
+    },
+    "positive_pnl_max_symbol_share": 0.1523358192845124,
+    "positive_quarters": 15,
+    "quarter_count": 23
+  },
+  "bootstrap": {
+    "block_length_days": 30,
+    "ci95_high": 2.0608999940817014,
+    "ci95_low": 0.23079718681073436,
+    "iterations": 2000
+  },
+  "evidence_label": "exploratory fixed-basket evidence with survivorship/selection bias",
+  "protocol_id": "ALT-LOMOM-002-A",
+  "realistic": {
+    "compounded_net_return": 2.703742867800114,
+    "cost_drag": 0.06703932182552338,
+    "daily_equivalent_observations": 2060,
+    "funding_return_sum": -0.14838625203930877,
+    "gross_return_sum": 1.665605770594368,
+    "max_drawdown": -0.2799982590591552,
+    "net_sharpe": 1.1507533304980098,
+    "scheduled_rebalances": 295,
+    "turnover_sum": 55.86610152126949,
+    "violation_count": 0
+  },
+  "reconciliation": {
+    "realistic": {
+      "compounded_net_return": 2.7037428678,
+      "cost_drag": 0.0670393218255192,
+      "daily_equivalent_observations": 2060,
+      "funding_return_sum": -0.148386252054,
+      "gross_return_sum": 1.665605770587,
+      "net_arithmetic_sum": 1.450180196724,
+      "scheduled_rebalances": 295,
+      "turnover_sum": 55.866101521266,
+      "violation_count": 0
+    },
+    "status": "PASS",
+    "stress": {
+      "compounded_net_return": 2.541807623498,
+      "cost_drag": 0.11173220304253201,
+      "daily_equivalent_observations": 2060,
+      "funding_return_sum": -0.148386252054,
+      "gross_return_sum": 1.665605770587,
+      "net_arithmetic_sum": 1.405487315516,
+      "scheduled_rebalances": 295,
+      "turnover_sum": 55.866101521266,
+      "violation_count": 0
+    }
+  },
+  "stress": {
+    "compounded_net_return": 2.541807623497701,
+    "cost_drag": 0.11173220304253899,
+    "daily_equivalent_observations": 2060,
+    "funding_return_sum": -0.14838625203930877,
+    "gross_return_sum": 1.665605770594368,
+    "max_drawdown": -0.28293892732998016,
+    "net_sharpe": 1.1151431934143134,
+    "scheduled_rebalances": 295,
+    "turnover_sum": 55.86610152126949,
+    "violation_count": 0
+  },
+  "train_gate": {
+    "checks": {
+      "at_least_three_positive_quarters": true,
+      "bootstrap_lower_above_zero": true,
+      "max_drawdown_no_worse_than_minus_30pct": true,
+      "observations_at_least_252": true,
+      "realistic_sharpe_at_least_0_75": true,
+      "rebalances_at_least_50": true,
+      "stress_compounded_positive": true,
+      "symbol_positive_pnl_share_at_most_40pct": true,
+      "zero_violations": true
+    },
+    "scope": "TRAIN diagnostic only; prospective gate is not opened",
+    "verdict": "PASS"
+  }
+}
