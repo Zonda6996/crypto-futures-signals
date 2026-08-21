@@ -17,6 +17,7 @@ RAW_ROOT_NAME = "altcoin-multitf-003"
 DEVELOPMENT_DIR = "development"
 SEALED_DIR = "sealed-holdout"
 OFFICIAL_EXCHANGE_INFO_URLS = (
+    "https://www.binance.com/fapi/v1/exchangeInfo",
     "https://fapi.binance.com/fapi/v1/exchangeInfo",
     "https://fapi1.binance.com/fapi/v1/exchangeInfo",
     "https://fapi2.binance.com/fapi/v1/exchangeInfo",
