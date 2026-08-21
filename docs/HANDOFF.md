@@ -5,7 +5,7 @@
 ## Где продолжать
 
 - Репозиторий: `Zonda6996/crypto-futures-signals`
-- Рабочая ветка: `crypto-futures-signals` (содержит результаты Phase 1–4 после rebase на remote)
+- Рабочая ветка: `v0/crypto-futures-signals-59e5aef9`
 - Roadmap: [`docs/roadmap.md`](./roadmap.md)
 - Phase 1: [`reports/PHASE1_AUDIT.md`](../reports/PHASE1_AUDIT.md)
 - Оригинальная Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
@@ -14,6 +14,7 @@
 - Дополнительная повторная robustness-проверка: [`reports/PHASE3_ROBUSTNESS.md`](../reports/PHASE3_ROBUSTNESS.md)
 - Phase 4: [`reports/PHASE4_ECONOMIC_MECHANISM.md`](../reports/PHASE4_ECONOMIC_MECHANISM.md)
 - Дополнительная M15/M30 robustness-проверка: [`reports/TIMEFRAME_ROBUSTNESS_M15_M30.md`](../reports/TIMEFRAME_ROBUSTNESS_M15_M30.md)
+- Отдельная regime/concentration-диагностика: [`reports/REGIME_CONCENTRATION.md`](../reports/REGIME_CONCENTRATION.md)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
 
@@ -69,6 +70,19 @@
 
 При механическом сохранении часовых горизонтов M30 и M15 положительны на VALIDATION при 0,10%: соответственно `+2,675R` и `+4,233R`. Но без top-5 результаты равны `−3,791R` и `−2,173R`; при 0,16% M15 также становится отрицательным (`−0,238R`). Заранее заданный строгий критерий поддержки не пройден; параметры не переотбирались, TEST закрыт.
 
+## Отдельная regime/concentration-диагностика
+
+Диагностика выполнена отдельно от Phase 2–4 на полном pre-TEST TRAIN+VALIDATION-срезе 2021–2024 при frozen-параметрах и расходах 0,10%. Это описательный анализ концентрации, не новая OOS-оценка. BTC-режимы размечены каузально: trailing 90-day return и trailing 30-day realized volatility; пороги — expanding median только предшествующих валидных наблюдений.
+
+- 1h: 185 сделок, `+16,387R`; top-5 = 40,1% total, без top-5 `+9,808R`.
+- M30: 264 сделки, `+7,926R`; top-5 = 83,0%, без top-5 `+1,348R`.
+- M15: 401 сделка, `+0,654R`; top-5 = 1003,3%, без top-5 `−5,910R`.
+- Leave-one-year-out и leave-one-regime-out сохранены в отдельных JSON; сделки — в отдельных CSV.
+- Ранние сделки без достаточной 90-day/past-threshold истории выделены как `insufficient_history`, а не классифицированы задним числом.
+- TEST с `2025-01-01` не загружался, не анализировался и не открывался.
+
+Вывод: 1h сохраняет положительный запас после top-5 на полном pre-TEST срезе, M30 имеет слабый положительный остаток, M15 полностью зависит от экстремальных сделок. Это не отменяет отрицательные trimmed-результаты исходных дополнительных rolling/timeframe экспериментов: эксперименты и их выборки нельзя смешивать.
+
 ## Связь с Phase 4
 
 Phase 4 не обнаружила специфический положительный 24h drift: средний gross return полного сигнала через 24 часа `−0,018%`, преимущество над главным контролем `−0,547` п.п. Возможный эффект Phase 2/3 может быть path-dependent и связан с stop/take, а не с простым continuation.
@@ -90,6 +104,7 @@ python3 -m research.phase3_parameter_map
 python3 -m research.phase3_robustness
 python3 -m research.phase4_mechanism
 python3 -m research.timeframe_robustness
+python3 -m research.regime_concentration
 ```
 
 Market cache скачивается в `data/cache/` и исключён из Git.
@@ -102,11 +117,12 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 - economic mechanism не подтверждён на 24h;
 - карта соседей однофакторная и не является новым поиском optimum;
 - фактические BingX fills отсутствуют;
+- полный pre-TEST concentration-срез не является новой OOS-оценкой; M15 без top-5 отрицателен, а ранний `insufficient_history`-режим нельзя интерпретировать как торговый фильтр;
 - TEST запрещено открывать без отдельного явного решения.
 
 ## Ровно один следующий шаг
 
-**Принять отдельное решение по frozen candidate: остановить текущую версию либо явно разрешить единственное открытие закрытого TEST в следующей фазе.**
+**Принять отдельное решение по frozen candidate: остановить текущую версию либо явно разрешить единственное открытие закрыт��го TEST в следующей фазе.**
 
 Если открытие разрешено, до просмотра зафиксировать критерий успеха и выполнить один прогон без изменения параметров. Если разрешения нет — TEST не трогать и текущую версию не продвигать в paper trading.
 

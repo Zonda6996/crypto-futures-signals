@@ -1,4 +1,8 @@
+import csv
+import json
 import unittest
+from datetime import datetime
+from pathlib import Path
 
 from research.core import Bar
 from research.regime_concentration import (
@@ -52,6 +56,30 @@ class RegimeConcentrationTests(unittest.TestCase):
             self.assertIn(f"top_{count}_profit_share", summary)
             self.assertIn(f"without_top_{count}_r", summary)
             self.assertIn(f"without_top_{count}_expectancy_r", summary)
+
+    def test_committed_artifacts_are_complete_and_pre_test(self):
+        output = Path(__file__).resolve().parents[1] / "reports" / "regime-concentration"
+        aggregate = json.loads((output / "results.json").read_text(encoding="utf-8"))
+        self.assertFalse(aggregate["test_opened"])
+        self.assertTrue(aggregate["separate_from_phases_2_to_4"])
+        self.assertEqual(set(aggregate["results"]), set(TIMEFRAMES))
+
+        for interval in TIMEFRAMES:
+            result = json.loads((output / f"results-{interval}.json").read_text(encoding="utf-8"))
+            with (output / f"trades-{interval}.csv").open(newline="", encoding="utf-8") as handle:
+                rows = list(csv.DictReader(handle))
+            self.assertEqual(len(rows), result["overall"]["trades"])
+            self.assertEqual(len(rows), result["artifact_integrity"]["trade_rows"])
+            self.assertFalse(result["sample"]["test_opened"])
+            self.assertLess(result["sample"]["last_included_ts"], SEALED_TEST_START_TS)
+            self.assertTrue(result["by_calendar_year"])
+            self.assertTrue(result["by_regime"])
+            self.assertTrue(result["leave_one_year_out"])
+            self.assertTrue(result["leave_one_regime_out"])
+            for row in rows:
+                signal_ts = int(datetime.fromisoformat(row["signal_time"]).timestamp() * 1000)
+                self.assertLess(signal_ts, SEALED_TEST_START_TS)
+                self.assertTrue(row["regime"])
 
 
 if __name__ == "__main__":
