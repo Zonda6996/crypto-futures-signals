@@ -2,7 +2,7 @@
 
 **Protocol ID:** `ALT-XSMOM-001-A`  
 **Frozen:** 21 August 2026  
-**Status:** frozen for Phase A (data availability and survivorship audit only)
+**Status:** Phase A frozen and completed with `STOP`; owner-authorized exploratory amendment `ALT-XSMOM-001-B` frozen 21 August 2026
 
 ## Governance and scope
 
@@ -90,3 +90,28 @@ Phase A reports exactly one verdict:
 - `STOP`: historical membership or delisted contracts cannot be reconstructed without material survivorship bias.
 
 Phase A must stop after the report. No automatic transition to signal implementation or parameter search is permitted.
+
+## Owner-authorized exploratory amendment `ALT-XSMOM-001-B`
+
+**Frozen:** 21 August 2026, before any signal or PnL computation.
+
+The strict point-in-time Top 30 experiment remains stopped and its `STOP` verdict is not changed. The owner explicitly accepts a smaller, faster exploratory study with known survivorship and discretionary selection bias.
+
+The fixed universe is exactly these 10 Binance USD-M perpetual contracts, in canonical order:
+
+1. `ETHUSDT`
+2. `BNBUSDT`
+3. `SOLUSDT`
+4. `XRPUSDT`
+5. `ADAUSDT`
+6. `DOGEUSDT`
+7. `LINKUSDT`
+8. `LTCUSDT`
+9. `AVAXUSDT`
+10. `DOTUSDT`
+
+BTC is excluded because the requested subject is altcoins. No contract may be added, removed, replaced, or selected using later performance. At a timestamp, a listed contract is eligible only after 90 calendar days of its own available history and with at least 95% hourly-bar coverage over the trailing 30 days; absent contracts are not backfilled with substitutes. A cross-section requires at least 5 eligible contracts. With 5–9 eligible contracts, long and short book size is one contract each; with 10 eligible contracts, it is two contracts each. Ranking ties use canonical order.
+
+The primary family, horizons, rebalance frequencies, next-bar execution, costs, funding treatment, metrics, controls, and sealed HOLDOUT from the original protocol remain unchanged. TRAIN/VALIDATION data must be strictly earlier than `2026-01-01T00:00:00Z`. The next phase may download only pre-HOLDOUT bars/funding for these symbols, freeze objective calendar boundaries from coverage rather than performance, implement data-quality checks, and then run the already declared grid.
+
+Any result from `ALT-XSMOM-001-B` must be labelled **exploratory fixed-basket evidence with survivorship/selection bias**. It cannot establish a universe-level edge, reverse the strict Phase A `STOP`, justify live trading, or open the HOLDOUT. The next phase stops after pre-HOLDOUT TRAIN/VALIDATION results and a complete multiple-testing ledger.

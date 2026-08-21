@@ -4,7 +4,7 @@
 
 ## Текущий статус
 
-**Независимое altcoin-исследование:** protocol `ALT-XSMOM-001-A` зафиксирован до анализа. Phase A data/survivorship audit получил **STOP**: complete historical Binance USD-M perpetual lifecycle registry, включая delistings, отсутствует, поэтому point-in-time Top 30 нельзя сертифицировать без survivorship bias. HOLDOUT с `2026-01-01` не загружался; signal/PnL и parameter search не запускались. Следующий допустимый шаг — независимый датированный pre-2026 registry и повтор только Phase A после решения владельца. См. [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md) и [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md).
+**Независимое altcoin-исследование:** protocol `ALT-XSMOM-001-A` зафиксирован до анализа. Строгий Phase A data/survivorship audit получил **STOP**: complete historical Binance USD-M perpetual lifecycle registry, включая delistings, отсутствует, поэтому point-in-time Top 30 нельзя сертифицировать без survivorship bias. По явному решению владельца создан отдельный exploratory amendment `ALT-XSMOM-001-B`: фиксированная корзина из 10 ликвидных контрактов (`ETHUSDT`, `BNBUSDT`, `SOLUSDT`, `XRPUSDT`, `ADAUSDT`, `DOGEUSDT`, `LINKUSDT`, `LTCUSDT`, `AVAXUSDT`, `DOTUSDT`) с явно принятым survivorship/selection bias. HOLDOUT с `2026-01-01` остаётся закрытым; signal/PnL и parameter search ещё не запускались. См. [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md) и [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md).
 
 ## Legacy ETH status
 
@@ -275,7 +275,7 @@ Long и short проверять отдельно.
 - экономическую гипотезу;
 - доступные на момент сигнала данные;
 - пространство параметров;
-- число проверенных вариантов;
+- число проверенных вариант��в;
 - train/validation/test границы;
 - критерии принятия решения;
 - все отрицательные результаты.
@@ -390,12 +390,13 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 
 # Ближайшая последовательность работ
 
-1. Заархивировать старый ETH candidate как окончательный FAIL; никогда не открывать TEST 2025 повторно.
-2. Начать новый независимый эксперимент по [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md).
-3. Сначала зафиксировать point-in-time universe, data split, costs, primary metric и pass/fail в новом protocol.
-4. Провести аудит survivorship/listing bias до расчёта стратегии.
-5. Не переходить к paper trading до нового независимого holdout PASS.
+1. Старый ETH candidate остаётся окончательным FAIL; никогда не открывать TEST 2025 повторно.
+2. Использовать только frozen exploratory basket `ALT-XSMOM-001-B` из 10 контрактов; не менять состав по результатам.
+3. Скачать и проверить только pre-HOLDOUT hourly bars/funding для корзины, не запрашивая timestamps с `2026-01-01`.
+4. Зафиксировать TRAIN/VALIDATION границы по общей доступности данных, а не по performance.
+5. Реализовать и выполнить только заранее заданную cross-sectional momentum grid, ledger и controls.
+6. Остановиться после exploratory TRAIN/VALIDATION отчёта; не открывать HOLDOUT и не переходить к paper trading.
 
 ## Текущее решение
 
-Сильный pre-TEST результат не воспроизвёлся на новом периоде: frozen ETH candidate получил TEST FAIL и не допускается к торговле. Следующий допустимый шаг — новая гипотеза на портфеле ликвидных альткоинов с новым будущим holdout; это отдельное исследование, а не попытка спасти старый TEST.
+Строгий point-in-time Top 30 эксперимент остаётся `STOP`, но владелец явно принял ограниченный fixed-basket эксперимент для ускорения. Следующий допустимый шаг — Phase B для 10 зафиксированных альткоинов с явной маркировкой survivorship/selection bias и полностью закрытым HOLDOUT.
