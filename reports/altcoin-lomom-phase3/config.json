@@ -1,0 +1,50 @@
+{
+  "basket": [
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "AVAXUSDT",
+    "DOTUSDT"
+  ],
+  "bootstrap_block_days": 30,
+  "cost_round_trip": {
+    "realistic": 0.0012,
+    "stress": 0.002
+  },
+  "daily_aggregation": "UTC open-to-open compounded portfolio returns with actual funding",
+  "evidence_label": "exploratory fixed-basket evidence with survivorship/selection bias",
+  "execution": "decision uses bars closed before t; execution at bar open t",
+  "momentum_days": 30,
+  "participation": {
+    "initial_capital_quote": 1.0,
+    "mechanic": "each target weight capped at 1% of prior closed hourly quote volume divided by current realistic-cost equity; residual is cash",
+    "rate": 0.01
+  },
+  "pre_scaling_weight": 0.25,
+  "protocol_id": "ALT-LOMOM-002-A",
+  "rebalance": "Monday 00:00 UTC",
+  "rebalance_days": 7,
+  "run_scope": "DEVELOPMENT/TRAIN only",
+  "search_points": 1,
+  "survivorship_selection_bias": true,
+  "top_k": 4,
+  "train": [
+    "2020-05-11T00:00:00Z",
+    "2026-01-01T00:00:00Z"
+  ],
+  "volatility": {
+    "annualisation_days": 365,
+    "multiplier_bounds": [
+      0,
+      1
+    ],
+    "target": 0.2,
+    "warmup": "cash until 30 complete causal shadow-portfolio daily returns",
+    "window_full_daily_returns": 30
+  }
+}
