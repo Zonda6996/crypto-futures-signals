@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых����������да;
+- причину вых������������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -419,13 +419,15 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 ### Новый engine: пофазный статус
 
 0. **Phase 0 — protocol freeze (DONE):** создан [`docs/ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`](./ALTCOIN_MULTITF_FROZEN_PROTOCOL.md). Зафиксированы development `[2019-09-08, 2026-01-01)`, sealed holdout `[2026-01-01, 2026-08-01)`, пять annual outer folds с expanding annual inner folds, purge `97d`, embargo `7d`, point-in-time lifecycle universe, moderate liquidity filter, конечный search manifest обоих семейств, execution/cost/risk model, score, SPA `5%`, DSR `95%`, robustness/concentration и mechanical PASS/FAIL.
-1. **Owner gate (WAITING):** требуется отдельное явное разрешение на Phase 1.
-2. **Phase 1 — data/lifecycle audit (NOT APPROVED):** после разрешения допустимы только получение и нормализация development/lifecycle данных, физическое sealing holdout, manifests и hashes. Signal/PnL/backtest запрещены.
-3. **Phase 2 — causal engine (NOT APPROVED):** отдельный будущий gate; implementation и tests без parameter selection.
-4. **Phase 3 — nested walk-forward sweep (NOT APPROVED):** два полных leaderboard без holdout.
-5. **Phase 4 — frozen robustness (NOT APPROVED):** только заранее заданные stresses/gates, без расширения grid.
-6. **Phase 5 — shortlist freeze (NOT APPROVED):** ровно один PASS winner каждого семейства; если family FAIL, winner отсутствует.
-7. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
-8. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
+1. **Owner gate Phase 1 (DONE):** владелец разрешил разделить Phase 1 и выполнить первую часть.
+2. **Phase 1A — acquisition/sealing gate (STOP):** до загрузки подтверждено отсутствие полного point-in-time lifecycle registry с delisted/failed contracts. Current roster и modern basket запрещены; поэтому network market-data requests, holdout reads и расчёты не выполнялись. См. [`reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md`](../reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md).
+3. **Owner/input gate (WAITING):** требуется полный versioned lifecycle registry source с provenance. После его предоставления повторяется Phase 1A; только PASS разрешит raw acquisition и physical sealing.
+4. **Phase 1B — normalization/eligibility audit (BLOCKED):** только после PASS 1A и отдельного owner approval; development-only quality audit, causal eligibility, TF aggregation, manifests/hashes. Prompt: [`docs/ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md`](./ALTCOIN_MULTITF_PHASE1B_NEXT_CHAT.md).
+5. **Phase 2 — causal engine (NOT APPROVED):** отдельный будущий gate; implementation и tests без parameter selection.
+6. **Phase 3 — nested walk-forward sweep (NOT APPROVED):** два полных leaderboard без holdout.
+7. **Phase 4 — frozen robustness (NOT APPROVED):** только заранее заданные stresses/gates, без расширения grid.
+8. **Phase 5 — shortlist freeze (NOT APPROVED):** ровно один PASS winner каждого семейства; если family FAIL, winner отсутствует.
+9. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
+10. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
 
-**Текущая точка — STOP после Phase 0.** Код, data download, backtest, grid search, holdout и paper/live не запускались. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.
+**Текущая точка — STOP на pre-download gate Phase 1A.** Полный lifecycle registry отсутствует; data download, holdout reads, backtest, grid search и paper/live не запускались. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.

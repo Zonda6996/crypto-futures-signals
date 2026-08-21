@@ -174,4 +174,11 @@ Holdout PASS каждого winner требует: net return `>0` base и stres
 
 Phase 0 завершает только документацию. После отдельного owner approval разрешена **только Phase 1: data/lifecycle audit, physical sealing, manifests и hashes без signal/PnL/backtest и без чтения holdout payload исследовательским процессом**. Engine implementation относится к отдельной последующей Phase 2 и сейчас запрещена.
 
+Для операционной безопасности Phase 1 разделена без изменения research rules:
+
+- **Phase 1A — acquisition/sealing:** сначала PASS полного point-in-time lifecycle registry, затем raw acquisition, физическое разделение development/holdout и immutable file inventory с SHA-256. Symbol-addressed market data нельзя массово загружать до PASS registry gate.
+- **Phase 1B — normalization/eligibility:** только после PASS Phase 1A и отдельного owner approval разрешены чтение development payload, quality audit, canonical lifecycle registry, causal eligibility и агрегация старших TF. Holdout payload остаётся недоступным.
+
+STOP любой части запрещает переход к следующей. Это разделение не разрешает новые источники, параметры, signals, PnL или backtest и не изменяет frozen calendar/search space.
+
 Любая неоднозначность при реализации решается консервативным STOP и owner amendment до расчёта, а не выбором после просмотра результата.
