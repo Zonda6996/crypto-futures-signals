@@ -19,6 +19,8 @@
 - Phase 5 falsification: [`reports/PHASE5_FALSIFICATION.md`](../reports/PHASE5_FALSIFICATION.md)
 - Immutable TEST-opening memo: [`docs/TEST_OPENING_MEMO.md`](./TEST_OPENING_MEMO.md)
 - Pre-TEST/hash allowlist: [`docs/test-opening-hashes.json`](./test-opening-hashes.json)
+- План независимого исследования альткоинов для нового чата: [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md)
+- Единственный TEST result/audit: [`reports/private/test-opening/result.json`](../reports/private/test-opening/result.json)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
 
@@ -28,7 +30,7 @@
 
 ## Текущий кандидат
 
-Статус: **положительный walk-forward и широкий положительный robustness-кластер, но strict Phase 3 pass не пройден; TEST закрыт**.
+Статус: **старый frozen candidate окончательно отклонён: единственный TEST 2025 завершился FAIL; повторное открытие и настройка по TEST запрещены**.
 
 - ETHUSDT perpetual, long, 1h;
 - `vwap_distance_24` в верхнем квартиле прошлого calibration-окна;
@@ -45,7 +47,8 @@
 - Phase 4 завершена: простой специфический 24h continuation-механизм не подтверждён.
 - Phase 5 завершена: frozen 1h прошёл все 7 заранее зафиксированных pre-TEST falsification-критериев; отдельный one-bar-delay stress отрицателен.
 - Immutable TEST-opening memo и SHA-256 allowlist подготовлены на frozen research commit `81f5ea590edbc04fadce762452801c1d365470d0`; integrity/one-time gate добавлены без изменения стратегии.
-- **TEST SEALED — awaiting a new explicit owner approval.** Закрытый TEST ни в одной фазе не оценивался.
+- Владелец дал точное разрешение; TEST был открыт один раз. Verdict: **FAIL** — 32 сделки, expectancy `−0,160R`, total `−5,135R`, CI95 `[−0,495R; +0,186R]`, max drawdown `−5,640R`.
+- Право открытия TEST израсходовано. Повторный запуск, retuning и использование 2025 TEST для новой версии гипотезы запрещены.
 
 ## Результаты Phase 2
 
@@ -85,7 +88,7 @@
 - M15: 401 сделка, `+0,654R`; top-5 = 1003,3%, без top-5 `−5,910R`.
 - Leave-one-year-out и leave-one-regime-out сохранены в отдельных JSON; сделки — в отдельных CSV.
 - Ранние сделки без достаточной 90-day/past-threshold истории выделены как `insufficient_history`, а не классифицированы задним числом.
-- TEST с `2025-01-01` не загружался, не анализировался и не открывался.
+- TEST с `2025-01-01` не загру��ался, не анализировался и не открывался.
 
 Вывод: 1h сохраняет положительный запас после top-5 на полном pre-TEST срезе, M30 имеет слабый положительный остаток, M15 полностью зависит от экстремальных сделок. Это не отменяет отрицательные trimmed-результаты исходных дополнительных rolling/timeframe экспериментов: эксперименты и их выборки нельзя смешивать.
 
@@ -101,7 +104,7 @@ Protocol был зафиксирован до расчётов. Frozen 1h-кан
 - каждый обязательный leave-one-causal-regime-out положителен;
 - combined execution stress: `+4,792R`.
 
-Важная отрицательная диагностика, которая не входила в семь verdict-критериев: дополнительная задержка входа на один 1h-бар дала `−2,358R`. Максимальный период без нового equity high — около 970 дней. Поэтому PASS разрешает только подготовить immutable TEST-opening memo, но не означает подтверждённый edge и не разрешает открывать TEST.
+Важная отрицательная диагностика, которая не входила в семь verdict-критериев: дополнительная задержка входа на один 1h-бар дала `−2,358R`. Максимальный период без нового equity high — около 970 дн��й. Поэтому PASS разрешает только подготовить immutable TEST-opening memo, но не означает подтверждённый edge и не разрешает открывать TEST.
 
 ## Связь с Phase 4
 
@@ -143,9 +146,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**Остановиться и запросить новое явное разрешение владельца на единственное открытие TEST.**
+**В новом чате подготовить protocol независимого исследования momentum на point-in-time universe ликвидных perpetual-альткоинов.**
 
-Immutable memo, SHA-256 исходных pre-TEST ZIP/исследовательских артефактов, единственная команда, CI95 criterion и fail-closed audit gate уже зафиксированы. Утверждение плана подготовки memo не является разрешением TEST; без новой точной approval phrase с полным frozen SHA TEST не трогать и кандидата не продвигать в paper trading.
+Начать с [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md). Первый этап — только protocol и аудит доступности данных/survivorship bias; не переносить старые ETH-параметры, не искать лучшую монету и не использовать уже открытый TEST 2025 для настройки.
 
 ## Правила для следующих чатов
 
@@ -153,5 +156,5 @@ Immutable memo, SHA-256 исходных pre-TEST ZIP/исследователь
 - делать одну фазу за раз;
 - не называть положительный walk-forward подтверждённым edge;
 - не выбирать новый candidate из Phase 3 neighbor map;
-- не открывать TEST до отдельного явного решения;
+- старый TEST 2025 уже открыт и израсходован: никогда не запускать повторно и не использовать для retuning;
 - в конце к��ждой фазы обновлять handoff, отчёт, артефакты и следующий единственный шаг.

@@ -159,7 +159,7 @@ $$R_i = \frac{NetPnL_i}{InitialRisk_i}$$
 Проверить не одну оптимальную точку, а соседнюю область:
 
 - VWAP: 12, 24, 48 и 72 часа;
-- стоп: 1,2 / 1,5 / 1,8 / 2,0 ATR;
+- сто��: 1,2 / 1,5 / 1,8 / 2,0 ATR;
 - тейк: 1,5 / 2,0 / 2,5 / 3,0 ATR;
 - удержание: 12 / 24 / 36 / 48 часов;
 - несколько соседних порогов отклонения и волатильности;
@@ -382,15 +382,16 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 - Отдельная regime/concentration-диагностика на полном TRAIN+VALIDATION 2021–2024: 1h `+16,387R` и `+9,808R` без top-5; M30 `+7,926R` и `+1,348R` без top-5; M15 `+0,654R` и `−5,910R` без top-5. Режимы и их thresholds каузальны; leave-one-year/regime-out сохранены отдельно. Это описательный pre-TEST срез, не новая OOS-оценка и не замена результатам Phase 2–4.
 - Phase 5: frozen 1h получил PASS 7/7 по заранее зафиксированному protocol: без top-5 `+9,808R`, без 2024 `+7,294R`, без лучшего 90-day кластера `+8,330R`, при 0,16% `+12,210R`, rolling 12m positive share 78,4%, все обязательные leave-one-regime-out положительны, combined stress `+4,792R`. Отдельный one-bar-delay stress отрицателен (`−2,358R`), а longest no-new-high около 970 дней. TEST не открыт.
 - Governance gate завершён: immutable memo и SHA-256 manifest фиксируют research commit `81f5ea590edbc04fadce762452801c1d365470d0`, 192 исходных pre-TEST ZIP, research artifacts, единственную TEST-команду и CI95 verdict. Frozen strategy/cost/execution не менялись.
+- Единственный TEST 2025 завершён с **FAIL**: 32 сделки, expectancy `−0,160R`, total `−5,135R`, CI95 `[−0,495R; +0,186R]`, max drawdown `−5,640R`. Старый candidate отклонён; повторный запуск и retuning по TEST запрещены.
 
 # Ближайшая последовательность работ
 
-1. Не менять frozen candidate и не выбирать лучший вариант из Phase 3.
-2. Immutable TEST-opening memo, hashes и integrity gate — **завершено**; TEST при подготовке не загружался и не анализировался.
-3. Остановиться и запросить отдельное новое явное разрешение владельца с exact phrase + full frozen SHA.
-4. Только после него допускается одна заранее зафиксированная команда; повторное открытие и retuning запрещены независимо от результата.
-5. До такого разрешения TEST и paper trading не открывать.
+1. Заархивировать старый ETH candidate как окончательный FAIL; никогда не открывать TEST 2025 повторно.
+2. Начать новый независимый эксперимент по [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md).
+3. Сначала зафиксировать point-in-time universe, data split, costs, primary metric и pass/fail в новом protocol.
+4. Провести аудит survivorship/listing bias до расчёта стратегии.
+5. Не переходить к paper trading до нового независимого holdout PASS.
 
 ## Текущее решение
 
-Phase 5 прошла все семь заранее зафиксированных критериев, а governance memo подготовлен. Это не отменяет strict fail дополнительной Phase 3, отрицательный one-bar-delay stress Phase 5 (`−2,358R`) и длительный период без нового high; эксперименты нельзя смешивать. **TEST SEALED — awaiting a new explicit owner approval.** Текущее/предыдущее утверждение плана не является таким разрешением.
+Сильный pre-TEST результат не воспроизвёлся на новом периоде: frozen ETH candidate получил TEST FAIL и не допускается к торговле. Следующий допустимый шаг — новая гипотеза на портфеле ликвидных альткоинов с новым будущим holdout; это отдельное исследование, а не попытка спасти старый TEST.
