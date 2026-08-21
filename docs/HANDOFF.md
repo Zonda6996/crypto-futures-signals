@@ -25,7 +25,7 @@
 
 ## Новый altcoin Phase A status
 
-Protocol `ALT-XSMOM-001-A` зафиксирован: cross-sectional long/short, point-in-time Top 30 и HOLDOUT с `2026-01-01`. Phase A завершена с verdict **STOP**: полного датированного pre-2026 lifecycle registry Binance USD-M perpetuals с delisted-контрактами нет; current roster создал бы survivorship bias и post-HOLDOUT leakage. HOLDOUT не загружался, сетевых запросов не было, signal/PnL не вычислялись. Подбор стратегии запрещён до независимого historical registry и отдельного решения владельца на повтор только Phase A.
+Protocol `ALT-XSMOM-001-A` зафиксирован: cross-sectional long/short, point-in-time Top 30 и HOLDOUT с `2026-01-01`. Строгая Phase A завершена с verdict **STOP**: полного датированного pre-2026 lifecycle registry Binance USD-M perpetuals с delisted-контрактами нет; current roster создал бы survivorship bias. По явному решению владельца зафиксирован отдельный exploratory amendment `ALT-XSMOM-001-B`: вместо Top 30 используется неизменяемая корзина из 10 заранее выбранных ликвидных контрактов — `ETHUSDT`, `BNBUSDT`, `SOLUSDT`, `XRPUSDT`, `ADAUSDT`, `DOGEUSDT`, `LINKUSDT`, `LTCUSDT`, `AVAXUSDT`, `DOTUSDT`. Это осознанно допускает survivorship/selection bias, поэтому будущий результат будет exploratory и не отменит Phase A STOP. HOLDOUT не загружался; signal/PnL и parameter search ещё не запускались.
 - Единственный TEST result/audit: [`reports/private/test-opening/result.json`](../reports/private/test-opening/result.json)
 
 Новый чат сначала читает этот файл, четыре фазовых отчёта и roadmap.
@@ -152,9 +152,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**В новом чате подготовить protocol независимого исследования momentum на point-in-time universe ликвидных perpetual-альткоинов.**
+**В новом чате выполнить только exploratory Phase B для frozen fixed basket `ALT-XSMOM-001-B`.**
 
-Начать с [`docs/ALTCOIN_RESEARCH_NEXT_CHAT.md`](./ALTCOIN_RESEARCH_NEXT_CHAT.md). Первый этап — только protocol и аудит доступности данных/survivorship bias; не переносить старые ETH-параметры, не искать лучшую монету и не использовать уже открытый TEST 2025 для настройки.
+Начать с [`docs/ALTCOIN_FIXED_BASKET_NEXT_CHAT.md`](./ALTCOIN_FIXED_BASKET_NEXT_CHAT.md). Скачать и проверить только pre-HOLDOUT данные 10 зафиксированных контрактов, зафиксировать TRAIN/VALIDATION границы по coverage, затем выполнить только preregistered cross-sectional grid и controls. Не менять корзину, не переносить старые ETH-параметры, не открывать HOLDOUT с `2026-01-01` и не использовать TEST 2025 для настройки.
 
 ## Правила для следующих чатов
 
