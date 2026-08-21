@@ -1,10 +1,12 @@
 # ALT-MULTITF-003 — frozen protocol
 
-Статус: **FROZEN WITH OWNER AMENDMENT A1 / PHASE 1A RE-APPROVED**
+Статус: **FROZEN WITH OWNER AMENDMENTS A1+A2 / PHASE 1A RE-APPROVED**
 
 Дата freeze: 22 августа 2026 года
 
 Дата owner amendment A1: 22 августа 2026 года
+
+Дата owner amendment A2: 22 августа 2026 года
 
 Рынок: Binance USD-M linear USDT perpetual futures
 
@@ -47,20 +49,20 @@ Purge равен `97d` (`90d` maximum lookback + `7d` maximum holding); embargo 
 
 1. это Binance USD-M linear USDT-margined perpetual (`contractType=PERPETUAL`, quote/settle asset `USDT`), не delivery, не coin-margined и не synthetic index;
 2. для timestamp существуют реальные raw `5m` bars; входы до первого доступного observation запрещены;
-3. возраст от первого доступного tradable `5m` observation не менее `90d`;
-4. присутствует не менее `99%` ожидаемых закрытых базовых `5m` bars за trailing `30d`, без gap длиннее `30m`;
-5. median causal daily quote volume за последние 30 полных UTC-дней не менее `$25m`;
+3. возраст от первого доступного tradable `5m` observation не менее `30d`;
+4. базовые bars, требуемые конкретным causal lookback/ATR/volatility calculation, непрерывны и валидны; отдельный gap исключает только затронутый период, а не symbol целиком;
+5. median causal daily quote volume за последние 30 полных UTC-дней не менее `$10m`; cohort `secondary` = `$10m–25m`, cohort `primary` = `>= $25m`, результаты и capacity публикуются раздельно;
 6. доступны causal price, current snapshot contract filters и funding, необходимые для решения/удержания.
 
 Delisted/expired/failed contracts, отсутствующие в frozen current roster, намеренно не входят в исследование. Исторические point-in-time изменения tick/step/minNotional могут быть недоступны; использование current snapshot filters должно маркироваться как отдельное ограничение. Symbol rename/migration не склеивается без однозначной официальной идентичности. Результаты отвечают только на вопрос о поведении текущих доступных контрактов на их доступной истории и не являются survivorship-unbiased оценкой всех когда-либо существовавших Binance contracts.
 
-Bars, volume, funding и lifecycle timestamps не импутируются. При missing/duplicate/out-of-order bar актив исключается с первого затронутого decision до первого следующего decision после полного clean trailing window. Duplicate разрешено только детерминированно удалить при byte-identical payload; конфликтующие duplicates блокируют актив. Неполный последний bar не используется. Отсутствующий funding timestamp при открытой позиции делает конкретный replay/config invalid (не нулевой funding). Universe membership и причины исключения логируются на каждом decision.
+Bars, volume и funding не импутируются. При missing/duplicate/out-of-order bar запрещены решения и fills, чьи required input/holding interval пересекает дефект; symbol автоматически возвращается после восстановления непрерывного causal окна, требуемого конкретной метрикой. Единичный исторический gap не исключает symbol за другие чистые периоды. Duplicate разрешено только детерминированно удалить при byte-identical payload; конфликтующие duplicates блокируют затронутый период. Неполный последний bar не используется. Отсутствующий funding timestamp при открытой позиции делает конкретный replay/config invalid (не нулевой funding). Universe membership, liquidity cohort и причины временного исключения логируются на каждом decision.
 
 ## 4. Общие causal правила
 
 Обязательные TF: `5m`, `15m`, `30m`, `1h`, `2h`, `4h`, `1d`. Старшие bars агрегируются из закрытых `5m` bars по UTC; решение принимается после закрытия bar, fill — не ранее следующего доступного open. Lookback задаётся физическим временем и требует полного окна. Momentum — total price return `close(t-1 closed)/close(t-lookback)-1`; funding не входит в rank, но входит в PnL.
 
-Каждая `(family, TF, lookback, execution/risk choices)` — отдельная hypothesis. Все допустимые конфигурации до первого backtest сериализуются в immutable machine-readable manifest с canonical config ID и SHA-256. Cartesian product используется только в пределах явно перечисленных значений; неописанные фильтры, indicators, assets и значения запрещены.
+Каждая `(family, TF, lookback, execution/risk choices)` — отдельная hypothesis. Параметры разрешено выбирать раздельно по TF или заранее заданным TF-группам (`5m/15m/30m`, `1h/2h`, `4h/1d`), но никогда по отдельному symbol. Все допустимые конфигурации до первого backtest сериализуются в immutable machine-readable manifest с canonical config ID и SHA-256. Cartesian product используется только в пределах явно перечисленных значений; неописанные фильтры, indicators, assets и значения запрещены.
 
 ## 5. Семейство A — portfolio momentum
 
@@ -133,46 +135,43 @@ Score:
 
 Sharpe annualizes daily net returns by `sqrt(365)`; Calmar = annualized compounded return / absolute max drawdown, undefined при истории менее года или zero drawdown and ranked conservatively. Zero-activity folds не считаются positive и получают Sharpe/Calmar 0.
 
-Multiple-testing correction применяется отдельно к полному manifest каждого family: stationary-bootstrap Hansen SPA против cash/null, family-wise `alpha=5%`, block length выбран один раз как `max(7d, 2 × median holding/rebalance interval)` и записан до sweep; не менее 10,000 deterministic-seed resamples. Дополнительно Deflated Sharpe Ratio учитывает число всех hypotheses family, skew/kurtosis и длину sample; требуется probability `>=95%`. Провал любого correction gate означает отсутствие winner family.
+Multiple-testing diagnostics применяются отдельно к полному manifest каждого family: stationary-bootstrap Hansen SPA против cash/null, family-wise `alpha=5%`, block length выбран один раз как `max(7d, 2 × median holding/rebalance interval)` и записан до sweep; не менее 10,000 deterministic-seed resamples. Дополнительно Deflated Sharpe Ratio учитывает число всех hypotheses family, skew/kurtosis и длину sample. SPA `p>0.05` или DSR probability `<95%` являются обязательными предупреждениями scorecard, но сами по себе не уничтожают кандидата; скрывать их запрещено.
 
 ## 10. Robustness и concentration gates
 
-До freeze winner, без расширения grid, каждый кандидат обязан пройти:
+До freeze winner, без расширения grid, каждый кандидат получает полный robustness scorecard:
 
 1. base и stress costs;
 2. one-bar execution delay (дополнительно к entry rule);
 3. participation cap stress `0.25%`;
-4. leave-one-year-out: aggregate net return положителен после исключения любого одного outer-test года;
-5. leave-one-symbol-out: aggregate net return положителен после исключения любого одного symbol с положительным attribution;
-6. parameter neighbours, существующие в frozen grid: не менее 60% one-coordinate adjacent configs имеют положительный aggregate base return;
-7. Family A: top symbol `<=30%` положительного PnL и ни один календарный год `>50%` положительного PnL;
-8. Family B: те же limits и top 5 trades `<=40%` положительного PnL;
-9. turnover, capacity, funding attribution и equity/fill ledger полностью reconciled.
+4. leave-one-year-out;
+5. leave-one-symbol-out;
+6. доля прибыльных one-coordinate parameter neighbours из frozen grid;
+7. Family A: доли top symbol и top calendar year в положительном PnL;
+8. Family B: те же доли и top 5 trades;
+9. turnover, capacity, funding attribution и equity/fill ledger reconciliation.
 
-При total PnL `<=0` concentration gate автомати��ески FAIL; отрицательные contributors не вычитаются из denominator положительного PnL.
+Hard FAIL дают только causal/accounting/limit violations, отрицательный aggregate stress return, full outer OOS drawdown хуже `−30%` или отсутствие большинства положительных доступных outer folds. Leave-one-out, neighbour stability, concentration, SPA/DSR и малое число сделок — обязательные warnings с точными значениями, а не автоматическая смерть прибыльной конфигурации. При total PnL `<=0` кандидат всё равно hard FAIL.
 
 ## 11. Mechanical PASS/FAIL
 
-Family получает PASS только если существует конфигурация, которая одновременно:
+Конфигурация получает статус **DEVELOPMENT-QUALIFIED** только если одновременно:
 
-- имеет все 5 outer folds (минимум 4 допускается только если один fold объективно unavailable из-за отсутствия eligible lifecycle universe, не из-за слабого результата);
-- positive outer-fold share `>=60%`;
-- median outer Sharpe `>=0.75`;
-- median outer Calmar `>=0.50`;
-- aggregate stress compounded return `>0`;
+- aggregate base и stress compounded return `>0`;
+- большинство доступных outer folds имеет положительный net return; unavailable fold документируется и не считается отрицательным;
 - full outer OOS max drawdown не хуже `−30%`;
-- проходит SPA `5%`, DSR probability `>=95%`, все robustness/concentration gates;
-- имеет zero hard violations.
+- equity/fill/funding ledger полностью reconciled;
+- zero hard violations причинности, impossible fills, cash/exposure/capacity limits и data-boundary rules.
 
-Иначе family FAIL и победитель не назначается. PASS одного family не компенсирует FAIL другого и не разрешает подбирать replacement после holdout.
+Median Sharpe `0.75`, median Calmar `0.50`, positive-fold share `60%`, SPA `5%`, DSR `95%`, concentration limits, neighbour stability и minimum trade count сохраняются в scorecard как заранее объявленные ориентиры/warnings. Они не являются отдельными veto, если hard gates выше пройдены. Все family и hypotheses публикуются независимо; отсутствие qualified config означает FAIL соответствующего family, но не запрещает выбрать qualified config другого family до открытия holdout.
 
 ## 12. Freeze shortlist и одноразовый holdout
 
-После Phase 4 среди PASS configs каждого family замораживается ровно один highest-score winner. Tie в пределах `1%` абсолютного score разрешается последовательно: меньший turnover, затем меньшая absolute max drawdown, затем lexicographically smallest canonical config ID. Freeze artifact содержит config, code/data/manifest hashes, score inputs, ledgers и owner approval; после него код и параметры immutable.
+После Phase 4 среди всех DEVELOPMENT-QUALIFIED configs обоих family замораживается ровно один highest-score final candidate. Tie в пределах `1%` абсолютного score разрешается последовательно: меньший turnover, затем меньшая absolute max drawdown, затем lexicographically smallest canonical config ID. Freeze artifact содержит config, code/data/manifest hashes, scorecard, warnings, ledgers и owner approval; после него код и параметры immutable.
 
-Holdout может быть открыт только если оба family имеют по одному frozen winner. Если хотя бы одно family FAIL, Phase 6 не проводится без нового owner protocol; нельзя заменить отсутствующего winner. В Phase 6 выполняется ровно один invocation, который одновременно оценивает два frozen winners на `[2026-01-01, 2026-08-01)`. Повторный запуск, debugging по holdout, выбор TF/asset/parameter и retuning запрещены даже при crash после чтения payload; технический сбой документируется как inconclusive, право открытия считается израсходованным.
+Holdout может быть открыт только для этого одного frozen candidate после отдельного owner approval. В Phase 6 выполняется ровно один invocation на `[2026-01-01, 2026-08-01)`. Повторный запуск, debugging по holdout, замена кандидата, выбор TF/asset/parameter и retuning запрещены даже при crash после чтения payload; технический сбой документируется как inconclusive, право открытия считается израсходованным.
 
-Holdout PASS каждого winner требует: net return `>0` base и stress, Sharpe `>0`, max drawdown не хуже `−30%`, zero hard violations и соблюдение symbol/year/trade concentration limits (year gate для семимесячного holdout заменяется monthly gate: ни один месяц `>50%` positive PnL). Результаты обоих публикуются независимо; holdout не меняет pre-holdout ranking.
+Holdout PASS требует: net return `>0` base и stress, max drawdown не хуже `−30%`, полностью reconciled ledger и zero hard violations. Sharpe, monthly/symbol/trade concentration и остальные scorecard metrics публикуются как диагностика и не меняют заранее замороженный выбор.
 
 ## 13. Governance и следующие фазы
 
