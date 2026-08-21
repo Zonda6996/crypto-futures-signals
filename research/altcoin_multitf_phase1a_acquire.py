@@ -147,14 +147,15 @@ def planned_keys(symbol: str, datatype: str) -> list[tuple[str, str, int, int]]:
 
 def acquire_one(root: Path, symbol: str, datatype: str, item: tuple[str, str, int, int]) -> RawFileRecord:
     key, partition, start, end = item
-    source = f"{VISION}/{key}"
+    source = f"{VISION}/{urllib.parse.quote(key, safe='/')}"
     relative = Path(RAW_ROOT_NAME) / partition / datatype / symbol / Path(key).name
     target = root / relative
-    acquired = utc_now()
     if target.exists():
         payload_size = target.stat().st_size
         digest = file_sha256(target)
+        acquired = datetime.fromtimestamp(target.stat().st_mtime, tz=timezone.utc).isoformat().replace("+00:00", "Z")
     else:
+        acquired = utc_now()
         payload = fetch(source)
         atomic_bytes(target, payload)
         payload_size = len(payload)

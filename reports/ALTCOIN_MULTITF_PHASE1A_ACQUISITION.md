@@ -1,58 +1,72 @@
-# ALT-MULTITF-003 — Phase 1A acquisition gate
+# ALT-MULTITF-003 — Phase 1A Acquisition and Sealing Report
 
-Статус: **BLOCKED — OFFICIAL CURRENT ROSTER UNAVAILABLE FROM EXECUTION ENVIRONMENT**
+Статус: **DONE**
 
-Дата проверки: 21 августа 2026 года, `2026-08-21T22:08:13Z` UTC
+Дата acquisition: `2026-08-21` UTC
 
-Ветка: `v0/altcoin-momentum-analysis-25e7e60d`
+## Frozen roster
 
-Исходный HEAD: `6b904bc6c904b6d6e7a66268ec4dc441fc86c15e`
+- Source: `https://www.binance.com/fapi/v1/exchangeInfo` (официальный Binance metadata endpoint).
+- Raw response: `1,077,582` bytes.
+- Raw SHA-256: `3c0d748c6ac699a7ed79baa3c7abf9f131b09c3d234ba5e33cc94295bd206242`.
+- Acquisition timestamp: `2026-08-21T22:26:20.042747Z`.
+- Frozen selection: `527` текущих `TRADING`, `PERPETUAL`, quote/margin `USDT` contracts.
+- Snapshot был физически записан и проверен до первого market-data download; resume повторно валидирует raw response и snapshot и не пересчитывает roster по coverage.
 
-## Scope и утверждённые правила
+## Raw acquisition
 
-Owner amendment A1 принят без пересмотра: используется только current Binance USD-M USDT perpetual roster; полный registry delisted/failed contracts не требуется; survivorship/coverage bias принят; roster обязан быть заморожен до market-data acquisition и не может меняться по coverage.
+Источник market data: официальный `https://data.binance.vision`.
 
-Также восстановлены ранее утверждённые owner-правила: две liquidity cohorts (`$10m–25m`, `≥$25m`), минимальный возраст `30d`, gaps исключают затронутый период, а не актив навсегда, параметры могут различаться только по TF-группам и не по symbols, hard safety gates отделены от diagnostic scorecard, development требует положительной net expectancy, приемлемого drawdown и устойчивости большинства окон. Holdout остаётся одноразовым и строгим.
+Скачаны только raw `5m` klines, raw monthly funding-rate archives и полный raw `exchangeInfo`, содержащий contract metadata и filters. Отдельные `15m/30m/1h/2h/4h/1d` не скачивались. Normalization, eligibility, signals, ranking, portfolio, PnL, backtest и grid search не выполнялись.
 
-## Проверка официального current roster
+### Inventory
 
-До любых запросов market data проверены только официальные production Binance USD-M metadata endpoints:
+| Partition | Datatype | Files |
+|---|---:|---:|
+| development | 5m klines | 11,603 |
+| development | funding | 11,564 |
+| sealed holdout | 5m klines | 3,577 |
+| sealed holdout | funding | 3,577 |
+| **Total** | | **30,321** |
 
-| URL | Результат |
-|---|---|
-| `https://fapi.binance.com/fapi/v1/exchangeInfo` | HTTP `451`, response body недоступен |
-| `https://fapi1.binance.com/fapi/v1/exchangeInfo` | HTTP `202`, пустой body (`0` bytes) |
-| `https://fapi2.binance.com/fapi/v1/exchangeInfo` | HTTP `202`, пустой body (`0` bytes) |
-| `https://fapi3.binance.com/fapi/v1/exchangeInfo` | HTTP `202`, пустой body (`0` bytes) |
-| `https://fapi4.binance.com/fapi/v1/exchangeInfo` | HTTP `202`, пустой body (`0` bytes) |
+- Total raw bytes: `4,938,089,720`.
+- Development: `23,167` files, `3,789,400,776` bytes.
+- Sealed holdout: `7,154` files, `1,148,688,944` bytes.
+- Unique manifest paths: `30,321`; duplicates: `0`; missing files: `0`.
+- Manifest SHA-256: `5a2cba833af721d60b09177150e0e8866ae3ed3e12c6ca6ceab5aef5d93d73e6`.
 
-Binance Vision предоставляет официальные symbol-addressed market archives, но не официальный current `exchangeInfo` snapshot с contract type/status/quote/margin/filter metadata. Поэтому Vision listing нельзя подменить требуемым current roster snapshot. Historical-delisted blocker не возвращён и не применяется.
+## Time boundaries
 
-## Fail-closed verdict
+Frozen requested ranges:
 
-Получить непустой официальный current roster response из окружения невозможно. Следовательно, нельзя доказательно:
+- development `[2019-09-08T00:00:00Z, 2026-01-01T00:00:00Z)`;
+- holdout `[2026-01-01T00:00:00Z, 2026-08-01T00:00:00Z)`.
 
-- сохранить полный raw metadata response и его SHA-256;
-- зафиксировать окончательный список symbols до market-data download;
-- скачать market data без риска самовольно сконструированного roster.
+Official Binance Vision USD-M archive availability begins at `2020-01-01T00:00:00Z`; acquired development coverage is `[2020-01-01T00:00:00Z, 2026-01-01T00:00:00Z)`. The missing initial requested segment is `[2019-09-08T00:00:00Z, 2020-01-01T00:00:00Z)`. No synthetic data or unofficial source was substituted.
 
-В соответствии с явным условием задачи acquisition остановлен на roster gate. Нужен сетевой доступ хотя бы к одному официальному production endpoint `GET /fapi/v1/exchangeInfo` с непустым JSON response (напрямую либо через разрешённый egress в поддерживаемом регионе). Никакие API keys не требуются.
+Holdout archives cover `[2026-01-01T00:00:00Z, 2026-08-01T00:00:00Z)`. Boundary violations and development/holdout overlaps: `0`.
 
-## Фактический inventory
+## Coverage limitations
 
-- Frozen symbols: `0` — snapshot не получен.
-- Raw market files: `0`.
-- Raw market bytes: `0`.
-- Development range, запрошенный protocol: `[2019-09-08T00:00:00Z, 2026-01-01T00:00:00Z)`; не скачан.
-- Holdout range, запрошенный protocol: `[2026-01-01T00:00:00Z, 2026-08-01T00:00:00Z)`; не скачан и не открыт.
-- Sealed holdout directory: не создан, потому что roster gate предшествует любому download.
-- Manifest/SHA-256 inventory: market-file inventory отсутствует, так как файлов нет.
-- Gaps: не измерялись; без frozen roster это было бы coverage analysis и нарушило бы ordering gate.
-- Holdout reads/parsing/aggregation: `0`.
-- Normalization, eligibility, signals, ranking, portfolio, PnL, backtest, grid search: не выполнялись.
+- `480/527` current-roster symbols have development archives; `47` were onboarded after the development end or otherwise have no official archive in that partition.
+- `526/527` symbols have sealed-holdout archives. `DOSUSDT` has no Binance Vision archive in the holdout partition at acquisition time.
+- These gaps do not mutate the frozen roster. Eligibility and period-local gap handling are deferred to Phase 1B.
+- Funding is stored in official monthly archive granularity; manifest ranges describe archive partitions, not inferred observation continuity.
+- Owner amendment A1 explicitly accepts current-roster survivorship/coverage bias.
 
-## Код и проверки
+## Physical sealing and checks
 
-`research/altcoin_multitf_phase1a.py` теперь реализует amendment A1: разрешает только официальный непустой current `exchangeInfo`, детерминированно выбирает `TRADING/PERPETUAL/USDT quote/USDT margin`, хеширует raw response, отвергает unofficial/empty/invalid/duplicate roster и сохраняет существующие half-open boundaries, atomic idempotent writes, sealed read denial и filesystem checksum audit. Historical lifecycle/delisted evidence больше не является gate.
+- Development root: `data/altcoin-multitf-003/development/`.
+- Sealed holdout root: `data/altcoin-multitf-003/sealed-holdout/`.
+- Metadata: `data/altcoin-multitf-003/metadata/`.
+- `sealed-inventory.json` pins every sealed path, size and SHA-256 and pins the manifest hash.
+- The research reader denies sealed payload paths.
+- Full validation verified path uniqueness, file sizes/hashes, datatype/timeframe, exact half-open partitions and no overlap.
+- Holdout payload contents were not opened, unzipped, aggregated or analysed. Acquisition wrote opaque ZIP bytes and computed byte hashes only.
+- Heavy raw files remain ignored by Git and are not committed.
 
-**Phase 1A = BLOCKED, NOT DONE. Phase 1B = NOT READY.** Повторный запуск должен начинаться с получения и immutable freeze официального current roster; до этого market-data acquisition запрещён.
+Acquisition/data/sealing tests: `7/7 PASS`.
+
+## Decision
+
+**Phase 1A DONE. Phase 1B is ready**, subject to preserving sealed-holdout access denial. Phase 1B may inspect development only, derive higher timeframes from development `5m`, and apply frozen eligibility/gap rules; it must not open holdout payloads.
