@@ -73,6 +73,22 @@ Eligibility audit содержит **337 contiguous state runs**. Разница
 - Это compact exploratory current-liquidity universe, а не point-in-time historical universe.
 - Raw/normalized payload и machine manifests находятся под `data/altcoin-multitf-004/` и исключены из Git; отчёт содержит воспроизводимые totals и manifest digest.
 
+## ALT-MULTITF-005 restore verification
+
+Публичный release `ALT-MULTITF-005` восстановлен анонимно через canonical CLI. Archive size/SHA-256, safe extraction и normalized manifest verification прошли; frozen roster и inventory совпадают с release contract. Holdout paths отсутствуют и loader отвергает любой путь с компонентом `holdout` до файлового I/O.
+
+## Phase 2 causal engine
+
+Owner-approved frozen Phase 2 реализована без изменения roster или параметров:
+
+- bounded loader читает только normalized development CSV и валидирует schema, timestamps, границы и symbol/TF contract;
+- short/medium/long группы рассчитаны существующим causal engine с higher-TF close availability, publication-time funding alignment и eligibility-before-ranking;
+- `BTWUSDT` остаётся в roster как missing/ineligible;
+- portfolio output является только candidate schema: execution, sizing, PnL и backtest отсутствуют;
+- deterministic real-data evidence сохранён в `reports/artifacts/altcoin-multitf-005-phase2-integration.json` для короткого, среднего и длинного bounded slices.
+
+Проверки: 15 Phase 2 unit/integration tests PASS; 10 release/restore contract tests PASS. Test suite подтверждает no-future-data boundaries, rolling-window boundary, TF-group isolation, symbol-order invariance, deterministic digest и holdout rejection.
+
 ## Verdict
 
-Data phase **DONE**: acquisition, SHA-256 verification, normalization, causal aggregation, quality inventory и eligibility audit завершены. **Phase 2 не начата и не разрешена автоматически**; следующий чат может реализовать causal engine только после отдельного owner approval и без strategy selection.
+Data release verification и Phase 2 causal-engine integration **PASS / DONE**. Это инженерная и leakage-safety проверка, а не evidence торгового edge. Parameter search, portfolio execution, PnL, backtest и holdout остаются **NOT RUN / FORBIDDEN** до отдельной owner-approved frozen Phase 3 specification.

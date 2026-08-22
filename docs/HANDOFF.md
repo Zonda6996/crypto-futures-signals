@@ -5,7 +5,7 @@
 ## Где продолжать
 
 - Репозиторий: `Zonda6996/crypto-futures-signals`
-- Рабочая ветка: `v0/crypto-futures-analysis-88d9d19a`
+- Рабочая ветка: `v0/causal-signal-engine-997deb80`
 - Roadmap: [`docs/roadmap.md`](./roadmap.md)
 - Phase 1: [`reports/PHASE1_AUDIT.md`](../reports/PHASE1_AUDIT.md)
 - Оригинальная Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
@@ -61,7 +61,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 **Compact replacement `ALT-MULTITF-004` — PHASE 2 DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; исторический data-phase manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; `BTWUSDT` остаётся во frozen roster без history. Owner-approved Phase 2 реализовала deterministic causal features/signals для short/medium/long TF groups, publication-time funding alignment и eligibility-before-ranking. Focused leakage tests PASS; parameter search, portfolio execution, PnL, backtest и holdout reads отсутствуют. Ignored dataset закреплён в SHA-256 verified private Blob, доступном новым чатам через project `BLOB_READ_WRITE_TOKEN`; restore metadata — [`docs/altcoin-multitf-004-blob.json`](./altcoin-multitf-004-blob.json), restore CLI — `python3 -m scripts.restore_altcoin_multitf_004 --root data`. Spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). Текущая точка — STOP перед отдельным strategy-evaluation gate.
 
-**ALT-MULTITF-005 — resumable release infrastructure ready, publication pending:** добавлен ручной GitHub Actions workflow, который продолжает проверенные checkpoint artifacts, пересобирает тот же frozen roster/inventory, детерминированно упаковывает его, публикует content-addressed архив в отдельный Public Vercel Blob и выполняет полный анонимный download с повторной проверкой size/SHA-256. Инструкция по secret, `resume`/`restart` и переходу между аккаунтами: [`docs/ALTCOIN_MULTITF_005_GITHUB_ACTIONS.md`](./ALTCOIN_MULTITF_005_GITHUB_ACTIONS.md). Пока реальный Actions run не завершился PASS, metadata `docs/altcoin-multitf-005-blob.json` намеренно отсутствует и release нельзя считать готовым. Phase 2/PnL/backtest/parameter search/holdout не запускались.
+**ALT-MULTITF-005 — DATA RELEASE VERIFIED / PHASE 2 DONE:** public content-addressed release восстановлен без секрета canonical CLI; archive size/SHA-256, safe extraction и normalized manifest verification прошли. Frozen roster/inventory не менялись, `BTWUSDT` сохранён как missing/ineligible, holdout отсутствует. Owner-approved Phase 2 добавила bounded real-data loader и deterministic short/medium/long integration evidence поверх frozen causal engine. Все 15 Phase 2 unit/integration tests и 10 restore/release tests прошли. Артефакт: [`reports/artifacts/altcoin-multitf-005-phase2-integration.json`](../reports/artifacts/altcoin-multitf-005-phase2-integration.json). Это не strategy result: execution, sizing, PnL, backtest, parameter search и holdout не запускались. Текущая точка — **STOP перед отдельным owner-approved frozen Phase 3 strategy-evaluation protocol**.
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
@@ -112,7 +112,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 - при costs 0,05–0,16% untrimmed anchored и rolling остаются положительными;
 - при 0,16%: anchored `+8,170R`, rolling `+4,053R`;
-- все три заданных window policies дают положительный untrimmed итог в обеих схемах;
+- ��се три заданных window policies дают положительный untrimmed итог в обеих схемах;
 - 11/11 соседей положительны anchored, 10/11 rolling;
 - медианный сосед: anchored `+7,484R`, rolling `+6,304R`;
 - rolling без top-5 отрицателен при 0,10%, 0,12% и 0,16%; при 0,16% `−2,385R`;
@@ -191,9 +191,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**Остановиться после FAIL frozen TRAIN/VALIDATION `ALT-XSMOM-001-B`.**
+**Остановиться после PASS/DONE ALT-MULTITF-005 Phase 2 и запросить отдельное решение владельца о документационной Phase 3.**
 
-Не выбирать другую конфигурацию из уже просмотренной grid, не менять frozen basket и не открывать HOLDOUT с `2026-01-01`. Любая будущая новая гипотеза требует отдельного owner decision, нового protocol ID и нового будущего sealed holdout; текущая версия не допускается к paper/live trading.
+Без нового approval разрешено только прочитать evidence и подготовить frozen Phase 3 strategy-evaluation specification. Запрещено запускать parameter search, выбирать candidate, строить portfolio execution, считать PnL/backtest, читать holdout или менять frozen roster/параметры. `ALT-XSMOM-001-B` и старый ETH TEST остаются закрытыми FAIL-ветками и не могут быть переоткрыты.
 
 ## Правила для следующих чатов
 
