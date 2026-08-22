@@ -1,13 +1,9 @@
 {
-  "revision": "ALT-MULTITF-005",
-  "sourceCommit": "f9ee53d7d0009b573bbeba0811b70712e49de3d2",
-  "publicUrl": "https://kdyewyu0flj9zljt.public.blob.vercel-storage.com/altcoin-multitf-005/665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d.tar.gz",
+  "access": "public",
+  "anonymous_verification": "PASS",
   "pathname": "altcoin-multitf-005/665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d.tar.gz",
-  "size": 1541152490,
+  "protocol_id": "ALT-MULTITF-005",
   "sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
-  "anonymousFullDownloadVerified": true,
-  "symbols": 40,
-  "rawFiles": 3291,
-  "rawBytes": 568466246,
-  "checkpointConfigHash": "b63129f81b0bfcff4283b53a67aea2644e96016c4db5818d06b8899f8aee1474"
+  "size": 1541152490,
+  "url": "https://kdyewyu0flj9zljt.public.blob.vercel-storage.com/altcoin-multitf-005/665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d.tar.gz"
 }
