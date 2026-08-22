@@ -4,7 +4,7 @@
 
 ## Текущий статус
 
-**ALT-MULTITF-005:** Public Blob release анонимно восстановлен и подтверждён по size/SHA-256, safe extraction и normalized manifest. Owner-approved Phase 2 causal engine завершена: bounded loader и deterministic short/medium/long real-data evidence прошли 15 focused tests; release/restore contract прошёл ещё 10 tests. Frozen roster и параметры не менялись, `BTWUSDT` остаётся missing/ineligible, holdout отсутствует. **PASS / DONE означает только причинность и воспроизводимость инженерного слоя, не торговый edge.** Parameter search, portfolio execution, PnL/backtest и holdout запрещены до отдельной frozen Phase 3 specification и нового owner approval; см. `docs/ALTCOIN_MULTITF_005_PHASE2_NEXT_CHAT.md`.
+**ALT-MULTITF-005:** Public Blob release анонимно восстановлен и подтверждён по size/SHA-256, safe extraction и normalized manifest. Owner-approved Phase 2 causal engine завершена: bounded loader и deterministic short/medium/long real-data evidence прошли 15 focused tests; release/restore contract прошёл ещё 10 tests. Frozen roster и параметры не менялись, `BTWUSDT` остаётся missing/ineligible, holdout отсутствует. **PASS / DONE означает только причинность и воспроизводимость инженерного слоя, не торговый edge.** Parameter search, portfolio execution, PnL/backtest и holdout запрещены до отдельной frozen Phase 3 specification и нового owner approval; итоговый отчёт — `reports/ALTCOIN_MULTITF_005_PHASE2.md`, gated handoff — `docs/ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md`.
 
 **Независимое altcoin-исследование:** строгий protocol `ALT-XSMOM-001-A` остаётся **STOP** из-за отсутствия полного historical lifecycle registry. Разрешённый exploratory amendment `ALT-XSMOM-001-B` на frozen basket из 10 контрактов завершил pre-HOLDOUT TRAIN/VALIDATION с **FAIL / STOP**. TRAIN-only selection выбрал `30d momentum / 24h rebalance`; на единственной VALIDATION при 0,12% net Sharpe равен `−0,817`, compounded return `−35,90%`, max drawdown `−46,78%`, bootstrap CI95 `[−2,449; +0,632]`. Результат при 0,20% также отрицателен (`−60,99%`). HOLDOUT с `2026-01-01` не открывался и остаётся закрытым. Это **exploratory fixed-basket evidence with survivorship/selection bias**, не universe-level edge. См. [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md).
 
@@ -84,7 +84,7 @@ Funding необходимо учитывать отдельно по факти
 - сигнал только по закрытой часовой свече;
 - вход не раньше следующего доступного исполнения;
 - корректное исполнение gap через стоп;
-- консервативный порядок, если внутри одной свечи затронуты стоп и тейк;
+- консервативны�� порядок, если внутри одной свечи затронуты стоп и тейк;
 - отсутствие пересечения позиций и повторного использования одного капитала;
 - корректные комиссии на обеих сторонах;
 - funding по времени удержания;
@@ -387,7 +387,7 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 - Дополнительный frozen перенос на M30/M15: оба TF положительны при 0,10% до trimming, но оба отрицательны без top-5; M15 отрицателен при 0,16%. Строгий критерий поддержки не пройден, TEST закрыт.
 - Отдельная regime/concentration-диагностика на полном TRAIN+VALIDATION 2021–2024: 1h `+16,387R` и `+9,808R` без top-5; M30 `+7,926R` и `+1,348R` без top-5; M15 `+0,654R` и `−5,910R` без top-5. Режимы и их thresholds каузальны; leave-one-year/regime-out сохранены отдельно. Это описательный pre-TEST срез, не новая OOS-оценка и не замена результатам Phase 2–4.
 - Phase 5: frozen 1h получил PASS 7/7 по заранее зафиксированному protocol: без top-5 `+9,808R`, без 2024 `+7,294R`, без лучшего 90-day кластера `+8,330R`, при 0,16% `+12,210R`, rolling 12m positive share 78,4%, все обязательные leave-one-regime-out положительны, combined stress `+4,792R`. Отдельный one-bar-delay stress отрицателен (`−2,358R`), а longest no-new-high около 970 дней. TEST не открыт.
-- Governance gate завершён: immutable memo и SHA-256 manifest фиксируют research commit `81f5ea590edbc04fadce762452801c1d365470d0`, 192 исходных pre-TEST ZIP, research artifacts, единственную TEST-команду и CI95 verdict. Frozen strategy/cost/execution не менялись.
+- Governance gate завершён: immutable memo и SHA-256 manifest фиксируют research commit `81f5ea590edbc04fadce762452801c1d365470d0`, 192 исходных pre-TEST ZIP, research artifacts, единственную TEST-ком��нду и CI95 verdict. Frozen strategy/cost/execution не менялись.
 - Единственный TEST 2025 завершён с **FAIL**: 32 сделки, expectancy `−0,160R`, total `−5,135R`, CI95 `[−0,495R; +0,186R]`, max drawdown `−5,640R`. Старый candidate отклонён; повторный запуск и retuning по TEST запрещены.
 
 # Ближайшая последовательность работ

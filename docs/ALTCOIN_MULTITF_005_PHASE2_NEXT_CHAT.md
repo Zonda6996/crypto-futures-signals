@@ -16,11 +16,9 @@ PASS здесь означает только deterministic causal implementatio
 
 ## Промпт следующему чату
 
-> Работай в `Zonda6996/crypto-futures-signals` на feature branch, содержащей ALT-MULTITF-005 Phase 2. Сначала прочитай `docs/HANDOFF.md`, `docs/roadmap.md`, `docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`, `docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`, `reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`, `research/altcoin_multitf_phase2.py`, `research/altcoin_multitf_phase2_dataset.py`, `tests/test_altcoin_multitf_phase2.py`, `tests/test_altcoin_multitf_phase2_integration.py` и `reports/artifacts/altcoin-multitf-005-phase2-integration.json`. Подтверди branch/commit и повтори focused tests. Не читай и не создавай holdout.
->
-> Текущий gate — только owner decision о **документационной Phase 3**. Без отдельного явного approval остановись после аудита. Если owner разрешит подготовку Phase 3, создай новый immutable strategy-evaluation protocol до любых расчётов: один заранее заданный portfolio construction/execution contract, календарь DEVELOPMENT/TRAIN/VALIDATION, cost/funding model, метрики, falsification gates, multiple-testing budget и machine-artifact schema. Specification должна отдельно запретить grid search, selection по уже просмотренным результатам и использование holdout.
->
-> После документационной спецификации снова остановись и запроси отдельное разрешение на реализацию/расчёт. Не запускай parameter search, candidate selection, portfolio execution, sizing, PnL или backtest в том же approval. Не меняй frozen roster, TF groups, feature parameters, eligibility rules или release data. Не открывай старые FAIL-ветки `ALT-XSMOM-001-B` и ETH TEST.
+Полный готовый к копированию gated prompt, release coordinates, confirmed digest, ограничения и обязательный OWNER APPROVAL PLACEHOLDER перенесены в `docs/ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md`. Итоговый технический отчёт находится в `reports/ALTCOIN_MULTITF_005_PHASE2.md`.
+
+Без отдельного явного approval разрешён только read-only аудит уже сохранённого evidence. Phase 2 approval не является разрешением на Phase 3.
 
 ## Recovery path
 

@@ -5,7 +5,7 @@
 ## Где продолжать
 
 - Репозиторий: `Zonda6996/crypto-futures-signals`
-- Рабочая ветка: `v0/causal-signal-engine-997deb80`
+- Рабочая ветка: `v0/causal-signal-engine-baeaef96`
 - Roadmap: [`docs/roadmap.md`](./roadmap.md)
 - Phase 1: [`reports/PHASE1_AUDIT.md`](../reports/PHASE1_AUDIT.md)
 - Оригинальная Phase 2: [`reports/PHASE2_WALK_FORWARD.md`](../reports/PHASE2_WALK_FORWARD.md)
@@ -28,6 +28,8 @@
 - Altcoin frozen TRAIN/VALIDATION result: [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md)
 - Compact multi-TF protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md)
 - Compact data-phase result: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md)
+- ALT-MULTITF-005 Phase 2 report: [`reports/ALTCOIN_MULTITF_005_PHASE2.md`](../reports/ALTCOIN_MULTITF_005_PHASE2.md)
+- Phase 3 gated next-chat prompt: [`docs/ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md)
 
 ## Новый altcoin Phase A status
 
@@ -59,7 +61,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 **`ALT-MULTITF-003` закрыт как невосстановимый:** его Phase 1A raw payload и machine manifests не были закоммичены и утрачены вместе с прежним sandbox; исторический отчёт не переписывается и старые хеши не выдаются за восстановленные данные.
 
-**Compact replacement `ALT-MULTITF-004` — PHASE 2 DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; исторический data-phase manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; `BTWUSDT` остаётся во frozen roster без history. Owner-approved Phase 2 реализовала deterministic causal features/signals для short/medium/long TF groups, publication-time funding alignment и eligibility-before-ranking. Focused leakage tests PASS; parameter search, portfolio execution, PnL, backtest и holdout reads отсутствуют. Ignored dataset закреплён в SHA-256 verified private Blob, доступном новым чатам через project `BLOB_READ_WRITE_TOKEN`; restore metadata — [`docs/altcoin-multitf-004-blob.json`](./altcoin-multitf-004-blob.json), restore CLI — `python3 -m scripts.restore_altcoin_multitf_004 --root data`. Spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). Текущая точка — STOP перед отдельным strategy-evaluation gate.
+**Compact replacement `ALT-MULTITF-004` — PHASE 2 DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; исторический data-phase manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; `BTWUSDT` остаётся во frozen roster без history. Owner-approved Phase 2 реализова��а deterministic causal features/signals для short/medium/long TF groups, publication-time funding alignment и eligibility-before-ranking. Focused leakage tests PASS; parameter search, portfolio execution, PnL, backtest и holdout reads отсутствуют. Ignored dataset закреплён в SHA-256 verified private Blob, доступном новым чатам через project `BLOB_READ_WRITE_TOKEN`; restore metadata — [`docs/altcoin-multitf-004-blob.json`](./altcoin-multitf-004-blob.json), restore CLI — `python3 -m scripts.restore_altcoin_multitf_004 --root data`. Spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). Текущая точка — STOP перед отдельным strategy-evaluation gate.
 
 **ALT-MULTITF-005 — DATA RELEASE VERIFIED / PHASE 2 DONE:** public content-addressed release восстановлен без секрета canonical CLI; archive size/SHA-256, safe extraction и normalized manifest verification прошли. Frozen roster/inventory не менялись, `BTWUSDT` сохранён как missing/ineligible, holdout отсутствует. Owner-approved Phase 2 добавила bounded real-data loader и deterministic short/medium/long integration evidence поверх frozen causal engine. Все 15 Phase 2 unit/integration tests и 10 restore/release tests прошли. Артефакт: [`reports/artifacts/altcoin-multitf-005-phase2-integration.json`](../reports/artifacts/altcoin-multitf-005-phase2-integration.json). Это не strategy result: execution, sizing, PnL, backtest, parameter search и holdout не запускались. Текущая точка — **STOP перед отдельным owner-approved frozen Phase 3 strategy-evaluation protocol**.
 
