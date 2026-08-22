@@ -5,6 +5,17 @@ from pathlib import Path
 
 import pytest
 
+from research.altcoin_multitf_phase4_runner import (
+    ReplayResult,
+    ReplayScenario,
+    aligned_matrix,
+    checkpoint_path,
+    concentration,
+    decision_times,
+    interval_ms,
+    returns_by_day,
+    write_checkpoint,
+)
 from research.altcoin_multitf_phase4 import (
     BASE_PARTICIPATION,
     DEVELOPMENT_END_MS,
@@ -124,3 +135,31 @@ def test_native_loader_rejects_wrong_timeframe_and_future_bar(tmp_path: Path) ->
         load_native_bars(path, "SOLUSDT", "1h")
     with pytest.raises(ProtocolViolation, match="mismatch"):
         load_native_bars(path, "SOLUSDT", "15m")
+
+
+def test_runner_uses_native_cycles_and_daily_alignment() -> None:
+    sample = bars()
+    histories = {"SOLUSDT": sample}
+    assert interval_ms("2h") == 7_200_000
+    assert interval_ms("3d") == 259_200_000
+    assert decision_times(histories, "2h") == (3_599_999, 10_799_999)
+    assert returns_by_day([(1, 0.1), (2, -0.02), (86_400_001, 0.03)]) == [(0, 0.08), (86_400_000, 0.03)]
+    documents = [{"returns": [[0, 0.1], [172_800_000, 0.2]]}, {"returns": [[86_400_000, -0.1]]}]
+    assert aligned_matrix(documents) == [[0.1, 0.0, 0.2], [0.0, -0.1, 0.0]]
+
+
+def test_atomic_checkpoint_is_deterministic(tmp_path: Path) -> None:
+    result = ReplayResult("abc", "A", [(0, 0.01)], [], [], 0.2, 0.001)
+    target = checkpoint_path(tmp_path, "A", "abc")
+    write_checkpoint(target, result, ReplayScenario())
+    first = target.read_bytes()
+    write_checkpoint(target, result, ReplayScenario())
+    assert target.read_bytes() == first
+    assert not target.with_suffix(".tmp").exists()
+
+
+def test_concentration_gate_fails_single_source_profit() -> None:
+    concentrated = [{"symbol": "SOLUSDT", "net_return": 0.1}, {"symbol": "SOLUSDT", "net_return": -0.01}]
+    diversified = [{"symbol": f"S{index}", "net_return": 0.1} for index in range(10)]
+    assert not concentration(concentrated)["pass"]
+    assert concentration(diversified)["max_symbol_profit_share"] == pytest.approx(0.1)
