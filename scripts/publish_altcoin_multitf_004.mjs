@@ -10,12 +10,16 @@ for await (const chunk of createReadStream(archive)) hash.update(chunk)
 const sha256 = hash.digest('hex')
 const size = statSync(archive).size
 const pathname = `altcoin-multitf-004/${sha256}.tar.gz`
-const blob = await put(pathname, createReadStream(archive), {
+const existing = (await list({ prefix: pathname, limit: 1 })).blobs.find(
+  (candidate) => candidate.pathname === pathname,
+)
+const blob = existing ?? await put(pathname, createReadStream(archive), {
   access: 'private',
   addRandomSuffix: false,
   multipart: true,
   contentType: 'application/gzip',
 })
+if (blob.size !== size) throw new Error(`existing Blob size mismatch: ${blob.size} != ${size}`)
 console.log(JSON.stringify({
   protocol_id: 'ALT-MULTITF-004',
   url: blob.url,
