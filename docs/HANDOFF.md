@@ -59,7 +59,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 **`ALT-MULTITF-003` закрыт как невосстановимый:** его Phase 1A raw payload и machine manifests не были закоммичены и утрачены вместе с прежним sandbox; исторический отчёт не переписывается и старые хеши не выдаются за восстановленные данные.
 
-**Compact replacement `ALT-MULTITF-004` — DATA PHASE DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Только development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; filesystem verification `3 291/3 291`, manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; из закрытых 5m построены `15m/30m/1h/2h/4h/1d`. Найдены 18 gaps `>30m`, 0 duplicates, 0 invalid rows; `BTWUSDT` остаётся во frozen roster без development history. Causal eligibility покрывает около 90,06% intraday decisions. Holdout физически не создавался и не читался; signals/PnL/backtest `0`. Отчёт: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). Текущая точка — STOP перед Phase 2, нужен отдельный owner approval.
+**Compact replacement `ALT-MULTITF-004` — PHASE 2 DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; исторический data-phase manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; `BTWUSDT` остаётся во frozen roster без history. Owner-approved Phase 2 реализовала deterministic causal features/signals для short/medium/long TF groups, publication-time funding alignment и eligibility-before-ranking. Focused leakage tests PASS; parameter search, portfolio execution, PnL, backtest и holdout reads отсутствуют. Ignored dataset закреплён в SHA-256 verified public Blob; restore metadata — [`docs/altcoin-multitf-004-blob.json`](./altcoin-multitf-004-blob.json), restore CLI — `python3 -m scripts.restore_altcoin_multitf_004 --root data`. Spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). Текущая точка — STOP перед отдельным strategy-evaluation gate.
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
@@ -120,7 +120,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 ## Дополнительная M15/M30 robustness-проверка
 
-При механическом сохранении часовых горизонтов M30 и M15 положительны на VALIDATION при 0,10%: соответственно `+2,675R` и `+4,233R`. Но без top-5 результаты равны `−3,791R` и `−2,173R`; при 0,16% M15 также становится отрицательным (`−0,238R`). Заранее заданный строгий критерий поддержки не пройден; параметры не переотбирались, TEST закрыт.
+При механическом сохранении часовых горизонтов M30 и M15 положительны на VALIDATION при 0,10%: соответственно `+2,675R` и `+4,233R`. Но без top-5 результаты равны `−3,791R` и `−2,173R`; при 0,16% M15 также становится отрицательным (`−0,238R`). З��ранее заданный строгий критерий поддержки не пройден; параметры не переотбирались, TEST закрыт.
 
 ## Отдельная regime/concentration-диагностика
 

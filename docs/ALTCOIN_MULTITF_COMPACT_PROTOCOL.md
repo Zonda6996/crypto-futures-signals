@@ -1,6 +1,6 @@
 # ALT-MULTITF-004 — compact liquidity baseline
 
-Статус: **DATA PHASE DONE / STOP перед Phase 2**
+Статус: **PHASE 2 DONE / STOP перед strategy evaluation**
 Дата freeze: 22 августа 2026 года  
 Рынок: Binance USD-M linear USDT perpetual futures
 
@@ -30,4 +30,4 @@ Data phase включает только acquisition, checksum inventory, normal
 
 ## Governance
 
-Data phase DONE только после полного raw и normalized manifests, SHA-256 filesystem verification, exact audit inventory и focused tests. Raw/normalized payload не коммитятся. Phase 2 не начинается автоматически и требует отдельного approval.
+Data phase DONE только после полного raw и normalized manifests, SHA-256 filesystem verification, exact audit inventory и focused tests. Raw/normalized payload не коммитятся и переносятся через SHA-256 verified Blob bundle. Владелец отдельно одобрил Phase 2; causal implementation и focused leakage tests завершены по frozen specification. Strategy evaluation, parameter selection, portfolio execution, PnL, backtest и holdout остаются запрещены до следующего отдельного gate.

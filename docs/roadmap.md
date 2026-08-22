@@ -272,7 +272,7 @@ Long и short проверять отдельно.
 Для каждого семейства фиксировать:
 
 - идентификатор эксперимента;
-- экономи��ес��ую гипотезу;
+- экон��ми��ес��ую гипотезу;
 - д��ст��пн��е на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
@@ -437,7 +437,8 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 1. **Protocol/universe freeze (DONE):** новый ID; 40 top-current-liquidity USDT perpetual altcoins по frozen official `ticker/24hr`, BTC/ETH исключены; survivorship/current-selection bias принят явно.
 2. **Development acquisition (DONE):** `[2020-01-01, 2026-01-01)`, `3 291` raw monthly files / `568 466 246` bytes; только 5m+funding; `3 291/3 291` SHA-256 PASS; `BTWUSDT` оставлен в roster без history.
 3. **Normalization/eligibility (DONE):** `14 276 432` 5m, `168 371` funding; `15m/30m/1h/2h/4h/1d` только из закрытых 5m; 18 gaps, 0 duplicates, 0 invalid; causal eligibility около 90,06% intraday decisions.
-4. **Phase 2 causal engine (NOT APPROVED):** отдельный gate; signals, ranking, PnL, backtest и grid search ещё не запускались.
-5. **Prospective validation/holdout:** календарь не определён; holdout directory не создавался и данные не читались.
+4. **Phase 2 causal engine (DONE):** owner-approved implementation фиксирует TF-group parameters, causal returns/momentum/volatility/trend/funding alignment, eligibility-before-ranking, deterministic ranking и schema-only portfolio handoff. Focused leakage tests PASS. Parameter search, construction execution, PnL и backtest не выполнялись.
+5. **Dataset portability (DONE):** frozen 40-symbol Binance archive inventory восстановлен без нового roster selection и закреплён как SHA-256 verified public Blob bundle; committed restore tool fail-closed проверяет bundle до extraction.
+6. **Strategy-evaluation gate (NOT APPROVED):** следующий возможный этап требует отдельного owner decision; prospective validation/holdout calendar не определён, holdout не создавался и не читался.
 
-Protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md). Data report: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). **Текущая точка — DATA PHASE DONE / STOP перед Phase 2.**
+Protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md). Data report: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). Phase 2 spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). **Текущая точка — PHASE 2 DONE / STOP перед strategy evaluation.**
