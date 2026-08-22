@@ -13,7 +13,7 @@
 - Phase 2 specification: `docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`;
 - implementation: `research/altcoin_multitf_phase2.py`.
 
-Restore проверяет размер и SHA-256 всего tar bundle до безопасной extraction. Public Blob содержит только публичные Binance market archives и derived development artifacts. Frozen roster не пересобирается.
+Restore использует project `BLOB_READ_WRITE_TOKEN`, проверяет размер и SHA-256 всего tar bundle до безопасной extraction. Private Blob содержит только публичные Binance market archives и derived development artifacts. Frozen roster не пересобирается.
 
 ## Completed Phase 2
 

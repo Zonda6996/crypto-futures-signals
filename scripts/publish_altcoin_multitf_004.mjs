@@ -11,7 +11,7 @@ const sha256 = hash.digest('hex')
 const size = statSync(archive).size
 const pathname = `altcoin-multitf-004/${sha256}.tar.gz`
 const blob = await put(pathname, createReadStream(archive), {
-  access: 'public',
+  access: 'private',
   addRandomSuffix: false,
   multipart: true,
   contentType: 'application/gzip',

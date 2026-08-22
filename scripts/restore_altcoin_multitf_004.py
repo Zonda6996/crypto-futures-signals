@@ -43,7 +43,13 @@ def restore(root: Path, manifest_path: Path) -> dict:
     os.close(fd)
     temporary = Path(temporary_name)
     try:
-        request = urllib.request.Request(manifest["url"], headers={"User-Agent": "ALT-MULTITF-004-restore/1.0"})
+        token = os.environ.get("BLOB_READ_WRITE_TOKEN")
+        if manifest.get("access") == "private" and not token:
+            raise RuntimeError("BLOB_READ_WRITE_TOKEN is required for private Blob restore")
+        headers = {"User-Agent": "ALT-MULTITF-004-restore/1.0"}
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        request = urllib.request.Request(manifest["url"], headers=headers)
         with urllib.request.urlopen(request, timeout=300) as response, temporary.open("wb") as output:
             while chunk := response.read(8 * 1024 * 1024):
                 output.write(chunk)
