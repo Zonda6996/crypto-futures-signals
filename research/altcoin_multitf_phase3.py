@@ -163,14 +163,41 @@ def evaluate_a(config: dict, close: pd.DataFrame, opened: pd.DataFrame, funds: p
     # Compute only rebalance rows, then causally carry positions forward.
     # This is equivalent to the former day-by-day loop but much faster.
     decision_rows = np.arange(0, max(0, len(close.index) - 1), step_days)
-    decision_index = close.index[decision_rows]
-    decisions = pd.DataFrame(0.0, index=decision_index, columns=close.columns)
-    for date in decision_index:
-        target = _weights(momentum.loc[date], realized.loc[date], config["weighting"], config["breadth"])
-        selected_vol = realized.loc[date].reindex(target[target > 0].index).dropna()
-        forecast = float((selected_vol * target.reindex(selected_vol.index)).sum()) if not selected_vol.empty else np.nan
-        scale = min(1.0, config["volatility_target"] / forecast) if forecast and np.isfinite(forecast) else 0.0
-        decisions.loc[date] = target * scale
+    momentum_values = momentum.to_numpy(dtype=float)
+    vol_values = realized.to_numpy(dtype=float)
+    decision_values = np.zeros((len(decision_rows), close.shape[1]), dtype=float)
+    for out_row, source_row in enumerate(decision_rows):
+        scores = momentum_values[source_row]
+        eligible = np.flatnonzero(np.isfinite(scores) & (scores > 0))
+        if eligible.size == 0:
+            continue
+        count = min(_breadth(config["breadth"], eligible.size), eligible.size)
+        selected = eligible[np.argsort(scores[eligible])[::-1][:count]]
+        selected_vol = vol_values[source_row, selected]
+        valid = np.isfinite(selected_vol) & (selected_vol > 0)
+        selected = selected[valid]
+        selected_vol = selected_vol[valid]
+        if selected.size == 0:
+            continue
+        if config["weighting"] == "inverse_vol":
+            raw = 1.0 / selected_vol
+        elif config["weighting"] == "capped_rank":
+            raw = np.arange(selected.size, 0, -1, dtype=float)
+        else:
+            raw = np.ones(selected.size, dtype=float)
+        raw /= raw.sum()
+        if config["weighting"] == "capped_rank":
+            for _ in range(20):
+                excess = np.maximum(raw - 0.20, 0).sum()
+                raw = np.minimum(raw, 0.20)
+                free = raw < 0.20
+                if excess <= 1e-12 or not free.any():
+                    break
+                raw[free] += excess * raw[free] / raw[free].sum()
+        forecast = float(np.dot(selected_vol, raw))
+        scale = min(1.0, config["volatility_target"] / forecast) if forecast > 0 else 0.0
+        decision_values[out_row, selected] = np.minimum(raw, 0.20) * scale
+    decisions = pd.DataFrame(decision_values, index=close.index[decision_rows], columns=close.columns)
     weights = decisions.reindex(close.index).ffill().fillna(0.0)
     execution_weights = weights.shift(1 + extra_delay).fillna(0.0)
     gross = (execution_weights * daily_ret.fillna(0.0)).sum(axis=1)
