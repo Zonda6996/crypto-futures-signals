@@ -1,0 +1,15 @@
+{
+  "approval_phrase_matched": true,
+  "argv": [
+    "python3",
+    "-m",
+    "research.test_opening",
+    "--frozen-sha",
+    "81f5ea590edbc04fadce762452801c1d365470d0",
+    "--approve",
+    "I AUTHORIZE THE ONE-TIME TEST OPENING FOR 81f5ea590edbc04fadce762452801c1d365470d0"
+  ],
+  "frozen_sha": "81f5ea590edbc04fadce762452801c1d365470d0",
+  "opened_at": "2026-08-21T08:25:26.153491+00:00",
+  "status": "OPENING_IRREVERSIBLY"
+}

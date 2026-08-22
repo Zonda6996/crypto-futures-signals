@@ -1,0 +1,5468 @@
+[
+  {
+    "eligible": [
+      "ETHUSDT"
+    ],
+    "eligible_count": 1,
+    "excluded": {
+      "ADAUSDT": "listing_age_below_90d",
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "LINKUSDT": "listing_age_below_90d",
+      "LTCUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d",
+      "XRPUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-03-31T00:00:00Z",
+    "ts": 1585612800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "XRPUSDT"
+    ],
+    "eligible_count": 2,
+    "excluded": {
+      "ADAUSDT": "listing_age_below_90d",
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "LINKUSDT": "listing_age_below_90d",
+      "LTCUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-04-07T00:00:00Z",
+    "ts": 1586217600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "XRPUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 3,
+    "excluded": {
+      "ADAUSDT": "listing_age_below_90d",
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "LINKUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-04-14T00:00:00Z",
+    "ts": 1586822400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "XRPUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 4,
+    "excluded": {
+      "ADAUSDT": "listing_age_below_90d",
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-04-21T00:00:00Z",
+    "ts": 1587427200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "XRPUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 4,
+    "excluded": {
+      "ADAUSDT": "listing_age_below_90d",
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-04-28T00:00:00Z",
+    "ts": 1588032000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 5,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "BNBUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-05-05T00:00:00Z",
+    "ts": 1588636800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-05-12T00:00:00Z",
+    "ts": 1589241600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-05-19T00:00:00Z",
+    "ts": 1589846400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-05-26T00:00:00Z",
+    "ts": 1590451200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-06-02T00:00:00Z",
+    "ts": 1591056000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-06-09T00:00:00Z",
+    "ts": 1591660800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-06-16T00:00:00Z",
+    "ts": 1592265600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-06-23T00:00:00Z",
+    "ts": 1592870400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-06-30T00:00:00Z",
+    "ts": 1593475200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-07-07T00:00:00Z",
+    "ts": 1594080000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-07-14T00:00:00Z",
+    "ts": 1594684800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-07-21T00:00:00Z",
+    "ts": 1595289600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-07-28T00:00:00Z",
+    "ts": 1595894400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-08-04T00:00:00Z",
+    "ts": 1596499200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-08-11T00:00:00Z",
+    "ts": 1597104000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-08-18T00:00:00Z",
+    "ts": 1597708800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-08-25T00:00:00Z",
+    "ts": 1598313600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-09-01T00:00:00Z",
+    "ts": 1598918400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-09-08T00:00:00Z",
+    "ts": 1599523200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-09-15T00:00:00Z",
+    "ts": 1600128000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-09-22T00:00:00Z",
+    "ts": 1600732800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-09-29T00:00:00Z",
+    "ts": 1601337600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 6,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOGEUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-10-06T00:00:00Z",
+    "ts": 1601942400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-10-13T00:00:00Z",
+    "ts": 1602547200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-10-20T00:00:00Z",
+    "ts": 1603152000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-10-27T00:00:00Z",
+    "ts": 1603756800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-11-03T00:00:00Z",
+    "ts": 1604361600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-11-10T00:00:00Z",
+    "ts": 1604966400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "DOTUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-11-17T00:00:00Z",
+    "ts": 1605571200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 8,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-11-24T00:00:00Z",
+    "ts": 1606176000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 8,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-12-01T00:00:00Z",
+    "ts": 1606780800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 8,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d",
+      "SOLUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-12-08T00:00:00Z",
+    "ts": 1607385600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 9,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-12-15T00:00:00Z",
+    "ts": 1607990400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 9,
+    "excluded": {
+      "AVAXUSDT": "listing_age_below_90d"
+    },
+    "iso": "2020-12-22T00:00:00Z",
+    "ts": 1608595200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2020-12-29T00:00:00Z",
+    "ts": 1609200000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-01-05T00:00:00Z",
+    "ts": 1609804800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-01-12T00:00:00Z",
+    "ts": 1610409600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-01-19T00:00:00Z",
+    "ts": 1611014400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-01-26T00:00:00Z",
+    "ts": 1611619200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-02-02T00:00:00Z",
+    "ts": 1612224000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-02-09T00:00:00Z",
+    "ts": 1612828800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-02-16T00:00:00Z",
+    "ts": 1613433600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-02-23T00:00:00Z",
+    "ts": 1614038400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-03-02T00:00:00Z",
+    "ts": 1614643200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-03-09T00:00:00Z",
+    "ts": 1615248000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-03-16T00:00:00Z",
+    "ts": 1615852800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-03-23T00:00:00Z",
+    "ts": 1616457600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-03-30T00:00:00Z",
+    "ts": 1617062400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-04-06T00:00:00Z",
+    "ts": 1617667200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-04-13T00:00:00Z",
+    "ts": 1618272000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-04-20T00:00:00Z",
+    "ts": 1618876800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-04-27T00:00:00Z",
+    "ts": 1619481600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-05-04T00:00:00Z",
+    "ts": 1620086400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-05-11T00:00:00Z",
+    "ts": 1620691200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-05-18T00:00:00Z",
+    "ts": 1621296000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-05-25T00:00:00Z",
+    "ts": 1621900800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-06-01T00:00:00Z",
+    "ts": 1622505600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-06-08T00:00:00Z",
+    "ts": 1623110400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-06-15T00:00:00Z",
+    "ts": 1623715200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-06-22T00:00:00Z",
+    "ts": 1624320000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-06-29T00:00:00Z",
+    "ts": 1624924800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-07-06T00:00:00Z",
+    "ts": 1625529600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-07-13T00:00:00Z",
+    "ts": 1626134400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-07-20T00:00:00Z",
+    "ts": 1626739200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-07-27T00:00:00Z",
+    "ts": 1627344000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-08-03T00:00:00Z",
+    "ts": 1627948800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-08-10T00:00:00Z",
+    "ts": 1628553600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-08-17T00:00:00Z",
+    "ts": 1629158400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-08-24T00:00:00Z",
+    "ts": 1629763200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-08-31T00:00:00Z",
+    "ts": 1630368000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-09-07T00:00:00Z",
+    "ts": 1630972800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-09-14T00:00:00Z",
+    "ts": 1631577600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-09-21T00:00:00Z",
+    "ts": 1632182400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-09-28T00:00:00Z",
+    "ts": 1632787200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-10-05T00:00:00Z",
+    "ts": 1633392000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-10-12T00:00:00Z",
+    "ts": 1633996800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-10-19T00:00:00Z",
+    "ts": 1634601600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-10-26T00:00:00Z",
+    "ts": 1635206400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-11-02T00:00:00Z",
+    "ts": 1635811200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-11-09T00:00:00Z",
+    "ts": 1636416000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-11-16T00:00:00Z",
+    "ts": 1637020800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-11-23T00:00:00Z",
+    "ts": 1637625600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-11-30T00:00:00Z",
+    "ts": 1638230400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-12-07T00:00:00Z",
+    "ts": 1638835200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-12-14T00:00:00Z",
+    "ts": 1639440000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-12-21T00:00:00Z",
+    "ts": 1640044800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2021-12-28T00:00:00Z",
+    "ts": 1640649600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-01-04T00:00:00Z",
+    "ts": 1641254400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-01-11T00:00:00Z",
+    "ts": 1641859200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-01-18T00:00:00Z",
+    "ts": 1642464000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-01-25T00:00:00Z",
+    "ts": 1643068800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-02-01T00:00:00Z",
+    "ts": 1643673600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-02-08T00:00:00Z",
+    "ts": 1644278400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-02-15T00:00:00Z",
+    "ts": 1644883200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-02-22T00:00:00Z",
+    "ts": 1645488000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-03-01T00:00:00Z",
+    "ts": 1646092800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-03-08T00:00:00Z",
+    "ts": 1646697600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-03-15T00:00:00Z",
+    "ts": 1647302400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-03-22T00:00:00Z",
+    "ts": 1647907200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-03-29T00:00:00Z",
+    "ts": 1648512000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-04-05T00:00:00Z",
+    "ts": 1649116800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-04-12T00:00:00Z",
+    "ts": 1649721600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-04-19T00:00:00Z",
+    "ts": 1650326400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 7,
+    "excluded": {
+      "LTCUSDT": "trailing_coverage_below_95pct",
+      "SOLUSDT": "trailing_coverage_below_95pct",
+      "XRPUSDT": "trailing_coverage_below_95pct"
+    },
+    "iso": "2022-04-26T00:00:00Z",
+    "ts": 1650931200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-05-03T00:00:00Z",
+    "ts": 1651536000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-05-10T00:00:00Z",
+    "ts": 1652140800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-05-17T00:00:00Z",
+    "ts": 1652745600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-05-24T00:00:00Z",
+    "ts": 1653350400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-05-31T00:00:00Z",
+    "ts": 1653955200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-06-07T00:00:00Z",
+    "ts": 1654560000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-06-14T00:00:00Z",
+    "ts": 1655164800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-06-21T00:00:00Z",
+    "ts": 1655769600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-06-28T00:00:00Z",
+    "ts": 1656374400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-07-05T00:00:00Z",
+    "ts": 1656979200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-07-12T00:00:00Z",
+    "ts": 1657584000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-07-19T00:00:00Z",
+    "ts": 1658188800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-07-26T00:00:00Z",
+    "ts": 1658793600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-08-02T00:00:00Z",
+    "ts": 1659398400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-08-09T00:00:00Z",
+    "ts": 1660003200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-08-16T00:00:00Z",
+    "ts": 1660608000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-08-23T00:00:00Z",
+    "ts": 1661212800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-08-30T00:00:00Z",
+    "ts": 1661817600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-09-06T00:00:00Z",
+    "ts": 1662422400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-09-13T00:00:00Z",
+    "ts": 1663027200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-09-20T00:00:00Z",
+    "ts": 1663632000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-09-27T00:00:00Z",
+    "ts": 1664236800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-10-04T00:00:00Z",
+    "ts": 1664841600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-10-11T00:00:00Z",
+    "ts": 1665446400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-10-18T00:00:00Z",
+    "ts": 1666051200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-10-25T00:00:00Z",
+    "ts": 1666656000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-11-01T00:00:00Z",
+    "ts": 1667260800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-11-08T00:00:00Z",
+    "ts": 1667865600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-11-15T00:00:00Z",
+    "ts": 1668470400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-11-22T00:00:00Z",
+    "ts": 1669075200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-11-29T00:00:00Z",
+    "ts": 1669680000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-12-06T00:00:00Z",
+    "ts": 1670284800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-12-13T00:00:00Z",
+    "ts": 1670889600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-12-20T00:00:00Z",
+    "ts": 1671494400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2022-12-27T00:00:00Z",
+    "ts": 1672099200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-01-03T00:00:00Z",
+    "ts": 1672704000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-01-10T00:00:00Z",
+    "ts": 1673308800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-01-17T00:00:00Z",
+    "ts": 1673913600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-01-24T00:00:00Z",
+    "ts": 1674518400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-01-31T00:00:00Z",
+    "ts": 1675123200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-02-07T00:00:00Z",
+    "ts": 1675728000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-02-14T00:00:00Z",
+    "ts": 1676332800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-02-21T00:00:00Z",
+    "ts": 1676937600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-02-28T00:00:00Z",
+    "ts": 1677542400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-03-07T00:00:00Z",
+    "ts": 1678147200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-03-14T00:00:00Z",
+    "ts": 1678752000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-03-21T00:00:00Z",
+    "ts": 1679356800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-03-28T00:00:00Z",
+    "ts": 1679961600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-04-04T00:00:00Z",
+    "ts": 1680566400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-04-11T00:00:00Z",
+    "ts": 1681171200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-04-18T00:00:00Z",
+    "ts": 1681776000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-04-25T00:00:00Z",
+    "ts": 1682380800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-05-02T00:00:00Z",
+    "ts": 1682985600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-05-09T00:00:00Z",
+    "ts": 1683590400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-05-16T00:00:00Z",
+    "ts": 1684195200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-05-23T00:00:00Z",
+    "ts": 1684800000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-05-30T00:00:00Z",
+    "ts": 1685404800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-06-06T00:00:00Z",
+    "ts": 1686009600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-06-13T00:00:00Z",
+    "ts": 1686614400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-06-20T00:00:00Z",
+    "ts": 1687219200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-06-27T00:00:00Z",
+    "ts": 1687824000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-07-04T00:00:00Z",
+    "ts": 1688428800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-07-11T00:00:00Z",
+    "ts": 1689033600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-07-18T00:00:00Z",
+    "ts": 1689638400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-07-25T00:00:00Z",
+    "ts": 1690243200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-08-01T00:00:00Z",
+    "ts": 1690848000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-08-08T00:00:00Z",
+    "ts": 1691452800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-08-15T00:00:00Z",
+    "ts": 1692057600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-08-22T00:00:00Z",
+    "ts": 1692662400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-08-29T00:00:00Z",
+    "ts": 1693267200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-09-05T00:00:00Z",
+    "ts": 1693872000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-09-12T00:00:00Z",
+    "ts": 1694476800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-09-19T00:00:00Z",
+    "ts": 1695081600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-09-26T00:00:00Z",
+    "ts": 1695686400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-10-03T00:00:00Z",
+    "ts": 1696291200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-10-10T00:00:00Z",
+    "ts": 1696896000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-10-17T00:00:00Z",
+    "ts": 1697500800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-10-24T00:00:00Z",
+    "ts": 1698105600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-10-31T00:00:00Z",
+    "ts": 1698710400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-11-07T00:00:00Z",
+    "ts": 1699315200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-11-14T00:00:00Z",
+    "ts": 1699920000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-11-21T00:00:00Z",
+    "ts": 1700524800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-11-28T00:00:00Z",
+    "ts": 1701129600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-12-05T00:00:00Z",
+    "ts": 1701734400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-12-12T00:00:00Z",
+    "ts": 1702339200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-12-19T00:00:00Z",
+    "ts": 1702944000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2023-12-26T00:00:00Z",
+    "ts": 1703548800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-01-02T00:00:00Z",
+    "ts": 1704153600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-01-09T00:00:00Z",
+    "ts": 1704758400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-01-16T00:00:00Z",
+    "ts": 1705363200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-01-23T00:00:00Z",
+    "ts": 1705968000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-01-30T00:00:00Z",
+    "ts": 1706572800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-02-06T00:00:00Z",
+    "ts": 1707177600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-02-13T00:00:00Z",
+    "ts": 1707782400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-02-20T00:00:00Z",
+    "ts": 1708387200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-02-27T00:00:00Z",
+    "ts": 1708992000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-03-05T00:00:00Z",
+    "ts": 1709596800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-03-12T00:00:00Z",
+    "ts": 1710201600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-03-19T00:00:00Z",
+    "ts": 1710806400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-03-26T00:00:00Z",
+    "ts": 1711411200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-04-02T00:00:00Z",
+    "ts": 1712016000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-04-09T00:00:00Z",
+    "ts": 1712620800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-04-16T00:00:00Z",
+    "ts": 1713225600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-04-23T00:00:00Z",
+    "ts": 1713830400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-04-30T00:00:00Z",
+    "ts": 1714435200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-05-07T00:00:00Z",
+    "ts": 1715040000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-05-14T00:00:00Z",
+    "ts": 1715644800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-05-21T00:00:00Z",
+    "ts": 1716249600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-05-28T00:00:00Z",
+    "ts": 1716854400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-06-04T00:00:00Z",
+    "ts": 1717459200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-06-11T00:00:00Z",
+    "ts": 1718064000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-06-18T00:00:00Z",
+    "ts": 1718668800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-06-25T00:00:00Z",
+    "ts": 1719273600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-07-02T00:00:00Z",
+    "ts": 1719878400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-07-09T00:00:00Z",
+    "ts": 1720483200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-07-16T00:00:00Z",
+    "ts": 1721088000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-07-23T00:00:00Z",
+    "ts": 1721692800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-07-30T00:00:00Z",
+    "ts": 1722297600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-08-06T00:00:00Z",
+    "ts": 1722902400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-08-13T00:00:00Z",
+    "ts": 1723507200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-08-20T00:00:00Z",
+    "ts": 1724112000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-08-27T00:00:00Z",
+    "ts": 1724716800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-09-03T00:00:00Z",
+    "ts": 1725321600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-09-10T00:00:00Z",
+    "ts": 1725926400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-09-17T00:00:00Z",
+    "ts": 1726531200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-09-24T00:00:00Z",
+    "ts": 1727136000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-10-01T00:00:00Z",
+    "ts": 1727740800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-10-08T00:00:00Z",
+    "ts": 1728345600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-10-15T00:00:00Z",
+    "ts": 1728950400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-10-22T00:00:00Z",
+    "ts": 1729555200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-10-29T00:00:00Z",
+    "ts": 1730160000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-11-05T00:00:00Z",
+    "ts": 1730764800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-11-12T00:00:00Z",
+    "ts": 1731369600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-11-19T00:00:00Z",
+    "ts": 1731974400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-11-26T00:00:00Z",
+    "ts": 1732579200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-12-03T00:00:00Z",
+    "ts": 1733184000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-12-10T00:00:00Z",
+    "ts": 1733788800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-12-17T00:00:00Z",
+    "ts": 1734393600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-12-24T00:00:00Z",
+    "ts": 1734998400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2024-12-31T00:00:00Z",
+    "ts": 1735603200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-01-07T00:00:00Z",
+    "ts": 1736208000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-01-14T00:00:00Z",
+    "ts": 1736812800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-01-21T00:00:00Z",
+    "ts": 1737417600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-01-28T00:00:00Z",
+    "ts": 1738022400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-02-04T00:00:00Z",
+    "ts": 1738627200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-02-11T00:00:00Z",
+    "ts": 1739232000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-02-18T00:00:00Z",
+    "ts": 1739836800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-02-25T00:00:00Z",
+    "ts": 1740441600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-03-04T00:00:00Z",
+    "ts": 1741046400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-03-11T00:00:00Z",
+    "ts": 1741651200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-03-18T00:00:00Z",
+    "ts": 1742256000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-03-25T00:00:00Z",
+    "ts": 1742860800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-04-01T00:00:00Z",
+    "ts": 1743465600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-04-08T00:00:00Z",
+    "ts": 1744070400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-04-15T00:00:00Z",
+    "ts": 1744675200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-04-22T00:00:00Z",
+    "ts": 1745280000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-04-29T00:00:00Z",
+    "ts": 1745884800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-05-06T00:00:00Z",
+    "ts": 1746489600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-05-13T00:00:00Z",
+    "ts": 1747094400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-05-20T00:00:00Z",
+    "ts": 1747699200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-05-27T00:00:00Z",
+    "ts": 1748304000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-06-03T00:00:00Z",
+    "ts": 1748908800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-06-10T00:00:00Z",
+    "ts": 1749513600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-06-17T00:00:00Z",
+    "ts": 1750118400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-06-24T00:00:00Z",
+    "ts": 1750723200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-07-01T00:00:00Z",
+    "ts": 1751328000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-07-08T00:00:00Z",
+    "ts": 1751932800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-07-15T00:00:00Z",
+    "ts": 1752537600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-07-22T00:00:00Z",
+    "ts": 1753142400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-07-29T00:00:00Z",
+    "ts": 1753747200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-08-05T00:00:00Z",
+    "ts": 1754352000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-08-12T00:00:00Z",
+    "ts": 1754956800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-08-19T00:00:00Z",
+    "ts": 1755561600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-08-26T00:00:00Z",
+    "ts": 1756166400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-09-02T00:00:00Z",
+    "ts": 1756771200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-09-09T00:00:00Z",
+    "ts": 1757376000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-09-16T00:00:00Z",
+    "ts": 1757980800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-09-23T00:00:00Z",
+    "ts": 1758585600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-09-30T00:00:00Z",
+    "ts": 1759190400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-10-07T00:00:00Z",
+    "ts": 1759795200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-10-14T00:00:00Z",
+    "ts": 1760400000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-10-21T00:00:00Z",
+    "ts": 1761004800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-10-28T00:00:00Z",
+    "ts": 1761609600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-11-04T00:00:00Z",
+    "ts": 1762214400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-11-11T00:00:00Z",
+    "ts": 1762819200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-11-18T00:00:00Z",
+    "ts": 1763424000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-11-25T00:00:00Z",
+    "ts": 1764028800000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-12-02T00:00:00Z",
+    "ts": 1764633600000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-12-09T00:00:00Z",
+    "ts": 1765238400000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-12-16T00:00:00Z",
+    "ts": 1765843200000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-12-23T00:00:00Z",
+    "ts": 1766448000000
+  },
+  {
+    "eligible": [
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "LTCUSDT",
+      "AVAXUSDT",
+      "DOTUSDT"
+    ],
+    "eligible_count": 10,
+    "excluded": {},
+    "iso": "2025-12-30T00:00:00Z",
+    "ts": 1767052800000
+  }
+]

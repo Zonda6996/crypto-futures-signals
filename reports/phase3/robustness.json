@@ -1,0 +1,1138 @@
+{
+  "cost_sensitivity": {
+    "round_trip_0.05pct": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 13.155544292207294,
+          "best_5_r": 6.596739912359226,
+          "share_from_best_5": 0.6465937132980439,
+          "total_without_best_10_r": -2.9532491311368156,
+          "total_without_best_5_r": 3.605555248711253
+        },
+        "expectancy_r": 0.2429117895492971,
+        "fold_total_r": [
+          -1.1336063826129241,
+          1.3026386188805057,
+          3.1197896452413056,
+          6.913473279561591
+        ],
+        "max_drawdown_r": -3.0827262160169036,
+        "positive_folds": 3,
+        "profit_factor_r": 1.6796040354494262,
+        "total_folds": 4,
+        "total_r": 10.202295161070479,
+        "trades": 42,
+        "win_rate": 0.5476190476190477
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 13.153383013870576,
+          "best_5_r": 6.592295309056103,
+          "share_from_best_5": 0.775957565124294,
+          "total_without_best_10_r": -4.6576925207955595,
+          "total_without_best_5_r": 1.9033951840189134
+        },
+        "expectancy_r": 0.11327587324100022,
+        "fold_total_r": [
+          -1.1336063826129241,
+          -0.23081639079753807,
+          5.231732063007143,
+          4.6283812034783365
+        ],
+        "max_drawdown_r": -5.135663094047175,
+        "positive_folds": 2,
+        "profit_factor_r": 1.2647805246089387,
+        "total_folds": 4,
+        "total_r": 8.495690493075017,
+        "trades": 75,
+        "win_rate": 0.48
+      }
+    },
+    "round_trip_0.10pct": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 12.98243966778807,
+          "best_5_r": 6.5293181694806455,
+          "share_from_best_5": 0.7036989220073613,
+          "total_without_best_10_r": -3.7038718523717717,
+          "total_without_best_5_r": 2.749249645935652
+        },
+        "expectancy_r": 0.22091828131943567,
+        "fold_total_r": [
+          -1.2517905880643316,
+          1.2719439044276715,
+          2.7625526785392647,
+          6.495861820513693
+        ],
+        "max_drawdown_r": -3.15181276451659,
+        "positive_folds": 3,
+        "profit_factor_r": 1.6021658997055275,
+        "total_folds": 4,
+        "total_r": 9.278567815416297,
+        "trades": 42,
+        "win_rate": 0.5476190476190477
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.984518722319883,
+          "best_5_r": 6.520485494820019,
+          "share_from_best_5": 1.0068467385002262,
+          "total_without_best_10_r": -6.508373698964323,
+          "total_without_best_5_r": -0.04434047146445726
+        },
+        "expectancy_r": 0.08634860031140748,
+        "fold_total_r": [
+          -1.2517905880643316,
+          -0.3498946453653173,
+          4.46531357568839,
+          3.61251668109682
+        ],
+        "max_drawdown_r": -5.756220418395726,
+        "positive_folds": 2,
+        "profit_factor_r": 1.1953349006195468,
+        "total_folds": 4,
+        "total_r": 6.476145023355562,
+        "trades": 75,
+        "win_rate": 0.48
+      }
+    },
+    "round_trip_0.12pct": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 12.91319781802038,
+          "best_5_r": 6.502349472329214,
+          "share_from_best_5": 0.7298567025505258,
+          "total_without_best_10_r": -4.004120940865752,
+          "total_without_best_5_r": 2.406727404825414
+        },
+        "expectancy_r": 0.21212087802749113,
+        "fold_total_r": [
+          -1.2990642702448942,
+          1.2596660186465378,
+          2.6196578918584494,
+          6.328817236894535
+        ],
+        "max_drawdown_r": -3.179447383916464,
+        "positive_folds": 3,
+        "profit_factor_r": 1.5722952773713212,
+        "total_folds": 4,
+        "total_r": 8.909076877154629,
+        "trades": 42,
+        "win_rate": 0.5476190476190477
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.916973005699608,
+          "best_5_r": 6.492928697391217,
+          "share_from_best_5": 1.1454753555782533,
+          "total_without_best_10_r": -7.248646170231823,
+          "total_without_best_5_r": -0.8246018619234323
+        },
+        "expectancy_r": 0.07557769113957047,
+        "fold_total_r": [
+          -1.2990642702448942,
+          -0.3975259471924286,
+          4.158746180760892,
+          3.2061708721442153
+        ],
+        "max_drawdown_r": -6.086111851943134,
+        "positive_folds": 2,
+        "profit_factor_r": 1.1687937895404121,
+        "total_folds": 4,
+        "total_r": 5.668326835467785,
+        "trades": 75,
+        "win_rate": 0.48
+      }
+    },
+    "round_trip_0.16pct": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 12.774714118485,
+          "best_5_r": 6.44841207802635,
+          "share_from_best_5": 0.7892701464950037,
+          "total_without_best_10_r": -4.6046191178537175,
+          "total_without_best_5_r": 1.7216829226049333
+        },
+        "expectancy_r": 0.19452607144360198,
+        "fold_total_r": [
+          -1.3936116346060203,
+          1.2351102470842705,
+          2.333868318496817,
+          5.994728069656216
+        ],
+        "max_drawdown_r": -3.2347166227162134,
+        "positive_folds": 3,
+        "profit_factor_r": 1.5143436866125919,
+        "total_folds": 4,
+        "total_r": 8.170095000631283,
+        "trades": 42,
+        "win_rate": 0.5476190476190477
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.781881572459055,
+          "best_5_r": 6.437815102533613,
+          "share_from_best_5": 1.5885286987900216,
+          "total_without_best_10_r": -8.729191112766836,
+          "total_without_best_5_r": -2.3851246428413955
+        },
+        "expectancy_r": 0.05403587279589624,
+        "fold_total_r": [
+          -1.3936116346060203,
+          -0.49278855084665196,
+          3.5456113909058895,
+          2.393479254239001
+        ],
+        "max_drawdown_r": -6.745894719037953,
+        "positive_folds": 2,
+        "profit_factor_r": 1.1176876339743278,
+        "total_folds": 4,
+        "total_r": 4.052690459692218,
+        "trades": 75,
+        "win_rate": 0.48
+      }
+    }
+  },
+  "data_quality": {
+    "BTCUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    },
+    "ETHUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    }
+  },
+  "decision_rule": {
+    "consequence": "TEST remains sealed regardless; opening requires a separate explicit decision after reviewing Phase 3.",
+    "passed": false,
+    "requirements": "Both modes positive at 0.16% cost, >=70% positive neighbors with positive median, and both frozen modes positive after removing best five trades."
+  },
+  "diagnostics": {
+    "median_neighbor_total_r": {
+      "anchored": 7.483836794445926,
+      "rolling": 6.303973207868924
+    },
+    "positive_neighbor_share": {
+      "anchored": 1.0,
+      "rolling": 0.9090909090909091
+    }
+  },
+  "frozen_candidate": {
+    "feature": "vwap_distance_24",
+    "horizon": 24,
+    "regime": "bear",
+    "side": 1,
+    "stop_atr": 1.5,
+    "take_atr": 2.0,
+    "threshold_q": 0.75,
+    "volatility": "high"
+  },
+  "method": {
+    "costs": [
+      "round_trip_0.05pct",
+      "round_trip_0.10pct",
+      "round_trip_0.12pct",
+      "round_trip_0.16pct"
+    ],
+    "parameter_policy": "Threshold, stop, take and horizon are perturbed one at a time around the frozen point.",
+    "principle": "Predeclared one-factor-at-a-time diagnostics; no variant replaces the frozen candidate.",
+    "windows": {
+      "long": {
+        "initial_bars": 16000,
+        "oos_bars": 6000
+      },
+      "phase2_base": {
+        "initial_bars": 14000,
+        "oos_bars": 5250
+      },
+      "short": {
+        "initial_bars": 12000,
+        "oos_bars": 4500
+      }
+    }
+  },
+  "parameter_map": {
+    "frozen": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.98243966778807,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 0.7036989220073613,
+            "total_without_best_10_r": -3.7038718523717717,
+            "total_without_best_5_r": 2.749249645935652
+          },
+          "expectancy_r": 0.22091828131943567,
+          "fold_total_r": [
+            -1.2517905880643316,
+            1.2719439044276715,
+            2.7625526785392647,
+            6.495861820513693
+          ],
+          "max_drawdown_r": -3.15181276451659,
+          "positive_folds": 3,
+          "profit_factor_r": 1.6021658997055275,
+          "total_folds": 4,
+          "total_r": 9.278567815416297,
+          "trades": 42,
+          "win_rate": 0.5476190476190477
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.984518722319883,
+            "best_5_r": 6.520485494820019,
+            "share_from_best_5": 1.0068467385002262,
+            "total_without_best_10_r": -6.508373698964323,
+            "total_without_best_5_r": -0.04434047146445726
+          },
+          "expectancy_r": 0.08634860031140748,
+          "fold_total_r": [
+            -1.2517905880643316,
+            -0.3498946453653173,
+            4.46531357568839,
+            3.61251668109682
+          ],
+          "max_drawdown_r": -5.756220418395726,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1953349006195468,
+          "total_folds": 4,
+          "total_r": 6.476145023355562,
+          "trades": 75,
+          "win_rate": 0.48
+        }
+      }
+    },
+    "horizon_12": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 12,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.976385940988177,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 0.6026863145914015,
+            "total_without_best_10_r": -2.1426935019831945,
+            "total_without_best_5_r": 4.304374269524336
+          },
+          "expectancy_r": 0.2579450580715472,
+          "fold_total_r": [
+            0.8855567761511416,
+            1.2719439044276715,
+            2.4488758839022378,
+            6.2273158745239305
+          ],
+          "max_drawdown_r": -3.4013604856515514,
+          "positive_folds": 4,
+          "profit_factor_r": 1.8468069938841536,
+          "total_folds": 4,
+          "total_r": 10.833692439004983,
+          "trades": 42,
+          "win_rate": 0.6190476190476191
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.957225208790774,
+            "best_5_r": 6.5179239514455425,
+            "share_from_best_5": 0.6691544192613864,
+            "total_without_best_10_r": -3.216687354105401,
+            "total_without_best_5_r": 3.222613903239832
+          },
+          "expectancy_r": 0.12987383806247166,
+          "fold_total_r": [
+            0.8855567761511416,
+            1.4008171454237557,
+            5.2891285717309255,
+            2.165035361379552
+          ],
+          "max_drawdown_r": -7.237433755162203,
+          "positive_folds": 4,
+          "profit_factor_r": 1.3703421303877847,
+          "total_folds": 4,
+          "total_r": 9.740537854685375,
+          "trades": 75,
+          "win_rate": 0.5333333333333333
+        }
+      }
+    },
+    "horizon_36": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 36,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.98243966778807,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 0.9142941338197993,
+            "total_without_best_10_r": -5.841063683888859,
+            "total_without_best_5_r": 0.6120578144185643
+          },
+          "expectancy_r": 0.17003276152140975,
+          "fold_total_r": [
+            -2.5654665964870516,
+            1.2719439044276715,
+            3.390723122792921,
+            5.04417555316567
+          ],
+          "max_drawdown_r": -3.260830845438444,
+          "positive_folds": 3,
+          "profit_factor_r": 1.3858009605996238,
+          "total_folds": 4,
+          "total_r": 7.14137598389921,
+          "trades": 42,
+          "win_rate": 0.5238095238095238
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.984518722319883,
+            "best_5_r": 6.520485494820019,
+            "share_from_best_5": 1.0041800156329361,
+            "total_without_best_10_r": -6.491175503663867,
+            "total_without_best_5_r": -0.027142276164001472
+          },
+          "expectancy_r": 0.08657790958208023,
+          "fold_total_r": [
+            -2.5654665964870516,
+            -1.0391854795774669,
+            6.31080246529665,
+            3.7871928294238857
+          ],
+          "max_drawdown_r": -5.9944800474616295,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1782019442610672,
+          "total_folds": 4,
+          "total_r": 6.493343218656017,
+          "trades": 75,
+          "win_rate": 0.5066666666666667
+        }
+      }
+    },
+    "horizon_48": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 48,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.98243966778807,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 1.072159182673122,
+            "total_without_best_10_r": -6.892562087108622,
+            "total_without_best_5_r": -0.43944058880119874
+          },
+          "expectancy_r": 0.14499708525427255,
+          "fold_total_r": [
+            -2.5654665964870516,
+            1.2719439044276715,
+            3.8111327399575075,
+            3.5722675327813196
+          ],
+          "max_drawdown_r": -3.996743843382508,
+          "positive_folds": 3,
+          "profit_factor_r": 1.3153207813623087,
+          "total_folds": 4,
+          "total_r": 6.089877580679447,
+          "trades": 42,
+          "win_rate": 0.5
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.984518722319883,
+            "best_5_r": 6.520485494820019,
+            "share_from_best_5": 1.1223579697719919,
+            "total_without_best_10_r": -7.174887864399695,
+            "total_without_best_5_r": -0.7108546368998298
+          },
+          "expectancy_r": 0.07746174477226918,
+          "fold_total_r": [
+            -2.5654665964870516,
+            -1.056757518071214,
+            5.568845098814816,
+            3.8630098736636387
+          ],
+          "max_drawdown_r": -6.012052085955377,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1580438069052066,
+          "total_folds": 4,
+          "total_r": 5.8096308579201885,
+          "trades": 75,
+          "win_rate": 0.4666666666666667
+        }
+      }
+    },
+    "stop_atr_1.2": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.2,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.98348395017635,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 1.7326436232744427,
+            "total_without_best_10_r": -9.21507013340935,
+            "total_without_best_5_r": -2.760904352713646
+          },
+          "expectancy_r": 0.08374252926148888,
+          "fold_total_r": [
+            -0.945460484978449,
+            1.2719439044276715,
+            2.45280367699469,
+            0.9891267203230872
+          ],
+          "max_drawdown_r": -3.4242180072104853,
+          "positive_folds": 3,
+          "profit_factor_r": 1.2064909392421361,
+          "total_folds": 4,
+          "total_r": 3.7684138167669996,
+          "trades": 45,
+          "win_rate": 0.4444444444444444
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.993351396980511,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 1.675132607581707,
+            "total_without_best_10_r": -9.095559580422986,
+            "total_without_best_5_r": -2.6315263529231205
+          },
+          "expectancy_r": 0.04812088662416698,
+          "fold_total_r": [
+            -0.945460484978449,
+            -0.14989464536532154,
+            2.9767131688287978,
+            2.0164337780724977
+          ],
+          "max_drawdown_r": -5.155450703443252,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1094390916296606,
+          "total_folds": 4,
+          "total_r": 3.897791816557525,
+          "trades": 81,
+          "win_rate": 0.43209876543209874
+        }
+      }
+    },
+    "stop_atr_1.8": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.8,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.9738585739097,
+            "best_5_r": 6.520737075602277,
+            "share_from_best_5": 0.5833353146557998,
+            "total_without_best_10_r": -1.795490126510157,
+            "total_without_best_5_r": 4.657631371797267
+          },
+          "expectancy_r": 0.2726431328634035,
+          "fold_total_r": [
+            -1.2277490667638158,
+            1.2719439044276715,
+            5.238311789221995,
+            5.8958618205136935
+          ],
+          "max_drawdown_r": -2.69652096414589,
+          "positive_folds": 3,
+          "profit_factor_r": 1.8050152344181114,
+          "total_folds": 4,
+          "total_r": 11.178368447399544,
+          "trades": 41,
+          "win_rate": 0.5853658536585366
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.982555910016673,
+            "best_5_r": 6.521808173925065,
+            "share_from_best_5": 0.9007869821617855,
+            "total_without_best_10_r": -5.742433324903962,
+            "total_without_best_5_r": 0.7183144111876473
+          },
+          "expectancy_r": 0.09783949439341502,
+          "fold_total_r": [
+            -1.2277490667638158,
+            1.9844060031497424,
+            5.1353281867010905,
+            1.3481374620256947
+          ],
+          "max_drawdown_r": -6.791227760261126,
+          "positive_folds": 3,
+          "profit_factor_r": 1.2126799787678022,
+          "total_folds": 4,
+          "total_r": 7.240122585112712,
+          "trades": 74,
+          "win_rate": 0.5135135135135135
+        }
+      }
+    },
+    "stop_atr_2.0": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 2.0,
+        "take_atr": 2.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.971405884971071,
+            "best_5_r": 6.520737075602277,
+            "share_from_best_5": 0.5943868988933784,
+            "total_without_best_10_r": -2.000879637265244,
+            "total_without_best_5_r": 4.44978917210355
+          },
+          "expectancy_r": 0.2812955448129699,
+          "fold_total_r": [
+            -1.4944157334304797,
+            1.2719439044276715,
+            4.319383176474642,
+            6.873614900233993
+          ],
+          "max_drawdown_r": -2.9631876308125538,
+          "positive_folds": 3,
+          "profit_factor_r": 1.8004373670971046,
+          "total_folds": 4,
+          "total_r": 10.970526247705827,
+          "trades": 39,
+          "win_rate": 0.5897435897435898
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.976008381511647,
+            "best_5_r": 6.521808173925065,
+            "share_from_best_5": 1.3878225240929676,
+            "total_without_best_10_r": -8.276698447637004,
+            "total_without_best_5_r": -1.8224982400504208
+          },
+          "expectancy_r": 0.06526819352603672,
+          "fold_total_r": [
+            -1.4944157334304797,
+            1.9844060031497424,
+            4.628387584052168,
+            -0.41906791989678754
+          ],
+          "max_drawdown_r": -10.455114834651265,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1346348976866238,
+          "total_folds": 4,
+          "total_r": 4.699309933874644,
+          "trades": 72,
+          "win_rate": 0.5
+        }
+      }
+    },
+    "take_atr_1.5": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 1.5,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 9.667488203440824,
+            "best_5_r": 4.8639741819190245,
+            "share_from_best_5": 0.7261123757378449,
+            "total_without_best_10_r": -2.9688361153580973,
+            "total_without_best_5_r": 1.834677906163702
+          },
+          "expectancy_r": 0.14562287148005928,
+          "fold_total_r": [
+            -1.9184572547310028,
+            0.9386105710943331,
+            1.9157503896433292,
+            5.762748382076067
+          ],
+          "max_drawdown_r": -3.15181276451659,
+          "positive_folds": 3,
+          "profit_factor_r": 1.4071608961056274,
+          "total_folds": 4,
+          "total_r": 6.698652088082727,
+          "trades": 46,
+          "win_rate": 0.5652173913043478
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 9.673819404647299,
+            "best_5_r": 4.86582104641159,
+            "share_from_best_5": 0.9270153844917138,
+            "total_without_best_10_r": -4.424908622999873,
+            "total_without_best_5_r": 0.38308973523583517
+          },
+          "expectancy_r": 0.0656113847705928,
+          "fold_total_r": [
+            -1.9184572547310028,
+            -0.6832279786986557,
+            5.018575707665368,
+            2.8320203074117156
+          ],
+          "max_drawdown_r": -6.422693829087622,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1587743452869312,
+          "total_folds": 4,
+          "total_r": 5.2489107816474245,
+          "trades": 80,
+          "win_rate": 0.5375
+        }
+      }
+    },
+    "take_atr_2.5": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.5,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 16.23825410007274,
+            "best_5_r": 8.179421828187616,
+            "share_from_best_5": 1.092944976333251,
+            "total_without_best_10_r": -8.754417305626815,
+            "total_without_best_5_r": -0.6955850337416902
+          },
+          "expectancy_r": 0.18253260474258357,
+          "fold_total_r": [
+            -3.251790588064338,
+            1.6052772377609963,
+            2.860653736876788,
+            6.26969640787248
+          ],
+          "max_drawdown_r": -3.8758475765243228,
+          "positive_folds": 3,
+          "profit_factor_r": 1.427922527654185,
+          "total_folds": 4,
+          "total_r": 7.483836794445926,
+          "trades": 41,
+          "win_rate": 0.4878048780487805
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 16.227187926032233,
+            "best_5_r": 8.174235442183347,
+            "share_from_best_5": 1.2966799148162418,
+            "total_without_best_10_r": -9.923214718163308,
+            "total_without_best_5_r": -1.8702622343144224
+          },
+          "expectancy_r": 0.09136193054882498,
+          "fold_total_r": [
+            -3.251790588064338,
+            -0.01656131203199246,
+            5.103891883789636,
+            4.468433224175619
+          ],
+          "max_drawdown_r": -6.478044507179058,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1915690741257632,
+          "total_folds": 4,
+          "total_r": 6.303973207868924,
+          "trades": 69,
+          "win_rate": 0.4492753623188406
+        }
+      }
+    },
+    "take_atr_3.0": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 3.0,
+        "threshold_q": 0.75,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 17.25784907105724,
+            "best_5_r": 9.747221346104562,
+            "share_from_best_5": 5.027644416407541,
+            "total_without_best_10_r": -15.319123787643234,
+            "total_without_best_5_r": -7.808496062690555
+          },
+          "expectancy_r": 0.051019086405631776,
+          "fold_total_r": [
+            -4.029253300505457,
+            -1.06138942890567,
+            2.1074487890227234,
+            4.92191922380241
+          ],
+          "max_drawdown_r": -5.090642729411127,
+          "positive_folds": 2,
+          "profit_factor_r": 1.1052414631548348,
+          "total_folds": 4,
+          "total_r": 1.9387252834140074,
+          "trades": 38,
+          "win_rate": 0.4473684210526316
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 19.416288761885806,
+            "best_5_r": 9.763759203272581,
+            "share_from_best_5": -6.522761216979669,
+            "total_without_best_10_r": -20.913163916207896,
+            "total_without_best_5_r": -11.26063435759467
+          },
+          "expectancy_r": -0.022341420213762526,
+          "fold_total_r": [
+            -4.029253300505457,
+            -2.6832279786986586,
+            5.6772016731405355,
+            -0.46159554825850985
+          ],
+          "max_drawdown_r": -8.8420730651968,
+          "positive_folds": 1,
+          "profit_factor_r": 0.9584483341905548,
+          "total_folds": 4,
+          "total_r": -1.4968751543220893,
+          "trades": 67,
+          "win_rate": 0.3880597014925373
+        }
+      }
+    },
+    "threshold_q_0.70": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.7,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.993789089690504,
+            "best_5_r": 6.5293181694806455,
+            "share_from_best_5": 0.4898653963584611,
+            "total_without_best_10_r": 0.3350114706634036,
+            "total_without_best_5_r": 6.799482390873262
+          },
+          "expectancy_r": 0.2563230876991136,
+          "fold_total_r": [
+            -0.8095247260534776,
+            -0.3201831503749043,
+            5.547022418258781,
+            8.91148601852351
+          ],
+          "max_drawdown_r": -4.189150447795381,
+          "positive_folds": 2,
+          "profit_factor_r": 1.7288835811122494,
+          "total_folds": 4,
+          "total_r": 13.328800560353908,
+          "trades": 52,
+          "win_rate": 0.5576923076923077
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.98449632983354,
+            "best_5_r": 6.520485494820019,
+            "share_from_best_5": 0.6987428192433498,
+            "total_without_best_10_r": -3.6527575051242143,
+            "total_without_best_5_r": 2.8112533298893077
+          },
+          "expectancy_r": 0.10254658049131128,
+          "fold_total_r": [
+            -0.8095247260534776,
+            -0.2750391610664927,
+            6.498051446450311,
+            3.9182512653789856
+          ],
+          "max_drawdown_r": -6.22273193160875,
+          "positive_folds": 2,
+          "profit_factor_r": 1.2437771742997679,
+          "total_folds": 4,
+          "total_r": 9.331738824709326,
+          "trades": 91,
+          "win_rate": 0.4945054945054945
+        }
+      }
+    },
+    "threshold_q_0.80": {
+      "candidate": {
+        "feature": "vwap_distance_24",
+        "horizon": 24,
+        "regime": "bear",
+        "side": 1,
+        "stop_atr": 1.5,
+        "take_atr": 2.0,
+        "threshold_q": 0.8,
+        "volatility": "high"
+      },
+      "modes": {
+        "anchored": {
+          "concentration": {
+            "best_10_r": 12.915912795142146,
+            "best_5_r": 6.52619929349198,
+            "share_from_best_5": 0.6764536805930459,
+            "total_without_best_10_r": -3.26824661972793,
+            "total_without_best_5_r": 3.121466881922236
+          },
+          "expectancy_r": 0.3112150379165876,
+          "fold_total_r": [
+            -0.49764916956426924,
+            1.2719439044276715,
+            5.900623476582413,
+            2.972747963968401
+          ],
+          "max_drawdown_r": -2.0898871197432607,
+          "positive_folds": 3,
+          "profit_factor_r": 1.9963598289532833,
+          "total_folds": 4,
+          "total_r": 9.647666175414216,
+          "trades": 31,
+          "win_rate": 0.5483870967741935
+        },
+        "rolling": {
+          "concentration": {
+            "best_10_r": 12.983504040863536,
+            "best_5_r": 6.52703369734695,
+            "share_from_best_5": 0.5756409150604599,
+            "total_without_best_10_r": -1.6447796267703996,
+            "total_without_best_5_r": 4.811690716746187
+          },
+          "expectancy_r": 0.19892498972093223,
+          "fold_total_r": [
+            -0.49764916956426924,
+            1.2719439044276715,
+            5.6004066576706135,
+            4.964023021559123
+          ],
+          "max_drawdown_r": -3.854761508892331,
+          "positive_folds": 3,
+          "profit_factor_r": 1.5020203720850454,
+          "total_folds": 4,
+          "total_r": 11.338724414093138,
+          "trades": 57,
+          "win_rate": 0.5263157894736842
+        }
+      }
+    }
+  },
+  "phase": "phase-3-robustness",
+  "scope": {
+    "available_indices": [
+      0,
+      35059
+    ],
+    "sealed_test_starts_at": 35059
+  },
+  "test_opened": false,
+  "window_sensitivity": {
+    "long": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 12.95125447370972,
+          "best_5_r": 6.52703369734695,
+          "share_from_best_5": 0.6803240632745716,
+          "total_without_best_10_r": -3.35724766182262,
+          "total_without_best_5_r": 3.0669731145401498
+        },
+        "expectancy_r": 0.31980022706290334,
+        "fold_total_r": [
+          0.5280953799022183,
+          5.236496797546268,
+          3.8294146344386144
+        ],
+        "max_drawdown_r": -3.15181276451659,
+        "positive_folds": 3,
+        "profit_factor_r": 1.9772481052745725,
+        "total_folds": 3,
+        "total_r": 9.5940068118871,
+        "trades": 30,
+        "win_rate": 0.6
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.973099623082675,
+          "best_5_r": 6.518201022686323,
+          "share_from_best_5": 0.7525582520394002,
+          "total_without_best_10_r": -4.31170895329428,
+          "total_without_best_5_r": 2.143189647102072
+        },
+        "expectancy_r": 0.1767630748936407,
+        "fold_total_r": [
+          0.5280953799022183,
+          9.227491788399078,
+          -1.0941964985129005
+        ],
+        "max_drawdown_r": -5.254292185733615,
+        "positive_folds": 2,
+        "profit_factor_r": 1.4239475418621286,
+        "total_folds": 3,
+        "total_r": 8.661390669788394,
+        "trades": 49,
+        "win_rate": 0.5510204081632653
+      }
+    },
+    "phase2_base": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 12.98243966778807,
+          "best_5_r": 6.5293181694806455,
+          "share_from_best_5": 0.7036989220073613,
+          "total_without_best_10_r": -3.7038718523717717,
+          "total_without_best_5_r": 2.749249645935652
+        },
+        "expectancy_r": 0.22091828131943567,
+        "fold_total_r": [
+          -1.2517905880643316,
+          1.2719439044276715,
+          2.7625526785392647,
+          6.495861820513693
+        ],
+        "max_drawdown_r": -3.15181276451659,
+        "positive_folds": 3,
+        "profit_factor_r": 1.6021658997055275,
+        "total_folds": 4,
+        "total_r": 9.278567815416297,
+        "trades": 42,
+        "win_rate": 0.5476190476190477
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.984518722319883,
+          "best_5_r": 6.520485494820019,
+          "share_from_best_5": 1.0068467385002262,
+          "total_without_best_10_r": -6.508373698964323,
+          "total_without_best_5_r": -0.04434047146445726
+        },
+        "expectancy_r": 0.08634860031140748,
+        "fold_total_r": [
+          -1.2517905880643316,
+          -0.3498946453653173,
+          4.46531357568839,
+          3.61251668109682
+        ],
+        "max_drawdown_r": -5.756220418395726,
+        "positive_folds": 2,
+        "profit_factor_r": 1.1953349006195468,
+        "total_folds": 4,
+        "total_r": 6.476145023355562,
+        "trades": 75,
+        "win_rate": 0.48
+      }
+    },
+    "short": {
+      "anchored": {
+        "concentration": {
+          "best_10_r": 13.005990580392325,
+          "best_5_r": 6.5293181694806455,
+          "share_from_best_5": 0.7181443510118888,
+          "total_without_best_10_r": -3.9140605801345445,
+          "total_without_best_5_r": 2.562611830777135
+        },
+        "expectancy_r": 0.18554959184199551,
+        "fold_total_r": [
+          -0.18809405580715746,
+          1.2719439044276715,
+          -1.566698732076913,
+          4.00819027642392,
+          5.566588607290259
+        ],
+        "max_drawdown_r": -3.15181276451659,
+        "positive_folds": 3,
+        "profit_factor_r": 1.468103507874467,
+        "total_folds": 5,
+        "total_r": 9.091930000257781,
+        "trades": 49,
+        "win_rate": 0.5306122448979592
+      },
+      "rolling": {
+        "concentration": {
+          "best_10_r": 12.997157905731699,
+          "best_5_r": 6.520485494820019,
+          "share_from_best_5": 1.0810869428616854,
+          "total_without_best_10_r": -6.965741526249765,
+          "total_without_best_5_r": -0.4890691153380854
+        },
+        "expectancy_r": 0.07539270474352416,
+        "fold_total_r": [
+          -0.18809405580715746,
+          1.0065364939695605,
+          1.1524341861609035,
+          2.251735953490283,
+          1.8088038016683434
+        ],
+        "max_drawdown_r": -6.179201376199371,
+        "positive_folds": 4,
+        "profit_factor_r": 1.166561405299507,
+        "total_folds": 5,
+        "total_r": 6.031416379481933,
+        "trades": 80,
+        "win_rate": 0.475
+      }
+    }
+  }
+}

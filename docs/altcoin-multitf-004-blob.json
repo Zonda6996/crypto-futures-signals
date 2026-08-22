@@ -1,0 +1,10 @@
+{
+  "protocol_id": "ALT-MULTITF-004",
+  "access": "private",
+  "pathname": "altcoin-multitf-004/4ef3221cc3a63005a53ea86797270e4195eae97cdb3faba3c2a21e571f45647d.tar.gz",
+  "url": "https://0kvacviukrfrypmp.private.blob.vercel-storage.com/altcoin-multitf-004/4ef3221cc3a63005a53ea86797270e4195eae97cdb3faba3c2a21e571f45647d.tar.gz",
+  "sha256": "4ef3221cc3a63005a53ea86797270e4195eae97cdb3faba3c2a21e571f45647d",
+  "size": 1540958671,
+  "archive_format": "tar.gz",
+  "historical_raw_manifest_sha256": "224f644989d569c4d9d647dc27aab58aaf1382db35a21e9cb6eeac0b380abe78"
+}

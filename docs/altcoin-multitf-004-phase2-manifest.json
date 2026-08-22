@@ -1,0 +1,49 @@
+{
+  "protocol_id": "ALT-MULTITF-004",
+  "phase": 2,
+  "status": "frozen",
+  "timeframe_groups": {
+    "short": {
+      "timeframes": ["5m", "15m", "30m"],
+      "momentum_bars": 12,
+      "volatility_bars": 24,
+      "trend_bars": 48,
+      "funding_publications": 3
+    },
+    "medium": {
+      "timeframes": ["1h", "2h", "4h"],
+      "momentum_bars": 6,
+      "volatility_bars": 12,
+      "trend_bars": 24,
+      "funding_publications": 3
+    },
+    "long": {
+      "timeframes": ["1d"],
+      "momentum_bars": 5,
+      "volatility_bars": 10,
+      "trend_bars": 20,
+      "funding_publications": 3
+    }
+  },
+  "availability": {
+    "bars": "close_time_ms <= decision_time_ms",
+    "funding": "publication_time_ms <= decision_time_ms",
+    "eligibility": "start_ms <= decision_time_ms < end_exclusive_ms",
+    "eligibility_before_ranking": true,
+    "incomplete_higher_timeframe_bars": "rejected upstream"
+  },
+  "ranking": {
+    "input": "normalized_momentum * trend - aligned_funding",
+    "order": "score descending, symbol ascending",
+    "deterministic": true
+  },
+  "forbidden": [
+    "symbol-specific parameters",
+    "parameter selection",
+    "portfolio construction execution",
+    "PnL",
+    "backtest",
+    "walk-forward",
+    "holdout reads"
+  ]
+}

@@ -5,7 +5,6 @@ __v0_jsx-dev-runtime.ts
 .snowflake/
 .v0-trash/
 .vercel/
-.artifacts/
 
 # Environment variables
 .env*.local
@@ -14,14 +13,8 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
-__pycache__/
-*.pyc
+
+# Reproducible research inputs remain local; manifests are committed.
 data/cache/
 data/normalized/
-data/altcoin-multitf-003/
-data/altcoin-multitf-004/
-data/altcoin-multitf-005/
-.alt-multitf-005/
-checkpoint-download/
-checkpoint.tar
-*.tar.gz
+reports/private/
