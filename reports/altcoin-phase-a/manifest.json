@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-21",
+  "holdout_loaded": false,
+  "protocol_id": "ALT-XSMOM-001-A",
+  "sha256": {
+    "docs/ALTCOIN_PROTOCOL.md": "5dbd1b184f5f16580cab529a1440c03dd03268eaa8bead509263a04fe32d558b",
+    "docs/HANDOFF.md": "6b9187b4c806743868df2298f1d4a77c805b0b92fe155acb6a52c0d11b63e81f",
+    "docs/roadmap.md": "f794de5b692bd3d7e8ff0c791954b6fab9ee2882577f6e260567477c0113fa36",
+    "reports/ALTCOIN_PHASE_A_DATA_AUDIT.md": "4e95f8189b9a8ab78f6a6d04a92243a445c9121cfa68eea1b527eba5e6593e27",
+    "reports/altcoin-phase-a/audit.json": "364fe90a3e86d93fadb2fe2d88a9e4ec886fe7ea68b503782504eea131c1deb0",
+    "research/altcoin_phase_a_audit.py": "caab954ce6613e478dfaecb13bf97411cf88bdc1234ccd16937654b5d0fe3b81",
+    "tests/test_altcoin_phase_a_audit.py": "9f714204becc2e1f6b63195a4536d179e59b2db9999f8b41c138304e984e32b6"
+  },
+  "strategy_or_pnl_computed": false,
+  "verdict": "STOP"
+}

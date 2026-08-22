@@ -1,0 +1,857 @@
+{
+  "evidence_label": "exploratory fixed-basket evidence with survivorship/selection bias",
+  "files": [
+    {
+      "kind": "klines",
+      "period": "2020-08",
+      "rows": 233,
+      "sha256": "0c16074431217211633c84b717b4900310e2e5673886c5c939e5d56a41d50f82"
+    },
+    {
+      "kind": "funding",
+      "period": "2020-08",
+      "rows": 35,
+      "sha256": "a0ff136ff0dc2e224289cb03893d21bdd53e6221988e8dbfdfddbccf08c72afd"
+    },
+    {
+      "kind": "klines",
+      "period": "2020-09",
+      "rows": 720,
+      "sha256": "9f7d1c39718c72a5fd989e87692c60b21b1188b9c0122d4f72a993f73cc9206e"
+    },
+    {
+      "kind": "funding",
+      "period": "2020-09",
+      "rows": 90,
+      "sha256": "fd3c596fd7d1f902c577172caa05d4494191a7e137910deb50ec48ca3e44d5d1"
+    },
+    {
+      "kind": "klines",
+      "period": "2020-10",
+      "rows": 744,
+      "sha256": "0050582582aea15a5efbe421f8d31da50dd74c3f70acfbe696ad73f058b426f9"
+    },
+    {
+      "kind": "funding",
+      "period": "2020-10",
+      "rows": 93,
+      "sha256": "a84a281496a23d889991d95975036ffa34bb31d532315624a9b0487191bc222f"
+    },
+    {
+      "kind": "klines",
+      "period": "2020-11",
+      "rows": 720,
+      "sha256": "86ae2fd16438c35733c05b132ecdc4b41e8a1e12767181dda377c009034a170f"
+    },
+    {
+      "kind": "funding",
+      "period": "2020-11",
+      "rows": 90,
+      "sha256": "6dc292559fe38178490d192d46b503015446d2b1910ac48953d7406672576611"
+    },
+    {
+      "kind": "klines",
+      "period": "2020-12",
+      "rows": 744,
+      "sha256": "de592e49ce3b82522c061a77f73ccb6afb2badb3465a9048318b13fc1ce3648d"
+    },
+    {
+      "kind": "funding",
+      "period": "2020-12",
+      "rows": 93,
+      "sha256": "afc807903eb609b53a81b2b1d2f37642c3d05bc5c9e15a0ff40009432aa7014d"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-01",
+      "rows": 744,
+      "sha256": "fae181340ad3f5731c382f4d49e3dd9a3814bf88470fd1bf2571a13d928e666a"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-01",
+      "rows": 93,
+      "sha256": "28c053b4b059f34d96cb4acd9eb2c93817db11db97a529e2de01d7af8fff5e7d"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-02",
+      "rows": 672,
+      "sha256": "f3a15712d6066e227aef3af67076aba95a3f1afa427b87ce85267d6790a4975d"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-02",
+      "rows": 84,
+      "sha256": "cd6dd0d8a4367ef92fd7f76b60ed37ff351bb9e21c764933e7ea4bb8dba45e7c"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-03",
+      "rows": 744,
+      "sha256": "21bbad18810061526e52f84a4a16dfb4083723232672410617f38a8bde0aab99"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-03",
+      "rows": 93,
+      "sha256": "527fa97f630d12ebfeebfb99c6cc99ae391b875f9a95347209e5b900737d7748"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-04",
+      "rows": 720,
+      "sha256": "39e8e364cd749e99d155a814691ab091d9d0e0ecaa7c6a645ae88e4c8d9bad33"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-04",
+      "rows": 90,
+      "sha256": "d16b613c44f9096aba506a247a63165c4bcb80e77dc22846057aba4df19b96d5"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-05",
+      "rows": 744,
+      "sha256": "62585af59fc3cef121fa131bddaf7275bf26a414eb310ec9940e371aac57895d"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-05",
+      "rows": 93,
+      "sha256": "82043d0ebfbf1fc1d41300837a6d125d31d90c90c141bfc7b080e1a40ba29799"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-06",
+      "rows": 720,
+      "sha256": "0ae301b029c5a8a4b96647f7d8cdef83ce82794038b8ebe3a2de9076d20116da"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-06",
+      "rows": 90,
+      "sha256": "04b5277a2fd88179db88392db5b07c7716e351f7174c632440543d9c8240f0f6"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-07",
+      "rows": 744,
+      "sha256": "e7fb99c34f4de59d26e1f6a58bb5e116e912134552a4b42eb2021becc755c408"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-07",
+      "rows": 93,
+      "sha256": "b744e8197b5868355ae7df7cfe435873b6a0465779e47ffed335a5fa6cf0279d"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-08",
+      "rows": 744,
+      "sha256": "50bf283caa28c35dc28a20e741cdd7cd8ca0c1127e786de61a05bf59acf058f6"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-08",
+      "rows": 93,
+      "sha256": "35a81a03a428b8b8f6fbd61343893af58e11479b832cea6c79761cd0f728f02c"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-09",
+      "rows": 720,
+      "sha256": "1bba1cda4c793926b5461bec3e182a9bd8858efeab9d9c3a6c507eae4058d3b4"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-09",
+      "rows": 90,
+      "sha256": "bb6ce598bb375d87faee5e5241c69d87a174087161b1d3c4c96f42bd7adfe0da"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-10",
+      "rows": 744,
+      "sha256": "30d0cc3b194300e9ac5a8f194ca2a1e9a2bf71baa4691c761870d176642bdd8c"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-10",
+      "rows": 93,
+      "sha256": "2cd1d37fb2733cd37a77d4d51e0378b5354e7d345e1bd892a4c992d251d13c3a"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-11",
+      "rows": 720,
+      "sha256": "33b901cceded295ad35d5cd8d9e14f95e2bc96598d743be254a1165e95f4ec94"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-11",
+      "rows": 90,
+      "sha256": "5f824b57c70255f367b1184d28cb8bbd264dd93f2c76a2867e5ef35159206b15"
+    },
+    {
+      "kind": "klines",
+      "period": "2021-12",
+      "rows": 744,
+      "sha256": "bb701e46b8c06df44cb740e70cc62ec3f76b3e06765562bc9e451c0a72bb2c60"
+    },
+    {
+      "kind": "funding",
+      "period": "2021-12",
+      "rows": 93,
+      "sha256": "c7543a16ad4e974f77fdc05e1ca80b9b4d202f958d32311a57816e8fb1e3bed5"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-01",
+      "rows": 744,
+      "sha256": "cec7929aa1d21568a39c85444253cc068da9b0b2bcadbbe2bd94e888b28617a6"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-01",
+      "rows": 93,
+      "sha256": "1897dda495a2a46058609df0bb866e06026daade549deae74664e02125df9add"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-02",
+      "rows": 672,
+      "sha256": "856244c60e1f218e45b8768a22539e1d0e3370a958fac38e518283b7da9be4f4"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-02",
+      "rows": 84,
+      "sha256": "bcd93e481e6d88d5e1024f2817af716130b98e956f7b07a2f059c7743f03fcb3"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-03",
+      "rows": 744,
+      "sha256": "dd3c1c3b087a6085ab0a0d6a3852437479a0c5d947358041a1fd90ff095440f8"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-03",
+      "rows": 93,
+      "sha256": "6043a1f6ef9d7a54d3235b924ddf254b72014d60a0621f0477ecfd5e4879bd97"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-04",
+      "rows": 720,
+      "sha256": "518285d02277eeac66aa39e23b1d6b1345ab380fbd7283268ed04cc5275f58c5"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-04",
+      "rows": 90,
+      "sha256": "3614b0b9d31e57ecd654c13ddf339606393f210e344d0fbceedc0d14ebc1d5be"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-05",
+      "rows": 744,
+      "sha256": "084dc436b374c1de084fadb9dde497282ca1e60dacdd15e3bcebe463aa59fb55"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-05",
+      "rows": 93,
+      "sha256": "9308b8db20165b762e1d1cbc0a38795877c5de015d25978d15de2b29aa907037"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-06",
+      "rows": 720,
+      "sha256": "982b313d5f7fa032b0265c576d72e54cccfd79d7afdb0e5d07bd7b79fb0b527c"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-06",
+      "rows": 90,
+      "sha256": "ee05cae5829be4f0827b667870080a05425b12ef7631bb34b0990c811806574c"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-07",
+      "rows": 744,
+      "sha256": "42f2136e1484716773f609c282761634c36549d8eacd7189404b8401da5dacda"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-07",
+      "rows": 93,
+      "sha256": "fc87f7250f9e17136289167eee5ce7025a48cb6d83f31165da74f13e0c522cfa"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-08",
+      "rows": 744,
+      "sha256": "3b43ecb09aa33a1adac71accaabf5a74bf073d6618ebc20de2b2f35e12ec4642"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-08",
+      "rows": 93,
+      "sha256": "3883040d1bccb5ed239de1a19c9f5d052b2764bd458831d9962be0152d38ccc3"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-09",
+      "rows": 720,
+      "sha256": "0cbc4f9a002e944359f449d342feb306c69a8f69aa444ae692f16570d222cf00"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-09",
+      "rows": 90,
+      "sha256": "6ecf0e91c0dda8f9a795a43b1bf87f41950c21b316b610117d0f1a575aba8fc3"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-10",
+      "rows": 744,
+      "sha256": "288961a1fa6b06a6e0e228ebb99411c3586a82f50367c8c754bbab89dca415c0"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-10",
+      "rows": 93,
+      "sha256": "d7bd357f7e6cb86ae6f7cd051346458712dd42218cff216e35c0c1063a41cb23"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-11",
+      "rows": 720,
+      "sha256": "6ad04a334e4490b0ff25de2ccf71f21b84615c8d70b8365c4cdd26b3d2a87718"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-11",
+      "rows": 90,
+      "sha256": "aff5174cec6876c69881bbc689b3d6fdd35b1f7c55ad58ae6d779347119f1fce"
+    },
+    {
+      "kind": "klines",
+      "period": "2022-12",
+      "rows": 744,
+      "sha256": "ef40fcbf90abb570f86f67a40309bb329d122613e1e9d534e173fd224e6aa922"
+    },
+    {
+      "kind": "funding",
+      "period": "2022-12",
+      "rows": 93,
+      "sha256": "64a93d3299b70d5bb1c459bd1c53d0ffa34c33174db9f924aa0b8f34b924a15d"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-01",
+      "rows": 744,
+      "sha256": "ecfcf32032d1860a95fcf54bdefc790b82a69a3ff4227ccf3c8a242609d95c16"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-01",
+      "rows": 93,
+      "sha256": "daf6986e3669fcea3cca406ef72751ef3b25d25d2a5a029a23397a398d78d133"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-02",
+      "rows": 672,
+      "sha256": "22b6158abeb569f696483242e92eafded57ba48b4951d89f43959555aedbd49b"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-02",
+      "rows": 84,
+      "sha256": "0dcf3c70f2a781c6b8f325f4a523e4fda651ebc18595a0ef20ea72d87a074f8d"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-03",
+      "rows": 744,
+      "sha256": "5cdefbf291eb4d4dc0149874f1c7f551977d2231f1462ffc28d6030aad049d08"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-03",
+      "rows": 93,
+      "sha256": "cd9c8d94f18c9780b9152ddf6ac26ab1147981190b704e912958ebbb97572e4e"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-04",
+      "rows": 720,
+      "sha256": "8909769aff23a52fa78606f220cfa45b8c8e4ff4c2558f5d589510f5e1f01bf3"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-04",
+      "rows": 90,
+      "sha256": "fcd6555f958b0cdcb62954893e4b1884e66727e7521c83af7be25ac5de78c5a1"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-05",
+      "rows": 744,
+      "sha256": "12fad57aa3559de433abe1ba11714713421cef3fa01d632cb5ac5327e6c3a2ba"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-05",
+      "rows": 93,
+      "sha256": "f27f079f18c894f78eaa09790fa93584e5d2b610bb6f788600d5ba56c4d69b6f"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-06",
+      "rows": 720,
+      "sha256": "71846947f273ae757dcb3d040762c53a0f0c62602db52bfe5688c4477b0d6ccc"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-06",
+      "rows": 90,
+      "sha256": "e29d828cbea7eed708ec9728c94b4fc1fb72e82495def596d978902e8c9e636f"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-07",
+      "rows": 744,
+      "sha256": "8cef7abe18eb5da7495ae1e65d5fb5e275d8f03307e94b8d595c85c42a89974e"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-07",
+      "rows": 93,
+      "sha256": "3b0bc3e552ed8e2c7c5221cb1d778c0e92a0df569a9f1c44fab462bf775b7678"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-08",
+      "rows": 744,
+      "sha256": "ee1ae2b52767c16717bfc803aa4d44b31a7ef75c9e58071e24b2c3f8c98806a6"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-08",
+      "rows": 93,
+      "sha256": "fc5685bd3ec2a6af0ff73e418c0b12c08af9d93ffe1d8e9e515bb4b15aa02415"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-09",
+      "rows": 720,
+      "sha256": "d70b4bbd4ea9e2c28ec7d06110c068fcdded2019d804d99e71d97af6932c1a57"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-09",
+      "rows": 90,
+      "sha256": "98c4c054fb1121b14a5b319a04d1eb5b4f89678a1b8dcc9416b8c639dbb9317d"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-10",
+      "rows": 744,
+      "sha256": "e42ce9863efd5979ca5ba7780d5ca5b8aa1cc7751c728c8a6796c88932a53a10"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-10",
+      "rows": 93,
+      "sha256": "092f39c279742fcf21ac6b136ca68d7c690d8d4f7811c8f4c31bf951dc9ff3d0"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-11",
+      "rows": 720,
+      "sha256": "0f5b39535230b0160c315a12057498ddc2b85b54e3b00d109c5e211f04c58449"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-11",
+      "rows": 90,
+      "sha256": "3f0ba50e441a17e403f16510b0ea147625f531512f4bd1bbaa73fe7d9515973c"
+    },
+    {
+      "kind": "klines",
+      "period": "2023-12",
+      "rows": 744,
+      "sha256": "69a1b0797dbc42193681cd8bf744a68d8bf32c71f8cf78a720c474531ef77a39"
+    },
+    {
+      "kind": "funding",
+      "period": "2023-12",
+      "rows": 93,
+      "sha256": "a2c0ba437d9b6159ecf95bf27eafe36f61650e9923d0a5f22858644525e4be22"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-01",
+      "rows": 744,
+      "sha256": "500174607a3d855efaf95ff4aefb9e6d4178882dbcd80bb636ac06b6c0ab1845"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-01",
+      "rows": 93,
+      "sha256": "dcd4a6511fcc216baa9988abae0d18f3598fd6ac79bc1fe5dfcdc3058434037d"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-02",
+      "rows": 696,
+      "sha256": "1ea3620204eb317fb060658add5f6b26ac97d4197e79d070550ef5deb1f579c7"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-02",
+      "rows": 87,
+      "sha256": "2603545e0b07eba3261a607fa192f202da773faa32160133f046ab834a9512ee"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-03",
+      "rows": 744,
+      "sha256": "552306a47166be16e4a3a81fab7298b0f93506ec2cc1f42d853e1a31c98fcaa9"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-03",
+      "rows": 93,
+      "sha256": "cf0a7894adef77805c61c4517d0cbfac78665f1fcccbacd52fa0707a502ce670"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-04",
+      "rows": 720,
+      "sha256": "08ef0809d708bfcc1c07a840e50b4192c0c07ee9c1d19dacdc4583a2a2b048aa"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-04",
+      "rows": 90,
+      "sha256": "13e20d6bf20678f934978c92edfb900cda9fea4f1e342040af4499f64bdad2d4"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-05",
+      "rows": 744,
+      "sha256": "304618b2342ab12a4b90d3df1b4d65bf9f915dd25d4b8b5192ecec695240b115"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-05",
+      "rows": 93,
+      "sha256": "a9302fe44977b81cfff1d96ee211191c4eeceda21170c3fd074a06ebf899f52e"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-06",
+      "rows": 720,
+      "sha256": "ec11c17e5beb6525e313e617d34ddd1df707e29a09907103bc41bb32b1842f51"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-06",
+      "rows": 90,
+      "sha256": "74c807aa155ced4a09f35881c9cd14d749eba85fa881015b0bfbe51d83d0980a"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-07",
+      "rows": 744,
+      "sha256": "290a5356b0d43c29343fbf19277e0b3ae2ea9a682da42367fb0bf97229eb28b4"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-07",
+      "rows": 93,
+      "sha256": "7090fa6a4897521868240ab89b66effef5b91f955cf15f2decb9f7566e1859d0"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-08",
+      "rows": 744,
+      "sha256": "bc53ee71debd7d1bd68385817f1be9c79562511475307d508048ac4e1065bd24"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-08",
+      "rows": 93,
+      "sha256": "b586d2d240bdaeea90583e2d17bd93ea34d91e192b50334ef01f5a3a9895f331"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-09",
+      "rows": 720,
+      "sha256": "46ed5d6f41924d40fca00f36c422e2e116a916e13626ac34f281bc19db1aaa0c"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-09",
+      "rows": 90,
+      "sha256": "2d707e7208463b4fa1a648d824744582b1d8fd18f25870a620035e24a544333a"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-10",
+      "rows": 744,
+      "sha256": "5d7a4c8f111b97154ac26125af906c5d1e686d982bea369e48b7c399aee0e3a2"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-10",
+      "rows": 93,
+      "sha256": "8d02c52c75cbc6231cd64507ba544497d024dd8a6a50ff4dc85e837fc8e58213"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-11",
+      "rows": 720,
+      "sha256": "785dcad37a68cf3a26cd0c4d7281749936e866a3f765e0c985cb991d4f900c1b"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-11",
+      "rows": 90,
+      "sha256": "af1b00d617b7221fe77cb2d2e297a10f74d91d0924e0456214d2469de47e8763"
+    },
+    {
+      "kind": "klines",
+      "period": "2024-12",
+      "rows": 744,
+      "sha256": "2533eab6851c38fd9ced1e29b94d1dd79bbc9a30c8746d5b5a8c7a69ef9b55b5"
+    },
+    {
+      "kind": "funding",
+      "period": "2024-12",
+      "rows": 93,
+      "sha256": "d43a9805d9674591a21710503f9a18a2bead6ad665ce224608d483d9a1fe600d"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-01",
+      "rows": 744,
+      "sha256": "210f92b2b3e705272085061161447bda7840374c6599395c82ea518147f9a700"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-01",
+      "rows": 93,
+      "sha256": "b226f044688e19eb612fdef1ebd176cc0b53a74b59b5038ea1518c9ee6ada1bb"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-02",
+      "rows": 672,
+      "sha256": "e2040ee79a9619d38656b37c354bab84618aeeee259c0d57b5efdf00e5d7b259"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-02",
+      "rows": 84,
+      "sha256": "549b7c16c6144d2e38a190abd66a04d683ad306e1c210237242d20de709e0165"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-03",
+      "rows": 744,
+      "sha256": "d82b05b8a6adf12131fcb2fa4215cb573ebbf6fc3cf99806557030554baccfc7"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-03",
+      "rows": 93,
+      "sha256": "d483c0852c51f4ca6ec92fd28d1152a0c4dd57e9aa8184583e245218866fa692"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-04",
+      "rows": 720,
+      "sha256": "9671cf800f16b795eafad8ab6db79cf7a73fe0fb277115452481167b0678e9f7"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-04",
+      "rows": 90,
+      "sha256": "5b40f75448bacec8a9ae7eb22d083f8c6d3c7900ea31e5a441daa8d5e29072ce"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-05",
+      "rows": 744,
+      "sha256": "168b775035dcafcca3c35a2cc51e62bdf01e53bd2123d182bc5c6be0ace17613"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-05",
+      "rows": 93,
+      "sha256": "1d7a8909d74169ce338195da7f1a56da5417ac6f08df24e3690a87a15cdbcaf7"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-06",
+      "rows": 720,
+      "sha256": "9ab765c4d91da288a8537681a6d55c9c275f37b82b6a66546b1b538042ccbade"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-06",
+      "rows": 90,
+      "sha256": "e5f8e1fcbddf08273ccf9e35de972049183f0cb4ae07fedfec91b626abfcd95b"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-07",
+      "rows": 744,
+      "sha256": "16929280b5886bad9d995b0ceb38e07579c56c2cf703c7877854306b13188b94"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-07",
+      "rows": 93,
+      "sha256": "3753fd6e7ee8b29f6be536496d28de9dd8d9b4dfc5a324504225fa095f37e80b"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-08",
+      "rows": 744,
+      "sha256": "d45303411c16c64c9cd98d5905697196a27229db5563cf2e0450fec283c3b5d7"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-08",
+      "rows": 93,
+      "sha256": "d0a1f1ac7dd630cea38589a6d049e5bac7af9d65ad23e84da75a1652a3a54ed1"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-09",
+      "rows": 720,
+      "sha256": "7ed87f0f9f8a9a064ab77711715ee6311400b8ec3bda04943c3a5781b25c6fc3"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-09",
+      "rows": 90,
+      "sha256": "2f57f9596fdb060cb4233b90688ce804046040d944027a2b6a2e4bafd9df3a20"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-10",
+      "rows": 744,
+      "sha256": "49e6916b2629c1918908abc5eed11f1183cb5d928a11bed80434b7aa22537309"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-10",
+      "rows": 93,
+      "sha256": "60b3830b6269e2d80698d21a8226bcf11af3d67256a31bcee0267c3280dc8689"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-11",
+      "rows": 720,
+      "sha256": "4133ae7f35555597623942e45d37596bd91d6b93a96993ac61358a7e62ae0428"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-11",
+      "rows": 90,
+      "sha256": "eef8656cd63a8b278ff0285d81373381186cebe7af82a99d9d204e118ce23b08"
+    },
+    {
+      "kind": "klines",
+      "period": "2025-12",
+      "rows": 744,
+      "sha256": "78ccdcf6885c881cfeccd61072b73f27dd7c73e134111661cf9a17d803f83783"
+    },
+    {
+      "kind": "funding",
+      "period": "2025-12",
+      "rows": 93,
+      "sha256": "8a28a6e22be8c34f99001e05c05fae14adf1c341dd7ecef788a451c4c89f09a9"
+    }
+  ],
+  "funding_rows": 5879,
+  "holdout_start": "2026-01-01T00:00:00Z",
+  "interval": "1h",
+  "missing_funding_months": [
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07"
+  ],
+  "missing_kline_months": [
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11",
+    "2019-12",
+    "2020-01",
+    "2020-02",
+    "2020-03",
+    "2020-04",
+    "2020-05",
+    "2020-06",
+    "2020-07"
+  ],
+  "months_with_funding": 65,
+  "months_with_klines": 65,
+  "open_interest": {
+    "available": false,
+    "reason": "no point-in-time-safe complete OI history; recorded as a limitation, not reconstructed"
+  },
+  "protocol_id": "ALT-XSMOM-001-B",
+  "quality": {
+    "coverage": 1.0,
+    "duplicates": 0,
+    "expected_bars": 46985,
+    "first_iso": "2020-08-22T07:00:00Z",
+    "first_ts": 1598079600000,
+    "holdout_rows": 0,
+    "interior_gaps": 0,
+    "invalid_ohlc": 0,
+    "last_iso": "2025-12-31T23:00:00Z",
+    "last_ts": 1767222000000,
+    "missing_bars": 0,
+    "monotonic": true,
+    "negative_quote_volume": 0,
+    "off_grid_timestamps": 0,
+    "rows": 46985
+  },
+  "requested_months": 84,
+  "source": "Binance Vision USD-M monthly archives",
+  "symbol": "DOTUSDT"
+}

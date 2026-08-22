@@ -1,0 +1,43 @@
+{
+  "blocking_findings": [
+    "A complete dated pre-HOLDOUT USD-M perpetual registry is not committed or otherwise available to this audit.",
+    "Starting from the current exchange roster would omit historical delistings and use post-HOLDOUT information.",
+    "Archive URLs are symbol-addressed, so archive coverage alone cannot prove that omitted symbols do not exist.",
+    "Point-in-time Top 30 membership cannot be certified until the historical registry is independently supplied."
+  ],
+  "coverage": {
+    "delisted_contract_discovery": "unavailable",
+    "funding": "potentially available with symbol/month gaps to audit",
+    "historical_contract_registry": "unavailable",
+    "klines": "potentially available only for a pre-established symbol registry",
+    "open_interest": "complete point-in-time history unavailable",
+    "quote_volume": "available in kline archives only for a pre-established symbol registry"
+  },
+  "generated_at": "2026-08-21",
+  "holdout_loaded": false,
+  "holdout_start": "2026-01-01T00:00:00Z",
+  "network_requests_made": 0,
+  "next_required_input": "A complete independently sourced, dated pre-2026 contract lifecycle registry including delisted USD-M perpetuals; then rerun Phase A only.",
+  "phase": "ALTCOIN_PHASE_A",
+  "protocol_id": "ALT-XSMOM-001-A",
+  "sources_assessed": [
+    {
+      "availability": "symbol-addressed archives can verify coverage after a symbol is known",
+      "limitation": "the existing downloader has no point-in-time complete listing/delisting registry",
+      "source": "Binance Vision USD-M monthly klines and funding archives"
+    },
+    {
+      "availability": "current metadata only",
+      "limitation": "retrieving it now is post-HOLDOUT and cannot recover omitted delisted contracts",
+      "source": "Binance USD-M exchangeInfo/current roster"
+    },
+    {
+      "availability": "not present as a complete project history",
+      "limitation": "cannot support a historical OI eligibility filter",
+      "source": "Open interest history"
+    }
+  ],
+  "strategy_or_pnl_computed": false,
+  "survivorship_risk": "material and unresolved",
+  "verdict": "STOP"
+}

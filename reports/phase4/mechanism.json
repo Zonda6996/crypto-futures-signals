@@ -1,0 +1,629 @@
+{
+  "calibration": {
+    "rv_median": 0.03188585280881554,
+    "threshold": 0.011212620517575989
+  },
+  "calibration_source": "TRAIN only",
+  "candidate": {
+    "feature": "vwap_distance_24",
+    "horizon": 24,
+    "regime": "bear",
+    "side": 1,
+    "stop_atr": 1.5,
+    "take_atr": 2.0,
+    "threshold_q": 0.75,
+    "volatility": "high"
+  },
+  "cohorts": {
+    "all_ready": {
+      "forward_returns": {
+        "1": {
+          "mean": -0.00023499089881937505,
+          "median": -0.00014969835780909158,
+          "observations": 1401,
+          "positive_rate": 0.483226266952177
+        },
+        "12": {
+          "mean": 0.0007531905700025983,
+          "median": 0.0003488015971142566,
+          "observations": 1401,
+          "positive_rate": 0.5110635260528195
+        },
+        "24": {
+          "mean": 0.0016978719626382086,
+          "median": 0.0004715498270984053,
+          "observations": 1401,
+          "positive_rate": 0.510349750178444
+        },
+        "4": {
+          "mean": 0.0006390077790745974,
+          "median": 0.00033065309821944666,
+          "observations": 1401,
+          "positive_rate": 0.5124910778015703
+        },
+        "8": {
+          "mean": 0.0007537120834411655,
+          "median": 4.9505358955093115e-05,
+          "observations": 1401,
+          "positive_rate": 0.5017844396859387
+        }
+      },
+      "non_overlapping_observations": 1401,
+      "raw_observations": 35010,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": -0.0157801073823989,
+          "median": -0.21921253256006956,
+          "observations": 1401,
+          "positive_rate": 0.3390435403283369
+        },
+        "btc_return_24": {
+          "mean": 0.0016775889532719022,
+          "median": 0.0006963095593355284,
+          "observations": 1401,
+          "positive_rate": 0.5267665952890792
+        },
+        "funding": {
+          "mean": 0.00013554043540328338,
+          "median": 0.0001,
+          "observations": 1401,
+          "positive_rate": 0.8679514632405425
+        },
+        "relative_strength_24": {
+          "mean": 0.0005951611513848195,
+          "median": -0.0015489033552926745,
+          "observations": 1401,
+          "positive_rate": 0.45895788722341185
+        },
+        "rv_24": {
+          "mean": 0.03484624549244854,
+          "median": 0.029954857651162684,
+          "observations": 1401,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.009270056992105875,
+          "median": -0.009923114845001225,
+          "observations": 1401,
+          "positive_rate": 0.3426124197002141
+        },
+        "vwap_distance_24": {
+          "mean": 0.0014816263695957305,
+          "median": 0.0008223059496816898,
+          "observations": 1401,
+          "positive_rate": 0.5239114917915775
+        }
+      }
+    },
+    "bear": {
+      "forward_returns": {
+        "1": {
+          "mean": -0.0006234516645675157,
+          "median": 0.0005414990693716204,
+          "observations": 768,
+          "positive_rate": 0.546875
+        },
+        "12": {
+          "mean": 0.0015554676916919947,
+          "median": 0.0022517969427809925,
+          "observations": 768,
+          "positive_rate": 0.56640625
+        },
+        "24": {
+          "mean": 0.0028978470955557775,
+          "median": 0.004164233829638153,
+          "observations": 768,
+          "positive_rate": 0.57421875
+        },
+        "4": {
+          "mean": -0.0005425899041967276,
+          "median": 0.0010535024933012727,
+          "observations": 768,
+          "positive_rate": 0.5481770833333334
+        },
+        "8": {
+          "mean": 0.000249367710780182,
+          "median": 0.001789492939918147,
+          "observations": 768,
+          "positive_rate": 0.5611979166666666
+        }
+      },
+      "non_overlapping_observations": 768,
+      "raw_observations": 10499,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": 0.5455576769696813,
+          "median": 0.11007445823425943,
+          "observations": 768,
+          "positive_rate": 0.56640625
+        },
+        "btc_return_24": {
+          "mean": -0.021666150249237306,
+          "median": -0.015487160693480162,
+          "observations": 768,
+          "positive_rate": 0.0
+        },
+        "funding": {
+          "mean": 0.0001386034765625,
+          "median": 0.0001,
+          "observations": 768,
+          "positive_rate": 0.8697916666666666
+        },
+        "relative_strength_24": {
+          "mean": 0.0005906575728159351,
+          "median": -0.0016345271208685341,
+          "observations": 768,
+          "positive_rate": 0.4609375
+        },
+        "rv_24": {
+          "mean": 0.037188931204865605,
+          "median": 0.03189237123160853,
+          "observations": 768,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.02009384700005639,
+          "median": -0.01927699978972606,
+          "observations": 768,
+          "positive_rate": 0.14453125
+        },
+        "vwap_distance_24": {
+          "mean": -0.013123725899668776,
+          "median": -0.01159490070439112,
+          "observations": 768,
+          "positive_rate": 0.14322916666666666
+        }
+      }
+    },
+    "bear_high": {
+      "forward_returns": {
+        "1": {
+          "mean": -0.00027657932936430075,
+          "median": 0.00041876777581961733,
+          "observations": 467,
+          "positive_rate": 0.5310492505353319
+        },
+        "12": {
+          "mean": 0.0021846660061264223,
+          "median": 0.004277239796061316,
+          "observations": 467,
+          "positive_rate": 0.5802997858672377
+        },
+        "24": {
+          "mean": 0.0046848049880636854,
+          "median": 0.00527231507354875,
+          "observations": 467,
+          "positive_rate": 0.563169164882227
+        },
+        "4": {
+          "mean": 4.633694968424847e-06,
+          "median": 0.001789473684210563,
+          "observations": 467,
+          "positive_rate": 0.5374732334047109
+        },
+        "8": {
+          "mean": 0.0009195726866903617,
+          "median": 0.003296210273799227,
+          "observations": 467,
+          "positive_rate": 0.563169164882227
+        }
+      },
+      "non_overlapping_observations": 467,
+      "raw_observations": 6410,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": 0.8260745398754896,
+          "median": 0.3453392248017908,
+          "observations": 467,
+          "positive_rate": 0.6509635974304069
+        },
+        "btc_return_24": {
+          "mean": -0.02737347886773721,
+          "median": -0.019986507758039118,
+          "observations": 467,
+          "positive_rate": 0.0
+        },
+        "funding": {
+          "mean": 0.00016376111349036403,
+          "median": 0.0001,
+          "observations": 467,
+          "positive_rate": 0.8479657387580299
+        },
+        "relative_strength_24": {
+          "mean": -0.0002511475509478516,
+          "median": -0.004375137991814215,
+          "observations": 467,
+          "positive_rate": 0.41113490364025695
+        },
+        "rv_24": {
+          "mean": 0.048182349458682744,
+          "median": 0.040875060951247384,
+          "observations": 467,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.021275824673135737,
+          "median": -0.020169958162568297,
+          "observations": 467,
+          "positive_rate": 0.14775160599571735
+        },
+        "vwap_distance_24": {
+          "mean": -0.01692599044169622,
+          "median": -0.017268141193119257,
+          "observations": 467,
+          "positive_rate": 0.1777301927194861
+        }
+      }
+    },
+    "bear_high_not_extended": {
+      "forward_returns": {
+        "1": {
+          "mean": -0.0004618924692898704,
+          "median": 0.00029594554601941603,
+          "observations": 451,
+          "positive_rate": 0.5232815964523282
+        },
+        "12": {
+          "mean": 0.001377979685696014,
+          "median": 0.003552432474558165,
+          "observations": 451,
+          "positive_rate": 0.5764966740576497
+        },
+        "24": {
+          "mean": 0.005294421461431732,
+          "median": 0.005781472726146042,
+          "observations": 451,
+          "positive_rate": 0.5698447893569845
+        },
+        "4": {
+          "mean": 0.0007280063637381038,
+          "median": 0.0019625475048079544,
+          "observations": 451,
+          "positive_rate": 0.5454545454545454
+        },
+        "8": {
+          "mean": 0.0007428052880983835,
+          "median": 0.0032940737748221594,
+          "observations": 451,
+          "positive_rate": 0.5609756097560976
+        }
+      },
+      "non_overlapping_observations": 451,
+      "raw_observations": 5807,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": 0.8543041560300144,
+          "median": 0.3858410739966507,
+          "observations": 451,
+          "positive_rate": 0.6674057649667405
+        },
+        "btc_return_24": {
+          "mean": -0.027448034843630655,
+          "median": -0.020203328142224697,
+          "observations": 451,
+          "positive_rate": 0.0
+        },
+        "funding": {
+          "mean": 0.00016484452328159645,
+          "median": 0.0001,
+          "observations": 451,
+          "positive_rate": 0.8492239467849224
+        },
+        "relative_strength_24": {
+          "mean": -0.0015502601257433681,
+          "median": -0.004505094545423138,
+          "observations": 451,
+          "positive_rate": 0.4035476718403548
+        },
+        "rv_24": {
+          "mean": 0.04790843436102984,
+          "median": 0.04044635955554214,
+          "observations": 451,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.02167968051285233,
+          "median": -0.02047507065754843,
+          "observations": 451,
+          "positive_rate": 0.1419068736141907
+        },
+        "vwap_distance_24": {
+          "mean": -0.019271095934277695,
+          "median": -0.017986046439818493,
+          "observations": 451,
+          "positive_rate": 0.13747228381374724
+        }
+      }
+    },
+    "extended_other_regime": {
+      "forward_returns": {
+        "1": {
+          "mean": 0.00048024073721856457,
+          "median": -0.0005399788678540629,
+          "observations": 451,
+          "positive_rate": 0.4678492239467849
+        },
+        "12": {
+          "mean": 0.003555744485683684,
+          "median": 0.0015220409115419553,
+          "observations": 451,
+          "positive_rate": 0.5299334811529933
+        },
+        "24": {
+          "mean": 0.004871057768721421,
+          "median": 0.0019916320575565916,
+          "observations": 451,
+          "positive_rate": 0.5254988913525499
+        },
+        "4": {
+          "mean": 0.0008396375256699188,
+          "median": -0.0005580558055805485,
+          "observations": 451,
+          "positive_rate": 0.4789356984478936
+        },
+        "8": {
+          "mean": 0.0022579818167320397,
+          "median": 0.0018196270981138962,
+          "observations": 451,
+          "positive_rate": 0.5388026607538803
+        }
+      },
+      "non_overlapping_observations": 451,
+      "raw_observations": 5292,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": 0.6464791216648047,
+          "median": 0.1896083207870154,
+          "observations": 451,
+          "positive_rate": 0.6097560975609756
+        },
+        "btc_return_24": {
+          "mean": 0.019831414783452392,
+          "median": 0.012073906734098472,
+          "observations": 451,
+          "positive_rate": 0.7405764966740577
+        },
+        "funding": {
+          "mean": 0.00017140461197339245,
+          "median": 0.0001,
+          "observations": 451,
+          "positive_rate": 0.8270509977827051
+        },
+        "relative_strength_24": {
+          "mean": 0.006042898658058735,
+          "median": 0.003036650809082886,
+          "observations": 451,
+          "positive_rate": 0.5454545454545454
+        },
+        "rv_24": {
+          "mean": 0.05043111570403077,
+          "median": 0.04333889394043313,
+          "observations": 451,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.0029281803336326366,
+          "median": -0.002718752460960964,
+          "observations": 451,
+          "positive_rate": 0.4434589800443459
+        },
+        "vwap_distance_24": {
+          "mean": 0.02527810272655389,
+          "median": 0.020971658450783526,
+          "observations": 451,
+          "positive_rate": 1.0
+        }
+      }
+    },
+    "full_signal": {
+      "forward_returns": {
+        "1": {
+          "mean": 0.0013115755654925306,
+          "median": 0.0005329741610822225,
+          "observations": 153,
+          "positive_rate": 0.5098039215686274
+        },
+        "12": {
+          "mean": 0.003206922505756893,
+          "median": 0.004342090189832559,
+          "observations": 153,
+          "positive_rate": 0.5555555555555556
+        },
+        "24": {
+          "mean": -0.00017615517081487087,
+          "median": 0.0015557616765271565,
+          "observations": 153,
+          "positive_rate": 0.5228758169934641
+        },
+        "4": {
+          "mean": 0.0008366743890675522,
+          "median": -2.8970322318966346e-05,
+          "observations": 153,
+          "positive_rate": 0.49673202614379086
+        },
+        "8": {
+          "mean": 0.001748633516474491,
+          "median": 0.0032003911589193468,
+          "observations": 153,
+          "positive_rate": 0.5686274509803921
+        }
+      },
+      "non_overlapping_observations": 153,
+      "raw_observations": 603,
+      "state_proxies": {
+        "abnormal_volume_24": {
+          "mean": 0.12113922269290031,
+          "median": -0.14081858921479984,
+          "observations": 153,
+          "positive_rate": 0.43137254901960786
+        },
+        "btc_return_24": {
+          "mean": -0.02797098878685386,
+          "median": -0.02154814366367719,
+          "observations": 153,
+          "positive_rate": 0.0
+        },
+        "funding": {
+          "mean": 0.0002322973202614379,
+          "median": 0.0001,
+          "observations": 153,
+          "positive_rate": 0.8431372549019608
+        },
+        "relative_strength_24": {
+          "mean": 0.01885888120325066,
+          "median": 0.011040733415838666,
+          "observations": 153,
+          "positive_rate": 0.6928104575163399
+        },
+        "rv_24": {
+          "mean": 0.06593150445194203,
+          "median": 0.055788527815190773,
+          "observations": 153,
+          "positive_rate": 1.0
+        },
+        "taker_imbalance_24": {
+          "mean": -0.017332855297574983,
+          "median": -0.014623483610386926,
+          "observations": 153,
+          "positive_rate": 0.16993464052287582
+        },
+        "vwap_distance_24": {
+          "mean": 0.01928829475763832,
+          "median": 0.015583807807784344,
+          "observations": 153,
+          "positive_rate": 1.0
+        }
+      }
+    }
+  },
+  "data_quality": {
+    "BTCUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    },
+    "ETHUSDT": {
+      "duplicates": 0,
+      "gaps": 0,
+      "invalid_ohlc": 0,
+      "monotonic": true,
+      "rows": 43824
+    }
+  },
+  "full_signal_24h_comparisons": {
+    "all_ready": {
+      "ci95": [
+        -0.011817879714264786,
+        0.007696700428242905
+      ],
+      "difference": -0.0018740271334530794,
+      "probability_positive": 0.3404
+    },
+    "bear_high": {
+      "ci95": [
+        -0.01574344582597705,
+        0.005698467629598443
+      ],
+      "difference": -0.004860960158878556,
+      "probability_positive": 0.1826
+    },
+    "bear_high_not_extended": {
+      "ci95": [
+        -0.016522956027467076,
+        0.005090416053799335
+      ],
+      "difference": -0.005470576632246603,
+      "probability_positive": 0.1586
+    },
+    "extended_other_regime": {
+      "ci95": [
+        -0.015269154290278296,
+        0.005204509563046345
+      ],
+      "difference": -0.005047212939536292,
+      "probability_positive": 0.1702
+    }
+  },
+  "interpretation_guardrail": "This phase tests whether conditional price paths fit a plausible continuation mechanism. It does not reselect parameters and cannot validate an edge.",
+  "method": {
+    "controls": {
+      "all_ready": "All causally ready observations in TRAIN+VALIDATION.",
+      "bear_high": "All high-volatility BTC-bear observations, including signal observations.",
+      "bear_high_not_extended": "Same BTC bear and high-volatility state, but ETH below the frozen VWAP-distance threshold.",
+      "extended_other_regime": "Same ETH extension and high volatility, but BTC is not in the bear regime."
+    },
+    "event_sampling": "At most one event every 25 bars within each cohort to reduce overlapping forward paths.",
+    "inference": "Deterministic 5,000-draw independent-event bootstrap; descriptive, not proof after candidate selection.",
+    "path_execution": "Signal at closed bar i; hypothetical entry at i+1 open; exits at future closes."
+  },
+  "phase": "phase-4-economic-mechanism",
+  "scope": {
+    "available_indices": [
+      0,
+      35059
+    ],
+    "sealed_test_starts_at": 35059,
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "timeframe": "1h",
+    "years": [
+      2021,
+      2025
+    ]
+  },
+  "strategy_with_frozen_exits_and_0_10pct_cost": {
+    "cost_total_return": 0.185,
+    "exit_counts": {
+      "stop": 79,
+      "take": 75,
+      "time": 31
+    },
+    "funding_total_return": -0.0368221,
+    "metrics": {
+      "average_holding_bars": 11.35135135135135,
+      "average_loss": -0.03019842103016694,
+      "average_win": 0.033662918144850805,
+      "expectancy": 0.001904846771328466,
+      "expectancy_ci95": [
+        -0.0034261268314577198,
+        0.007235820374114651
+      ],
+      "expectancy_r": 0.08858040029945596,
+      "max_drawdown": -0.3598923469139431,
+      "max_drawdown_r": -8.864700958846882,
+      "p_value": 0.24185710053010606,
+      "profit_factor": 1.126841015794853,
+      "sharpe": 1.4342634916913435,
+      "threshold": 0.011212620517575989,
+      "total_r": 16.387374055399352,
+      "total_return": 0.2544403898810512,
+      "trades": 185,
+      "win_rate": 0.5027027027027027
+    },
+    "result_r_by_exit": {
+      "stop": {
+        "mean": -1.0425960885708658,
+        "median": -1.0410316569788465,
+        "observations": 79,
+        "positive_rate": 0.0
+      },
+      "take": {
+        "mean": 1.287753267962969,
+        "median": 1.2933540906810428,
+        "observations": 75,
+        "positive_rate": 1.0
+      },
+      "time": {
+        "mean": 0.07003128887984084,
+        "median": 0.14253367398747638,
+        "observations": 31,
+        "positive_rate": 0.5806451612903226
+      }
+    }
+  },
+  "test_opened": false
+}

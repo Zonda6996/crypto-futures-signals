@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "decision_time_ms": 1767139200000,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "5m"
+    },
+    {
+      "decision_time_ms": 1767225599999,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "5m"
+    },
+    {
+      "decision_time_ms": 1767139200000,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "1h"
+    },
+    {
+      "decision_time_ms": 1767225599999,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "1h"
+    },
+    {
+      "decision_time_ms": 1767139200000,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "1d"
+    },
+    {
+      "decision_time_ms": 1767225599999,
+      "eligible_symbols": 33,
+      "excluded_symbols": [
+        "ACEUSDT",
+        "BOMEUSDT",
+        "BTWUSDT",
+        "HEMIUSDT",
+        "LITUSDT",
+        "ONGUSDT",
+        "TUTUSDT"
+      ],
+      "featured_symbols": 33,
+      "input_symbols": 40,
+      "timeframe": "1d"
+    }
+  ],
+  "deterministic_output_sha256": "89e6b3ebfbaeb869dbbdfe284c3aa4017c6ea7230d96ee031e69a6f8661aee4b",
+  "engine_spec_id": "ALT-MULTITF-005-PHASE2-FROZEN-1",
+  "input_manifest_sha256": "9541bad8793b584f74754828f4abb762e1a75dbfdbb8ae823d3256c9049ce0cf",
+  "prohibited_fields_absent": true,
+  "protocol_id": "ALT-MULTITF-005"
+}

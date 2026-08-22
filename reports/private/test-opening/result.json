@@ -1,0 +1,64 @@
+{
+  "audit": {
+    "approval_phrase_matched": true,
+    "argv": [
+      "python3",
+      "-m",
+      "research.test_opening",
+      "--frozen-sha",
+      "81f5ea590edbc04fadce762452801c1d365470d0",
+      "--approve",
+      "I AUTHORIZE THE ONE-TIME TEST OPENING FOR 81f5ea590edbc04fadce762452801c1d365470d0"
+    ],
+    "completed_at": "2026-08-21T08:25:48.999756+00:00",
+    "frozen_sha": "81f5ea590edbc04fadce762452801c1d365470d0",
+    "governance_sha": "44d0cb4e74241b1583164fcd2d7542aa2b5b5ef0",
+    "manifest_sha256": "8ccf285e1acfd59d402bf68fdd9b23e548781edc977046c8133bf1f310c3a10d",
+    "opened_at": "2026-08-21T08:25:26.153491+00:00",
+    "platform": "Linux-6.18.40-x86_64-with-glibc2.34",
+    "python": "3.13.11 (main, Dec 17 2025, 21:08:16) [Clang 21.1.4 ]",
+    "source_quality": {
+      "BTCUSDT": {
+        "duplicates": 0,
+        "gaps": 0,
+        "invalid_ohlc": 0,
+        "monotonic": true,
+        "rows": 43824
+      },
+      "ETHUSDT": {
+        "duplicates": 0,
+        "gaps": 0,
+        "invalid_ohlc": 0,
+        "monotonic": true,
+        "rows": 43824
+      }
+    },
+    "status": "COMPLETED"
+  },
+  "primary": {
+    "bootstrap": {
+      "method": "iid trade resampling with replacement; percentile interval",
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "resamples": 100000,
+      "seed": 6996
+    },
+    "ci95": [
+      -0.49516036105062033,
+      0.1863154229024001
+    ],
+    "criterion": "trade_count >= 30 AND ci95_lower > 0",
+    "metric": "mean_expectancy_R",
+    "minimum_trades": 30,
+    "value": -0.16047893127976534
+  },
+  "secondary_diagnostics_verdict_neutral": {
+    "expectancy_r": -0.16047893127976534,
+    "max_drawdown_r": -5.639621819362511,
+    "total_r": -5.135325800952491,
+    "trade_count": 32
+  },
+  "verdict": "FAIL"
+}
