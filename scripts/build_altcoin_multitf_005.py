@@ -12,8 +12,13 @@ import tarfile
 import tempfile
 import time
 import urllib.error
+import sys
 from dataclasses import asdict
 from pathlib import Path
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+if str(REPOSITORY_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPOSITORY_ROOT))
 
 import research.altcoin_multitf_compact as compact
 from scripts.rebuild_altcoin_multitf_004 import FROZEN_ROSTER
