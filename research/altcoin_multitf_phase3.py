@@ -197,13 +197,26 @@ def run(dataset: Path, output: Path, limit: int | None = None) -> dict:
     if limit is not None: configs = configs[:limit]
     rows: list[dict] = []
     fold_rows: list[dict] = []
-    ledgers: dict[str, pd.DataFrame] = {}
+    best_key: tuple[float, float] | None = None
+    best_ledger: pd.DataFrame | None = None
+    replay_cache: dict[tuple, tuple[dict, pd.DataFrame, dict]] = {}
     for n, config in enumerate(configs, 1):
-        base, ledger = evaluate_a(config, close, opened, funds)
-        stress, _ = evaluate_a(config, close, opened, funds, STRESS_SLIPPAGE)
+        interval = config["rebalance"]
+        hours = int(interval[:-1]) if interval.endswith("h") else int(interval[:-1]) * 24
+        effective_key = (config["lookback_days"], max(1, math.ceil(hours / 24)), config["breadth"],
+                         config["weighting"], config["volatility_target"])
+        if effective_key not in replay_cache:
+            cached_base, cached_ledger = evaluate_a(config, close, opened, funds)
+            cached_stress, _ = evaluate_a(config, close, opened, funds, STRESS_SLIPPAGE)
+            replay_cache[effective_key] = (cached_base, cached_ledger, cached_stress)
+        cached_base, ledger, cached_stress = replay_cache[effective_key]
+        base = {**config, **{key: value for key, value in cached_base.items() if key not in config}}
+        stress = {**config, **{key: value for key, value in cached_stress.items() if key not in config}}
         folds = []
         for fold, start, end in OUTER_FOLDS:
-            part = ledger.loc[start:pd.Timestamp(end, tz="UTC") - pd.Timedelta(days=1)]
+            fold_start = pd.Timestamp(start, tz="UTC")
+            fold_end = pd.Timestamp(end, tz="UTC") - pd.Timedelta(days=1)
+            part = ledger.loc[fold_start:fold_end]
             fm = metrics(part.net_return, part.turnover, part.cost, part.funding_return)
             fold_rows.append({"config_id": config["config_id"], "fold": fold, **fm})
             folds.append(fm)
@@ -212,15 +225,18 @@ def run(dataset: Path, output: Path, limit: int | None = None) -> dict:
                "median_outer_sharpe": float(np.median([x["sharpe"] for x in folds])),
                "median_outer_calmar": float(np.median([x["calmar"] for x in folds]))}
         rows.append(row)
-        ledgers[config["config_id"]] = ledger
+        selection_key = (row["median_outer_sharpe"], row["compounded_net_return"])
+        if best_key is None or selection_key > best_key:
+            best_key = selection_key
+            best_ledger = ledger.copy()
         if n % 100 == 0: print(f"evaluated {n}/{len(configs)}", flush=True)
     board = pd.DataFrame(rows).sort_values(["median_outer_sharpe", "compounded_net_return"], ascending=False)
     output.mkdir(parents=True, exist_ok=True)
     board.to_csv(output / "leaderboard-family-a.csv", index=False)
     pd.DataFrame(fold_rows).to_csv(output / "per-fold-family-a.csv", index=False)
     best = board.iloc[0].to_dict() if len(board) else None
-    if best:
-        ledgers[str(best["config_id"])].to_csv(output / "winner-family-a-ledger.csv")
+    if best and best_ledger is not None:
+        best_ledger.to_csv(output / "winner-family-a-ledger.csv")
     verdict = {"protocol_id": PROTOCOL_ID, "manifest_sha256": manifest["manifest_sha256"],
                "evaluated_family_a": len(rows), "manifest_family_a": sum(h["family"] == "A" for h in manifest["hypotheses"]),
                "evaluated_family_b": 0, "manifest_family_b": sum(h["family"] == "B" for h in manifest["hypotheses"]),
