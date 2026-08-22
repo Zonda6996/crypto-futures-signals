@@ -39,7 +39,7 @@ def restore(root: Path, manifest_path: Path) -> dict:
     target = root / EXPECTED_ROOT
     if target.exists():
         raise FileExistsError(f"refusing to overwrite existing dataset: {target}")
-    fd, temporary_name = tempfile.mkstemp(prefix="altcoin-multitf-004-", suffix=".tar")
+    fd, temporary_name = tempfile.mkstemp(prefix="altcoin-multitf-004-", suffix=".tar.gz")
     os.close(fd)
     temporary = Path(temporary_name)
     try:
@@ -50,7 +50,7 @@ def restore(root: Path, manifest_path: Path) -> dict:
         actual = sha256(temporary)
         if temporary.stat().st_size != manifest["size"] or actual != manifest["sha256"]:
             raise RuntimeError(f"bundle mismatch: size={temporary.stat().st_size} sha256={actual}")
-        with tarfile.open(temporary, "r") as archive:
+        with tarfile.open(temporary, "r:gz") as archive:
             archive.extractall(root, members=safe_members(archive), filter="data")
         return {"restored": str(target), "bundle_sha256": actual, "size": temporary.stat().st_size}
     finally:
