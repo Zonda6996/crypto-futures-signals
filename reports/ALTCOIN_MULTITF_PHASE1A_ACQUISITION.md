@@ -1,5 +1,7 @@
 # ALT-MULTITF-003 — Phase 1A Acquisition and Sealing Report
 
+> Continuation status (2026-08-22): незакоммиченные payload/manifests этого запуска были утрачены вместе с прежним sandbox, поэтому `ALT-MULTITF-003` закрыт без подмены исторических фактов. Новый компактный protocol имеет отдельный ID `ALT-MULTITF-004`; результат data phase: [`ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](./ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md).
+
 Статус: **DONE**
 
 Дата acquisition: `2026-08-21` UTC

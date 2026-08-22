@@ -104,7 +104,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых��������������������да;
+- причину вых����������������������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -272,7 +272,7 @@ Long и short проверять отдельно.
 Для каждого семейства фиксировать:
 
 - идентификатор эксперимента;
-- экономичес��ую гипотезу;
+- экономи��ес��ую гипотезу;
 - д��ст��пн��е на ��омент сигнала данные;
 - пространство параметров;
 - число проверенных вариант��в;
@@ -430,4 +430,14 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 9. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
 10. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
 
-**Текущая точка — Phase 1A DONE; Phase 1B READY FOR OWNER APPROVAL.** Разрешённый следующий scope — development-only normalization/eligibility audit и агрегация higher TF из raw `5m`; sealed holdout остаётся недоступным. Backtest, grid search, Phase 2 и paper/live запрещены. `ALT-LOMOM-002-A` не изменён и не смешивается с новым исследованием.
+**`ALT-MULTITF-003` закрыт как невосстановимый:** незакоммиченные raw payload/manifests Phase 1A утрачены с прежним sandbox; исторические факты строк 424–425 остаются только отчётом того запуска.
+
+### Compact replacement `ALT-MULTITF-004`
+
+1. **Protocol/universe freeze (DONE):** новый ID; 40 top-current-liquidity USDT perpetual altcoins по frozen official `ticker/24hr`, BTC/ETH исключены; survivorship/current-selection bias принят явно.
+2. **Development acquisition (DONE):** `[2020-01-01, 2026-01-01)`, `3 291` raw monthly files / `568 466 246` bytes; только 5m+funding; `3 291/3 291` SHA-256 PASS; `BTWUSDT` оставлен в roster без history.
+3. **Normalization/eligibility (DONE):** `14 276 432` 5m, `168 371` funding; `15m/30m/1h/2h/4h/1d` только из закрытых 5m; 18 gaps, 0 duplicates, 0 invalid; causal eligibility около 90,06% intraday decisions.
+4. **Phase 2 causal engine (NOT APPROVED):** отдельный gate; signals, ranking, PnL, backtest и grid search ещё не запускались.
+5. **Prospective validation/holdout:** календарь не определён; holdout directory не создавался и данные не читались.
+
+Protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md). Data report: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). **Текущая точка — DATA PHASE DONE / STOP перед Phase 2.**

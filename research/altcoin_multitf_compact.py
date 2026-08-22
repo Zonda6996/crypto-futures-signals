@@ -280,6 +280,7 @@ def _gzip_csv(path: Path, header: list[str], rows: Iterable[list[str]]) -> tuple
 
 def normalize(root: Path) -> dict:
     base = root / ROOT_NAME; metadata = base / "metadata"
+    verification = verify_raw_manifest(root)
     manifest = json.loads((metadata / "raw-development-manifest.json").read_text())
     raw_records = [FileRecord(**{**row, "source_inputs": tuple(row["source_inputs"])}) for row in manifest["files"]]
     for record in raw_records:
@@ -356,11 +357,26 @@ def normalize(root: Path) -> dict:
     normalized_manifest = {"protocol_id": PROTOCOL_ID, "partition": "development", "built_at": built, "files": [asdict(item) for item in output_records]}
     atomic_write(metadata / "normalized-development-manifest.json", canonical(normalized_manifest))
     atomic_write(base / "development" / "audit" / "quality.json", canonical(audit))
-    return {"rows": row_counts, "files": len(output_records), "bytes": sum(item.size for item in output_records), **audit}
+    return {"verification": verification, "rows": row_counts, "files": len(output_records), "bytes": sum(item.size for item in output_records), **audit}
 
 
 def aggregate_bucket(rows: list[list[str]], start: int, factor: int) -> list[str]:
     return [str(start), rows[0][1], repr(max(float(row[2]) for row in rows)), repr(min(float(row[3]) for row in rows)), rows[-1][4], repr(sum(float(row[5]) for row in rows)), str(start + factor * BAR_MS - 1), repr(sum(float(row[7]) for row in rows)), str(sum(int(row[8]) for row in rows)), repr(sum(float(row[9]) for row in rows)), repr(sum(float(row[10]) for row in rows))]
+
+
+def verify_raw_manifest(root: Path) -> dict:
+    base = root / ROOT_NAME
+    manifest_path = base / "metadata" / "raw-development-manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    mismatches: list[str] = []
+    for record in manifest["files"]:
+        path = root / record["path"]
+        assert_development_path(path)
+        if not path.is_file() or path.stat().st_size != record["size"] or sha256_file(path) != record["sha256"]:
+            mismatches.append(record["path"])
+    if mismatches:
+        raise RuntimeError(f"raw development manifest mismatch: {mismatches[:5]}")
+    return {"verified_files": len(manifest["files"]), "mismatches": 0, "manifest_sha256": sha256_file(manifest_path)}
 
 
 def eligibility(root: Path) -> dict:
@@ -419,10 +435,11 @@ def eligibility(root: Path) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(); parser.add_argument("command", choices=("download", "normalize", "eligibility", "all")); parser.add_argument("--root", type=Path, default=Path("data")); parser.add_argument("--workers", type=int, default=16)
+    parser = argparse.ArgumentParser(); parser.add_argument("command", choices=("download", "verify", "normalize", "eligibility", "all")); parser.add_argument("--root", type=Path, default=Path("data")); parser.add_argument("--workers", type=int, default=16)
     args = parser.parse_args(); assert_development_path(args.root / ROOT_NAME / "development")
     result = {}
     if args.command in {"download", "all"}: result["download"] = download(args.root, workers=args.workers)
+    if args.command == "verify": result["verify"] = verify_raw_manifest(args.root)
     if args.command in {"normalize", "all"}: result["normalize"] = normalize(args.root)
     if args.command in {"eligibility", "all"}: result["eligibility"] = eligibility(args.root)
     print(json.dumps(result, indent=2, sort_keys=True)); return 0

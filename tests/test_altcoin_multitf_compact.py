@@ -19,6 +19,7 @@ from research.altcoin_multitf_compact import (
     select_roster,
     validate_funding,
     validate_kline,
+    verify_raw_manifest,
 )
 
 
@@ -80,6 +81,13 @@ class CompactMultitfTests(unittest.TestCase):
         self.assertEqual(result[6], str(START_MS + 3 * BAR_MS - 1))
         self.assertEqual(result[4], "13")
         self.assertEqual(float(result[7]), 60)
+
+    def test_manifest_verification_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); metadata = root / "altcoin-multitf-004" / "metadata"; metadata.mkdir(parents=True)
+            (metadata / "raw-development-manifest.json").write_text(json.dumps({"files": [{"path": "altcoin-multitf-004/development/raw/missing.zip", "size": 1, "sha256": "bad"}]}))
+            with self.assertRaises(RuntimeError):
+                verify_raw_manifest(root)
 
     def test_header_and_round_trip_csv_fixture(self) -> None:
         buffer = io.StringIO(); csv.writer(buffer).writerow([START_MS, 1, 2])

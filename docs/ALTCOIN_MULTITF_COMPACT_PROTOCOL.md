@@ -1,6 +1,6 @@
 # ALT-MULTITF-004 — compact liquidity baseline
 
-Статус: **FROZEN / DATA PHASE APPROVED**  
+Статус: **DATA PHASE DONE / STOP перед Phase 2**
 Дата freeze: 22 августа 2026 года  
 Рынок: Binance USD-M linear USDT perpetual futures
 

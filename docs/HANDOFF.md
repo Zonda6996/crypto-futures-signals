@@ -26,6 +26,8 @@
 - Frozen altcoin protocol: [`docs/ALTCOIN_PROTOCOL.md`](./ALTCOIN_PROTOCOL.md)
 - Altcoin Phase A audit: [`reports/ALTCOIN_PHASE_A_DATA_AUDIT.md`](../reports/ALTCOIN_PHASE_A_DATA_AUDIT.md)
 - Altcoin frozen TRAIN/VALIDATION result: [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md)
+- Compact multi-TF protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md)
+- Compact data-phase result: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md)
 
 ## Новый altcoin Phase A status
 
@@ -55,7 +57,9 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 **Текущая точка остановки baseline:** Фаза 3 DONE. TRAIN diagnostic: PASS — Sharpe `1,1508`, compounded return `+270,37%` при 0,12%, stress `+254,18%`, max drawdown `−28,00%`, bootstrap CI95 `[0,2308; 2,0609]`, 0 нарушений; ledger reconciliation PASS. Это contaminated DEVELOPMENT/TRAIN evidence на fixed basket с survivorship/selection bias, не prospective подтверждение. `ALT-LOMOM-002-A` остаётся неизменяемым baseline; VALIDATION и любое изменение baseline запрещены.
 
-**Новый engine — Phase 1A DONE:** официальный current roster получен через `https://www.binance.com/fapi/v1/exchangeInfo` и до market-data download заморожен на `527` symbols (raw SHA-256 `3c0d748c…`). С Binance Vision скачано `30,321` raw files / `4,938,089,720` bytes: development `23,167`, sealed holdout `7,154`. Holdout физически находится в `data/altcoin-multitf-003/sealed-holdout/`; его `1,148,688,944` bytes закреплены per-file SHA-256 inventory и manifest SHA-256 `5a2cba83…`, payload не открывался. Development archive coverage начинается `2020-01-01` вместо requested `2019-09-08`; 47 новых symbols не имеют development archives, `DOSUSDT` не имеет holdout archive, roster не менялся. Boundary/duplicate/hash checks и 7 acquisition/sealing tests PASS. Signals/PnL/backtest `0`. Отчёт: [`reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md`](../reports/ALTCOIN_MULTITF_PHASE1A_ACQUISITION.md). Phase 1B технически готова, но требует отдельного owner approval и не получает доступ к holdout.
+**`ALT-MULTITF-003` закрыт как невосстановимый:** его Phase 1A raw payload и machine manifests не были закоммичены и утрачены вместе с прежним sandbox; исторический отчёт не переписывается и старые хеши не выдаются за восстановленные данные.
+
+**Compact replacement `ALT-MULTITF-004` — DATA PHASE DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Только development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; filesystem verification `3 291/3 291`, manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; из закрытых 5m построены `15m/30m/1h/2h/4h/1d`. Найдены 18 gaps `>30m`, 0 duplicates, 0 invalid rows; `BTWUSDT` остаётся во frozen roster без development history. Causal eligibility покрывает около 90,06% intraday decisions. Holdout физически не создавался и не читался; signals/PnL/backtest `0`. Отчёт: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). Текущая точка — STOP перед Phase 2, нужен отдельный owner approval.
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
@@ -120,7 +124,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 ## Отдельная regime/concentration-диагностика
 
-Диагностика выполнена отдельно от Phase 2–4 на полном pre-TEST TRAIN+VALIDATION-срезе 2021–2024 при frozen-параметрах и расходах 0,10%. Это описательный анализ конц��нтрации, не новая OOS-оценка. BTC-режимы размече��ы каузально: trailing 90-day return и trailing 30-day realized volatility; пороги — expanding median только предшествующих валидных наблюдений.
+Диагностика выполнена отдельно от Phase 2–4 на полном pre-TEST TRAIN+VALIDATION-срезе 2021–2024 при frozen-параметрах и расходах 0,10%. Это опи��ательный анализ конц��нтрации, не новая OOS-оценка. BTC-режимы размече��ы каузально: trailing 90-day return и trailing 30-day realized volatility; пороги — expanding median только предшествующих валидных наблюдений.
 
 - 1h: 185 сделок, `+16,387R`; top-5 = 40,1% total, без top-5 `+9,808R`.
 - M30: 264 сделки, `+7,926R`; top-5 = 83,0%, без top-5 `+1,348R`.
