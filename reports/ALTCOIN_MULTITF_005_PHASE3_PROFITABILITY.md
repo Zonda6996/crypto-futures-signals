@@ -109,3 +109,11 @@ Development использован для поиска кандидата. На�
 - `reports/artifacts/altcoin-multitf-005-phase3/verdict.json`
 
 Все ключевые цифры в этом отчёте взяты из указанных артефактов; итоговый `verdict.json` намеренно остаётся `NO WINNER` и не маскирует незавершённые части протокола.
+
+## Дополнительные материалы и следующий этап
+
+- Наглядный data-срез `SOLUSDT` и `XRPUSDT` по `15m/1h/4h/1d`: [`ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md`](./ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md). Он показывает различия данных между TF, но не является backtest.
+- Пофазный roadmap обновлён в [`docs/roadmap.md`](../docs/roadmap.md).
+- Готовый prompt другому аккаунту для Phase 4 completion: [`docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md`](../docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md).
+
+Phase 4 должна устранить daily-proxy ограничение, полностью рассчитать Family B и обязательную статистику только на DEVELOPMENT. Открытие holdout в эту фазу запрещено.

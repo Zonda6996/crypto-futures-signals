@@ -253,10 +253,10 @@ Long и short проверять отдельно.
 Проверить:
 
 - продолжение после каскада ликвидаций;
-- возврат к VWAP после экстремального каскада;
+- возврат к VWAP после экстремального ка��када;
 - зависимость от funding, OI и времени суток.
 
-При отсутствии прямых данных использовать заранее определённый proxy: широкий диапазон свечи, всплеск объёма и резкое падение OI.
+При отсутствии прямых данных использовать заранее определённый proxy: широкий диа��азон свечи, всплеск объёма и резкое падение OI.
 
 ## 5.6. Cross-sectional momentum
 
@@ -429,10 +429,10 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 6. **Phase 3 — nested walk-forward sweep (NOT APPROVED):** два полных leaderboard без holdout.
 7. **Phase 4 — frozen robustness (NOT APPROVED):** только заранее заданные stresses/gates, без расширения grid.
 8. **Phase 5 — shortlist freeze (NOT APPROVED):** ровно один PASS winner каждого семейства; если family FAIL, winner отсутствует.
-9. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил открытие.
+9. **Phase 6 — one-time holdout (NOT APPROVED):** один совместный invocation двух immutable winners; только если оба family прошли и владелец отдельно разрешил откр��тие.
 10. **Phase 7 — paper signals (NOT APPROVED):** только после holdout PASS и отдельного решения; live capital не разрешён.
 
-**`ALT-MULTITF-003` закрыт как невосстановимый:** незакоммиченные raw payload/manifests Phase 1A утрачены с прежним sandbox; исторические факты строк 424–425 остаются только отчётом того запуска.
+**`ALT-MULTITF-003` закрыт как невосстан��вимый:** незакоммиченные raw payload/manifests Phase 1A утрачены с прежним sandbox; исторические факты строк 424–425 остаются только отчётом того запуска.
 
 ### Compact replacement `ALT-MULTITF-004`
 
@@ -441,6 +441,10 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 3. **Normalization/eligibility (DONE):** `14 276 432` 5m, `168 371` funding; `15m/30m/1h/2h/4h/1d` только из закрытых 5m; 18 gaps, 0 duplicates, 0 invalid; causal eligibility около 90,06% intraday decisions.
 4. **Phase 2 causal engine (DONE):** owner-approved implementation фиксирует TF-group parameters, causal returns/momentum/volatility/trend/funding alignment, eligibility-before-ranking, deterministic ranking и schema-only portfolio handoff. Focused leakage tests PASS. Parameter search, construction execution, PnL и backtest не выполнялись.
 5. **Dataset portability (DONE):** frozen 40-symbol Binance archive inventory восстановлен без нового roster selection и закреплён как SHA-256 verified private Blob bundle, доступный подключённым чатам через `BLOB_READ_WRITE_TOKEN`; committed restore tool fail-closed проверяет bundle до extraction.
-6. **Strategy-evaluation gate (NOT APPROVED):** следующий возможный этап требует отдельного owner decision; prospective validation/holdout calendar не определён, holdout не создавался и не читался.
+6. **Phase 3 frozen strategy evaluation (INCOMPLETE / NO WINNER):** frozen manifest содержит 58 140 configs. Family A рассчитана полностью (`3 060/3 060`); лучший daily-proxy кандидат дал `+79,24%` cumulative net, `10,20%` annualized, Sharpe `1,465`, max drawdown `−5,68%`, но это не финальный winner. Family B (`0/55 080`), SPA/DSR, mandatory robustness и TF-native replay не завершены. Holdout не читался.
+7. **Phase 4 completion (NEXT / OWNER-APPROVED PROMPT PREPARED):** нативный multi-TF replay, полный Family B, повтор затронутой Family A, SPA/DSR и frozen robustness gates только на DEVELOPMENT. Готовый handoff: [`docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md).
+8. **Shortlist freeze (CONDITIONAL):** максимум один PASS winner каждого семейства; при непрохождении gates — NO WINNER.
+9. **One-time holdout (NOT APPROVED):** только отдельным следующим решением после полного Phase 4 PASS; до этого holdout остаётся sealed.
+10. **Paper/live (NOT APPROVED):** только после holdout PASS и отдельных решений.
 
-Protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md). Data report: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md). Phase 2 spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). **Текущая точка — PHASE 2 DONE / STOP перед strategy evaluation.**
+Protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md). Phase 3 spec: [`docs/ALTCOIN_MULTITF_005_PHASE3_SPEC.md`](./ALTCOIN_MULTITF_005_PHASE3_SPEC.md). Profitability report: [`reports/ALTCOIN_MULTITF_005_PHASE3_PROFITABILITY.md`](../reports/ALTCOIN_MULTITF_005_PHASE3_PROFITABILITY.md). Наглядный TF-срез: [`reports/ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md`](../reports/ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md). **Текущая точка — PHASE 3 INCOMPLETE / NO WINNER; следующий этап — Phase 4 completion без holdout.**

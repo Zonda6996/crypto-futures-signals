@@ -29,7 +29,10 @@
 - Compact multi-TF protocol: [`docs/ALTCOIN_MULTITF_COMPACT_PROTOCOL.md`](./ALTCOIN_MULTITF_COMPACT_PROTOCOL.md)
 - Compact data-phase result: [`reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md`](../reports/ALTCOIN_MULTITF_COMPACT_DATA_PHASE.md)
 - ALT-MULTITF-005 Phase 2 report: [`reports/ALTCOIN_MULTITF_005_PHASE2.md`](../reports/ALTCOIN_MULTITF_005_PHASE2.md)
-- Phase 3 gated next-chat prompt: [`docs/ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE3_NEXT_CHAT.md)
+- Phase 3 frozen specification: [`docs/ALTCOIN_MULTITF_005_PHASE3_SPEC.md`](./ALTCOIN_MULTITF_005_PHASE3_SPEC.md)
+- Phase 3 profitability report: [`reports/ALTCOIN_MULTITF_005_PHASE3_PROFITABILITY.md`](../reports/ALTCOIN_MULTITF_005_PHASE3_PROFITABILITY.md)
+- Наглядные SOL/XRP срезы по 15m/1h/4h/1d: [`reports/ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md`](../reports/ALTCOIN_MULTITF_005_ASSET_TF_EXAMPLES.md)
+- Phase 4 completion prompt: [`docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md)
 
 ## Новый altcoin Phase A status
 
@@ -63,7 +66,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 **Compact replacement `ALT-MULTITF-004` — PHASE 2 DONE:** до acquisition заморожены 40 top-current-liquidity USDT perpetual altcoins (BTC/ETH исключены). Development `[2020-01-01, 2026-01-01)` содержит `3 291` raw files / `568 466 246` bytes; исторический data-phase manifest SHA-256 `224f6449…`. Нормализованы `14 276 432` строк 5m и `168 371` funding; `BTWUSDT` остаётся во frozen roster без history. Owner-approved Phase 2 реализова��а deterministic causal features/signals для short/medium/long TF groups, publication-time funding alignment и eligibility-before-ranking. Focused leakage tests PASS; parameter search, portfolio execution, PnL, backtest и holdout reads отсутствуют. Ignored dataset закреплён в SHA-256 verified private Blob, доступном новым чатам через project `BLOB_READ_WRITE_TOKEN`; restore metadata — [`docs/altcoin-multitf-004-blob.json`](./altcoin-multitf-004-blob.json), restore CLI — `python3 -m scripts.restore_altcoin_multitf_004 --root data`. Spec: [`docs/ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md`](./ALTCOIN_MULTITF_COMPACT_PHASE2_SPEC.md). Текущая точка — STOP перед отдельным strategy-evaluation gate.
 
-**ALT-MULTITF-005 — DATA RELEASE VERIFIED / PHASE 2 DONE:** public content-addressed release восстановлен без секрета canonical CLI; archive size/SHA-256, safe extraction и normalized manifest verification прошли. Frozen roster/inventory не менялись, `BTWUSDT` сохранён как missing/ineligible, holdout отсутствует. Owner-approved Phase 2 добавила bounded real-data loader и deterministic short/medium/long integration evidence поверх frozen causal engine. Все 15 Phase 2 unit/integration tests и 10 restore/release tests прошли. Артефакт: [`reports/artifacts/altcoin-multitf-005-phase2-integration.json`](../reports/artifacts/altcoin-multitf-005-phase2-integration.json). Это не strategy result: execution, sizing, PnL, backtest, parameter search и holdout не запускались. Текущая точка — **STOP перед отдельным owner-approved frozen Phase 3 strategy-evaluation protocol**.
+**ALT-MULTITF-005 — PHASE 3 INCOMPLETE / NO WINNER:** frozen manifest содержит 58 140 hypotheses. Family A полностью рассчитана (`3 060/3 060`); лучший daily-proxy candidate `f48bdca64b00d0903b54` дал `+79,24%` cumulative net, `10,20%` annualized, Sharpe `1,465`, max drawdown `−5,68%`, 4/5 положительных annual outer folds. Но Family B (`0/55 080`), SPA/Deflated Sharpe, mandatory robustness и нативный multi-TF replay не завершены, поэтому machine verdict честно остаётся `NO WINNER`. Holdout не читался. Следующий этап — Phase 4 completion по готовому prompt: [`docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md).
 
 Новый чат сначала читает этот файл, новый frozen protocol, итоговый Phase B report, post-mortem и roadmap.
 
@@ -114,7 +117,7 @@ Read-only post-mortem завершён: cost drag превысил VALIDATION gr
 
 - при costs 0,05–0,16% untrimmed anchored и rolling остаются положительными;
 - при 0,16%: anchored `+8,170R`, rolling `+4,053R`;
-- ��се три заданных window policies дают положительный untrimmed итог в обеих схемах;
+- ��с�� три заданных window policies дают положительный untrimmed итог в обеих схемах;
 - 11/11 соседей положительны anchored, 10/11 rolling;
 - медианный сосед: anchored `+7,484R`, rolling `+6,304R`;
 - rolling без top-5 отрицателен при 0,10%, 0,12% и 0,16%; при 0,16% `−2,385R`;
@@ -193,9 +196,9 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 
 ## Ровно один следующий шаг
 
-**Остановиться после PASS/DONE ALT-MULTITF-005 Phase 2 и запросить отдельное решение владельца о документационной Phase 3.**
+**Передать Phase 4 completion другому аккаунту по [`docs/ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md`](./ALTCOIN_MULTITF_005_PHASE4_NEXT_CHAT.md).**
 
-Без нового approval разрешено только прочитать evidence и подготовить frozen Phase 3 strategy-evaluation specification. Запрещено запускать parameter search, выбирать candidate, строить portfolio execution, считать PnL/backtest, читать holdout или менять frozen roster/параметры. `ALT-XSMOM-001-B` и старый ETH TEST остаются закрытыми FAIL-ветками и не могут быть переоткрыты.
+Разрешён только полный DEVELOPMENT-run: TF-native replay, Family B, затронутая Family A, SPA/DSR и frozen robustness. Holdout, paper/live, изменение manifest/roster/grid/costs и продвижение текущего daily-proxy кандидата запрещены. `ALT-XSMOM-001-B` и старый ETH TEST остаются закрытыми FAIL-ветками.
 
 ## Правила для следующих чатов
 
@@ -204,4 +207,4 @@ Market cache скачивается в `data/cache/` и исключён из Gi
 - не называть положительный walk-forward подтверждённым edge;
 - не выбирать новый candidate из Phase 3 neighbor map;
 - старый TEST 2025 уже открыт и израсходован: никогда не запускать повторно и не использовать для retuning;
-- в конце к��ждой фазы обновлять handoff, отчёт, артефакты и следующий единственный шаг.
+- в конце к��ждой фазы обновлять handoff, отчёт, артефакты и следующ��й единственный шаг.
