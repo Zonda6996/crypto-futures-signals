@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from scripts.build_altcoin_multitf_005 import CONFIG_HASH, PROTOCOL_ID, deterministic_archive, load_state, new_state, save_state, verified
+from scripts.build_altcoin_multitf_005 import CONFIG_HASH, PROTOCOL_ID, deterministic_archive, fetch_retry, load_state, new_state, save_state, verified
 from scripts.rebuild_altcoin_multitf_004 import FROZEN_ROSTER
 from scripts.restore_altcoin_multitf_005 import safe_members
 from scripts.verify_altcoin_multitf_005_blob import verify as verify_blob

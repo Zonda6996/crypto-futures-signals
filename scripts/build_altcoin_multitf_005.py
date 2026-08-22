@@ -98,15 +98,20 @@ def verified(path: Path, record: dict | None) -> bool:
     return bool(record and path.is_file() and path.stat().st_size == record["size"] and compact.sha256_file(path) == record["sha256"])
 
 
-def fetch_retry(url: str, attempts: int = 5) -> bytes:
+def fetch_retry(url: str, attempts: int = 8) -> bytes:
     for attempt in range(attempts):
         try:
             return compact.fetch(url, timeout=180)
-        except urllib.error.HTTPError:
-            raise
+        except urllib.error.HTTPError as error:
+            if error.code not in {408, 425, 429, 500, 502, 503, 504} or attempt + 1 == attempts:
+                raise
+            retry_after = error.headers.get("Retry-After") if error.headers else None
+            delay = float(retry_after) if retry_after and retry_after.isdigit() else min(60, 2 ** attempt)
+            time.sleep(delay)
         except (OSError, TimeoutError, urllib.error.URLError):
-            if attempt + 1 == attempts: raise
-            time.sleep(min(30, 2 ** attempt))
+            if attempt + 1 == attempts:
+                raise
+            time.sleep(min(60, 2 ** attempt))
     raise AssertionError("unreachable")
 
 
