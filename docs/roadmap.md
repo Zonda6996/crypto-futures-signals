@@ -4,6 +4,8 @@
 
 ## Текущий статус
 
+**ALT-MULTITF-005 infrastructure:** подготовлена resumable GitHub Actions сборка frozen ALT-MULTITF inventory с checkpoint artifacts и публикацией в Public Vercel Blob. Статус — код готов, но data release ещё не подтверждён реальным Actions run. До `anonymous verification: PASS` запрещено считать 005 опубликованным или переходить к Phase 2; см. `docs/ALTCOIN_MULTITF_005_GITHUB_ACTIONS.md`.
+
 **Независимое altcoin-исследование:** строгий protocol `ALT-XSMOM-001-A` остаётся **STOP** из-за отсутствия полного historical lifecycle registry. Разрешённый exploratory amendment `ALT-XSMOM-001-B` на frozen basket из 10 контрактов завершил pre-HOLDOUT TRAIN/VALIDATION с **FAIL / STOP**. TRAIN-only selection выбрал `30d momentum / 24h rebalance`; на единственной VALIDATION при 0,12% net Sharpe равен `−0,817`, compounded return `−35,90%`, max drawdown `−46,78%`, bootstrap CI95 `[−2,449; +0,632]`. Результат при 0,20% также отрицателен (`−60,99%`). HOLDOUT с `2026-01-01` не открывался и остаётся закрытым. Это **exploratory fixed-basket evidence with survivorship/selection bias**, не universe-level edge. См. [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md).
 
 ## Legacy ETH status
@@ -104,7 +106,7 @@ Funding необходимо учитывать отдельно по факти
 - результат �� R;
 - MAE и MFE;
 - длительность;
-- причину вых����������������������да;
+- причину вых������������������������да;
 - рыночный режим.
 
 Результат сделки считать как:
@@ -272,10 +274,10 @@ Long и short проверять отдельно.
 Для каждого семейства фиксировать:
 
 - идентификатор эксперимента;
-- экон����ми��ес��ую гипотезу;
+- эк��н����ми��ес��ую гипотезу;
 - д��ст��пн��е на ��омент сигнала данные;
 - пространство параметров;
-- число проверенных вариант��в;
+- число проверенных ва��иант��в;
 - train/validation/test границы;
 - кр��тери�� принятия решения;
 - все отрицательные результаты.
