@@ -160,21 +160,18 @@ def evaluate_a(config: dict, close: pd.DataFrame, opened: pd.DataFrame, funds: p
     interval = config["rebalance"]
     hours = int(interval[:-1]) if interval.endswith("h") else int(interval[:-1]) * 24
     step_days = max(1, math.ceil(hours / 24))
-    weights = pd.DataFrame(0.0, index=close.index, columns=close.columns)
-    current = pd.Series(0.0, index=close.columns)
-    history: list[float] = []
-    for i, date in enumerate(close.index[:-1]):
-        if i % step_days == 0:
-            target = _weights(momentum.loc[date], realized.loc[date], config["weighting"], config["breadth"])
-            # Causal 30-day forecast from the assets selected at this decision.
-            # This avoids a circular zero-exposure warm-up while using no future return.
-            selected_vol = realized.loc[date].reindex(target[target > 0].index).dropna()
-            forecast = float((selected_vol * target.reindex(selected_vol.index)).sum()) if not selected_vol.empty else np.nan
-            scale = min(1.0, config["volatility_target"] / forecast) if forecast and np.isfinite(forecast) else 0.0
-            current = target * scale
-        weights.loc[date] = current
-        if i and i < len(daily_ret):
-            history.append(float((weights.iloc[i - 1] * daily_ret.iloc[i - 1].fillna(0)).sum()))
+    # Compute only rebalance rows, then causally carry positions forward.
+    # This is equivalent to the former day-by-day loop but much faster.
+    decision_rows = np.arange(0, max(0, len(close.index) - 1), step_days)
+    decision_index = close.index[decision_rows]
+    decisions = pd.DataFrame(0.0, index=decision_index, columns=close.columns)
+    for date in decision_index:
+        target = _weights(momentum.loc[date], realized.loc[date], config["weighting"], config["breadth"])
+        selected_vol = realized.loc[date].reindex(target[target > 0].index).dropna()
+        forecast = float((selected_vol * target.reindex(selected_vol.index)).sum()) if not selected_vol.empty else np.nan
+        scale = min(1.0, config["volatility_target"] / forecast) if forecast and np.isfinite(forecast) else 0.0
+        decisions.loc[date] = target * scale
+    weights = decisions.reindex(close.index).ffill().fillna(0.0)
     execution_weights = weights.shift(1 + extra_delay).fillna(0.0)
     gross = (execution_weights * daily_ret.fillna(0.0)).sum(axis=1)
     funding_ret = -(execution_weights * funds.fillna(0.0)).sum(axis=1)
