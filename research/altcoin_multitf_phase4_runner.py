@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 import math
@@ -20,14 +21,17 @@ from research.altcoin_multitf_phase4 import (
     STRESS_PARTICIPATION,
     STRESS_SLIPPAGE,
     ExchangeFilter,
+    FundingPoint,
     NativeBar,
     ProtocolViolation,
+    adverse_price,
     annualized_metrics,
     apply_selection_score,
     deflated_sharpe_probability,
     execute_next_open,
     family_a_signal,
     family_b_entries,
+    funding_cashflow,
     hansen_spa,
     load_frozen_manifest,
     load_native_bars,
@@ -47,8 +51,10 @@ OUTER_FOLDS = tuple(
     )
     for year in range(2021, 2026)
 )
-REPORT_VERSION = "ALT-MULTITF-005-PHASE4-1"
+REPORT_VERSION = "ALT-MULTITF-005-PHASE4-2"
 EXPECTED = {"A": 3_060, "B": 55_080}
+INITIAL_EQUITY = 1_000_000.0
+FUNDING_HEADER = ["funding_time_ms", "funding_rate", "mark_price"]
 
 
 @dataclass(frozen=True)
@@ -119,6 +125,58 @@ def load_histories(dataset: Path, timeframe: str, symbols: Sequence[str] | None 
     return histories
 
 
+def load_exchange_filters(dataset: Path, symbols: Sequence[str]) -> dict[str, ExchangeFilter]:
+    reject_holdout(dataset)
+    path = dataset / "metadata/exchangeInfo.raw.json"
+    if not path.exists():
+        raise ProtocolViolation("missing immutable exchangeInfo snapshot")
+    document = json.loads(path.read_text(encoding="utf-8"))
+    wanted = set(symbols)
+    result: dict[str, ExchangeFilter] = {}
+    for item in document.get("symbols", []):
+        symbol = str(item.get("symbol", ""))
+        if symbol not in wanted:
+            continue
+        filters = {str(row.get("filterType")): row for row in item.get("filters", [])}
+        price = filters.get("PRICE_FILTER", {})
+        lot = filters.get("LOT_SIZE", {})
+        notional = filters.get("MIN_NOTIONAL", {})
+        try:
+            result[symbol] = ExchangeFilter(
+                float(price["tickSize"]), float(lot["stepSize"]),
+                float(lot["minQty"]), float(notional["notional"]),
+            )
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ProtocolViolation(f"invalid exchange filters: {symbol}") from exc
+    missing = wanted - result.keys()
+    if missing:
+        raise ProtocolViolation(f"missing exchange filters: {','.join(sorted(missing))}")
+    return result
+
+
+def load_funding(dataset: Path, symbols: Sequence[str]) -> dict[str, tuple[FundingPoint, ...]]:
+    reject_holdout(dataset)
+    result: dict[str, tuple[FundingPoint, ...]] = {}
+    for symbol in symbols:
+        path = dataset / "development/normalized/funding" / symbol / f"{symbol}-funding.csv.gz"
+        if not path.exists():
+            raise ProtocolViolation(f"missing funding history: {symbol}")
+        rows: list[FundingPoint] = []
+        previous = -1
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as handle:
+            reader = csv.reader(handle)
+            if next(reader, None) != FUNDING_HEADER:
+                raise ProtocolViolation(f"invalid funding schema: {symbol}")
+            for row in reader:
+                timestamp, rate, mark = int(row[0]), float(row[1]), float(row[2])
+                if timestamp >= DEVELOPMENT_END_MS or timestamp <= previous or not math.isfinite(rate) or not math.isfinite(mark) or mark <= 0:
+                    raise ProtocolViolation(f"invalid funding row: {symbol}")
+                rows.append(FundingPoint(symbol, timestamp, rate, mark))
+                previous = timestamp
+        result[symbol] = tuple(rows)
+    return result
+
+
 def decision_times(histories: Mapping[str, Sequence[NativeBar]], cycle: str) -> tuple[int, ...]:
     step = interval_ms(cycle)
     closes = sorted({bar.close_time_ms for bars in histories.values() for bar in bars})
@@ -164,7 +222,12 @@ def exit_long(
     return active[-1], active[-1].close, "time"
 
 
-def replay_family_a(config: Mapping[str, object], histories: Mapping[str, Sequence[NativeBar]], scenario: ReplayScenario = ReplayScenario()) -> ReplayResult:
+def replay_family_a(
+    config: Mapping[str, object], histories: Mapping[str, Sequence[NativeBar]],
+    filters: Mapping[str, ExchangeFilter] | None = None,
+    funding: Mapping[str, Sequence[FundingPoint]] | None = None,
+    scenario: ReplayScenario = ReplayScenario(),
+) -> ReplayResult:
     events: list[tuple[int, float]] = []
     fills: list[dict] = []
     violations: list[str] = []
@@ -182,7 +245,8 @@ def replay_family_a(config: Mapping[str, object], histories: Mapping[str, Sequen
             try:
                 entry = execute_next_open(
                     symbol=symbol, decision_time_ms=decision, bars=histories[symbol], side="buy",
-                    desired_notional=weight, filters=default_filter(histories[symbol]),
+                    desired_notional=weight * INITIAL_EQUITY,
+                    filters=(filters or {}).get(symbol, default_filter(histories[symbol])),
                     trailing_quote_volume=trailing_quote_volume(histories[symbol], decision),
                     participation_cap=scenario.participation, slippage=scenario.slippage,
                     delay_bars=scenario.delay_bars,
@@ -195,17 +259,31 @@ def replay_family_a(config: Mapping[str, object], histories: Mapping[str, Sequen
                 violations.append(f"{symbol}:{decision}:missing exit")
                 continue
             exit_bar, raw_exit, reason = resolved
-            exit_price = raw_exit * (1 - scenario.slippage)
+            exchange_filter = (filters or {}).get(symbol, default_filter(histories[symbol]))
+            exit_price = adverse_price(raw_exit, "sell", scenario.slippage, exchange_filter.tick_size)
             exit_fee = entry.quantity * exit_price * 0.0005
-            net = entry.quantity * (exit_price - entry.fill_price) - entry.fee - exit_fee
-            events.append((exit_bar.close_time_ms, net))
-            turnover += entry.quantity * (entry.fill_price + exit_price)
-            costs += entry.fee + exit_fee
-            fills.append({**asdict(entry), "exit_time_ms": exit_bar.close_time_ms, "exit_price": exit_price, "exit_reason": reason, "net_return": net})
+            try:
+                funding_pnl = 0.0 if funding is None else funding_cashflow(
+                    funding.get(symbol, ()), symbol, entry.fill_time_ms,
+                    exit_bar.close_time_ms, entry.quantity,
+                )
+            except ProtocolViolation as exc:
+                violations.append(f"{symbol}:{decision}:{exc}")
+                continue
+            net = entry.quantity * (exit_price - entry.fill_price) - entry.fee - exit_fee + funding_pnl
+            events.append((exit_bar.close_time_ms, net / INITIAL_EQUITY))
+            turnover += entry.quantity * (entry.fill_price + exit_price) / INITIAL_EQUITY
+            costs += (entry.fee + exit_fee) / INITIAL_EQUITY
+            fills.append({**asdict(entry), "exit_time_ms": exit_bar.close_time_ms, "exit_price": exit_price, "exit_reason": reason, "net_return": net / INITIAL_EQUITY, "funding_pnl": funding_pnl})
     return ReplayResult(str(config["config_id"]), "A", returns_by_day(events), fills, violations, turnover, costs)
 
 
-def replay_family_b(config: Mapping[str, object], histories: Mapping[str, Sequence[NativeBar]], scenario: ReplayScenario = ReplayScenario()) -> ReplayResult:
+def replay_family_b(
+    config: Mapping[str, object], histories: Mapping[str, Sequence[NativeBar]],
+    filters: Mapping[str, ExchangeFilter] | None = None,
+    funding: Mapping[str, Sequence[FundingPoint]] | None = None,
+    scenario: ReplayScenario = ReplayScenario(),
+) -> ReplayResult:
     events: list[tuple[int, float]] = []
     fills: list[dict] = []
     violations: list[str] = []
@@ -222,8 +300,10 @@ def replay_family_b(config: Mapping[str, object], histories: Mapping[str, Sequen
             desired = allocation * min(1.0, float(config["volatility_target"]) / volatility)
             try:
                 entry = execute_next_open(
-                    symbol=symbol, decision_time_ms=decision, bars=bars, side="buy", desired_notional=desired,
-                    filters=default_filter(bars), trailing_quote_volume=trailing_quote_volume(bars, decision),
+                    symbol=symbol, decision_time_ms=decision, bars=bars, side="buy",
+                    desired_notional=desired * INITIAL_EQUITY,
+                    filters=(filters or {}).get(symbol, default_filter(bars)),
+                    trailing_quote_volume=trailing_quote_volume(bars, decision),
                     participation_cap=scenario.participation, slippage=scenario.slippage,
                     delay_bars=scenario.delay_bars + (1 if config["entry"] == "one_bar_confirmation" else 0),
                 )
@@ -242,13 +322,22 @@ def replay_family_b(config: Mapping[str, object], histories: Mapping[str, Sequen
                 violations.append(f"{symbol}:{decision}:missing exit")
                 continue
             exit_bar, raw_exit, reason = resolved
-            exit_price = raw_exit * (1 - scenario.slippage)
+            exchange_filter = (filters or {}).get(symbol, default_filter(bars))
+            exit_price = adverse_price(raw_exit, "sell", scenario.slippage, exchange_filter.tick_size)
             exit_fee = entry.quantity * exit_price * 0.0005
-            net = entry.quantity * (exit_price - entry.fill_price) - entry.fee - exit_fee
-            events.append((exit_bar.close_time_ms, net))
-            turnover += entry.quantity * (entry.fill_price + exit_price)
-            costs += entry.fee + exit_fee
-            fills.append({**asdict(entry), "exit_time_ms": exit_bar.close_time_ms, "exit_price": exit_price, "exit_reason": reason, "net_return": net})
+            try:
+                funding_pnl = 0.0 if funding is None else funding_cashflow(
+                    funding.get(symbol, ()), symbol, entry.fill_time_ms,
+                    exit_bar.close_time_ms, entry.quantity,
+                )
+            except ProtocolViolation as exc:
+                violations.append(f"{symbol}:{decision}:{exc}")
+                continue
+            net = entry.quantity * (exit_price - entry.fill_price) - entry.fee - exit_fee + funding_pnl
+            events.append((exit_bar.close_time_ms, net / INITIAL_EQUITY))
+            turnover += entry.quantity * (entry.fill_price + exit_price) / INITIAL_EQUITY
+            costs += (entry.fee + exit_fee) / INITIAL_EQUITY
+            fills.append({**asdict(entry), "exit_time_ms": exit_bar.close_time_ms, "exit_price": exit_price, "exit_reason": reason, "net_return": net / INITIAL_EQUITY, "funding_pnl": funding_pnl})
     return ReplayResult(str(config["config_id"]), "B", returns_by_day(events), fills, violations, turnover, costs)
 
 
@@ -290,14 +379,21 @@ def run_family(
         grouped.setdefault(str(config["timeframe"]), []).append(config)
     completed = 0
     evaluator = replay_family_a if family == "A" else replay_family_b
+    symbols = load_roster(dataset)
+    filters = load_exchange_filters(dataset, symbols)
+    funding = load_funding(dataset, symbols)
     for timeframe, tf_configs in sorted(grouped.items()):
-        histories = load_histories(dataset, timeframe)
+        histories = load_histories(dataset, timeframe, symbols)
         for config in tf_configs:
             target = checkpoint_path(output, family, str(config["config_id"]), scenario.name)
             if resume and target.exists():
                 completed += 1
                 continue
-            write_checkpoint(target, evaluator(config, histories, scenario), scenario)
+            write_checkpoint(
+                target,
+                evaluator(config, histories, filters=filters, funding=funding, scenario=scenario),
+                scenario,
+            )
             completed += 1
     status = "COMPLETE" if completed == EXPECTED[family] and limit is None and scenario.name == "base" else "INCOMPLETE"
     return {"family": family, "manifest_count": EXPECTED[family], "evaluated_count": completed, "scenario": scenario.name, "status": status}

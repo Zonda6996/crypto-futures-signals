@@ -63,6 +63,41 @@ class Fill:
     participation: float
 
 
+@dataclass(frozen=True)
+class FundingPoint:
+    symbol: str
+    publication_time_ms: int
+    rate: float
+    mark_price: float
+
+
+def funding_cashflow(
+    records: Sequence[FundingPoint], symbol: str, entry_time_ms: int, exit_time_ms: int, quantity: float
+) -> float:
+    """Return long-position funding PnL using only published records in (entry, exit]."""
+    if exit_time_ms <= entry_time_ms or quantity < 0:
+        raise ValueError("invalid funding interval")
+    applicable = [
+        row for row in records
+        if row.symbol == symbol and entry_time_ms < row.publication_time_ms <= exit_time_ms
+    ]
+    if not applicable:
+        # Binance publishes at fixed 00:00/08:00/16:00 UTC boundaries. A
+        # position crossing one without a record is invalid, never zero-filled.
+        first_boundary = ((entry_time_ms // (8 * TF_MS["1h"])) + 1) * 8 * TF_MS["1h"]
+        if first_boundary <= exit_time_ms:
+            raise ProtocolViolation(f"missing required funding: {symbol}:{first_boundary}")
+        return 0.0
+    previous = -1
+    cashflow = 0.0
+    for row in applicable:
+        if row.publication_time_ms <= previous or not math.isfinite(row.rate) or row.mark_price <= 0:
+            raise ProtocolViolation("invalid funding publication series")
+        cashflow -= quantity * row.mark_price * row.rate
+        previous = row.publication_time_ms
+    return cashflow
+
+
 def reject_holdout(*values: object) -> None:
     if any("holdout" in str(value).lower() for value in values):
         raise ProtocolViolation("holdout access is forbidden")
@@ -330,7 +365,23 @@ def portfolio_weights(
     if not total:
         return {}
     weights = {symbol: value / total for symbol, value in raw.items()}
-    # Frozen 20% symbol cap. Excess remains cash; it is never redistributed above the cap.
+    # Frozen iterative redistribution under the 20% symbol cap. If fewer than
+    # five names survive, the unallocatable residual remains cash.
+    for _ in range(len(weights) + 1):
+        capped = {symbol: min(0.20, value) for symbol, value in weights.items()}
+        excess = sum(weights.values()) - sum(capped.values())
+        free = {symbol: value for symbol, value in capped.items() if value < 0.20 - 1e-15}
+        weights = capped
+        if excess <= 1e-15 or not free:
+            break
+        free_total = sum(free.values())
+        if free_total <= 0:
+            addition = excess / len(free)
+            for symbol in free:
+                weights[symbol] += addition
+        else:
+            for symbol, value in free.items():
+                weights[symbol] += excess * value / free_total
     return {symbol: min(0.20, value) for symbol, value in weights.items()}
 
 
