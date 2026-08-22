@@ -1,6 +1,6 @@
 import { createReadStream, statSync } from 'node:fs'
 import { createHash } from 'node:crypto'
-import { put } from '@vercel/blob'
+import { list, put } from '@vercel/blob'
 
 const archive = process.argv[2]
 if (!archive) throw new Error('usage: node scripts/publish_altcoin_multitf_004.mjs <archive.tar.gz>')
