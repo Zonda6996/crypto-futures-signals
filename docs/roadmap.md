@@ -4,7 +4,7 @@
 
 ## Текущий статус
 
-**ALT-MULTITF-005 infrastructure:** подготовлена resumable GitHub Actions сборка frozen ALT-MULTITF inventory с checkpoint artifacts и публикацией в Public Vercel Blob. Статус — код готов, но data release ещё не подтверждён реальным Actions run. До `anonymous verification: PASS` запрещено считать 005 опубликованным или переходить к Phase 2; см. `docs/ALTCOIN_MULTITF_005_GITHUB_ACTIONS.md`.
+**ALT-MULTITF-005:** Public Blob release анонимно восстановлен и подтверждён по size/SHA-256, safe extraction и normalized manifest. Owner-approved Phase 2 causal engine завершена: bounded loader и deterministic short/medium/long real-data evidence прошли 15 focused tests; release/restore contract прошёл ещё 10 tests. Frozen roster и параметры не менялись, `BTWUSDT` остаётся missing/ineligible, holdout отсутствует. **PASS / DONE означает только причинность и воспроизводимость инженерного слоя, не торговый edge.** Parameter search, portfolio execution, PnL/backtest и holdout запрещены до отдельной frozen Phase 3 specification и нового owner approval; см. `docs/ALTCOIN_MULTITF_005_PHASE2_NEXT_CHAT.md`.
 
 **Независимое altcoin-исследование:** строгий protocol `ALT-XSMOM-001-A` остаётся **STOP** из-за отсутствия полного historical lifecycle registry. Разрешённый exploratory amendment `ALT-XSMOM-001-B` на frozen basket из 10 контрактов завершил pre-HOLDOUT TRAIN/VALIDATION с **FAIL / STOP**. TRAIN-only selection выбрал `30d momentum / 24h rebalance`; на единственной VALIDATION при 0,12% net Sharpe равен `−0,817`, compounded return `−35,90%`, max drawdown `−46,78%`, bootstrap CI95 `[−2,449; +0,632]`. Результат при 0,20% также отрицателен (`−60,99%`). HOLDOUT с `2026-01-01` не открывался и остаётся закрытым. Это **exploratory fixed-basket evidence with survivorship/selection bias**, не universe-level edge. См. [`reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md`](../reports/ALTCOIN_PHASE_B_TRAIN_VALIDATION.md).
 
@@ -115,7 +115,7 @@ $$R_i = \frac{NetPnL_i}{InitialRisk_i}$$
 
 ## 1.4. Мягкий диагностический отбор
 
-Не применять требование «каждый период обязан быть прибыльным». Трендовая или режимная система закономерно может иметь убыточные окна.
+Не при��енять требование «каждый период обязан быть прибыльным». Трендовая или режимная система закономерно может иметь убыточные окна.
 
 Кандидатов ранжировать по совокупности:
 
@@ -260,7 +260,7 @@ Long и short проверять отдельно.
 
 ## 5.6. Cross-sectional momentum
 
-После проверки BTC/ETH расширить universe только на ликвидные perpetual-контракты:
+После проверки BTC/ETH расширить universe только на ликвидные perpetual-контрак��ы:
 
 - фильтр ликвидности;
 - исключение новых инструментов;
@@ -404,7 +404,7 @@ $$PositionSize = \frac{Capital \times RiskFraction}{StopDistance}$$
 2. **Фаза 1 — read-only post-mortem (DONE):** существующие ledgers разложены по costs, turnover, legs, symbols, funding, concentration и календарным срезам без новых backtests.
 3. **Gate 1 — owner decision (DONE):** владелец разрешил только документационную Фазу 2.
 4. **Фаза 2 — новый protocol (DONE):** до реализации frozen `ALT-LOMOM-002-A` с единственным low-turnover long-only кандидатом, mechanical PASS/FAIL и новым prospective calendar.
-5. **Фаза 3 — реализация и TRAIN (DONE):** один preregistered вариант реализован и рассчитан только на timestamps `< 2026-01-01`; TRAIN diagnostic PASS, ledger reconciliation PASS.
+5. **Фаза 3 — реализация и TRAIN (DONE):** один preregistered вариант реализован и р��ссчитан только на timestamps `< 2026-01-01`; TRAIN diagnostic PASS, ledger reconciliation PASS.
 6. **Фаза 4 — prospective VALIDATION (NOT STARTED):** `[2026-09-01, 2027-09-01)`, один заранее определённый запуск с механическим gate без retuning; отдельное разрешение обязательно.
 7. **Фаза 5 — paper trading (CONDITIONAL):** только после уверенного PASS и отдельного разрешения; live остаётся отдельным решением.
 
