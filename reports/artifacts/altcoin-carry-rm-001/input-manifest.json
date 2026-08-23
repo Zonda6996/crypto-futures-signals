@@ -1,0 +1,36 @@
+{
+  "erratum_commit": "9209620",
+  "freeze_proof_commit": "68482d4",
+  "frozen_protocol_document": "ALTCOIN_CARRY_RM_001_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "01b6c1676ee696681c79cbf2e597431e0786e3d705692e9409f7f0ae20bea96e",
+  "prior_inputs": {
+    "primary_archive_sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "supplement_archive_sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b",
+    "supplement_v2_archive_sha256": "487046fad5659e427075ca2b2b676bb3213da85276848129ba5eb21f00d10c56"
+  },
+  "protocol_id": "ALTCOIN_CARRY_RM-001",
+  "repo_source_commit": "6483898d326b7c6d2bc6f700595df89bd926c058",
+  "selection_policy": "single-pass decision; hypothesis-level NO_SELECTION only; reference rows excluded from gates",
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ],
+  "windows_utc": {
+    "decide": [
+      "2021-01-01T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "monitor_reserve": [
+      "2026-07-01T00:00:00Z",
+      null
+    ]
+  }
+}

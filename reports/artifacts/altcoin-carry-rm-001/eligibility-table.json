@@ -1,0 +1,87 @@
+{
+  "eligible_count": 4,
+  "ordering": [
+    {
+      "key": "b6e894f87f39d4e4dd68",
+      "rank": 1
+    },
+    {
+      "key": "42f41176e6cecba214e8",
+      "rank": 2
+    },
+    {
+      "key": "419c90e2add6295726b1",
+      "rank": 3
+    },
+    {
+      "key": "708fe551bdf805ca8a91",
+      "rank": 4
+    }
+  ],
+  "table": {
+    "419c90e2add6295726b1": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "42f41176e6cecba214e8": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "6f80862e68afd713eed6": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": false
+    },
+    "708fe551bdf805ca8a91": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "9b40db9389c03751d2af": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "b6e894f87f39d4e4dd68": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "f869001ff6f3afe5d6b3": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": false
+    },
+    "fdd5d805db72630e819a": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    }
+  }
+}

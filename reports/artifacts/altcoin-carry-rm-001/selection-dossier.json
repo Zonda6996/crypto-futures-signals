@@ -1,0 +1,41 @@
+{
+  "eligible_candidates": 4,
+  "examined": 4,
+  "reports": [
+    {
+      "failures": [
+        "spa_p_above_limit",
+        "dsr_below_limit",
+        "holm_p_above_limit"
+      ],
+      "key": "b6e894f87f39d4e4dd68"
+    },
+    {
+      "failures": [
+        "spa_p_above_limit",
+        "dsr_below_limit",
+        "holm_p_above_limit"
+      ],
+      "key": "42f41176e6cecba214e8"
+    },
+    {
+      "failures": [
+        "spa_p_above_limit",
+        "dsr_below_limit",
+        "holm_p_above_limit",
+        "temporal_consistency_failed"
+      ],
+      "key": "419c90e2add6295726b1"
+    },
+    {
+      "failures": [
+        "spa_p_above_limit",
+        "dsr_below_limit",
+        "holm_p_above_limit",
+        "temporal_consistency_failed"
+      ],
+      "key": "708fe551bdf805ca8a91"
+    }
+  ],
+  "tie_break_rule": "pre-registered ordering; rank-1 full passer wins"
+}
