@@ -1,0 +1,107 @@
+{
+  "eligible_count": 1,
+  "ordering": [
+    {
+      "key": "dab879a24ba906802fbf",
+      "rank": 1
+    }
+  ],
+  "table": {
+    "1c74dd299ba48eebdf0f": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "27fb2be6fc882939c0de": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": false,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": false,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "36e7e56b050cd4a23620": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "414e10021ea2b6a4aab9": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "85e188eff1f5b5cdd9e4": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "877aff0ca5876dacbdb0": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "9b6899e20e7fe0192cf2": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "abbdb42a11808d61ebfb": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "b914e12fe448a01a38b0": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "dab879a24ba906802fbf": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "df07f899213ea7be9ee0": {
+      "concentration_le_40pct": false,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "eb6590438d97ab707690": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    }
+  }
+}

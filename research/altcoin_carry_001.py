@@ -526,15 +526,16 @@ def finalize(cache_dir: Path, merged_root: Path) -> dict:
     invalid = [k for k, r in rows.items() if not r["valid"]]
     active_keys = sorted(k for k, r in rows.items() if r["valid"])
     write_json_atomic(ARTIFACTS / "sweep-progress.json", json.loads((cache_dir / "checkpoint-carry-001.json").read_text(encoding="utf-8")))
-    header_source = next(iter(rows.values()))
+    csv_excluded = {"daily_returns", "fold_sharpes", "asset_names", "config"}
+    sample = next(iter(rows.values()))
+    header = sorted({**sample["config"], **{k: v for k, v in sample.items() if k not in csv_excluded}})
     with (ARTIFACTS / "development-metrics.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")
-        flat = {k: v for k, v in header_source.items() if k not in CSV_EXCLUDED}
-        writer.writerow(sorted(flat))
+        writer.writerow(header)
         for key in sorted(rows):
             row = rows[key]
-            flat = {k: v for k, v in row.items() if k not in CSV_EXCLUDED}
-            writer.writerow([flat[h] for h in sorted(flat)])
+            flat = {**row["config"], **{k: v for k, v in row.items() if k not in csv_excluded}}
+            writer.writerow([flat[h] for h in header])
     if not active_keys:
         verdict = {"stage": "FINAL", "decision": "NO_SELECTION", "selected_key": None, "reason": "no active configurations"}
         write_json_atomic(ARTIFACTS / "verdict-final.json", verdict)
