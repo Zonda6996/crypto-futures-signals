@@ -55,9 +55,16 @@ fast × slow       : {10,20} × {50,100,200}   (all six pairs valid)
 entry_threshold   : {0.01, 0.02}
 exit_threshold    : {0.0}   (single value; axis not consumed by the engine)
 stop_atr          : {2.0, 3.0}      take_atr : {4.0, 6.0}
-max_holding_bars  : {14400, 28800}  (= 10 / 20 days of 5m execution bars)
+max_holding_bars  : {2880, 5760}    (= 10 / 20 days of 5m execution bars)
 side              : {"long", "both"}
 ```
+
+ERRATUM (committed before any window analysis): the original freeze listed
+`{14400, 28800}` with the same "10 / 20 days" annotation — an arithmetic slip
+(those bar counts equal 50/100 days). The approved specification everywhere else,
+including the discussion that led to this freeze, states holding periods of
+**10 / 20 days**, so the corrected bar values are `{2880, 5760}`. Grid count
+remains 192. This erratum changes nothing else and predates the first sweep run.
 
 Count check: 6 × 2 × 2 × 2 × 2 × 2 = **192**. Part 2 must stop on any other count.
 Expected trades per configuration ≈ hundreds, not tens of thousands.
