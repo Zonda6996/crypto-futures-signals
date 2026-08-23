@@ -98,7 +98,15 @@ Mandatory gates for the selected candidate:
 
 - **DSR (decision gate)** ≥ 0.95 with N = number of valid evaluated configurations.
 - **Heritage DSR (report-only)** recomputed at N = 6,044 with Sharpe variance across the
-  union of published 005/006 Sharpes plus the twelve current values.
+  union of published per-configuration Sharpes of 005 (5,832), 006 (192), 007 (8) and
+  the twelve current values.
+
+ERRATUM (committed before any window analysis): the original freeze text named the
+variance sources as "published 005/006 Sharpes plus the twelve current values" while
+already fixing N = 6,044; the source list omitted 007's eight published Sharpes by
+accident of wording. The corrected union (005+006+007+current) matches the frozen
+N = 6,044 exactly and changes nothing else. Grid count remains 12; this erratum
+predates the first sweep run.
 - **Temporal robustness:** annualized fold Sharpe > 0 in ≥ 7 of 11 calendar half-year
   folds (boundaries identical to 007) **and** median fold Sharpe > 0.
 - SPA consistent p ≤ 0.05 (screened stationary bootstrap, panel of configuration daily
