@@ -1,0 +1,40 @@
+{
+  "eligible_candidates": 4,
+  "examined": 1,
+  "reports": [
+    {
+      "bootstrap": {
+        "block_length": 13.0,
+        "lower": 0.0003609697920752614,
+        "mean": 0.001202287600812552,
+        "replicates": 2000.0,
+        "upper": 0.0022181337506161783
+      },
+      "failures": [],
+      "key": "699326dc4971c5d9e437",
+      "maker_track_report_only": {
+        "net_return": 11.347886067213535
+      },
+      "passes_all_gates": true,
+      "stress": {
+        "fee_double": {
+          "net_return": 4.356206946167797,
+          "pass": true
+        },
+        "funding_flipped": {
+          "net_return": 3.029863631042285,
+          "pass": true
+        },
+        "funding_half": {
+          "net_return": 6.136608259724707,
+          "pass": true
+        },
+        "slippage_triple": {
+          "net_return": 4.356206946167797,
+          "pass": true
+        }
+      }
+    }
+  ],
+  "tie_break_rule": "pre-registered ordering; rank-1 full passer wins"
+}

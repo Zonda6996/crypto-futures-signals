@@ -1,0 +1,13 @@
+{
+  "active": 8,
+  "elapsed_seconds": 13.274186611175537,
+  "eligible": 4,
+  "examined": 1,
+  "python": "3.14.0",
+  "rows": 8,
+  "seeds": {
+    "bootstrap": 20261006,
+    "spa": 20261007,
+    "sweep": 20261005
+  }
+}

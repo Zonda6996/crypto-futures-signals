@@ -1,0 +1,104 @@
+{
+  "bootstrap_seed": 20261006,
+  "heritage_report_only": {
+    "counts": {
+      "005": 5832,
+      "006": 192,
+      "007": 8,
+      "CARRY-001": 11,
+      "RM-001": 8,
+      "SL-001": 30
+    },
+    "n": 6089,
+    "n_trials": 6090,
+    "variance": 0.0008999709473089504
+  },
+  "method": {
+    "dsr": "Bailey-Lopez de Prado",
+    "holm": "step-down",
+    "spa": "Hansen 2005 screened consistent"
+  },
+  "n_trials_dsr": 8,
+  "nw_lag": 13,
+  "reference_rows_excluded_from_gates": {
+    "reference_bare_A": {
+      "daily_sharpe": 0.06904768002659328,
+      "episodes": 12000,
+      "max_drawdown": -0.2020881285541135,
+      "net_return": 10.892252953364146
+    },
+    "reference_bare_B": {
+      "daily_sharpe": 0.07298392162018034,
+      "episodes": 8000,
+      "max_drawdown": -0.29241291197813535,
+      "net_return": 9.147495490242832
+    },
+    "reference_risk_arm": {
+      "daily_sharpe": 0.06606252263252495,
+      "episodes": 2636,
+      "max_drawdown": -0.26694272331168223,
+      "net_return": 9.391523823690205
+    }
+  },
+  "results": {
+    "239311c0af1b8212a155": {
+      "dsr_probability": 0.9994815754851768,
+      "heritage_dsr_probability_n6090": 6.91804935097726e-05,
+      "holm_p": 0.03683825388663431,
+      "naive_p": 0.013965039527155554,
+      "spa_p": 0.078
+    },
+    "699326dc4971c5d9e437": {
+      "dsr_probability": 0.9998189246375381,
+      "heritage_dsr_probability_n6090": 0.018938748171401294,
+      "holm_p": 0.024383930297075418,
+      "naive_p": 0.003483418613867917,
+      "spa_p": 0.025
+    },
+    "7d84b6d31306178acd7d": {
+      "dsr_probability": 0.9995884468977928,
+      "heritage_dsr_probability_n6090": 0.0009164076376346372,
+      "holm_p": 0.031332644693385925,
+      "naive_p": 0.006266528938677185,
+      "spa_p": 0.038
+    },
+    "8e1755ea43e6d3159d8d": {
+      "dsr_probability": 0.9945222994630125,
+      "heritage_dsr_probability_n6090": 0.0032523237195672687,
+      "holm_p": 0.03683825388663431,
+      "naive_p": 0.013414330765342042,
+      "spa_p": 0.075
+    },
+    "ab1fa1c04ffb6d336666": {
+      "dsr_probability": 0.9999628573916459,
+      "heritage_dsr_probability_n6090": 0.05461565876611612,
+      "holm_p": 0.01011136588977024,
+      "naive_p": 0.00126392073622128,
+      "spa_p": 0.014
+    },
+    "b0ee959d83e52a2d31a4": {
+      "dsr_probability": 0.9997204936803862,
+      "heritage_dsr_probability_n6090": 0.0011623107837696997,
+      "holm_p": 0.030538605261659413,
+      "naive_p": 0.005089767543609902,
+      "spa_p": 0.031
+    },
+    "ce4d6a068903dd5b42d2": {
+      "dsr_probability": 0.9995659056681482,
+      "heritage_dsr_probability_n6090": 0.00010063390087253205,
+      "holm_p": 0.03683825388663431,
+      "naive_p": 0.010973930817009148,
+      "spa_p": 0.061
+    },
+    "e5318ff30a81ea5ebade": {
+      "dsr_probability": 0.9933136825196038,
+      "heritage_dsr_probability_n6090": 0.00578947526413601,
+      "holm_p": 0.03683825388663431,
+      "naive_p": 0.009209563471658577,
+      "spa_p": 0.055
+    }
+  },
+  "sharpe_variance_across_trials": 6.818405359735019e-05,
+  "spa_replicates": 1000,
+  "spa_seed": 20261007
+}
