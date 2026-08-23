@@ -60,6 +60,16 @@ multiplier with corresponding turnover costs — the overlay must act immediatel
 only on rebalance dates. The multiplier used on day `d+1` depends only on information
 through close `d` (causal).
 
+ERRATUM (committed before any window analysis): computing `dd` "after applying that
+day's costs" is circular — the overlay's own rescaling cost depends on the multiplier,
+which depends on `dd`. Deterministic resolution frozen here: `dd(d)` is computed on the
+**provisional** equity `eq'(d) = eq(d−1) × growth(d)` (day growth applied, today's
+overlay/rebalance costs not yet deducted), while the running peak covers historical
+**final** end-of-day equities. The final equity of day `d` is
+`eq(d) = eq'(d) × (1 − cost(turnover induced by the multiplier and rebalance))`, and it
+enters the peak history from the next day onward. Nothing else changes; grid count
+remains 8; this erratum predates the first sweep run.
+
 ## Frozen grid — exactly 8 configurations
 
 Carry cores (from published CARRY-001 diagnostics):
