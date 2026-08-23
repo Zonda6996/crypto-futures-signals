@@ -1,0 +1,251 @@
+{
+  "eligible_count": 1,
+  "ordering": [
+    {
+      "key": "c3fc46836cdb5a8801fc",
+      "rank": 1
+    }
+  ],
+  "table": {
+    "055d71fcbfd63812b15c": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "0600cf09037d7a71cb2d": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "0c32adeaac32fd891559": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "0f2e07a8ae1f31684491": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "1252212acbd0aefeef2a": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "17ef4aebc72d305f10fd": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "1af47e7d4e1b15d011c0": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "1d5f72f7b51909ab87ff": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "2742283d3ff25450db97": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "36e100817da27fc3178d": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "407b1e4006de49cee5c3": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "50aa22a2ba6208998900": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "82e27a04da654a895ade": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "871260eb129b03e9c6e7": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "8f3898b0d63409d8d2a6": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "900aa51f538646c8677a": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "97e0a185b3e3ea26186a": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "9c5d396730f9f4584c3c": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "a589f387e1de1530bade": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "ad43ff155d1d8f41ffdc": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "b14c266fff642bbdef2a": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "c0eb893ba33f3c1ae4eb": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "c3fc46836cdb5a8801fc": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": true,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "ccaa2bb74fdfb422a2d4": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "d9f85a79e6df030e3d0c": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "e541128fe653c46d8745": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "ea686575b440172fe348": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": false
+    },
+    "ebc1d162bb4dd0d2d6fc": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "ed72831c5076c8d6b807": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "f73e403870f80a11dc2d": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    }
+  }
+}
