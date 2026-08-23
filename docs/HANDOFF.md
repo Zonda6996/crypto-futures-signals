@@ -13,6 +13,10 @@ Reporting convention for any assistant/human finishing a protocol:
 
 Hypothesis queue: H-MR (daily mean reversion), H-XS (cross-sectional momentum),
 H-VOL (volatility-regime conditioning), portfolio day-brake, cooldown variants.
+External line (DO NOT touch from this repo): D6 cascade reversion (OI-flush, leverage
+flow) lives in `SMC-Research-Engine` — two GO replications on symbol-fresh listings,
+non-replication on old listings, paper-forward running. Owner resolves population
+question before any integration into the TIDAL product.
 
 History: trend family closed by 007; CARRY-001 found the gross premium (10/11 net-positive);
 RM-001 proved a drawdown overlay works mechanically but whipsaws; SL-001 showed tight
