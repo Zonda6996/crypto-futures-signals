@@ -1,0 +1,14 @@
+{
+  "eligible_candidates": 1,
+  "examined": 1,
+  "reports": [
+    {
+      "block": 2,
+      "failures": [
+        "holm_p_above_limit"
+      ],
+      "key": "c3fc46836cdb5a8801fc"
+    }
+  ],
+  "tie_break_rule": "pre-registered ordering; rank-1 full passer wins"
+}
