@@ -1,0 +1,10 @@
+{
+  "active": 192,
+  "elapsed_seconds": 1.610201358795166,
+  "eligible": 3,
+  "examined": 3,
+  "invalid": 0,
+  "python": "3.14.0",
+  "rows": 192,
+  "zero_trade": 0
+}

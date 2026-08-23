@@ -114,9 +114,10 @@ def atr_series_compact(highs: Sequence[float], lows: Sequence[float], closes: Se
 class IndicatorCache:
     """Per-process rolling-statistics cache keyed by dataset object identity."""
 
-    def __init__(self, max_entries: int = 8) -> None:
+    def __init__(self, max_entries: int = 8, windows: tuple[int, ...] = WINDOWS) -> None:
         self._entries: dict[tuple[int, int], dict[str, object]] = {}
         self._max_entries = max_entries
+        self._windows = tuple(windows)
 
     def _entry(self, key: tuple[int, int], builder) -> dict[str, object]:
         entry = self._entries.get(key)
@@ -133,7 +134,7 @@ class IndicatorCache:
             closes = list(series.closes)
             return {
                 "closes": closes,
-                "sma": {w: sma_series(closes, w) for w in WINDOWS},
+                "sma": {w: sma_series(closes, w) for w in self._windows},
                 "atr": atr_series_compact(series.highs, series.lows, series.closes),
             }
 
@@ -142,7 +143,7 @@ class IndicatorCache:
     def regime_entry(self, series_id: int, series: CompactSeries) -> dict[str, object]:
         def build() -> dict[str, object]:
             closes = list(series.closes)
-            return {"closes": closes, "sma": {w: sma_series(closes, w) for w in WINDOWS}}
+            return {"closes": closes, "sma": {w: sma_series(closes, w) for w in self._windows}}
 
         return self._entry((series_id, 1), build)
 
@@ -200,6 +201,7 @@ def evaluate_compact(
     prevalidated: bool = False,
     signal_entry: dict[str, object] | None = None,
     regime_entry: dict[str, object] | None = None,
+    decision_start_ms: int | None = None,
 ) -> Evaluation:
     diagnostics = Diagnostics()
     try:
@@ -245,6 +247,8 @@ def evaluate_compact(
     for signal_index in range(len(signals)):
         decision = sig_ct[signal_index]
         if decision < next_allowed_time:
+            continue
+        if decision_start_ms is not None and decision < decision_start_ms:
             continue
         regime_visible = bisect_right(regime_close_times, decision)
         signal = evaluate_signal_fast(config, decision, signal_index, sig_entry, reg_entry, regime_visible)

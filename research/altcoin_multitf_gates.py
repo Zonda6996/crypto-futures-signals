@@ -33,9 +33,9 @@ DSR_PROBABILITY_LIMIT = 0.95
 HOLM_P_LIMIT = 0.05
 
 
-def fold_bounds() -> list[tuple[int, int]]:
-    step = (DEV_END_MS - DEV_START_MS) // FOLD_COUNT
-    return [(DEV_START_MS + index * step, DEV_START_MS + (index + 1) * step) for index in range(FOLD_COUNT)]
+def fold_bounds(start_ms: int = DEV_START_MS, end_ms: int = DEV_END_MS, count: int = FOLD_COUNT) -> list[tuple[int, int]]:
+    step = (end_ms - start_ms) // count
+    return [(start_ms + index * step, start_ms + (index + 1) * step) for index in range(count)]
 
 
 @dataclass(frozen=True)
@@ -73,24 +73,31 @@ def _empty_daily() -> list[float]:
     return [0.0] * DEV_DAYS
 
 
-def daily_equity_curve(events: Sequence[tuple[int, str, int, float]], initial_equity: float) -> list[float]:
+def daily_equity_curve(
+    events: Sequence[tuple[int, str, int, float]],
+    initial_equity: float,
+    *,
+    start_ms: int = DEV_START_MS,
+    end_ms: int = DEV_END_MS,
+) -> list[float]:
     """End-of-day equity for a merged cross-symbol trade event stream.
 
     ``events`` items are ``(exit_time_ms, symbol, entry_time_ms, net_pnl)``
     sorted by ``(exit_time_ms, symbol, entry_time_ms)``.
     """
+    days = (end_ms - start_ms) // DAY_MS
     points: list[tuple[int, float]] = []
     equity = initial_equity
     for exit_time_ms, _symbol, _entry_time_ms, net_pnl in events:
-        day = (exit_time_ms - DEV_START_MS) // DAY_MS
-        if day < 0 or day >= DEV_DAYS:
+        day = (exit_time_ms - start_ms) // DAY_MS
+        if day < 0 or day >= days:
             continue
         equity += net_pnl
         points.append((day, equity))
     curve: list[float] = []
     index = 0
     running = initial_equity
-    for day in range(DEV_DAYS):
+    for day in range(days):
         while index < len(points) and points[index][0] == day:
             running = points[index][1]
             index += 1
@@ -125,10 +132,15 @@ def compute_metrics(
     evaluation_by_symbol: Mapping[str, object],
     *,
     initial_equity: float,
+    window_start_ms: int = DEV_START_MS,
+    window_end_ms: int = DEV_END_MS,
+    fold_count: int = FOLD_COUNT,
 ) -> ConfigMetrics:
     """Aggregate per-symbol frozen-engine evaluations into protocol metrics.
 
     ``evaluation_by_symbol`` maps symbol -> Evaluation from the frozen engine.
+    Trades must already be filtered by the caller to entries inside the accounting
+    window when a warmup-inclusive engine span was used.
     """
     events: list[tuple[int, str, int, float]] = []
     asset_positive: dict[str, float] = {}
@@ -142,8 +154,8 @@ def compute_metrics(
     missing_bars = 0
     rejected_total = 0
     funding_events_count = 0
-    fold_nets = [0.0] * FOLD_COUNT
-    bounds = fold_bounds()
+    fold_nets = [0.0] * fold_count
+    bounds = fold_bounds(window_start_ms, window_end_ms, fold_count)
     ending_equity = initial_equity
     for symbol in sorted(evaluation_by_symbol):
         evaluation = evaluation_by_symbol[symbol]
@@ -173,6 +185,7 @@ def compute_metrics(
                     fold_nets[index] += trade.net_pnl
                     break
     if invalid_reason is not None:
+        window_days = (window_end_ms - window_start_ms) // DAY_MS
         return ConfigMetrics(
             config_key=config_key,
             valid=False,
@@ -185,7 +198,7 @@ def compute_metrics(
             daily_sharpe=None,
             annualized_sharpe=None,
             median_fold_sharpe=0.0,
-            fold_sharpes=tuple([0.0] * FOLD_COUNT),
+            fold_sharpes=tuple([0.0] * fold_count),
             fold_net_returns=tuple(fold_nets),
             positive_folds=0,
             max_drawdown=0.0,
@@ -200,17 +213,17 @@ def compute_metrics(
             rejected_orders_total=rejected_total,
             missing_bars=missing_bars,
             funding_events=funding_events_count,
-            daily_returns=tuple(_empty_daily()),
+            daily_returns=tuple([0.0] * window_days),
         )
     events.sort(key=lambda item: (item[0], item[1], item[2]))
-    curve = daily_equity_curve(events, initial_equity)
+    curve = daily_equity_curve(events, initial_equity, start_ms=window_start_ms, end_ms=window_end_ms)
     daily = daily_returns_from_curve(curve, initial_equity)
     daily_sharpe = sharpe_ratio(daily)
     bounds_list = bounds
     fold_sharpes: list[float] = []
     for start, end in bounds_list:
-        first_day = (start - DEV_START_MS) // DAY_MS
-        last_day = (end - DEV_START_MS) // DAY_MS
+        first_day = (start - window_start_ms) // DAY_MS
+        last_day = (end - window_start_ms) // DAY_MS
         segment = daily[first_day:last_day]
         fold_sharpe = sharpe_ratio(segment)
         fold_sharpes.append(0.0 if fold_sharpe is None else fold_sharpe * ANNUALIZATION)
