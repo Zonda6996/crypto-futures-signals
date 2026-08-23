@@ -1,0 +1,36 @@
+{
+  "downloads": "none",
+  "freeze_proof_commit": "db6e4f8",
+  "frozen_protocol_document": "ALTCOIN_MR_TF_001_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "b7a93930fa7f22a594c4bc12f2ecc085bfbb9f7a87379093e431edb9f1b19b98",
+  "prior_inputs": {
+    "primary_archive_sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "supplement_archive_sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b",
+    "supplement_v2_archive_sha256": "487046fad5659e427075ca2b2b676bb3213da85276848129ba5eb21f00d10c56"
+  },
+  "protocol_id": "ALTCOIN_MR_TF-001",
+  "repo_source_commit": "8b451ba5862a8804fde169fedf42fc7f7fbeabd7",
+  "selection_policy": "single-pass decision; TF pack 2 deferred to its own freeze",
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ],
+  "windows_utc": {
+    "decide": [
+      "2021-01-01T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "monitor_reserve": [
+      "2026-07-01T00:00:00Z",
+      null
+    ]
+  }
+}
