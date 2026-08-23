@@ -1,0 +1,42 @@
+{
+  "exchange_info_freeze_snapshot": {
+    "raw_sha256": "3eb3bcf246495fb0e9e99a38f7d6c4cd741ced5f4256b461d3cf8643df5b2daf",
+    "rules_file": "reports\\artifacts\\altcoin-multitf-007\\input\\exchange-rules-frozen.json",
+    "rules_sha256": "3109eeae512270d1fad0db5f28ffe3265d6a18f0e660c6275356f0cbd1a4b0a6",
+    "source_url": "https://www.binance.com/fapi/v1/exchangeInfo"
+  },
+  "freeze_proof_commit": "f0628f5",
+  "frozen_protocol_document": "ALTCOIN_MULTITF_007_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "4ae9f804c7ffc7169673cd3db9c8d192490171d8b3c902fb272d4615a121d30b",
+  "prior_inputs": {
+    "primary_archive_sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "supplement_archive_sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b",
+    "supplement_v2_archive_sha256": "487046fad5659e427075ca2b2b676bb3213da85276848129ba5eb21f00d10c56"
+  },
+  "protocol_id": "ALT-MULTITF-007",
+  "repo_source_commit": "f0628f54007ac237892cfa1c376484a7e619e623",
+  "selection_policy": "single-pass decision; no confirmation stage; monitor reserve never read",
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ],
+  "windows_utc": {
+    "decide": [
+      "2021-01-01T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "engine_span_start": "earliest acquired history per symbol",
+    "monitor_reserve": [
+      "2026-07-01T00:00:00Z",
+      null
+    ]
+  }
+}

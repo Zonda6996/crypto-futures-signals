@@ -1,0 +1,15 @@
+{
+  "active": 8,
+  "elapsed_seconds": 0.4033989906311035,
+  "eligible": 0,
+  "examined": 0,
+  "invalid": 0,
+  "python": "3.14.0",
+  "rows": 8,
+  "seeds": {
+    "bootstrap": 20260908,
+    "spa": 20260909,
+    "sweep": 20260907
+  },
+  "zero_trade": 0
+}
