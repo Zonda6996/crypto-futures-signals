@@ -1,0 +1,1555 @@
+{
+  "eligible_count": 3,
+  "ordering": [
+    {
+      "key": "66f887bd234215537c87",
+      "rank": 1
+    },
+    {
+      "key": "d732595b72b5da812cdc",
+      "rank": 2
+    },
+    {
+      "key": "af195b1d59aa3ab603a0",
+      "rank": 3
+    }
+  ],
+  "table": {
+    "00e730d74f9ce6a05485": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "00fb32230f34a431d404": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "0299531ab7a24a3d0256": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "0490be51d517349361e2": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "06499a9ebe9712dc9074": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "07be1d249ebc999860d6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": false,
+      "trades": true
+    },
+    "08a92294fdda55304cc3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "08ee3419a2ee159f068e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "09eef91664ecfbf6a63a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "0a809fd61b220fc86c59": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "0b94fcd336c1bbbb0de4": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "0be3efebefd2743821d0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "0c3d65bdeecd9cc3f004": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "0f68e45bb9b3dbf8067e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "111f26494ab0aa92929b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "137efdede6749e6b9fe6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "15a1a9cb2b53b2e58cfb": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "16a921e607f045bbad8c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "17b9cda284592b8e8367": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "19b4183bba5626cd6c2b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "1aa3a339f3d1e6f86822": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "1dff6df4aaedf72d5930": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "1feb09c3a137b52ec22b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "203ba5e650af8107f5f6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "2208e89a76f731d366a8": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "236258e8f053d73e7fe8": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "23a50032bd1c06f99f46": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "248081eba12ae334e4c6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "24f486b4c5bcd63ec0d8": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "25f111d18a55a2050fc2": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "27567577d2993ccb394d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "28170604974571c9ecf5": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "2830d15211aa5c6a24f6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "28947eaf1265fe42e05c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "28bf643d36a12bca218f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "296d4737899339967c56": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "29bbd427dac0573f8197": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "2a9e08cb0ceaed560f9d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "2e1aaaedc32b02164c9d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "2ffac3d7f49ae7624f40": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "30e69b68d70c1f2074e2": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "31adc4f57778e6eac6d2": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "33aff3e527ae1dc8bb66": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "360e5172b215218fc0c9": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "362c8dc57ef8f175e2a3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "36b971673c128a4b4245": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "3834c3c43205585a86a6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "3d214949a9ed5f2dce08": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "3d4a5a6aa6931172b896": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "3e03fddbaa822052be4f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "40de8064b2dea28f7673": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "4159ce3c2181a64bb260": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "437e4deccaa3c07da62a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "43cbb523a1e73c84313b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "441457ff0c50d0a480dd": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "47ee360e46e92302b2eb": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "4b1133e591e309fc7a9c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "4b61f8b30c8a6e1515b5": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "4c2b1b9723069641d80c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "51a6652a308330ef51fa": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "529496b254afa7358f6f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "54dd1a8e5d1dbf943e8f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "56b95cc6cfcae074d5a3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "57c0b5c86e3c3808e0e7": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "57f36f618fdeef2bc28d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "582139dad7f279eb2018": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "589fad5267387a4fa297": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "58ca5724b9eab1e381b3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "59dbbb936e9124ba9746": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5a7936695d86d6016608": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5b1566e03603cee0b14c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5c62fdb0cba6aa14a959": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5c73a8b4666bd93fef50": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5de26689d1d6cb50ade6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "5e0107f81785aab74700": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "5eed59409e72bce484be": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "6043ed237ae5ee5926ed": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "61a644c9f92d8d68c547": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "630d910355e701e14cf0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "6421e5347a583be4f447": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "66f887bd234215537c87": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": true,
+      "trades": true
+    },
+    "675339b0b6fe4955accd": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "67dd0166d3b7f453fc66": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "69336f1f59101c5103a4": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "6a1ec3197869422b8aa8": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "6a4dfba458a4bbb6a940": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "6b1be63e177e7f0db936": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "6e240494cc586e1731e7": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "6e3a47d91fe7619616f8": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "6f07b0d88b9de1f3fba6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "75c1108d2861b63ae27d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "79208b451b6fe00e5a1f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "7ccabd9be8ad5516cc7f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "7d5887e3123bc714943c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "7e5ea51dff9df8839811": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "81e6dcf11f5810bcb1d0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "82918d47388389aeb4f0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "8390700dddc35bf5801d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "84dbe5df48c92ad4e71a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "85b9b246ba88a526f08a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "85d03cd602375ef3148c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "85da0df6e6b7c1016f5c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "8632a915ec6a902af56f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "881d3a50443e4456b521": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "888b054103dbeaaf727f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "8a129b94d1c8f45f54da": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "8b3cd32da7c96656a413": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "8b8c4712e56bb2e900ea": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "8e4244fcfccbbda2217e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "8f8f796484db8a71da4d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "90c44b476c6318a41f1b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "91ca3a1dd9237dae0f62": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "926ba21a9fcefd6b3a00": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "936dcca120a99d0d2d34": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "9456e477348077089f22": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "949294c93cad74d4893d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "94962641eb493d4d883d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "96471aabb70cb74616c0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "96f9a8f39eb7fab59e6d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "982fbab0f29d84643d3a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "98fbf99f1f071690c77e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "9995f14a5739ac9d305f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "99e94ed1f4cedcbec268": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "9ba9699c799f11ffa7ae": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "9bbe5c78f09a76d711cb": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "9ca3a2d7a7dc1d1a2ac4": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "9e1e4b106fbfea6c14a4": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "a2224738a1d9fc85e525": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "a254bbde2821e1cf0074": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": false,
+      "trades": true
+    },
+    "a30ec0269505caca41ff": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": false,
+      "trades": true
+    },
+    "a33ee5fdedfc40047d6d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "a3e228fc8844f09c9b2b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": false,
+      "trades": true
+    },
+    "a4f28ae690d1d4b7146c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "a72d80ac6dd54c8669e3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "a850cb6e870f41f13c21": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "a95af085707346c376a7": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "aa7a068b41357163a437": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "accd60dd0cb369cd2bca": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ad672791cceba193e54f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ae813f799aa871c09eda": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "af195b1d59aa3ab603a0": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": true,
+      "trades": true
+    },
+    "b086c399bf4367dc472f": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "b23705f39fe42c6b0548": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "b28f7c7269479ded9fc7": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "b2ed94f0458e665fa2a9": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "b44252ad67b7efdae070": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "b599c405af4329771bf3": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "b792db54ab5422e01c14": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "bb5e27e5a7dc697c0c72": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "bba8b5538bbd2cf07f98": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "c1c7de1ca7a8a160fadd": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "c6780adbb943ed01851c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "c7efe2e4da94de720427": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "c9951c83e19763fb74d7": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ca6f0ae3ba5fd3b1e413": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "cca99f87deebfc9d622d": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "cd5929f6f629b7f72657": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "d0ae1ac02e94bcf3e41b": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "d2f39ca51c81f4b94219": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "d513af622a404113ee58": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "d732595b72b5da812cdc": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": true,
+      "sharpe": true,
+      "trades": true
+    },
+    "d8caf5c9cd9dc85adfcf": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "daa6d48f5ec242d59284": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "dbaf7b98d9b7628ed7a4": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "dbe6f5acd4b5253cf628": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "dc48115afa52c669c510": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "dca734657fbe0bd0aeed": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "dd425e4862bff7791038": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "df6e38ff40933de194af": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "dfc81b0ae421502e43c6": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "e0f4286cca6ed1c7736a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "e13219bdb25cdcfb0be1": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "e5c6f2d05849da79c97e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "e5e16e9f95b7d06f5b31": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "e627e8fbd967f3e01913": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "e77a134a1959eb833d54": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "e7fc3894040f1d3d9665": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "e9a4b4679f64dba2086e": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ebc233f9172d46c2ca29": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "eca4a83ea617194b7eba": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ecdf59ad6710e943be72": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ee9b6983e624ace7c4d5": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "efb72a3a0d64c0d51aa9": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "f0e906f100ef338baa88": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "f4e092c387bc5235e686": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "f8f4a4b035b501023b12": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": true,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": false
+    },
+    "fabb8d27d9f96baaf1df": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "fb15db4f2f31269fe478": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "fe1ef909c257ad157770": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "fe476ac5f8ac78f4a40a": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "fefdc6b5591870cf08cf": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "ff6887b32abe9ca55f6c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    }
+  }
+}

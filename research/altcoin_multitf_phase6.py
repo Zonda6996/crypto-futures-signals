@@ -310,7 +310,9 @@ def load_rows(cache_dir: Path) -> dict[str, dict]:
 
 
 def _metrics_from_row(row: dict) -> ConfigMetrics:
-    fields = dict(row)
+    metric_fields = {f for f in ConfigMetrics.__dataclass_fields__}
+    fields = {k: v for k, v in row.items() if k in metric_fields}
+    fields["config_key"] = row["key"]
     fields["fold_sharpes"] = tuple(fields["fold_sharpes"])
     fields["fold_net_returns"] = tuple(fields["fold_net_returns"])
     fields["asset_names"] = tuple(fields["asset_names"])

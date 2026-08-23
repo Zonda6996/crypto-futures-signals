@@ -1,0 +1,40 @@
+{
+  "evaluation_sealed_policy": "confirm metrics computed only inside the confirmation stage",
+  "frozen_protocol_document": "ALTCOIN_MULTITF_006_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "444f4a3bd825ea488e6c5acd5a645296d8ed69ddc39127ea82e59128742740ec",
+  "prior_inputs": {
+    "merged_tree_digest_005": "8515e68a8cf024ee8b8de91e8c3bed4368459365d920b98ffdde4fbf0d0f97a8",
+    "primary_archive_sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "supplement_archive_sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b"
+  },
+  "protocol_id": "ALT-MULTITF-006",
+  "repo_source_commit": "6e6e30d15f87a27fce2c0ae8f824c25314578d9c",
+  "supplement_v2_archive": {
+    "root_name": "altcoin-multitf-006-supplement",
+    "sha256": "487046fad5659e427075ca2b2b676bb3213da85276848129ba5eb21f00d10c56",
+    "size": 573920939
+  },
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ],
+  "windows_utc": {
+    "confirm": [
+      "2025-01-01T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "dev": [
+      "2024-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "engine_span_start": "earliest acquired history (2020-02)"
+  }
+}
