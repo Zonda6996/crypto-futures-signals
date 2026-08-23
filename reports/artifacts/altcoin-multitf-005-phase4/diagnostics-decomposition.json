@@ -1,0 +1,117 @@
+{
+ "best": {
+  "params": "A tf=60 fw=8 sw=13 et=0.01 mh=48",
+  "trades": 8899,
+  "pct": {
+   "price_edge_mid": 9.4,
+   "slippage": -4.7,
+   "fees": -7.1,
+   "funding": -0.9,
+   "net": -3.2
+  },
+  "per_symbol_net_pct": {
+   "BTCUSDT": 0.31,
+   "ETHUSDT": 0.07,
+   "BNBUSDT": 1.94,
+   "SOLUSDT": -2.2,
+   "XRPUSDT": 0.0,
+   "ADAUSDT": -1.63,
+   "DOGEUSDT": 2.14,
+   "AVAXUSDT": -1.89,
+   "LINKUSDT": -1.4,
+   "DOTUSDT": -0.58
+  }
+ },
+ "worst": {
+  "params": "B tf=15 fw=3 sw=13 et=0.0 mh=12",
+  "trades": 183107,
+  "pct": {
+   "price_edge_mid": 2.5,
+   "slippage": -35.5,
+   "fees": -56.4,
+   "funding": -0.7,
+   "net": -90.1
+  },
+  "per_symbol_net_pct": {
+   "BTCUSDT": -8.96,
+   "ETHUSDT": -9.16,
+   "BNBUSDT": -9.03,
+   "SOLUSDT": -9.6,
+   "XRPUSDT": -9.16,
+   "ADAUSDT": -9.18,
+   "DOGEUSDT": -8.74,
+   "AVAXUSDT": -8.48,
+   "LINKUSDT": -9.16,
+   "DOTUSDT": -8.64
+  }
+ },
+ "median": {
+  "params": "A tf=60 fw=8 sw=21 et=0.01 mh=12",
+  "trades": 64110,
+  "pct": {
+   "price_edge_mid": 16.2,
+   "slippage": -24.5,
+   "fees": -38.7,
+   "funding": -0.7,
+   "net": -47.7
+  },
+  "per_symbol_net_pct": {
+   "BTCUSDT": -3.73,
+   "ETHUSDT": -4.6,
+   "BNBUSDT": -3.11,
+   "SOLUSDT": -6.95,
+   "XRPUSDT": -4.3,
+   "ADAUSDT": -4.92,
+   "DOGEUSDT": -2.31,
+   "AVAXUSDT": -5.63,
+   "LINKUSDT": -6.46,
+   "DOTUSDT": -5.67
+  }
+ },
+ "highfreq": {
+  "params": "A tf=15 fw=3 sw=13 et=0.0 mh=12",
+  "trades": 174549,
+  "pct": {
+   "price_edge_mid": -2.2,
+   "slippage": -33.9,
+   "fees": -53.1,
+   "funding": -0.6,
+   "net": -89.8
+  },
+  "per_symbol_net_pct": {
+   "BTCUSDT": -8.49,
+   "ETHUSDT": -8.49,
+   "BNBUSDT": -8.79,
+   "SOLUSDT": -9.18,
+   "XRPUSDT": -9.26,
+   "ADAUSDT": -9.29,
+   "DOGEUSDT": -9.11,
+   "AVAXUSDT": -8.85,
+   "LINKUSDT": -9.15,
+   "DOTUSDT": -9.2
+  }
+ },
+ "lowfreq": {
+  "params": "A tf=60 fw=8 sw=34 et=0.01 mh=48",
+  "trades": 25864,
+  "pct": {
+   "price_edge_mid": 12.1,
+   "slippage": -12.0,
+   "fees": -19.0,
+   "funding": -1.6,
+   "net": -20.5
+  },
+  "per_symbol_net_pct": {
+   "BTCUSDT": -2.37,
+   "ETHUSDT": -2.2,
+   "BNBUSDT": -2.17,
+   "SOLUSDT": -3.12,
+   "XRPUSDT": -2.67,
+   "ADAUSDT": -3.13,
+   "DOGEUSDT": 1.4,
+   "AVAXUSDT": 0.77,
+   "LINKUSDT": -3.71,
+   "DOTUSDT": -3.27
+  }
+ }
+}
