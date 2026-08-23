@@ -1,0 +1,10 @@
+{
+  "artifact_id": "altcoin-multitf-005-phase3-reconstructed-baseline",
+  "development_interval": ["2021-01-01T00:00:00Z", "2023-12-31T23:59:59Z"],
+  "evaluation_interval": ["2024-01-01T00:00:00Z", "2024-12-31T23:59:59Z"],
+  "historical_outputs_available": false,
+  "input_hashes": {},
+  "protocol_status": "reconstructed-not-empirical",
+  "seed": 20250304,
+  "universe": ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT", "AVAXUSDT", "LINKUSDT", "DOTUSDT"]
+}

@@ -1,0 +1,14 @@
+{
+  "bootstrap_replicates": 2000,
+  "decision": "NO_SELECTION",
+  "elapsed_seconds": 396.3648738861084,
+  "eligible": 0,
+  "invalid": 0,
+  "invalid_reason_counts": {},
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.0",
+  "rows": 5832,
+  "spa_replicates": 1000,
+  "valid_active": 5832,
+  "valid_zero_trade": 0
+}

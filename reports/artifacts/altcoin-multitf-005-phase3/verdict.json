@@ -1,0 +1,6 @@
+{
+  "decision": "BASELINE_RECONSTRUCTED",
+  "empirical_claim": false,
+  "reason": "The original Phase 3 branch, data and outputs were unavailable. This artifact records only the frozen reconstruction contract for Phase 4 Part 1.",
+  "selection": null
+}
