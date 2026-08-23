@@ -382,14 +382,22 @@ def finalize(cache_dir: Path) -> dict:
         raise CarryError("unexpected decide row count")
     active_keys = sorted(k for k, r in rows.items() if r["valid"])
     write_json_atomic(ARTIFACTS / "sweep-progress.json", payload)
+
+    def _flat(row: dict) -> dict:
+        return {
+            **CORES[row["config"]["core"]],
+            "dd_start": row["config"]["dd_start"],
+            "dd_stop": row["config"]["dd_stop"],
+            **{k: v for k, v in row.items() if k not in CSV_EXCLUDED},
+        }
+
     sample = next(iter(rows.values()))
-    header = sorted({**CORES[sample["config"]["core"]], **{k: v for k, v in sample.items() if k not in CSV_EXCLUDED}})
+    header = sorted(_flat(sample))
     with (ARTIFACTS / "development-metrics.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(header)
         for key in sorted(rows):
-            row = rows[key]
-            flat = {**CORES[row["config"]["core"]], "dd_start": row["config"]["dd_start"], "dd_stop": row["config"]["dd_stop"], **{k: v for k, v in row.items() if k not in CSV_EXCLUDED}}
+            flat = _flat(rows[key])
             writer.writerow([flat[h] for h in header])
     if not active_keys:
         verdict = {"stage": "FINAL", "decision": "NO_SELECTION", "selected_key": None, "reason": "no active configurations"}
