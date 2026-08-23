@@ -1,0 +1,5 @@
+{
+  "decision": "NO_SELECTION",
+  "rule": "exactly one candidate after pre-registered tie-breaking, else NO_SELECTION",
+  "selected_key": null
+}

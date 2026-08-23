@@ -1,0 +1,55 @@
+{
+  "ambiguous_hash_note": "sha256:02b03ddf3e73f84e6c53a40b3e910058e5b3f4d3861716a7dfc25a24de692953 from the Part 2 assignment matches no artifact in this run (not the primary archive, its raw manifest, nor the build config hash); it is recorded here verbatim and is NOT used as an input hash.",
+  "development_interval_utc": [
+    "2021-01-01T00:00:00Z",
+    "2023-12-31T23:59:59Z"
+  ],
+  "evaluation_interval_utc": [
+    "2024-01-01T00:00:00Z",
+    "2024-12-31T23:59:59Z"
+  ],
+  "evaluation_sealed": true,
+  "frozen_protocol_document": "ALTCOIN_MULTITF_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "4f7118a8ce723d128d64bee50bd5dd6d5785785e529aa6efbce6e0526b0cfa41",
+  "inputs_verified": true,
+  "merge_policy": "supplement only adds files; conflicts abort; no overwrites",
+  "merged_tree_digest": "8515e68a8cf024ee8b8de91e8c3bed4368459365d920b98ffdde4fbf0d0f97a8",
+  "merged_tree_file_count": 3858,
+  "primary_archive": {
+    "checkpoint_config_hash": "b63129f81b0bfcff4283b53a67aea2644e96016c4db5818d06b8899f8aee1474",
+    "revision": "ALT-MULTITF-005",
+    "sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "size": 1541152490,
+    "source_commit": "f9ee53d7d0009b573bbeba0811b70712e49de3d2",
+    "url_pathname": "alt-multitf-005/665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d.tar.gz"
+  },
+  "protocol_id": "ALT-MULTITF-005",
+  "repo_source_commit": "e8497929470ffdcba884c9c0eaaba7496b60f1db",
+  "supplement_archive": {
+    "root_name": "altcoin-multitf-005-supplement",
+    "sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b",
+    "size": 113083086,
+    "sources": {
+      "exchange_info": "https://www.binance.com/fapi/v1/exchangeInfo",
+      "funding_pattern": "https://data.binance.vision/data/futures/um/monthly/fundingRate/{SYMBOL}/{SYMBOL}-fundingRate-YYYY-MM.zip",
+      "klines_pattern": "https://data.binance.vision/data/futures/um/monthly/klines/{SYMBOL}/5m/{SYMBOL}-5m-YYYY-MM.zip"
+    },
+    "symbols_added": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "DOTUSDT"
+    ]
+  },
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "bars_checked": 4529160,
+  "claim": "evaluation interval never loaded; all inputs clipped to frozen development interval",
+  "development_interval_ms": [
+    1609459200000,
+    1704067200000
+  ],
+  "evaluation_interval_ms": [
+    1704067200000,
+    1735689600000
+  ],
+  "funding_events_checked": 32925,
+  "sealed": true,
+  "series_checked": 40,
+  "violations": []
+}

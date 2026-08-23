@@ -1,0 +1,14 @@
+{
+  "best_configuration_by_net_return": {
+    "annualized_sharpe": -0.3706216458660444,
+    "key": "579f013fe88375a8df31",
+    "max_drawdown": -0.6208528285411852,
+    "net_return": -0.032477772097259966,
+    "trades": 8899
+  },
+  "eligible_count": 0,
+  "first_failure_histogram": {
+    "non_positive_net_return": 5832
+  },
+  "total_configurations": 5832
+}

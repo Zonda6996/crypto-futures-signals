@@ -1,0 +1,42 @@
+# ALTCOIN_MULTITF_005 Phase 4 Part 2 — reproduction commands
+#
+# All paths in angle brackets are placeholders; no machine-specific path is stored.
+# Branch: phase4-part2-full-sweep, baseline commit e8497929470ffdcba884c9c0eaaba7496b60f1db
+
+# 1. Environment (strict lockfile)
+uv sync --frozen --group dev
+
+# 2. Baseline checks (must pass before anything else)
+uv run python -m pytest                                                # 37 passed
+uv run python -m research.altcoin_multitf_phase4_runner --validate-grid  # count = 5832
+uv run python -m research.altcoin_multitf_phase4_sweep --validate-grid   # count = 5832
+
+# 3. Supplement archive build (public sources only; BTCUSDT/ETHUSDT/DOTUSDT, dev interval)
+uv run python research/altcoin_multitf_supplement.py --workspace <supplement-workspace> --workers 6
+# Expected archive sha256: a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b (113083086 bytes)
+
+# 4. Input verification + merge (primary must hash to the frozen SHA-256)
+uv run python -m research.altcoin_multitf_phase4_sweep --prepare-inputs \
+  --primary <path-to>/altcoin-multitf-005.tar.gz \
+  --supplement <supplement-workspace>/release/altcoin-multitf-005-supplement.tar.gz \
+  --inputs-root <inputs-root> \
+  --artifacts reports/artifacts/altcoin-multitf-005-phase4
+# Primary expected: 665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d (1541152490 bytes)
+
+# 5. FULL deterministic sweep of all 5,832 frozen configurations
+uv run python -m research.altcoin_multitf_phase4_sweep --full-sweep \
+  --inputs-root <inputs-root> \
+  --cache-dir <cache-dir> \
+  --artifacts reports/artifacts/altcoin-multitf-005-phase4 \
+  --workers 12
+
+# 5a. Resume verification (must report pending_chunks=0 and complete=true)
+uv run python -m research.altcoin_multitf_phase4_sweep --full-sweep \
+  --inputs-root <inputs-root> --cache-dir <cache-dir> \
+  --artifacts reports/artifacts/altcoin-multitf-005-phase4 --workers 12
+
+# 6. Statistics, gates and deterministic verdict (NO_SELECTION or exactly one candidate)
+uv run python -m research.altcoin_multitf_phase4_sweep --finalize \
+  --inputs-root <inputs-root> \
+  --cache-dir <cache-dir> \
+  --artifacts reports/artifacts/altcoin-multitf-005-phase4

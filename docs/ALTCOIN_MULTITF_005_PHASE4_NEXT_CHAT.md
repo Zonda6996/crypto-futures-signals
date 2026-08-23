@@ -1,7 +1,17 @@
 # Phase 4 next chat
 
-Continue **Part 2 only** from branch `v0/phase4-engine-completion` and the exact pushed SHA recorded by the delivering chat. Read the frozen protocol, Phase 3 specification, Part 1 handoff, all three research modules, tests, and Phase 3 artifacts before changes.
+Part 2 is **complete** on branch `phase4-part2-full-sweep`. Start from
+`docs/ALTCOIN_MULTITF_005_PHASE4_PART2_HANDOFF.md`, then the frozen protocol and the Part 1
+handoff for background.
 
-Do not alter the causal engine, grid, intervals, universe, costs, seeds or gates merely to obtain a winner. Verify the exact 5,832 configuration count and stop on mismatch. Use development data for all search/statistics; evaluation remains sealed until the selection contract permits it. A smoke run is not a full sweep, and valid zero-trade configurations must remain distinct from invalid configurations.
+Authoritative outcome: the full deterministic development sweep of all 5,832 frozen
+configurations completed (no smoke run, no relaxation of any criterion) and produced
+**`NO_SELECTION`** — zero configurations pass eligibility because none achieves a positive net
+return under frozen costs; SPA/DSR/Holm layers corroborate. The evaluation interval remains
+sealed (`evaluation-seal-verification.json`).
 
-Complete the deterministic sweep, SPA, DSR, multiple-testing correction, bootstrap confidence intervals, topology-derived neighbors, all frozen robustness gates, final `selection`/`NO_SELECTION`, artifact checksums and reproducibility verification. Report actual counts and failures without relaxing criteria.
+Do not re-run selection on partial data, do not weaken costs/gates/seeds to manufacture a
+winner, and do not open evaluation data unless a future authorized phase explicitly permits it.
+Any next phase must start from the exact artifacts listed in the Part 2 handoff and must
+re-verify: clean tree at the recorded commit, `pytest` green, grid count exactly 5,832,
+input SHA-256s unchanged, checkpoint resume idempotent.
