@@ -1,0 +1,92 @@
+{
+  "ADAUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 30000000.0,
+    "min_notional": 5.0,
+    "min_qty": 1.0,
+    "status": "TRADING",
+    "step_size": 1.0,
+    "tick_size": 0.0001
+  },
+  "AVAXUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 500000.0,
+    "min_notional": 5.0,
+    "min_qty": 1.0,
+    "status": "TRADING",
+    "step_size": 1.0,
+    "tick_size": 0.001
+  },
+  "BNBUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 100000.0,
+    "min_notional": 5.0,
+    "min_qty": 0.01,
+    "status": "TRADING",
+    "step_size": 0.01,
+    "tick_size": 0.01
+  },
+  "BTCUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 1000.0,
+    "min_notional": 50.0,
+    "min_qty": 0.001,
+    "status": "TRADING",
+    "step_size": 0.001,
+    "tick_size": 0.1
+  },
+  "DOGEUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 300000000.0,
+    "min_notional": 5.0,
+    "min_qty": 1.0,
+    "status": "TRADING",
+    "step_size": 1.0,
+    "tick_size": 1e-05
+  },
+  "DOTUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 3000000.0,
+    "min_notional": 5.0,
+    "min_qty": 0.1,
+    "status": "TRADING",
+    "step_size": 0.1,
+    "tick_size": 0.0001
+  },
+  "ETHUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 10000.0,
+    "min_notional": 20.0,
+    "min_qty": 0.001,
+    "status": "TRADING",
+    "step_size": 0.001,
+    "tick_size": 0.01
+  },
+  "LINKUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 700000.0,
+    "min_notional": 20.0,
+    "min_qty": 0.01,
+    "status": "TRADING",
+    "step_size": 0.01,
+    "tick_size": 0.001
+  },
+  "SOLUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 1000000.0,
+    "min_notional": 5.0,
+    "min_qty": 0.01,
+    "status": "TRADING",
+    "step_size": 0.01,
+    "tick_size": 0.01
+  },
+  "XRPUSDT": {
+    "contract_type": "PERPETUAL",
+    "max_qty": 10000000.0,
+    "min_notional": 5.0,
+    "min_qty": 0.1,
+    "status": "TRADING",
+    "step_size": 0.1,
+    "tick_size": 0.0001
+  }
+}
