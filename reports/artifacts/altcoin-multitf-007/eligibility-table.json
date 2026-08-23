@@ -1,0 +1,70 @@
+{
+  "eligible_count": 0,
+  "ordering": [],
+  "table": {
+    "111446a7b934dd24b330": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "18032e8730ab98ef2dac": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "64c044218b10e653cd90": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "74c26f06089072904efd": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "82d812fd8ebc096baedf": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "842ac332ec98116f546c": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "bba8b5538bbd2cf07f98": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    },
+    "d07e629fcee11516d1a9": {
+      "concentration": true,
+      "coverage": true,
+      "drawdown": false,
+      "positive_net_return": false,
+      "sharpe": false,
+      "trades": true
+    }
+  }
+}

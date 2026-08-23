@@ -135,12 +135,15 @@ def compute_metrics(
     window_start_ms: int = DEV_START_MS,
     window_end_ms: int = DEV_END_MS,
     fold_count: int = FOLD_COUNT,
+    fold_bounds_override: Sequence[tuple[int, int]] | None = None,
 ) -> ConfigMetrics:
     """Aggregate per-symbol frozen-engine evaluations into protocol metrics.
 
     ``evaluation_by_symbol`` maps symbol -> Evaluation from the frozen engine.
     Trades must already be filtered by the caller to entries inside the accounting
     window when a warmup-inclusive engine span was used.
+    ``fold_bounds_override`` supplies explicit calendar fold boundaries; when omitted
+    the historical even-division behaviour is preserved exactly.
     """
     events: list[tuple[int, str, int, float]] = []
     asset_positive: dict[str, float] = {}
@@ -154,6 +157,8 @@ def compute_metrics(
     missing_bars = 0
     rejected_total = 0
     funding_events_count = 0
+    bounds = list(fold_bounds_override) if fold_bounds_override is not None else fold_bounds(window_start_ms, window_end_ms, fold_count)
+    fold_count = len(bounds)
     fold_nets = [0.0] * fold_count
     bounds = fold_bounds(window_start_ms, window_end_ms, fold_count)
     ending_equity = initial_equity
@@ -198,7 +203,7 @@ def compute_metrics(
             daily_sharpe=None,
             annualized_sharpe=None,
             median_fold_sharpe=0.0,
-            fold_sharpes=tuple([0.0] * fold_count),
+            fold_sharpes=tuple([0.0] * len(bounds)),
             fold_net_returns=tuple(fold_nets),
             positive_folds=0,
             max_drawdown=0.0,
