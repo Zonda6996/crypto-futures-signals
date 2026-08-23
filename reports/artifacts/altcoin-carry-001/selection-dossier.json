@@ -1,0 +1,13 @@
+{
+  "eligible_candidates": 1,
+  "examined": 1,
+  "reports": [
+    {
+      "failures": [
+        "spa_p_above_limit"
+      ],
+      "key": "dab879a24ba906802fbf"
+    }
+  ],
+  "tie_break_rule": "pre-registered ordering; rank-1 full passer wins"
+}

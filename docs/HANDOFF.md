@@ -1,16 +1,18 @@
 # Research handoff
 
-Current milestone: **ALT-MULTITF research line CLOSED** by ALT-MULTITF-007
-"Definitive One-Shot" — final verdict `NO_SELECTION` over the full-history single pass
-2021‑01…2026‑06. Closure record: `ALTCOIN_MULTITF_007_FINAL_HANDOFF.md`; protocol:
-`ALTCOIN_MULTITF_007_FROZEN_PROTOCOL.md` (freeze proof `f0628f5`). Engine:
-`research/altcoin_multitf_phase7.py`.
+Current milestone: **ALTCOIN_CARRY_001 (H-CARRY funding carry) executed — verdict
+`NO_SELECTION` ("hypothesis unproven as deployable")**, but the first family with a
+gross premium that survives real costs (10/11 configs net-positive; two pass the full
+statistical stack at N=12; blocked by drawdown eligibility and heritage multiplicity
+pricing). Details: `ALTCOIN_CARRY_001_HANDOFF.md`; protocol:
+`ALTCOIN_CARRY_001_FROZEN_PROTOCOL.md` (freeze proof `26b78ca`); engine:
+`research/altcoin_carry_001.py`.
 
-History: 005 (dev 2021–2023, 5,832 configs) → `NO_SELECTION`; 006 (dev 2024, 192
-configs) → `NO_SELECTION`; 007 (8 canonical configs, 11 half-year robustness folds) →
-`NO_SELECTION`. No successor protocol may re-open selection on any overlapping window.
-The interval 2026‑07…08 remains untouched (monitor reserve). Any future related work
-requires a NEW freeze on NEW forward data only.
+History: ALT-MULTITF trend family closed by 007 (`NO_SELECTION` over 2021–2026‑06,
+closure record `ALTCOIN_MULTITF_007_FINAL_HANDOFF.md`, freeze `f0628f5`). The research
+PROGRAM continues: each new hypothesis = one new freeze before any window analysis,
+gates never weakened, cumulative search priced via heritage DSR (N ≥ 6,044).
+Monitor reserve 2026‑07…08 remains untouched.
 
-Legacy phase 4/6 documentation: `ALTCOIN_MULTITF_FROZEN_PROTOCOL.md`,
-`ALTCOIN_MULTITF_006_FROZEN_PROTOCOL.md`, and the handoff documents in this directory.
+Any successor carry variant must declare the published CARRY-001 diagnostics as design
+input in its own freeze; re-tuning on DECIDE-overlapping windows is prohibited.
