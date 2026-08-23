@@ -1,0 +1,262 @@
+{
+  "eligible_count": 0,
+  "ordering": [],
+  "table": {
+    "0921cac5b94f9ac0f6bb": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "204bff7e08cab732e4a8": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "328145467627b4c4beb5": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "492e7ee48a64d42948d5": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "4956ea3ba604139705f6": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": false
+    },
+    "5195c8229f0e76fa781f": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "5aea2964f7aab46bd159": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "7c83dd62405364fee0da": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "82aa8d0b49bc55c09255": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "82ea92b09d801528afb9": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "8af625f4e036b4c0c9e6": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "8b9c43a5ac070ab6e5f3": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "957593b06d6d41d3e890": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "9d086dec31d53cb5b535": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "a481b7ce030555788637": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "a681d1144765f6cb8700": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "b0d33a73e5ca1a464570": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "b20575652650f2de18f2": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "b89f54cd34e6b79c51ea": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "bebe9a1873836d4c8b56": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "cafd3b8bfaa4b0a8630c": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "cd95011db7299a94da29": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": false
+    },
+    "cfc814ff193c8dd77081": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "d8244359dd571317dd25": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "dd2b5ce7acb3155c5505": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": true,
+      "sharpe_above_0_5": true
+    },
+    "e2b22d84b8e0a4be0c9c": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "e48e499d30763c5e4137": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "eb956eeb24566f997cf5": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "edf1b62f14b09556829e": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "ef21bb062d5a083970c1": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "f0bcd5c8492b3ddc65a3": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    },
+    "f839c157bd1db2c8e873": {
+      "concentration_le_40pct": true,
+      "coverage_ge_6_assets": true,
+      "drawdown_within_limit": false,
+      "episodes_ge_100": true,
+      "positive_net_return": false,
+      "sharpe_above_0_5": false
+    }
+  }
+}

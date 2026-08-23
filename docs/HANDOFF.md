@@ -1,12 +1,21 @@
 # Research handoff
 
-Current milestone: **ALTCOIN_CARRY_FINAL_001 — `SELECT`** (first of the program).
+Current milestone: **ALTCOIN_MR_TF_001 — `NO_SELECTION`** (price-flush mean reversion,
+4 timeframes, 32 configs, 0 eligible). Findings: gross intraday bounce exists (longs
++1,8…+2,8k% on 1h–4h) but SPA ≥ 0.25 and DD −30…−55% fail everything; shorts after
+pumps are toxic (every both-side arm destroyed); tight 1:1 stops chew the bounce;
+daily MR is flat. Price-only control result consistent with the external D6 premise
+(signal lives in OI, not price). Details: `ALTCOIN_MR_TF_001_HANDOFF.md`; protocol:
+`ALTCOIN_MR_TF_001_FROZEN_PROTOCOL.md` (freeze proof `db6e4f8`); engine:
+`research/altcoin_mr_tf_001.py`. TF pack 2 (M45/M30/M15/M5) and exit round 2 require
+their own freeze + new information set.
+
+Previous milestone: **ALTCOIN_CARRY_FINAL_001 — `SELECT`** (first of the program).
 Hardened carry: core A + atr3 stop + full-take-1R + BTC beta-hedge + inverse-vol
 weights. Net +763% over 2021–2026-06 (~+48%/yr), Sharpe 1.44, maxDD −20.9%, 9/11
 positive half-years, ALL frozen gates passed (SPA 0.025, DSR 1.000, Holm 0.024,
 bootstrap CI-low > 0, stress ×4, neighbours). Heritage DSR 0.019 at N = 6,090
-(report-only). This is the LAST in-sample pass; next validation is forward-only on the
-untouched reserve 2026-07…08. Details: `ALTCOIN_CARRY_FINAL_001_HANDOFF.md`; protocol:
+(report-only). Details: `ALTCOIN_CARRY_FINAL_001_HANDOFF.md`; protocol:
 `ALTCOIN_CARRY_FINAL_001_FROZEN_PROTOCOL.md` (freeze proof `240598a`); engine:
 `research/altcoin_carry_final_001.py`. TIDAL SAFE-mode candidate = selected config;
 RISK mode = SL-001 RISK arm (pending forward).
