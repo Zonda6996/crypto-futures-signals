@@ -158,7 +158,7 @@
  "_meta": {
   "journal_starts": "first run date; no backfill over the sealed reserve",
   "last_closed_bar_utc": "2026-08-23",
-  "last_run_utc": "2026-08-24T16:03:33.825720+00:00",
+  "last_run_utc": "2026-08-24T16:25:38.787532+00:00",
   "processed_this_run": 0
  }
 }

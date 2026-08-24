@@ -447,8 +447,8 @@ def build_report(states: dict) -> str:
             "",
             "Вход исполняется по закрытию дневного бара указанной даты (≈ 00:00 UTC следующего дня).",
             "",
-            f"| # | сторона | символ | вес книги | вход (закрытие бара) | бар входа | стоп | {take_header} | текущая цена | PnL |",
-            "|---|---|---|---|---|---|---|---|---|---|",
+            f"| # | сторона | символ | вес книги | вход (закрытие бара) | бар входа | стоп | {take_header} | текущая цена | PnL | удар по капиталу при стопе |",
+            "|---|---|---|---|---|---|---|---|---|---|---|",
         ]
         for n, (sym, e) in enumerate(sorted(st["episodes"].items(), key=lambda kv: (kv[1]["side"], kv[0])), 1):
             side = "LONG" if e["side"] > 0 else "SHORT"
@@ -469,9 +469,10 @@ def build_report(states: dict) -> str:
             else:
                 pnl_txt = "—"
             status = " · частично зафиксирована" if e.get("be") else ""
+            equity_hit = abs(weight) * (e["dist"] / e["entry"])
             lines.append(
                 f"| {n} | {side}{status} | {sym} | {weight:+.2%} | {e['entry']:.6g} | {e.get('entry_date','—')} | "
-                f"{stop:.6g} | {target_txt} | {mark_txt} | {pnl_txt} |")
+                f"{stop:.6g} | {target_txt} | {mark_txt} | {pnl_txt} | −{equity_hit:.2%} |")
         lines.append("")
     journal = (ART / "trades.jsonl")
     if journal.exists():
