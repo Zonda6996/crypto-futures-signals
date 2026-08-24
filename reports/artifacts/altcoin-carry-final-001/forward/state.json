@@ -59,6 +59,18 @@
    "ETHUSDT",
    "LINKUSDT"
   ],
+  "marks": {
+   "ADAUSDT": 0.227,
+   "AVAXUSDT": 7.61,
+   "BNBUSDT": 702.93,
+   "BTCUSDT": 77719.1,
+   "DOGEUSDT": 0.09343,
+   "DOTUSDT": 0.9284,
+   "ETHUSDT": 2462.58,
+   "LINKUSDT": 11.543,
+   "SOLUSDT": 95.44,
+   "XRPUSDT": 1.52
+  },
   "shorts": [
    "ADAUSDT",
    "AVAXUSDT",
@@ -125,6 +137,18 @@
    "ETHUSDT",
    "LINKUSDT"
   ],
+  "marks": {
+   "ADAUSDT": 0.227,
+   "AVAXUSDT": 7.61,
+   "BNBUSDT": 702.93,
+   "BTCUSDT": 77719.1,
+   "DOGEUSDT": 0.09343,
+   "DOTUSDT": 0.9284,
+   "ETHUSDT": 2462.58,
+   "LINKUSDT": 11.543,
+   "SOLUSDT": 95.44,
+   "XRPUSDT": 1.52
+  },
   "shorts": [
    "ADAUSDT",
    "AVAXUSDT",
@@ -134,7 +158,7 @@
  "_meta": {
   "journal_starts": "first run date; no backfill over the sealed reserve",
   "last_closed_bar_utc": "2026-08-23",
-  "last_run_utc": "2026-08-24T12:23:54.093269+00:00",
-  "processed_this_run": 2
+  "last_run_utc": "2026-08-24T16:03:33.825720+00:00",
+  "processed_this_run": 0
  }
 }

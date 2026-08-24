@@ -368,6 +368,7 @@ def run_once() -> dict:
                           "beta": market["beta"][s]} for s in UNIVERSE_SYMBOLS}
         outcome = decide_bar(mode, st, market_day)
         states[mode] = outcome["state"]
+        states[mode]["marks"] = {s: market["closes"][s][-1] for s in UNIVERSE_SYMBOLS}
         states[mode]["last_open_ms"] = day
         if gap_days:
             outcome["events"].insert(0, {"type": "gap", "missed_days": gap_days,
@@ -383,6 +384,9 @@ def run_once() -> dict:
         "processed_this_run": processed,
         "journal_starts": "first run date; no backfill over the sealed reserve",
     }
+    for mode in MODES:
+        # always refresh latest marks so the report shows live PnL per position
+        states[mode]["marks"] = {s: market["closes"][s][-1] for s in UNIVERSE_SYMBOLS}
     write_json_atomic(state_path, states)
     write_report(states)
     return states
@@ -424,23 +428,50 @@ def build_report(states: dict) -> str:
     ]
     for mode in MODES:
         st = states[mode]
-        spec = ("SELECT FINAL-001: inv-vol веса, хедж BTC, стоп 3×ATR, фулл-тейк 1:1"
-                if mode == SAFE else
-                "SL-001 RISK: равные веса, без хеджа, стоп 3×ATR, частичка при +2 стопа → безубыток")
+        marks = st.get("marks", {})
+        if mode == SAFE:
+            spec = ("**Чем отличается:** веса обратно волатильности (у каждой позиции свой %), "
+                    "хедж BTC против обвалов рынка, тейк = полный фикс при цели 1:1.")
+            take_header = "тейк (полный фикс)"
+        else:
+            spec = ("**Чем отличается:** веса равные (по 1/6 книги), хеджа нет, вместо полного тейка — "
+                    "частичная фиксация 50% при цели 2:1, после чего стоп остатка переезжает в безубыток.")
+            take_header = "частичка 50% (цель 2:1) / безубыток после"
         lines += [
             f"## {mode}",
-            f"*{spec}*",
+            spec,
             "",
             f"- Equity (mark-to-market): **{st['equity']:.6f}**",
-            f"- Хедж BTC: **{st.get('hedge_frac', 0):+.4%}** от капитала",
+            f"- Хедж BTC: **{st.get('hedge_frac', 0):+.4%}** от капитала" + (" (только в SAFE)" if mode == RISK else ""),
             f"- Позиций в книге: **{len(st['episodes'])}**",
             "",
-            "| # | сторона | символ | вход | стоп-дистанция | с даты |",
-            "|---|---|---|---|---|---|",
+            "Вход исполняется по закрытию дневного бара указанной даты (≈ 00:00 UTC следующего дня).",
+            "",
+            f"| # | сторона | символ | вес книги | вход (закрытие бара) | бар входа | стоп | {take_header} | текущая цена | PnL |",
+            "|---|---|---|---|---|---|---|---|---|---|",
         ]
         for n, (sym, e) in enumerate(sorted(st["episodes"].items(), key=lambda kv: (kv[1]["side"], kv[0])), 1):
             side = "LONG" if e["side"] > 0 else "SHORT"
-            lines.append(f"| {n} | {side} | {sym} | {e['entry']:.6g} | {e['dist']:.4g} | {e.get('entry_date', '—')} |")
+            weight = st["fractions"].get(sym, 0.0)
+            stop = e["entry"] - e["dist"] if e["side"] > 0 else e["entry"] + e["dist"]
+            if mode == SAFE:
+                target = e["entry"] + e["dist"] if e["side"] > 0 else e["entry"] - e["dist"]
+                target_txt = f"{target:.6g} (100%)"
+            else:
+                target = e["entry"] + 2 * e["dist"] if e["side"] > 0 else e["entry"] - 2 * e["dist"]
+                be = " → безубыток" if e.get("be") else ""
+                target_txt = f"{target:.6g} (50%){be}"
+            mark = marks.get(sym)
+            mark_txt = f"{mark:.6g}" if mark is not None else "—"
+            if mark is not None:
+                pnl = e["side"] * (mark - e["entry"]) / e["entry"]
+                pnl_txt = f"{pnl:+.2%}"
+            else:
+                pnl_txt = "—"
+            status = " · частично зафиксирована" if e.get("be") else ""
+            lines.append(
+                f"| {n} | {side}{status} | {sym} | {weight:+.2%} | {e['entry']:.6g} | {e.get('entry_date','—')} | "
+                f"{stop:.6g} | {target_txt} | {mark_txt} | {pnl_txt} |")
         lines.append("")
     journal = (ART / "trades.jsonl")
     if journal.exists():
@@ -451,11 +482,17 @@ def build_report(states: dict) -> str:
             lines.append(f"| {e.get('day','—')} | {e.get('mode','—')} | {e.get('type','—')} | {e.get('symbol','—')} | {detail} |")
         lines.append("")
     lines += [
-        "## Легенда событий",
+        "## Легенда и важное",
         "",
-        "- `open` — вход в корзину (LONG = лонг-нога, SHORT = шорт-нога)",
-        "- `take` — фулл-фикс по цели (SAFE) · `partial` — половина в кэш, остаток в безубыток (RISK)",
-        "- `stop` — ATR-стоп · `rank_drop` — вышел из рейтинга (штатный выход) · `gap` — пропуск дней",
+        "- **SAFE и RISK — два независимых виртуальных портфеля.** ADA SHORT в SAFE и ADA SHORT в RISK —",
+        "  это две ОТДЕЛЬНЫЕ сделки в двух отдельных книгах со своим учётом. Сравниваем их друг с другом,",
+        "  чтобы форвард показал, какой режим лучше. В реальной торговле это две несмешиваемые позиции.",
+        "- `стоп` — цена, при закрытии дня хуже которой позиция закрывается убытком (3×ATR от входа).",
+        "- `тейк` — цена цели: SAFE закрывает всё (1:1), RISK фиксирует половину (2:1), остаток едет",
+        "  со стопом на цене входа (безубыток).",
+        "- `вес книги` — доля капитала на позицию: в SAFE своя у каждой (inv-vol), в RISK всегда 1/6.",
+        "- `rank_drop` — штатный выход: монета выпала из топ-3/дно-3 рейтинга фандинга, слот заняли другой.",
+        "- `open` — вход · `partial` — половина в кэш (RISK) · `stop` — ATR-стоп · `gap` — пропуск дней.",
         "",
         "Сигналы считаются на дневном ТФ; график можно открывать на любом ТФ — это только отображение.",
     ]
