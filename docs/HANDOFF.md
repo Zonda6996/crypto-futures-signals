@@ -1,37 +1,29 @@
 # Research handoff
 
-Current milestone: **ALTCOIN_MR_TF_001 — `NO_SELECTION`** (price-flush mean reversion,
-4 timeframes, 32 configs, 0 eligible). Findings: gross intraday bounce exists (longs
-+1,8…+2,8k% on 1h–4h) but SPA ≥ 0.25 and DD −30…−55% fail everything; shorts after
-pumps are toxic (every both-side arm destroyed); tight 1:1 stops chew the bounce;
-daily MR is flat. Price-only control result consistent with the external D6 premise
-(signal lives in OI, not price). Details: `ALTCOIN_MR_TF_001_HANDOFF.md`; protocol:
-`ALTCOIN_MR_TF_001_FROZEN_PROTOCOL.md` (freeze proof `db6e4f8`); engine:
-`research/altcoin_mr_tf_001.py`. TF pack 2 (M45/M30/M15/M5) and exit round 2 require
-their own freeze + new information set.
+Current milestone: **paper-forward LIVE** for the FINAL-001 arms (started 2026-08-24,
+journal `reports/artifacts/altcoin-carry-final-001/forward/`, runner
+`research/altcoin_carry_forward.py --run` daily; SAFE = SELECT config, RISK = SL-001
+arm, mode-tagged; strict no-backfill — sealed reserve 2026-07…08 never evaluated).
+SELECT daily-return series exported for portfolio analysis with the external D6 line:
+`reports/artifacts/altcoin-carry-final-001/select-daily-returns.{csv,json}`.
+Price-only MR line CLOSED (`NO_SELECTION` accepted, `ALTCOIN_MR_TF_001_HANDOFF.md`).
 
-Previous milestone: **ALTCOIN_CARRY_FINAL_001 — `SELECT`** (first of the program).
-Hardened carry: core A + atr3 stop + full-take-1R + BTC beta-hedge + inverse-vol
-weights. Net +763% over 2021–2026-06 (~+48%/yr), Sharpe 1.44, maxDD −20.9%, 9/11
-positive half-years, ALL frozen gates passed (SPA 0.025, DSR 1.000, Holm 0.024,
-bootstrap CI-low > 0, stress ×4, neighbours). Heritage DSR 0.019 at N = 6,090
-(report-only). Details: `ALTCOIN_CARRY_FINAL_001_HANDOFF.md`; protocol:
-`ALTCOIN_CARRY_FINAL_001_FROZEN_PROTOCOL.md` (freeze proof `240598a`); engine:
-`research/altcoin_carry_final_001.py`. TIDAL SAFE-mode candidate = selected config;
-RISK mode = SL-001 RISK arm (pending forward).
+Prior milestones: **ALTCOIN_CARRY_FINAL_001 — `SELECT`** (first of the program):
+hardened carry, net +763% / Sharpe 1.44 / DD −20.9% over 2021–2026-06, all gates passed
+(freeze `240598a`, engine `research/altcoin_carry_final_001.py`). **ALTCOIN_MR_TF_001 —
+`NO_SELECTION`**: gross intraday bounce unsignifiable, shorts toxic, daily MR flat
+(freeze `db6e4f8`). TIDAL SAFE-mode candidate = SELECT config; RISK mode = SL-001 RISK arm.
 
 Reporting convention for any assistant/human finishing a protocol:
 `docs/RESEARCH_REPORTING_STANDARD.md`.
 
-Hypothesis queue: H-MR (daily mean reversion), H-XS (cross-sectional momentum),
-H-VOL (volatility-regime conditioning), portfolio day-brake, cooldown variants.
-External line (DO NOT touch from this repo): D6 cascade reversion (OI-flush, leverage
-flow) lives in `SMC-Research-Engine` — two GO replications on symbol-fresh listings,
-non-replication on old listings, paper-forward running. Owner resolves population
-question before any integration into the TIDAL product.
+Hypothesis queue: H-XS (cross-sectional momentum), H-VOL (volatility-regime
+conditioning), portfolio day-brake, cooldown variants, TF pack 2 (blocked: needs a new
+information set). External line (DO NOT touch from this repo): D6 cascade reversion in
+`SMC-Research-Engine` — owner resolves the population question before TIDAL integration.
 
-History: trend family closed by 007; CARRY-001 found the premium; RM-001 showed
-portfolio overlays whipsaw; SL-001 showed takes (not stops) fix drawdowns and found the
-base champion; FINAL-001 hardened it past every gate. Program rules unchanged: freeze
-before analysis, gates never weakened, heritage multiplicity pricing (N ≥ 6,090).
-Monitor reserve 2026-07…08 untouched.
+History: trend family closed by 007; CARRY-001 found the premium; RM-001 showed overlays
+whipsaw; SL-001 showed takes (not stops) fix drawdowns; FINAL-001 hardened past every
+gate; MR-TF-001 closed the price-only reversion line. Program rules unchanged: freeze
+before analysis, gates never weakened, heritage multiplicity pricing (N ≥ 6,122).
+Monitor reserve 2026-07…08 sealed.
