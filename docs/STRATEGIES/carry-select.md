@@ -41,9 +41,11 @@ uv run python -m research.altcoin_carry_forward --run      # прожить де
 uv run python -m research.altcoin_carry_forward --status   # что в книге, equity, хедж
 ```
 
-Журнал: `reports/artifacts/altcoin-carry-final-001/forward/trades.jsonl`
-(каждое событие с меткой режима). Бэктест-артефакты: `reports/artifacts/altcoin-carry-final-001/`.
-Серия дневных доходностей для портфельных расчётов: `select-daily-returns.{csv,json}` там же.
+Журнал и **главный отчёт**: `reports/artifacts/altcoin-carry-final-001/forward/report.md`
+(обновляется при каждом запуске: книга, хедж, equity, последние события, легенда).
+Полный журнал событий: `forward/trades.jsonl`. Бэктест-артефакты: `reports/artifacts/altcoin-carry-final-001/`
+(глоссарий всех файлов — `reports/artifacts/README.md`). Серия дневных доходностей
+для портфельных расчётов: `select-daily-returns.{csv,json}` там же.
 
 ## Чего НЕ делать
 

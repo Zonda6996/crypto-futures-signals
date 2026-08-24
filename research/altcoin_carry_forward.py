@@ -384,6 +384,7 @@ def run_once() -> dict:
         "journal_starts": "first run date; no backfill over the sealed reserve",
     }
     write_json_atomic(state_path, states)
+    write_report(states)
     return states
 
 
@@ -408,6 +409,64 @@ def status() -> str:
     return "\n".join(lines)
 
 
+def build_report(states: dict) -> str:
+    """Human-readable report.md, d6-forward style: book, hedge, recent events."""
+    meta = states["_meta"]
+    lines = [
+        "# Carry forward — живой дневник",
+        "",
+        f"- Обновлён: `{meta['last_run_utc']}`",
+        f"- Последний закрытый дневной бар: **{meta['last_closed_bar_utc']}**",
+        "- Запуск раз в сутки: `uv run python -m research.altcoin_carry_forward --run`",
+        f"- Журнал событий: `trades.jsonl` ({sum(1 for _ in (ART / 'trades.jsonl').open(encoding='utf-8'))} строк)",
+        "- Правила: без бэкфилла; sealed-резерв 2026-07…08 не оценивается; параметры не менять.",
+        "",
+    ]
+    for mode in MODES:
+        st = states[mode]
+        spec = ("SELECT FINAL-001: inv-vol веса, хедж BTC, стоп 3×ATR, фулл-тейк 1:1"
+                if mode == SAFE else
+                "SL-001 RISK: равные веса, без хеджа, стоп 3×ATR, частичка при +2 стопа → безубыток")
+        lines += [
+            f"## {mode}",
+            f"*{spec}*",
+            "",
+            f"- Equity (mark-to-market): **{st['equity']:.6f}**",
+            f"- Хедж BTC: **{st.get('hedge_frac', 0):+.4%}** от капитала",
+            f"- Позиций в книге: **{len(st['episodes'])}**",
+            "",
+            "| # | сторона | символ | вход | стоп-дистанция | с даты |",
+            "|---|---|---|---|---|---|",
+        ]
+        for n, (sym, e) in enumerate(sorted(st["episodes"].items(), key=lambda kv: (kv[1]["side"], kv[0])), 1):
+            side = "LONG" if e["side"] > 0 else "SHORT"
+            lines.append(f"| {n} | {side} | {sym} | {e['entry']:.6g} | {e['dist']:.4g} | {e.get('entry_date', '—')} |")
+        lines.append("")
+    journal = (ART / "trades.jsonl")
+    if journal.exists():
+        events = [json.loads(l) for l in journal.read_text(encoding="utf-8").splitlines() if l.strip()]
+        lines += ["## Последние события", "", "| день | режим | событие | символ | детали |", "|---|---|---|---|---|"]
+        for e in events[-30:]:
+            detail = e.get("entry") or e.get("mark") or e.get("missed_days") or ""
+            lines.append(f"| {e.get('day','—')} | {e.get('mode','—')} | {e.get('type','—')} | {e.get('symbol','—')} | {detail} |")
+        lines.append("")
+    lines += [
+        "## Легенда событий",
+        "",
+        "- `open` — вход в корзину (LONG = лонг-нога, SHORT = шорт-нога)",
+        "- `take` — фулл-фикс по цели (SAFE) · `partial` — половина в кэш, остаток в безубыток (RISK)",
+        "- `stop` — ATR-стоп · `rank_drop` — вышел из рейтинга (штатный выход) · `gap` — пропуск дней",
+        "",
+        "Сигналы считаются на дневном ТФ; график можно открывать на любом ТФ — это только отображение.",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def write_report(states: dict) -> None:
+    ART.mkdir(parents=True, exist_ok=True)
+    (ART / "report.md").write_text(build_report(states), encoding="utf-8")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group(required=True)
@@ -421,6 +480,9 @@ def main(argv: list[str] | None = None) -> int:
                               "hedge": states[m].get("hedge_frac", 0.0)} for m in MODES} |
                          {"meta": states["_meta"]}, indent=1, sort_keys=True, default=str))
     else:
+        if (ART / "state.json").exists():
+            states = json.loads((ART / "state.json").read_text(encoding="utf-8"))
+            write_report(states)
         print(status())
     return 0
 
