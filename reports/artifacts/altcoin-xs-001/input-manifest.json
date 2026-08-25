@@ -1,0 +1,36 @@
+{
+  "downloads": "none",
+  "freeze_proof_commit": "8635b73",
+  "frozen_protocol_document": "ALTCOIN_XS_001_FROZEN_PROTOCOL.md",
+  "frozen_protocol_sha256": "d5410bf05e485575d9e82326994fbf86b10306fbae52cfedc56f07b1fa6e7125",
+  "prior_inputs": {
+    "primary_archive_sha256": "665ac7b7cb6057b3511d60d08bee144fe747ec205cfff9f8494d94826a83743d",
+    "supplement_archive_sha256": "a753585a11beb7bad74f9262920324fe8315a681b6dd108db072790bad47bd5b",
+    "supplement_v2_archive_sha256": "487046fad5659e427075ca2b2b676bb3213da85276848129ba5eb21f00d10c56"
+  },
+  "protocol_id": "ALTCOIN_XS-001",
+  "repo_source_commit": "af14455f2c6f10b6627616867c7106a45619605b",
+  "selection_policy": "single-pass decision; XS family closes on NO_SELECTION",
+  "universe_used": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT"
+  ],
+  "windows_utc": {
+    "decide": [
+      "2021-01-01T00:00:00Z",
+      "2026-07-01T00:00:00Z"
+    ],
+    "monitor_reserve": [
+      "2026-07-01T00:00:00Z",
+      null
+    ]
+  }
+}

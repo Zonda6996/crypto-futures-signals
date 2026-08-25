@@ -255,7 +255,10 @@ CSV_EXCLUDED = {"daily_returns", "fold_sharpes", "fold_net_returns", "asset_name
 
 
 def _flat_row(row: dict) -> dict:
-    return {k: v for k, v in row.items() if k not in CSV_EXCLUDED}
+    return {
+        **row["config"],
+        **{k: v for k, v in row.items() if k not in CSV_EXCLUDED},
+    }
 
 
 def _references(data: CarryData) -> dict:
@@ -268,14 +271,18 @@ def _references(data: CarryData) -> dict:
         prev = None
         for day in days:
             if prev is not None:
-                if symbol is not None:
-                    rets.append(d1[day] / d1[prev] - 1.0)
+                have = all(day in data.closes[s] and prev in data.closes[s] for s in picks)
+                if have:
+                    if symbol is not None:
+                        rets.append(data.closes[symbol][day] / data.closes[symbol][prev] - 1.0)
+                    else:
+                        leg = 0.0
+                        for s in picks:
+                            cs = data.closes[s]
+                            leg += cs[day] / cs[prev] - 1.0
+                        rets.append(leg / len(picks))
                 else:
-                    leg = 0.0
-                    for s in picks:
-                        cs = data.closes[s]
-                        leg += cs[day] / cs[prev] - 1.0
-                    rets.append(leg / len(picks))
+                    rets.append(0.0)
             prev = day
         equity = 1.0
         for r in rets:
