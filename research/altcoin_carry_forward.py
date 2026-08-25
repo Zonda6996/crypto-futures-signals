@@ -505,12 +505,72 @@ def write_report(states: dict) -> None:
     (ART / "report.md").write_text(build_report(states), encoding="utf-8")
 
 
+def symbol_view(symbols: list[str]) -> str:
+    """Per-asset view: backtest stats + live book status + journal events."""
+    stats_path = ART.parent / "per-symbol-stats.json"
+    stats = json.loads(stats_path.read_text(encoding="utf-8"))["symbols"] if stats_path.exists() else {}
+    state_path = ART / "state.json"
+    states = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+    journal = (ART / "trades.jsonl")
+    events = [json.loads(l) for l in journal.read_text(encoding="utf-8").splitlines() if l.strip()] if journal.exists() else []
+    out = []
+    for sym in symbols:
+        out.append(f"=== {sym} ===")
+        s = stats.get(sym)
+        if s:
+            out.append(
+                f"[бэктест 2021-2026] эпизодов {s['episodes']} "
+                f"(тейк {s['exits']['take']} / стоп {s['exits']['stop']} / рейтинг {s['exits']['rank']}), "
+                f"WR {s['winrate_price']:.1%}, ср.ход {s['avg_move']:+.2%} "
+                f"(плюс {s['avg_win_move']:+.2%} / минус {s['avg_loss_move']:+.2%}), "
+                f"держали {s['avg_hold_days']:.1f} дн, лонг/шорт {s['long_episodes']}/{s['short_episodes']}")
+        else:
+            out.append("[бэктест] нет данных (сгенерируй research.per_symbol_stats)")
+        for mode in MODES:
+            st = states.get(mode, {})
+            e = st.get("episodes", {}).get(sym)
+            if e is None:
+                out.append(f"[{mode} live] не в книге")
+                continue
+            weight = st.get("fractions", {}).get(sym, 0.0)
+            mark = st.get("marks", {}).get(sym)
+            stop = e["entry"] - e["dist"] if e["side"] > 0 else e["entry"] + e["dist"]
+            if mode == SAFE:
+                target = e["entry"] + e["dist"] if e["side"] > 0 else e["entry"] - e["dist"]
+                target_txt = f"{target:.6g} (фулл-фикс)"
+            else:
+                target = e["entry"] + 2 * e["dist"] if e["side"] > 0 else e["entry"] - 2 * e["dist"]
+                target_txt = f"{target:.6g} (50%{' ,безубыток активен' if e.get('be') else ''})"
+            pnl = e["side"] * (mark - e["entry"]) / e["entry"] if mark else 0.0
+            out.append(
+                f"[{mode} live] {'LONG' if e['side'] > 0 else 'SHORT'} | вес {weight:+.2%} | "
+                f"вход {e['entry']:.6g} ({e.get('entry_date','—')}) | стоп {stop:.6g} | "
+                f"цель {target_txt} | сейчас {mark if mark is not None else '—'} | PnL {pnl:+.2%}")
+        sym_events = [e for e in events if e.get("symbol") == sym]
+        if sym_events:
+            out.append("[журнал] последние события:")
+            for e in sym_events[-10:]:
+                detail = e.get("entry") or e.get("mark") or ""
+                out.append(f"  {e.get('day','—')} [{e.get('mode','—')}] {e.get('type','—')} {detail}".rstrip())
+        else:
+            out.append("[журнал] событий пока нет")
+        out.append("")
+    return "\n".join(out)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group(required=True)
+    group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument("--run", action="store_true")
     group.add_argument("--status", action="store_true")
+    parser.add_argument("--symbol", nargs="+", action="extend", dest="symbols",
+                        help="показать актив: бэктест-статистика, живая позиция, журнал (можно несколько)")
     args = parser.parse_args(argv)
+    if not args.symbols and not args.run and not args.status:
+        parser.error("one of --run / --status / --symbol is required")
+    if args.symbols:
+        print(symbol_view([s.upper() for s in args.symbols]))
+        return 0
     if args.run:
         states = run_once()
         print(json.dumps({m: {"equity": states[m]["equity"],

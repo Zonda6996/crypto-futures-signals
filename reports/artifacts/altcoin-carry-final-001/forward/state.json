@@ -20,56 +20,56 @@
     "entry_date": "2026-08-23",
     "side": -1
    },
-   "BTCUSDT": {
-    "dist": 6599.239937803665,
-    "entry": 77719.1,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
-   "ETHUSDT": {
-    "dist": 288.49403908808216,
-    "entry": 2462.58,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
    "LINKUSDT": {
     "dist": 1.9481025147866244,
     "entry": 11.543,
     "entry_date": "2026-08-23",
     "side": 1
+   },
+   "SOLUSDT": {
+    "dist": 13.534474145866328,
+    "entry": 98.96,
+    "entry_date": "2026-08-24",
+    "side": 1
+   },
+   "XRPUSDT": {
+    "dist": 0.24865741459652893,
+    "entry": 1.4813,
+    "entry_date": "2026-08-24",
+    "side": 1
    }
   },
-  "equity": 0.9988,
+  "equity": 1.018565570432964,
   "fractions": {
    "ADAUSDT": -0.3333333333333333,
    "AVAXUSDT": -0.3333333333333333,
    "BNBUSDT": -0.3333333333333333,
-   "BTCUSDT": 0.3333333333333333,
+   "BTCUSDT": 0.0,
    "DOGEUSDT": 0.0,
    "DOTUSDT": 0.0,
-   "ETHUSDT": 0.3333333333333333,
+   "ETHUSDT": 0.0,
    "LINKUSDT": 0.3333333333333333,
-   "SOLUSDT": 0.0,
-   "XRPUSDT": 0.0
+   "SOLUSDT": 0.3333333333333333,
+   "XRPUSDT": 0.3333333333333333
   },
   "hedge_frac": 0.0,
-  "last_open_ms": 1787443200000,
+  "last_open_ms": 1787529600000,
   "longs": [
-   "BTCUSDT",
-   "ETHUSDT",
-   "LINKUSDT"
+   "LINKUSDT",
+   "SOLUSDT",
+   "XRPUSDT"
   ],
   "marks": {
-   "ADAUSDT": 0.227,
-   "AVAXUSDT": 7.61,
-   "BNBUSDT": 702.93,
-   "BTCUSDT": 77719.1,
-   "DOGEUSDT": 0.09343,
-   "DOTUSDT": 0.9284,
-   "ETHUSDT": 2462.58,
-   "LINKUSDT": 11.543,
-   "SOLUSDT": 95.44,
-   "XRPUSDT": 1.52
+   "ADAUSDT": 0.2214,
+   "AVAXUSDT": 7.543,
+   "BNBUSDT": 704.67,
+   "BTCUSDT": 78953.0,
+   "DOGEUSDT": 0.0901,
+   "DOTUSDT": 0.8996,
+   "ETHUSDT": 2481.03,
+   "LINKUSDT": 11.629,
+   "SOLUSDT": 98.96,
+   "XRPUSDT": 1.4813
   },
   "shorts": [
    "ADAUSDT",
@@ -98,56 +98,56 @@
     "entry_date": "2026-08-23",
     "side": -1
    },
-   "BTCUSDT": {
-    "dist": 6599.239937803665,
-    "entry": 77719.1,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
-   "ETHUSDT": {
-    "dist": 288.49403908808216,
-    "entry": 2462.58,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
    "LINKUSDT": {
     "dist": 1.9481025147866244,
     "entry": 11.543,
     "entry_date": "2026-08-23",
     "side": 1
+   },
+   "SOLUSDT": {
+    "dist": 13.534474145866328,
+    "entry": 98.96,
+    "entry_date": "2026-08-24",
+    "side": 1
+   },
+   "XRPUSDT": {
+    "dist": 0.24865741459652893,
+    "entry": 1.4813,
+    "entry_date": "2026-08-24",
+    "side": 1
    }
   },
-  "equity": 0.9993919328538616,
+  "equity": 1.0077456195600312,
   "fractions": {
-   "ADAUSDT": -0.11401924082658305,
-   "AVAXUSDT": -0.1420694365733028,
-   "BNBUSDT": -0.28164479436740514,
-   "BTCUSDT": 0.20733201052493608,
+   "ADAUSDT": -0.12029699943264098,
+   "AVAXUSDT": -0.14774138486053537,
+   "BNBUSDT": -0.29530008493867804,
+   "BTCUSDT": 0.0,
    "DOGEUSDT": 0.0,
    "DOTUSDT": 0.0,
-   "ETHUSDT": 0.12572875789920523,
-   "LINKUSDT": 0.12920575980856777,
-   "SOLUSDT": 0.0,
-   "XRPUSDT": 0.0
+   "ETHUSDT": 0.0,
+   "LINKUSDT": 0.13499328489679377,
+   "SOLUSDT": 0.18731672078013745,
+   "XRPUSDT": 0.11435152509121439
   },
-  "hedge_frac": 0.013445243563877662,
-  "last_open_ms": 1787443200000,
+  "hedge_frac": 0.0370046799841027,
+  "last_open_ms": 1787529600000,
   "longs": [
-   "BTCUSDT",
-   "ETHUSDT",
-   "LINKUSDT"
+   "LINKUSDT",
+   "SOLUSDT",
+   "XRPUSDT"
   ],
   "marks": {
-   "ADAUSDT": 0.227,
-   "AVAXUSDT": 7.61,
-   "BNBUSDT": 702.93,
-   "BTCUSDT": 77719.1,
-   "DOGEUSDT": 0.09343,
-   "DOTUSDT": 0.9284,
-   "ETHUSDT": 2462.58,
-   "LINKUSDT": 11.543,
-   "SOLUSDT": 95.44,
-   "XRPUSDT": 1.52
+   "ADAUSDT": 0.2214,
+   "AVAXUSDT": 7.543,
+   "BNBUSDT": 704.67,
+   "BTCUSDT": 78953.0,
+   "DOGEUSDT": 0.0901,
+   "DOTUSDT": 0.8996,
+   "ETHUSDT": 2481.03,
+   "LINKUSDT": 11.629,
+   "SOLUSDT": 98.96,
+   "XRPUSDT": 1.4813
   },
   "shorts": [
    "ADAUSDT",
@@ -157,8 +157,8 @@
  },
  "_meta": {
   "journal_starts": "first run date; no backfill over the sealed reserve",
-  "last_closed_bar_utc": "2026-08-23",
-  "last_run_utc": "2026-08-24T16:25:38.787532+00:00",
-  "processed_this_run": 0
+  "last_closed_bar_utc": "2026-08-24",
+  "last_run_utc": "2026-08-25T09:42:52.004001+00:00",
+  "processed_this_run": 2
  }
 }

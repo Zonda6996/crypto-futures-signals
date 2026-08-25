@@ -10,3 +10,11 @@
 {"day": "2026-08-23", "entry": 77719.1, "mode": "RISK", "side_name": "LONG", "symbol": "BTCUSDT", "type": "open"}
 {"day": "2026-08-23", "entry": 2462.58, "mode": "RISK", "side_name": "LONG", "symbol": "ETHUSDT", "type": "open"}
 {"day": "2026-08-23", "entry": 11.543, "mode": "RISK", "side_name": "LONG", "symbol": "LINKUSDT", "type": "open"}
+{"date": "2026-08-24", "day": "2026-08-24", "entry": 77719.1, "exit": 78953.0, "mode": "SAFE", "side": 1, "symbol": "BTCUSDT", "type": "rank_drop"}
+{"date": "2026-08-24", "day": "2026-08-24", "entry": 2462.58, "exit": 2481.03, "mode": "SAFE", "side": 1, "symbol": "ETHUSDT", "type": "rank_drop"}
+{"day": "2026-08-24", "entry": 98.96, "mode": "SAFE", "side_name": "LONG", "symbol": "SOLUSDT", "type": "open"}
+{"day": "2026-08-24", "entry": 1.4813, "mode": "SAFE", "side_name": "LONG", "symbol": "XRPUSDT", "type": "open"}
+{"date": "2026-08-24", "day": "2026-08-24", "entry": 77719.1, "exit": 78953.0, "mode": "RISK", "side": 1, "symbol": "BTCUSDT", "type": "rank_drop"}
+{"date": "2026-08-24", "day": "2026-08-24", "entry": 2462.58, "exit": 2481.03, "mode": "RISK", "side": 1, "symbol": "ETHUSDT", "type": "rank_drop"}
+{"day": "2026-08-24", "entry": 98.96, "mode": "RISK", "side_name": "LONG", "symbol": "SOLUSDT", "type": "open"}
+{"day": "2026-08-24", "entry": 1.4813, "mode": "RISK", "side_name": "LONG", "symbol": "XRPUSDT", "type": "open"}

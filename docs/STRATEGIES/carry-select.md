@@ -39,13 +39,16 @@
 ```bash
 uv run python -m research.altcoin_carry_forward --run      # прожить день (раз в сутки)
 uv run python -m research.altcoin_carry_forward --status   # что в книге, equity, хедж
+uv run python -m research.altcoin_carry_forward --symbol ADAUSDT BTCUSDT
+# по активу: бэктест-статистика + живая позиция в SAFE/RISK + журнал событий
 ```
 
 Журнал и **главный отчёт**: `reports/artifacts/altcoin-carry-final-001/forward/report.md`
 (обновляется при каждом запуске: книга, хедж, equity, последние события, легенда).
 Полный журнал событий: `forward/trades.jsonl`. Бэктест-артефакты: `reports/artifacts/altcoin-carry-final-001/`
 (глоссарий всех файлов — `reports/artifacts/README.md`). Серия дневных доходностей
-для портфельных расчётов: `select-daily-returns.{csv,json}` там же.
+для портфельных расчётов: `select-daily-returns.{csv,json}` там же. Статистика по
+каждому активу за 2021–2026: `per-symbol-stats.{json,csv}` там же (или `--symbol`).
 
 ## Чего НЕ делать
 

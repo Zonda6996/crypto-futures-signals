@@ -1,0 +1,160 @@
+{
+ "purpose": "per-symbol backtest statistics of the FINAL-001 SELECT episode logic (price moves; hedge/weights do not affect episode timing)",
+ "symbols": {
+  "ADAUSDT": {
+   "avg_hold_days": 3.63,
+   "avg_loss_move": -0.06287,
+   "avg_move": 0.00917,
+   "avg_win_move": 0.05797,
+   "episodes": 312,
+   "exits": {
+    "rank": 299,
+    "stop": 8,
+    "take": 5
+   },
+   "long_episodes": 136,
+   "short_episodes": 176,
+   "winrate_price": 0.5962
+  },
+  "AVAXUSDT": {
+   "avg_hold_days": 4.23,
+   "avg_loss_move": -0.08641,
+   "avg_move": 0.01233,
+   "avg_win_move": 0.09144,
+   "episodes": 308,
+   "exits": {
+    "rank": 282,
+    "stop": 15,
+    "take": 11
+   },
+   "long_episodes": 145,
+   "short_episodes": 163,
+   "winrate_price": 0.5552
+  },
+  "BNBUSDT": {
+   "avg_hold_days": 7.59,
+   "avg_loss_move": -0.06769,
+   "avg_move": 0.01293,
+   "avg_win_move": 0.08365,
+   "episodes": 199,
+   "exits": {
+    "rank": 162,
+    "stop": 13,
+    "take": 24
+   },
+   "long_episodes": 141,
+   "short_episodes": 58,
+   "winrate_price": 0.5327
+  },
+  "BTCUSDT": {
+   "avg_hold_days": 4.32,
+   "avg_loss_move": -0.02983,
+   "avg_move": 0.00984,
+   "avg_win_move": 0.05213,
+   "episodes": 281,
+   "exits": {
+    "rank": 265,
+    "stop": 1,
+    "take": 15
+   },
+   "long_episodes": 128,
+   "short_episodes": 153,
+   "winrate_price": 0.484
+  },
+  "DOGEUSDT": {
+   "avg_hold_days": 3.82,
+   "avg_loss_move": -0.07982,
+   "avg_move": 0.00471,
+   "avg_win_move": 0.08368,
+   "episodes": 294,
+   "exits": {
+    "rank": 280,
+    "stop": 12,
+    "take": 2
+   },
+   "long_episodes": 85,
+   "short_episodes": 209,
+   "winrate_price": 0.517
+  },
+  "DOTUSDT": {
+   "avg_hold_days": 5.42,
+   "avg_loss_move": -0.076,
+   "avg_move": 0.0053,
+   "avg_win_move": 0.07544,
+   "episodes": 244,
+   "exits": {
+    "rank": 231,
+    "stop": 7,
+    "take": 6
+   },
+   "long_episodes": 140,
+   "short_episodes": 104,
+   "winrate_price": 0.5369
+  },
+  "ETHUSDT": {
+   "avg_hold_days": 3.53,
+   "avg_loss_move": -0.04871,
+   "avg_move": 0.00846,
+   "avg_win_move": 0.05778,
+   "episodes": 285,
+   "exits": {
+    "rank": 266,
+    "stop": 5,
+    "take": 14
+   },
+   "long_episodes": 127,
+   "short_episodes": 158,
+   "winrate_price": 0.5368
+  },
+  "LINKUSDT": {
+   "avg_hold_days": 4.53,
+   "avg_loss_move": -0.08398,
+   "avg_move": -0.00735,
+   "avg_win_move": 0.06986,
+   "episodes": 265,
+   "exits": {
+    "rank": 251,
+    "stop": 8,
+    "take": 6
+   },
+   "long_episodes": 80,
+   "short_episodes": 185,
+   "winrate_price": 0.4981
+  },
+  "SOLUSDT": {
+   "avg_hold_days": 4.03,
+   "avg_loss_move": -0.06803,
+   "avg_move": 0.01291,
+   "avg_win_move": 0.09385,
+   "episodes": 282,
+   "exits": {
+    "rank": 262,
+    "stop": 5,
+    "take": 15
+   },
+   "long_episodes": 150,
+   "short_episodes": 132,
+   "winrate_price": 0.5
+  },
+  "XRPUSDT": {
+   "avg_hold_days": 3.63,
+   "avg_loss_move": -0.06337,
+   "avg_move": -0.00526,
+   "avg_win_move": 0.04889,
+   "episodes": 284,
+   "exits": {
+    "rank": 274,
+    "stop": 8,
+    "take": 2
+   },
+   "long_episodes": 118,
+   "short_episodes": 166,
+   "winrate_price": 0.5176
+  }
+ },
+ "total_episodes": 2754,
+ "window_utc": [
+  "2021-01-01",
+  "2026-06-30"
+ ]
+}
