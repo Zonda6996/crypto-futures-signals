@@ -38,7 +38,13 @@ BTC = "BTCUSDT"
 
 SAFE = "SAFE"
 RISK = "RISK"
-MODES = (SAFE, RISK)
+WIDE = "WIDE"
+MODES = (SAFE, RISK, WIDE)
+MODE_CONFIG = {
+    SAFE: {"k": 3, "hedge": True, "partial": False},
+    RISK: {"k": 3, "hedge": False, "partial": True},
+    WIDE: {"k": 5, "hedge": True, "partial": False},
+}
 
 ATR_PERIOD = 14
 SIGMA_WINDOW = 30
@@ -117,6 +123,8 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
              "hedge_frac": float, "banned": {sym}, "equity": float, "last_open_ms": int}
     Returns the new state plus an events list. Pure: inputs are not mutated.
     """
+    syms = state.get("symbols") or list(UNIVERSE_SYMBOLS)
+    k_side = state.get("k", K_PER_SIDE)
     btc_close = market[BTC]["close"]
     btc_ret = market[BTC]["ret"]
     fractions = dict(state["fractions"])
@@ -151,11 +159,11 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
                 reason = "stop"
             elif episode["side"] < 0 and px >= episode["entry"] + dist_eff:
                 reason = "stop"
-        if reason is None and mode == SAFE:
+        if reason is None and not MODE_CONFIG[mode]["partial"]:
             favorable = (px - episode["entry"]) if episode["side"] > 0 else (episode["entry"] - px)
             if favorable >= episode["dist"]:
                 reason = "take"
-        if reason is None and mode == RISK and not episode.get("taken"):
+        if reason is None and MODE_CONFIG[mode]["partial"] and not episode.get("taken"):
             favorable = (px - episode["entry"]) if episode["side"] > 0 else (episode["entry"] - px)
             if favorable >= 2.0 * episode["dist"]:
                 half = abs(fractions[symbol]) / 2.0
@@ -178,7 +186,7 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
     for side, bucket in ((-1, state["shorts"]), (1, state["longs"])):
         holders = [s for s, e in episodes.items() if e["side"] == side]
         for symbol in sorted(bucket):
-            if len(holders) >= K_PER_SIDE:
+            if len(holders) >= k_side:
                 break
             if symbol in holders or symbol in episodes or symbol in banned:
                 continue
@@ -209,16 +217,16 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
             turnover += abs(target - fractions.get(symbol, 0.0))
             fractions[symbol] = target
     else:
-        for symbol in symbols_all():
+        for symbol in syms:
             target = 0.0
             if symbol in episodes:
-                target = (1.0 / K_PER_SIDE) if episodes[symbol]["side"] > 0 else -(1.0 / K_PER_SIDE)
+                target = (1.0 / k_side) if episodes[symbol]["side"] > 0 else -(1.0 / k_side)
             turnover += abs(target - fractions.get(symbol, 0.0))
             fractions[symbol] = target
 
     # anti-blowup cap
-    for symbol in symbols_all():
-        cap = BLOWUP_CAP / K_PER_SIDE
+    for symbol in syms:
+        cap = BLOWUP_CAP / k_side
         if abs(fractions.get(symbol, 0.0)) > cap:
             signed_cap = cap if fractions[symbol] > 0 else -cap
             turnover += abs(signed_cap - fractions[symbol])
@@ -226,8 +234,8 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
 
     # hedge (SAFE only)
     hedge_frac = state.get("hedge_frac", 0.0)
-    if mode == SAFE:
-        beta_book = sum(fractions[s] * market[s]["beta"] for s in symbols_all())
+    if MODE_CONFIG[mode]["hedge"]:
+        beta_book = sum(fractions[s] * market[s]["beta"] for s in syms)
         new_hedge = -beta_book
         turnover += abs(new_hedge - hedge_frac)
         hedge_frac = new_hedge
@@ -253,9 +261,11 @@ def symbols_all() -> tuple[str, ...]:
     return UNIVERSE_SYMBOLS
 
 
-def empty_state(equity: float = 1.0) -> dict:
+def empty_state(equity: float = 1.0, symbols=None, k: int = K_PER_SIDE) -> dict:
+    syms = list(symbols) if symbols else list(UNIVERSE_SYMBOLS)
     return {
-        "episodes": {}, "fractions": {s: 0.0 for s in UNIVERSE_SYMBOLS},
+        "symbols": syms, "k": k,
+        "episodes": {}, "fractions": {s: 0.0 for s in syms},
         "hedge_frac": 0.0, "banned": [], "equity": equity,
         "shorts": [], "longs": [], "last_open_ms": 0,
     }
@@ -279,7 +289,7 @@ def _bars_from_klines(payload: list) -> tuple[list[int], list[float], list[float
     return opens, closes, highs, lows
 
 
-def fetch_market() -> dict:
+def fetch_market(symbols=None) -> dict:
     """Fetch closed daily bars + funding for the universe. Returns per-symbol
     indicator snapshot for the latest closed bar plus funding means per day."""
     closes_map: dict[str, list[float]] = {}
@@ -290,7 +300,9 @@ def fetch_market() -> dict:
     last_open: int | None = None
     funding_by_day: dict[str, dict[int, float]] = {}
 
-    for symbol in UNIVERSE_SYMBOLS:
+    symbol_list = list(symbols) if symbols else list(UNIVERSE_SYMBOLS)
+    for symbol in symbol_list:
+        time.sleep(0.05)
         payload = json.loads(fetch_retry(KLINES_URL.format(symbol=symbol)))
         opens, closes, highs, lows = _bars_from_klines(payload)
         if last_open is None:
@@ -302,6 +314,7 @@ def fetch_market() -> dict:
         ret_map[symbol] = closes[-1] / closes[-2] - 1.0
         sigma_map[symbol] = trailing_sigma(closes, len(closes) - 1)
         beta_map[symbol] = trailing_beta(closes, closes_map.get(BTC, closes), len(closes) - 1)
+        time.sleep(0.05)
         fpayload = json.loads(fetch_retry(FUNDING_URL.format(
             symbol=symbol, start_ms=int(time.time() * 1000) - 45 * DAY_MS)))
         by_day: dict[int, float] = {}
@@ -315,7 +328,7 @@ def fetch_market() -> dict:
     day_means: dict[int, dict[str, float | None]] = {}
     for day in sorted({d for m in funding_by_day.values() for d in m}):
         row = {}
-        for symbol in UNIVERSE_SYMBOLS:
+        for symbol in symbol_list:
             window = [funding_by_day[symbol].get(day - o * DAY_MS) for o in (0, 1, 2)]
             vals = [v for v in window if v is not None]
             row[symbol] = sum(vals) / len(vals) if vals else None
@@ -326,11 +339,18 @@ def fetch_market() -> dict:
     }
 
 
-def rank_book(day_means: dict[str, float | None]) -> tuple[set[str], set[str]] | None:
-    if any(v is None for v in day_means.values()):
+def rank_book(day_means: dict[str, float | None], symbols=None, k: int = K_PER_SIDE):
+    syms = list(symbols) if symbols else list(UNIVERSE_SYMBOLS)
+    if any(day_means.get(s) is None for s in syms):
         return None
-    ranked = sorted(UNIVERSE_SYMBOLS, key=lambda s: (-day_means[s], s))
-    return set(ranked[:K_PER_SIDE]), set(ranked[len(ranked) - K_PER_SIDE:])
+    ranked = sorted(syms, key=lambda s: (-day_means[s], s))
+    return set(ranked[:k]), set(ranked[len(ranked) - k:])
+
+
+def load_wide_universe() -> list[str]:
+    path = ART.parent.parent / "altcoin-carry-wide-001" / "universe-final.json"
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return payload["symbols"]
 
 
 def run_once() -> dict:
@@ -340,9 +360,15 @@ def run_once() -> dict:
     states = {}
     if state_path.exists():
         states = json.loads(state_path.read_text(encoding="utf-8"))
+    wide_symbols = load_wide_universe()
     for mode in MODES:
-        states.setdefault(mode, empty_state())
-    market = fetch_market()
+        cfg = MODE_CONFIG[mode]
+        if mode == WIDE:
+            states.setdefault(mode, empty_state(symbols=wide_symbols, k=cfg["k"]))
+        else:
+            states.setdefault(mode, empty_state(k=cfg["k"]))
+    all_symbols = sorted(set(UNIVERSE_SYMBOLS) | set(wide_symbols))
+    market = fetch_market(all_symbols)
     last_open = market["last_open"]
 
     # strict no-backfill: process ONLY the latest closed bar; if the runner was
@@ -351,9 +377,13 @@ def run_once() -> dict:
     day = last_open
     processed = 0
     means = market["funding_day_means"].get(day)
-    book = rank_book(means) if means is not None else None
+    books = {}
+    if means is not None:
+        for mode in MODES:
+            books[mode] = rank_book(means, states[mode].get("symbols"), states[mode].get("k", K_PER_SIDE))
     for mode in MODES:
         st = states[mode]
+        book = books.get(mode)
         if st["last_open_ms"] >= day:
             continue
         gap_days = None if st["last_open_ms"] == 0 else (day - st["last_open_ms"]) // DAY_MS - 1
@@ -365,7 +395,7 @@ def run_once() -> dict:
             datetime.fromtimestamp(day / 1000, tz=timezone.utc).date().isoformat()
         market_day = {s: {"close": market["closes"][s][-1], "ret": market["ret"][s],
                           "atr": market["atr"][s], "sigma": market["sigma"][s],
-                          "beta": market["beta"][s]} for s in UNIVERSE_SYMBOLS}
+                          "beta": market["beta"][s]} for s in st.get("symbols", UNIVERSE_SYMBOLS)}
         outcome = decide_bar(mode, st, market_day)
         states[mode] = outcome["state"]
         states[mode]["marks"] = {s: market["closes"][s][-1] for s in UNIVERSE_SYMBOLS}
@@ -429,7 +459,10 @@ def build_report(states: dict) -> str:
     for mode in MODES:
         st = states[mode]
         marks = st.get("marks", {})
-        if mode == SAFE:
+        if mode == WIDE:
+            spec = ("**EXPLORATORY (CARRY-WIDE-001):** 99 активов, по 5 на сторону, inv-vol веса,"
+                    " хедж BTC, стоп 3×ATR, фулл-тейк 1:1. Без претензии на SELECT — накопление данных.")
+        elif mode == SAFE:
             spec = ("**Чем отличается:** веса обратно волатильности (у каждой позиции свой %), "
                     "хедж BTC против обвалов рынка, тейк = полный фикс при цели 1:1.")
             take_header = "тейк (полный фикс)"
