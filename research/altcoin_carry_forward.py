@@ -41,9 +41,9 @@ RISK = "RISK"
 WIDE = "WIDE"
 MODES = (SAFE, RISK, WIDE)
 MODE_CONFIG = {
-    SAFE: {"k": 3, "hedge": True, "partial": False},
-    RISK: {"k": 3, "hedge": False, "partial": True},
-    WIDE: {"k": 5, "hedge": True, "partial": False},
+    SAFE: {"k": 3, "hedge": True, "partial": False, "weights": "invvol"},
+    RISK: {"k": 3, "hedge": False, "partial": True, "weights": "equal"},
+    WIDE: {"k": 5, "hedge": True, "partial": False, "weights": "invvol"},
 }
 
 ATR_PERIOD = 14
@@ -202,18 +202,18 @@ def decide_bar(mode: str, state: dict, market: dict, costs: float = COST_PER_FIL
 
     # targets
     held = list(episodes)
-    if mode == SAFE and held:
+    if MODE_CONFIG[mode]["weights"] == "invvol" and held:
         invols = {}
         for symbol in held:
             sigma = market[symbol]["sigma"]
             invols[symbol] = (1.0 / sigma) if sigma and sigma > 0 else None
         known = [s for s in held if invols[s] is not None]
         denom = sum(invols[s] for s in known)
-        for symbol in symbols_all():
+        for symbol in syms:
             target = 0.0
             if symbol in episodes:
                 side = episodes[symbol]["side"]
-                target = side * (invols[symbol] / denom if symbol in known and denom > 0 else 1.0 / K_PER_SIDE)
+                target = side * (invols[symbol] / denom if symbol in known and denom > 0 else 1.0 / k_side)
             turnover += abs(target - fractions.get(symbol, 0.0))
             fractions[symbol] = target
     else:

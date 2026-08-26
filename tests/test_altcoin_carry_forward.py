@@ -160,3 +160,23 @@ def test_equity_marks_previous_book() -> None:
     market = market_for(**{"BTCUSDT": {"ret": 0.02}})
     out = decide_bar(SAFE, st, market)
     assert out["bar_ret"] == pytest.approx(0.01)  # 0.5 * 2% (hedge was 0)
+
+
+def test_wide_mode_k5_invvol_gross_one() -> None:
+    from research.altcoin_carry_forward import WIDE, empty_state
+
+    syms = list(UNIVERSE_SYMBOLS)
+    st = empty_state(symbols=syms, k=5)
+    st["shorts"] = sorted(syms)[:5]
+    st["longs"] = sorted(syms)[5:]
+    st["pending_date"] = "d"
+    out = decide_bar(WIDE, st, market_for())
+    assert len(out["state"]["episodes"]) == 10
+    fr = out["state"]["fractions"]
+    assert sum(abs(v) for v in fr.values()) == pytest.approx(1.0)
+    for s in sorted(syms)[:5]:
+        assert fr[s] == pytest.approx(-0.1)
+    for s in sorted(syms)[5:]:
+        assert fr[s] == pytest.approx(0.1)
+    # hedge present in WIDE (uniform betas, neutral book -> ~0)
+    assert out["state"]["hedge_frac"] == pytest.approx(0.0, abs=1e-9)
