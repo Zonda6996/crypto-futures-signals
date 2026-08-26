@@ -18,3 +18,23 @@
 {"date": "2026-08-24", "day": "2026-08-24", "entry": 2462.58, "exit": 2481.03, "mode": "RISK", "side": 1, "symbol": "ETHUSDT", "type": "rank_drop"}
 {"day": "2026-08-24", "entry": 98.96, "mode": "RISK", "side_name": "LONG", "symbol": "SOLUSDT", "type": "open"}
 {"day": "2026-08-24", "entry": 1.4813, "mode": "RISK", "side_name": "LONG", "symbol": "XRPUSDT", "type": "open"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 0.227, "exit": 0.209, "mode": "SAFE", "side": -1, "symbol": "ADAUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 7.61, "exit": 7.323, "mode": "SAFE", "side": -1, "symbol": "AVAXUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 702.93, "exit": 694.83, "mode": "SAFE", "side": -1, "symbol": "BNBUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 11.543, "exit": 11.287, "mode": "SAFE", "side": 1, "symbol": "LINKUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 98.96, "exit": 96.56, "mode": "SAFE", "side": 1, "symbol": "SOLUSDT", "type": "rank_drop"}
+{"day": "2026-08-25", "entry": 0.08568, "mode": "SAFE", "side_name": "SHORT", "symbol": "DOGEUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 0.8511, "mode": "SAFE", "side_name": "SHORT", "symbol": "DOTUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 11.287, "mode": "SAFE", "side_name": "SHORT", "symbol": "LINKUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 694.83, "mode": "SAFE", "side_name": "LONG", "symbol": "BNBUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 2441.72, "mode": "SAFE", "side_name": "LONG", "symbol": "ETHUSDT", "type": "open"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 0.227, "exit": 0.209, "mode": "RISK", "side": -1, "symbol": "ADAUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 7.61, "exit": 7.323, "mode": "RISK", "side": -1, "symbol": "AVAXUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 702.93, "exit": 694.83, "mode": "RISK", "side": -1, "symbol": "BNBUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 11.543, "exit": 11.287, "mode": "RISK", "side": 1, "symbol": "LINKUSDT", "type": "rank_drop"}
+{"date": "2026-08-25", "day": "2026-08-25", "entry": 98.96, "exit": 96.56, "mode": "RISK", "side": 1, "symbol": "SOLUSDT", "type": "rank_drop"}
+{"day": "2026-08-25", "entry": 0.08568, "mode": "RISK", "side_name": "SHORT", "symbol": "DOGEUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 0.8511, "mode": "RISK", "side_name": "SHORT", "symbol": "DOTUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 11.287, "mode": "RISK", "side_name": "SHORT", "symbol": "LINKUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 694.83, "mode": "RISK", "side_name": "LONG", "symbol": "BNBUSDT", "type": "open"}
+{"day": "2026-08-25", "entry": 2441.72, "mode": "RISK", "side_name": "LONG", "symbol": "ETHUSDT", "type": "open"}

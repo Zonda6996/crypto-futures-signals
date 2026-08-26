@@ -2,35 +2,35 @@
  "RISK": {
   "banned": [],
   "episodes": {
-   "ADAUSDT": {
-    "dist": 0.04474333253895112,
-    "entry": 0.227,
-    "entry_date": "2026-08-23",
-    "side": -1
-   },
-   "AVAXUSDT": {
-    "dist": 1.2733273903858535,
-    "entry": 7.61,
-    "entry_date": "2026-08-23",
-    "side": -1
-   },
    "BNBUSDT": {
-    "dist": 58.19765050199563,
-    "entry": 702.93,
-    "entry_date": "2026-08-23",
+    "dist": 61.774120088559926,
+    "entry": 694.83,
+    "entry_date": "2026-08-25",
+    "side": 1
+   },
+   "DOGEUSDT": {
+    "dist": 0.01526093317626527,
+    "entry": 0.08568,
+    "entry_date": "2026-08-25",
     "side": -1
+   },
+   "DOTUSDT": {
+    "dist": 0.15010371125788974,
+    "entry": 0.8511,
+    "entry_date": "2026-08-25",
+    "side": -1
+   },
+   "ETHUSDT": {
+    "dist": 296.4580660543816,
+    "entry": 2441.72,
+    "entry_date": "2026-08-25",
+    "side": 1
    },
    "LINKUSDT": {
-    "dist": 1.9481025147866244,
-    "entry": 11.543,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
-   "SOLUSDT": {
-    "dist": 13.534474145866328,
-    "entry": 98.96,
-    "entry_date": "2026-08-24",
-    "side": 1
+    "dist": 1.9691351494052411,
+    "entry": 11.287,
+    "entry_date": "2026-08-25",
+    "side": -1
    },
    "XRPUSDT": {
     "dist": 0.24865741459652893,
@@ -39,76 +39,76 @@
     "side": 1
    }
   },
-  "equity": 1.018565570432964,
+  "equity": 1.021003506695944,
   "fractions": {
-   "ADAUSDT": -0.3333333333333333,
-   "AVAXUSDT": -0.3333333333333333,
-   "BNBUSDT": -0.3333333333333333,
+   "ADAUSDT": 0.0,
+   "AVAXUSDT": 0.0,
+   "BNBUSDT": 0.3333333333333333,
    "BTCUSDT": 0.0,
-   "DOGEUSDT": 0.0,
-   "DOTUSDT": 0.0,
-   "ETHUSDT": 0.0,
-   "LINKUSDT": 0.3333333333333333,
-   "SOLUSDT": 0.3333333333333333,
+   "DOGEUSDT": -0.3333333333333333,
+   "DOTUSDT": -0.3333333333333333,
+   "ETHUSDT": 0.3333333333333333,
+   "LINKUSDT": -0.3333333333333333,
+   "SOLUSDT": 0.0,
    "XRPUSDT": 0.3333333333333333
   },
   "hedge_frac": 0.0,
-  "last_open_ms": 1787529600000,
+  "last_open_ms": 1787616000000,
   "longs": [
-   "LINKUSDT",
-   "SOLUSDT",
+   "BNBUSDT",
+   "ETHUSDT",
    "XRPUSDT"
   ],
   "marks": {
-   "ADAUSDT": 0.2214,
-   "AVAXUSDT": 7.543,
-   "BNBUSDT": 704.67,
-   "BTCUSDT": 78953.0,
-   "DOGEUSDT": 0.0901,
-   "DOTUSDT": 0.8996,
-   "ETHUSDT": 2481.03,
-   "LINKUSDT": 11.629,
-   "SOLUSDT": 98.96,
-   "XRPUSDT": 1.4813
+   "ADAUSDT": 0.209,
+   "AVAXUSDT": 7.323,
+   "BNBUSDT": 694.83,
+   "BTCUSDT": 78505.4,
+   "DOGEUSDT": 0.08568,
+   "DOTUSDT": 0.8511,
+   "ETHUSDT": 2441.72,
+   "LINKUSDT": 11.287,
+   "SOLUSDT": 96.56,
+   "XRPUSDT": 1.4335
   },
   "shorts": [
-   "ADAUSDT",
-   "AVAXUSDT",
-   "BNBUSDT"
+   "DOGEUSDT",
+   "DOTUSDT",
+   "LINKUSDT"
   ]
  },
  "SAFE": {
   "banned": [],
   "episodes": {
-   "ADAUSDT": {
-    "dist": 0.04474333253895112,
-    "entry": 0.227,
-    "entry_date": "2026-08-23",
-    "side": -1
-   },
-   "AVAXUSDT": {
-    "dist": 1.2733273903858535,
-    "entry": 7.61,
-    "entry_date": "2026-08-23",
-    "side": -1
-   },
    "BNBUSDT": {
-    "dist": 58.19765050199563,
-    "entry": 702.93,
-    "entry_date": "2026-08-23",
+    "dist": 61.774120088559926,
+    "entry": 694.83,
+    "entry_date": "2026-08-25",
+    "side": 1
+   },
+   "DOGEUSDT": {
+    "dist": 0.01526093317626527,
+    "entry": 0.08568,
+    "entry_date": "2026-08-25",
     "side": -1
+   },
+   "DOTUSDT": {
+    "dist": 0.15010371125788974,
+    "entry": 0.8511,
+    "entry_date": "2026-08-25",
+    "side": -1
+   },
+   "ETHUSDT": {
+    "dist": 296.4580660543816,
+    "entry": 2441.72,
+    "entry_date": "2026-08-25",
+    "side": 1
    },
    "LINKUSDT": {
-    "dist": 1.9481025147866244,
-    "entry": 11.543,
-    "entry_date": "2026-08-23",
-    "side": 1
-   },
-   "SOLUSDT": {
-    "dist": 13.534474145866328,
-    "entry": 98.96,
-    "entry_date": "2026-08-24",
-    "side": 1
+    "dist": 1.9691351494052411,
+    "entry": 11.287,
+    "entry_date": "2026-08-25",
+    "side": -1
    },
    "XRPUSDT": {
     "dist": 0.24865741459652893,
@@ -117,48 +117,48 @@
     "side": 1
    }
   },
-  "equity": 1.0077456195600312,
+  "equity": 1.009373611914207,
   "fractions": {
-   "ADAUSDT": -0.12029699943264098,
-   "AVAXUSDT": -0.14774138486053537,
-   "BNBUSDT": -0.29530008493867804,
+   "ADAUSDT": 0.0,
+   "AVAXUSDT": 0.0,
+   "BNBUSDT": 0.3052399381894853,
    "BTCUSDT": 0.0,
-   "DOGEUSDT": 0.0,
-   "DOTUSDT": 0.0,
-   "ETHUSDT": 0.0,
-   "LINKUSDT": 0.13499328489679377,
-   "SOLUSDT": 0.18731672078013745,
-   "XRPUSDT": 0.11435152509121439
+   "DOGEUSDT": -0.15124590761545567,
+   "DOTUSDT": -0.15078786614196069,
+   "ETHUSDT": 0.1359457361416901,
+   "LINKUSDT": -0.13977332426158484,
+   "SOLUSDT": 0.0,
+   "XRPUSDT": 0.1170072276498234
   },
-  "hedge_frac": 0.0370046799841027,
-  "last_open_ms": 1787529600000,
+  "hedge_frac": -0.08970212609310585,
+  "last_open_ms": 1787616000000,
   "longs": [
-   "LINKUSDT",
-   "SOLUSDT",
+   "BNBUSDT",
+   "ETHUSDT",
    "XRPUSDT"
   ],
   "marks": {
-   "ADAUSDT": 0.2214,
-   "AVAXUSDT": 7.543,
-   "BNBUSDT": 704.67,
-   "BTCUSDT": 78953.0,
-   "DOGEUSDT": 0.0901,
-   "DOTUSDT": 0.8996,
-   "ETHUSDT": 2481.03,
-   "LINKUSDT": 11.629,
-   "SOLUSDT": 98.96,
-   "XRPUSDT": 1.4813
+   "ADAUSDT": 0.209,
+   "AVAXUSDT": 7.323,
+   "BNBUSDT": 694.83,
+   "BTCUSDT": 78505.4,
+   "DOGEUSDT": 0.08568,
+   "DOTUSDT": 0.8511,
+   "ETHUSDT": 2441.72,
+   "LINKUSDT": 11.287,
+   "SOLUSDT": 96.56,
+   "XRPUSDT": 1.4335
   },
   "shorts": [
-   "ADAUSDT",
-   "AVAXUSDT",
-   "BNBUSDT"
+   "DOGEUSDT",
+   "DOTUSDT",
+   "LINKUSDT"
   ]
  },
  "_meta": {
   "journal_starts": "first run date; no backfill over the sealed reserve",
-  "last_closed_bar_utc": "2026-08-24",
-  "last_run_utc": "2026-08-25T09:42:52.004001+00:00",
+  "last_closed_bar_utc": "2026-08-25",
+  "last_run_utc": "2026-08-26T07:59:14.081998+00:00",
   "processed_this_run": 2
  }
 }

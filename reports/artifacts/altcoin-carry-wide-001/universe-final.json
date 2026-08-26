@@ -1,0 +1,841 @@
+{
+ "count": 99,
+ "details": [
+  {
+   "age_days": 2543,
+   "owner_override": false,
+   "rank_original": 1,
+   "symbol": "BTCUSDT",
+   "vol_m": 12711.4
+  },
+  {
+   "age_days": 2464,
+   "owner_override": false,
+   "rank_original": 2,
+   "symbol": "ETHUSDT",
+   "vol_m": 7961.4
+  },
+  {
+   "age_days": 2172,
+   "owner_override": false,
+   "rank_original": 3,
+   "symbol": "SOLUSDT",
+   "vol_m": 2000.0
+  },
+  {
+   "age_days": 2424,
+   "owner_override": false,
+   "rank_original": 4,
+   "symbol": "XRPUSDT",
+   "vol_m": 1556.9
+  },
+  {
+   "age_days": 2394,
+   "owner_override": false,
+   "rank_original": 5,
+   "symbol": "ZECUSDT",
+   "vol_m": 1525.5
+  },
+  {
+   "age_days": 452,
+   "owner_override": false,
+   "rank_original": 6,
+   "symbol": "HYPEUSDT",
+   "vol_m": 1105.5
+  },
+  {
+   "age_days": 2238,
+   "owner_override": false,
+   "rank_original": 7,
+   "symbol": "DOGEUSDT",
+   "vol_m": 462.9
+  },
+  {
+   "age_days": 1002,
+   "owner_override": false,
+   "rank_original": 8,
+   "symbol": "ONGUSDT",
+   "vol_m": 416.3
+  },
+  {
+   "age_days": 412,
+   "owner_override": false,
+   "rank_original": 10,
+   "symbol": "PUMPUSDT",
+   "vol_m": 329.4
+  },
+  {
+   "age_days": 526,
+   "owner_override": false,
+   "rank_original": 11,
+   "symbol": "BMTUSDT",
+   "vol_m": 297.6
+  },
+  {
+   "age_days": 2389,
+   "owner_override": false,
+   "rank_original": 12,
+   "symbol": "BNBUSDT",
+   "vol_m": 291.9
+  },
+  {
+   "age_days": 1209,
+   "owner_override": false,
+   "rank_original": 13,
+   "symbol": "1000PEPEUSDT",
+   "vol_m": 267.2
+  },
+  {
+   "age_days": 875,
+   "owner_override": false,
+   "rank_original": 14,
+   "symbol": "ENAUSDT",
+   "vol_m": 263.8
+  },
+  {
+   "age_days": 1211,
+   "owner_override": false,
+   "rank_original": 15,
+   "symbol": "SUIUSDT",
+   "vol_m": 252.1
+  },
+  {
+   "age_days": 796,
+   "owner_override": false,
+   "rank_original": 16,
+   "symbol": "ZROUSDT",
+   "vol_m": 193.5
+  },
+  {
+   "age_days": 587,
+   "owner_override": false,
+   "rank_original": 17,
+   "symbol": "PROMUSDT",
+   "vol_m": 191.2
+  },
+  {
+   "age_days": 406,
+   "owner_override": false,
+   "rank_original": 18,
+   "symbol": "TACUSDT",
+   "vol_m": 152.5
+  },
+  {
+   "age_days": 2399,
+   "owner_override": false,
+   "rank_original": 19,
+   "symbol": "ADAUSDT",
+   "vol_m": 135.2
+  },
+  {
+   "age_days": 2413,
+   "owner_override": false,
+   "rank_original": 20,
+   "symbol": "LINKUSDT",
+   "vol_m": 119.6
+  },
+  {
+   "age_days": 1128,
+   "owner_override": false,
+   "rank_original": 21,
+   "symbol": "WLDUSDT",
+   "vol_m": 118.8
+  },
+  {
+   "age_days": 2141,
+   "owner_override": false,
+   "rank_original": 22,
+   "symbol": "NEARUSDT",
+   "vol_m": 105.7
+  },
+  {
+   "age_days": 866,
+   "owner_override": false,
+   "rank_original": 23,
+   "symbol": "TAOUSDT",
+   "vol_m": 101.9
+  },
+  {
+   "age_days": 2140,
+   "owner_override": false,
+   "rank_original": 24,
+   "symbol": "AAVEUSDT",
+   "vol_m": 100.3
+  },
+  {
+   "age_days": 616,
+   "owner_override": false,
+   "rank_original": 26,
+   "symbol": "PENGUUSDT",
+   "vol_m": 95.3
+  },
+  {
+   "age_days": 1283,
+   "owner_override": false,
+   "rank_original": 27,
+   "symbol": "STXUSDT",
+   "vol_m": 94.8
+  },
+  {
+   "age_days": 2168,
+   "owner_override": false,
+   "rank_original": 29,
+   "symbol": "UNIUSDT",
+   "vol_m": 83.3
+  },
+  {
+   "age_days": 2163,
+   "owner_override": false,
+   "rank_original": 30,
+   "symbol": "AVAXUSDT",
+   "vol_m": 77.8
+  },
+  {
+   "age_days": 613,
+   "owner_override": false,
+   "rank_original": 31,
+   "symbol": "FARTCOINUSDT",
+   "vol_m": 77.3
+  },
+  {
+   "age_days": 2421,
+   "owner_override": false,
+   "rank_original": 32,
+   "symbol": "LTCUSDT",
+   "vol_m": 74.0
+  },
+  {
+   "age_days": 948,
+   "owner_override": false,
+   "rank_original": 33,
+   "symbol": "ONDOUSDT",
+   "vol_m": 70.5
+  },
+  {
+   "age_days": 711,
+   "owner_override": false,
+   "rank_original": 34,
+   "symbol": "POLUSDT",
+   "vol_m": 69.3
+  },
+  {
+   "age_days": 2140,
+   "owner_override": false,
+   "rank_original": 36,
+   "symbol": "FILUSDT",
+   "vol_m": 66.5
+  },
+  {
+   "age_days": 2415,
+   "owner_override": false,
+   "rank_original": 37,
+   "symbol": "TRXUSDT",
+   "vol_m": 64.8
+  },
+  {
+   "age_days": 2442,
+   "owner_override": false,
+   "rank_original": 38,
+   "symbol": "BCHUSDT",
+   "vol_m": 60.7
+  },
+  {
+   "age_days": 982,
+   "owner_override": false,
+   "rank_original": 39,
+   "symbol": "ACEUSDT",
+   "vol_m": 60.3
+  },
+  {
+   "age_days": 2410,
+   "owner_override": false,
+   "rank_original": 40,
+   "symbol": "XLMUSDT",
+   "vol_m": 57.9
+  },
+  {
+   "age_days": 340,
+   "owner_override": true,
+   "rank_original": 0,
+   "symbol": "ASTERUSDT",
+   "vol_m": 56.7
+  },
+  {
+   "age_days": 1471,
+   "owner_override": false,
+   "rank_original": 41,
+   "symbol": "INJUSDT",
+   "vol_m": 56.0
+  },
+  {
+   "age_days": 908,
+   "owner_override": false,
+   "rank_original": 42,
+   "symbol": "PORTALUSDT",
+   "vol_m": 55.5
+  },
+  {
+   "age_days": 1934,
+   "owner_override": false,
+   "rank_original": 43,
+   "symbol": "1000SHIBUSDT",
+   "vol_m": 44.9
+  },
+  {
+   "age_days": 2396,
+   "owner_override": false,
+   "rank_original": 44,
+   "symbol": "XMRUSDT",
+   "vol_m": 43.2
+  },
+  {
+   "age_days": 369,
+   "owner_override": false,
+   "rank_original": 45,
+   "symbol": "XPLUSDT",
+   "vol_m": 42.9
+  },
+  {
+   "age_days": 2195,
+   "owner_override": false,
+   "rank_original": 46,
+   "symbol": "DOTUSDT",
+   "vol_m": 40.7
+  },
+  {
+   "age_days": 1408,
+   "owner_override": false,
+   "rank_original": 47,
+   "symbol": "APTUSDT",
+   "vol_m": 39.4
+  },
+  {
+   "age_days": 950,
+   "owner_override": false,
+   "rank_original": 48,
+   "symbol": "WIFUSDT",
+   "vol_m": 38.8
+  },
+  {
+   "age_days": 623,
+   "owner_override": false,
+   "rank_original": 49,
+   "symbol": "VIRTUALUSDT",
+   "vol_m": 38.4
+  },
+  {
+   "age_days": 574,
+   "owner_override": false,
+   "rank_original": 50,
+   "symbol": "VVVUSDT",
+   "vol_m": 37.9
+  },
+  {
+   "age_days": 2395,
+   "owner_override": false,
+   "rank_original": 51,
+   "symbol": "DASHUSDT",
+   "vol_m": 37.5
+  },
+  {
+   "age_days": 623,
+   "owner_override": false,
+   "rank_original": 52,
+   "symbol": "SPXUSDT",
+   "vol_m": 35.4
+  },
+  {
+   "age_days": 1246,
+   "owner_override": false,
+   "rank_original": 53,
+   "symbol": "TLMUSDT",
+   "vol_m": 34.4
+  },
+  {
+   "age_days": 1707,
+   "owner_override": false,
+   "rank_original": 54,
+   "symbol": "PEOPLEUSDT",
+   "vol_m": 32.8
+  },
+  {
+   "age_days": 522,
+   "owner_override": false,
+   "rank_original": 55,
+   "symbol": "BRUSDT",
+   "vol_m": 32.4
+  },
+  {
+   "age_days": 2414,
+   "owner_override": false,
+   "rank_original": 56,
+   "symbol": "ETCUSDT",
+   "vol_m": 30.8
+  },
+  {
+   "age_days": 1319,
+   "owner_override": false,
+   "rank_original": 57,
+   "symbol": "FETUSDT",
+   "vol_m": 30.7
+  },
+  {
+   "age_days": 368,
+   "owner_override": false,
+   "rank_original": 58,
+   "symbol": "WLFIUSDT",
+   "vol_m": 30.7
+  },
+  {
+   "age_days": 1988,
+   "owner_override": false,
+   "rank_original": 59,
+   "symbol": "HBARUSDT",
+   "vol_m": 30.2
+  },
+  {
+   "age_days": 1590,
+   "owner_override": false,
+   "rank_original": 60,
+   "symbol": "JASMYUSDT",
+   "vol_m": 29.7
+  },
+  {
+   "age_days": 890,
+   "owner_override": false,
+   "rank_original": 62,
+   "symbol": "ETHFIUSDT",
+   "vol_m": 27.0
+  },
+  {
+   "age_days": 1435,
+   "owner_override": false,
+   "rank_original": 61,
+   "symbol": "LDOUSDT",
+   "vol_m": 27.0
+  },
+  {
+   "age_days": 1029,
+   "owner_override": false,
+   "rank_original": 63,
+   "symbol": "TIAUSDT",
+   "vol_m": 24.6
+  },
+  {
+   "age_days": 2388,
+   "owner_override": false,
+   "rank_original": 64,
+   "symbol": "ONTUSDT",
+   "vol_m": 24.2
+  },
+  {
+   "age_days": 1007,
+   "owner_override": false,
+   "rank_original": 65,
+   "symbol": "PYTHUSDT",
+   "vol_m": 20.9
+  },
+  {
+   "age_days": 1007,
+   "owner_override": false,
+   "rank_original": 67,
+   "symbol": "1000BONKUSDT",
+   "vol_m": 20.5
+  },
+  {
+   "age_days": 2391,
+   "owner_override": false,
+   "rank_original": 66,
+   "symbol": "ATOMUSDT",
+   "vol_m": 20.5
+  },
+  {
+   "age_days": 636,
+   "owner_override": false,
+   "rank_original": 68,
+   "symbol": "MORPHOUSDT",
+   "vol_m": 20.4
+  },
+  {
+   "age_days": 992,
+   "owner_override": false,
+   "rank_original": 69,
+   "symbol": "JTOUSDT",
+   "vol_m": 20.1
+  },
+  {
+   "age_days": 629,
+   "owner_override": false,
+   "rank_original": 71,
+   "symbol": "AEROUSDT",
+   "vol_m": 20.0
+  },
+  {
+   "age_days": 2185,
+   "owner_override": false,
+   "rank_original": 70,
+   "symbol": "CRVUSDT",
+   "vol_m": 20.0
+  },
+  {
+   "age_days": 1252,
+   "owner_override": false,
+   "rank_original": 72,
+   "symbol": "ARBUSDT",
+   "vol_m": 19.8
+  },
+  {
+   "age_days": 1853,
+   "owner_override": false,
+   "rank_original": 74,
+   "symbol": "ICPUSDT",
+   "vol_m": 19.4
+  },
+  {
+   "age_days": 1996,
+   "owner_override": false,
+   "rank_original": 76,
+   "symbol": "COTIUSDT",
+   "vol_m": 17.8
+  },
+  {
+   "age_days": 551,
+   "owner_override": false,
+   "rank_original": 77,
+   "symbol": "KAITOUSDT",
+   "vol_m": 17.0
+  },
+  {
+   "age_days": 559,
+   "owner_override": false,
+   "rank_original": 80,
+   "symbol": "HEIUSDT",
+   "vol_m": 16.5
+  },
+  {
+   "age_days": 1547,
+   "owner_override": false,
+   "rank_original": 81,
+   "symbol": "OPUSDT",
+   "vol_m": 16.3
+  },
+  {
+   "age_days": 494,
+   "owner_override": false,
+   "rank_original": 83,
+   "symbol": "BANKUSDT",
+   "vol_m": 16.0
+  },
+  {
+   "age_days": 440,
+   "owner_override": false,
+   "rank_original": 84,
+   "symbol": "SQDUSDT",
+   "vol_m": 15.4
+  },
+  {
+   "age_days": 761,
+   "owner_override": false,
+   "rank_original": 85,
+   "symbol": "RENDERUSDT",
+   "vol_m": 15.3
+  },
+  {
+   "age_days": 937,
+   "owner_override": false,
+   "rank_original": 86,
+   "symbol": "JUPUSDT",
+   "vol_m": 15.2
+  },
+  {
+   "age_days": 1022,
+   "owner_override": false,
+   "rank_original": 91,
+   "symbol": "ORDIUSDT",
+   "vol_m": 12.9
+  },
+  {
+   "age_days": 1125,
+   "owner_override": false,
+   "rank_original": 92,
+   "symbol": "PENDLEUSDT",
+   "vol_m": 12.8
+  },
+  {
+   "age_days": 613,
+   "owner_override": false,
+   "rank_original": 94,
+   "symbol": "KMNOUSDT",
+   "vol_m": 12.2
+  },
+  {
+   "age_days": 2046,
+   "owner_override": false,
+   "rank_original": 96,
+   "symbol": "SANDUSDT",
+   "vol_m": 11.9
+  },
+  {
+   "age_days": 585,
+   "owner_override": false,
+   "rank_original": 97,
+   "symbol": "SOLVUSDT",
+   "vol_m": 11.9
+  },
+  {
+   "age_days": 1804,
+   "owner_override": false,
+   "rank_original": 98,
+   "symbol": "GALAUSDT",
+   "vol_m": 11.5
+  },
+  {
+   "age_days": 655,
+   "owner_override": false,
+   "rank_original": 99,
+   "symbol": "GRASSUSDT",
+   "vol_m": 11.5
+  },
+  {
+   "age_days": 1731,
+   "owner_override": false,
+   "rank_original": 101,
+   "symbol": "ENSUSDT",
+   "vol_m": 10.6
+  },
+  {
+   "age_days": 1105,
+   "owner_override": false,
+   "rank_original": 103,
+   "symbol": "SEIUSDT",
+   "vol_m": 10.1
+  },
+  {
+   "age_days": 2262,
+   "owner_override": false,
+   "rank_original": 104,
+   "symbol": "ALGOUSDT",
+   "vol_m": 9.6
+  },
+  {
+   "age_days": 1003,
+   "owner_override": false,
+   "rank_original": 105,
+   "symbol": "SUPERUSDT",
+   "vol_m": 9.5
+  },
+  {
+   "age_days": 694,
+   "owner_override": false,
+   "rank_original": 107,
+   "symbol": "EIGENUSDT",
+   "vol_m": 9.4
+  },
+  {
+   "age_days": 439,
+   "owner_override": false,
+   "rank_original": 108,
+   "symbol": "PUMPBTCUSDT",
+   "vol_m": 9.4
+  },
+  {
+   "age_days": 1026,
+   "owner_override": false,
+   "rank_original": 109,
+   "symbol": "TWTUSDT",
+   "vol_m": 9.3
+  },
+  {
+   "age_days": 917,
+   "owner_override": false,
+   "rank_original": 110,
+   "symbol": "STRKUSDT",
+   "vol_m": 9.0
+  },
+  {
+   "age_days": 2183,
+   "owner_override": false,
+   "rank_original": 111,
+   "symbol": "TRBUSDT",
+   "vol_m": 8.8
+  },
+  {
+   "age_days": 476,
+   "owner_override": false,
+   "rank_original": 116,
+   "symbol": "B2USDT",
+   "vol_m": 7.3
+  },
+  {
+   "age_days": 562,
+   "owner_override": false,
+   "rank_original": 118,
+   "symbol": "TSTUSDT",
+   "vol_m": 6.8
+  },
+  {
+   "age_days": 1990,
+   "owner_override": false,
+   "rank_original": 119,
+   "symbol": "ALICEUSDT",
+   "vol_m": 6.7
+  },
+  {
+   "age_days": 670,
+   "owner_override": false,
+   "rank_original": 120,
+   "symbol": "GOATUSDT",
+   "vol_m": 6.7
+  },
+  {
+   "age_days": 2077,
+   "owner_override": false,
+   "rank_original": 134,
+   "symbol": "GRTUSDT",
+   "vol_m": 5.3
+  }
+ ],
+ "generated_utc": "2026-08-26T10:04:08.160280+00:00",
+ "owner_decisions": {
+  "forced": [
+   "ASTERUSDT",
+   "GRTUSDT"
+  ],
+  "memes_out": [
+   "1000FLOKIUSDT",
+   "BOMEUSDT",
+   "KOMAUSDT",
+   "MUBARAKUSDT",
+   "NEIROUSDT",
+   "PAXGUSDT",
+   "POPCATUSDT",
+   "TRUMPUSDT",
+   "TUTUSDT",
+   "VELVETUSDT"
+  ],
+  "removed": [
+   "BICOUSDT",
+   "COWUSDT",
+   "DEXEUSDT",
+   "ESPORTSUSDT",
+   "GPSUSDT",
+   "HOMEUSDT",
+   "HUSDT",
+   "LSKUSDT",
+   "MOVEUSDT",
+   "PUNDIXUSDT",
+   "REDUSDT",
+   "SKYAIUSDT",
+   "SPKUSDT"
+  ],
+  "returned": [
+   "1000BONKUSDT",
+   "1000PEPEUSDT",
+   "1000SHIBUSDT",
+   "FARTCOINUSDT",
+   "PENGUUSDT",
+   "PUMPUSDT"
+  ]
+ },
+ "symbols": [
+  "BTCUSDT",
+  "ETHUSDT",
+  "SOLUSDT",
+  "XRPUSDT",
+  "ZECUSDT",
+  "HYPEUSDT",
+  "DOGEUSDT",
+  "ONGUSDT",
+  "PUMPUSDT",
+  "BMTUSDT",
+  "BNBUSDT",
+  "1000PEPEUSDT",
+  "ENAUSDT",
+  "SUIUSDT",
+  "ZROUSDT",
+  "PROMUSDT",
+  "TACUSDT",
+  "ADAUSDT",
+  "LINKUSDT",
+  "WLDUSDT",
+  "NEARUSDT",
+  "TAOUSDT",
+  "AAVEUSDT",
+  "PENGUUSDT",
+  "STXUSDT",
+  "UNIUSDT",
+  "AVAXUSDT",
+  "FARTCOINUSDT",
+  "LTCUSDT",
+  "ONDOUSDT",
+  "POLUSDT",
+  "FILUSDT",
+  "TRXUSDT",
+  "BCHUSDT",
+  "ACEUSDT",
+  "XLMUSDT",
+  "ASTERUSDT",
+  "INJUSDT",
+  "PORTALUSDT",
+  "1000SHIBUSDT",
+  "XMRUSDT",
+  "XPLUSDT",
+  "DOTUSDT",
+  "APTUSDT",
+  "WIFUSDT",
+  "VIRTUALUSDT",
+  "VVVUSDT",
+  "DASHUSDT",
+  "SPXUSDT",
+  "TLMUSDT",
+  "PEOPLEUSDT",
+  "BRUSDT",
+  "ETCUSDT",
+  "FETUSDT",
+  "WLFIUSDT",
+  "HBARUSDT",
+  "JASMYUSDT",
+  "ETHFIUSDT",
+  "LDOUSDT",
+  "TIAUSDT",
+  "ONTUSDT",
+  "PYTHUSDT",
+  "1000BONKUSDT",
+  "ATOMUSDT",
+  "MORPHOUSDT",
+  "JTOUSDT",
+  "AEROUSDT",
+  "CRVUSDT",
+  "ARBUSDT",
+  "ICPUSDT",
+  "COTIUSDT",
+  "KAITOUSDT",
+  "HEIUSDT",
+  "OPUSDT",
+  "BANKUSDT",
+  "SQDUSDT",
+  "RENDERUSDT",
+  "JUPUSDT",
+  "ORDIUSDT",
+  "PENDLEUSDT",
+  "KMNOUSDT",
+  "SANDUSDT",
+  "SOLVUSDT",
+  "GALAUSDT",
+  "GRASSUSDT",
+  "ENSUSDT",
+  "SEIUSDT",
+  "ALGOUSDT",
+  "SUPERUSDT",
+  "EIGENUSDT",
+  "PUMPBTCUSDT",
+  "TWTUSDT",
+  "STRKUSDT",
+  "TRBUSDT",
+  "B2USDT",
+  "TSTUSDT",
+  "ALICEUSDT",
+  "GOATUSDT",
+  "GRTUSDT"
+ ]
+}
