@@ -1,0 +1,1224 @@
+{
+ "eligible": 392,
+ "exclude_rule": [
+  "1000BONKUSDT",
+  "1000FLOKIUSDT",
+  "1000PEPEUSDT",
+  "1000SHIBUSDT",
+  "BOMEUSDT",
+  "FARTCOINUSDT",
+  "KOMAUSDT",
+  "MUBARAKUSDT",
+  "NEIROUSDT",
+  "PAXGUSDT",
+  "PENGUUSDT",
+  "POPCATUSDT",
+  "PUMPUSDT",
+  "TRUMPUSDT",
+  "TUTUSDT",
+  "VELVETUSDT"
+ ],
+ "generated_utc": "2026-08-26T09:25:38.669506+00:00",
+ "ranked_all": [
+  {
+   "age_days": 2543,
+   "current": true,
+   "excluded": false,
+   "rank": 1,
+   "symbol": "BTCUSDT",
+   "vol_m": 13352.9
+  },
+  {
+   "age_days": 2464,
+   "current": true,
+   "excluded": false,
+   "rank": 2,
+   "symbol": "ETHUSDT",
+   "vol_m": 8231.9
+  },
+  {
+   "age_days": 2172,
+   "current": true,
+   "excluded": false,
+   "rank": 3,
+   "symbol": "SOLUSDT",
+   "vol_m": 2036.5
+  },
+  {
+   "age_days": 2424,
+   "current": true,
+   "excluded": false,
+   "rank": 4,
+   "symbol": "XRPUSDT",
+   "vol_m": 1560.7
+  },
+  {
+   "age_days": 2394,
+   "current": false,
+   "excluded": false,
+   "rank": 5,
+   "symbol": "ZECUSDT",
+   "vol_m": 1549.5
+  },
+  {
+   "age_days": 452,
+   "current": false,
+   "excluded": false,
+   "rank": 6,
+   "symbol": "HYPEUSDT",
+   "vol_m": 1135.8
+  },
+  {
+   "age_days": 2238,
+   "current": true,
+   "excluded": false,
+   "rank": 7,
+   "symbol": "DOGEUSDT",
+   "vol_m": 471.7
+  },
+  {
+   "age_days": 1002,
+   "current": false,
+   "excluded": false,
+   "rank": 8,
+   "symbol": "ONGUSDT",
+   "vol_m": 422.0
+  },
+  {
+   "age_days": 584,
+   "current": false,
+   "excluded": true,
+   "rank": 9,
+   "symbol": "TRUMPUSDT",
+   "vol_m": 352.2
+  },
+  {
+   "age_days": 412,
+   "current": false,
+   "excluded": true,
+   "rank": 10,
+   "symbol": "PUMPUSDT",
+   "vol_m": 331.9
+  },
+  {
+   "age_days": 2389,
+   "current": true,
+   "excluded": false,
+   "rank": 11,
+   "symbol": "BNBUSDT",
+   "vol_m": 306.8
+  },
+  {
+   "age_days": 526,
+   "current": false,
+   "excluded": false,
+   "rank": 12,
+   "symbol": "BMTUSDT",
+   "vol_m": 288.4
+  },
+  {
+   "age_days": 1209,
+   "current": false,
+   "excluded": true,
+   "rank": 13,
+   "symbol": "1000PEPEUSDT",
+   "vol_m": 273.0
+  },
+  {
+   "age_days": 875,
+   "current": false,
+   "excluded": false,
+   "rank": 14,
+   "symbol": "ENAUSDT",
+   "vol_m": 262.0
+  },
+  {
+   "age_days": 1211,
+   "current": false,
+   "excluded": false,
+   "rank": 15,
+   "symbol": "SUIUSDT",
+   "vol_m": 255.3
+  },
+  {
+   "age_days": 587,
+   "current": false,
+   "excluded": false,
+   "rank": 16,
+   "symbol": "PROMUSDT",
+   "vol_m": 193.7
+  },
+  {
+   "age_days": 796,
+   "current": false,
+   "excluded": false,
+   "rank": 17,
+   "symbol": "ZROUSDT",
+   "vol_m": 189.6
+  },
+  {
+   "age_days": 2399,
+   "current": true,
+   "excluded": false,
+   "rank": 18,
+   "symbol": "ADAUSDT",
+   "vol_m": 139.2
+  },
+  {
+   "age_days": 406,
+   "current": false,
+   "excluded": false,
+   "rank": 19,
+   "symbol": "TACUSDT",
+   "vol_m": 137.3
+  },
+  {
+   "age_days": 1128,
+   "current": false,
+   "excluded": false,
+   "rank": 20,
+   "symbol": "WLDUSDT",
+   "vol_m": 124.5
+  },
+  {
+   "age_days": 2413,
+   "current": true,
+   "excluded": false,
+   "rank": 21,
+   "symbol": "LINKUSDT",
+   "vol_m": 118.7
+  },
+  {
+   "age_days": 2141,
+   "current": false,
+   "excluded": false,
+   "rank": 22,
+   "symbol": "NEARUSDT",
+   "vol_m": 109.9
+  },
+  {
+   "age_days": 866,
+   "current": false,
+   "excluded": false,
+   "rank": 23,
+   "symbol": "TAOUSDT",
+   "vol_m": 102.7
+  },
+  {
+   "age_days": 524,
+   "current": false,
+   "excluded": true,
+   "rank": 24,
+   "symbol": "TUTUSDT",
+   "vol_m": 102.1
+  },
+  {
+   "age_days": 2140,
+   "current": false,
+   "excluded": false,
+   "rank": 25,
+   "symbol": "AAVEUSDT",
+   "vol_m": 101.6
+  },
+  {
+   "age_days": 616,
+   "current": false,
+   "excluded": true,
+   "rank": 26,
+   "symbol": "PENGUUSDT",
+   "vol_m": 95.8
+  },
+  {
+   "age_days": 1283,
+   "current": false,
+   "excluded": false,
+   "rank": 27,
+   "symbol": "STXUSDT",
+   "vol_m": 94.4
+  },
+  {
+   "age_days": 2168,
+   "current": false,
+   "excluded": false,
+   "rank": 28,
+   "symbol": "UNIUSDT",
+   "vol_m": 85.0
+  },
+  {
+   "age_days": 407,
+   "current": false,
+   "excluded": true,
+   "rank": 29,
+   "symbol": "VELVETUSDT",
+   "vol_m": 78.8
+  },
+  {
+   "age_days": 2163,
+   "current": true,
+   "excluded": false,
+   "rank": 30,
+   "symbol": "AVAXUSDT",
+   "vol_m": 78.6
+  },
+  {
+   "age_days": 2421,
+   "current": false,
+   "excluded": false,
+   "rank": 31,
+   "symbol": "LTCUSDT",
+   "vol_m": 77.5
+  },
+  {
+   "age_days": 613,
+   "current": false,
+   "excluded": true,
+   "rank": 32,
+   "symbol": "FARTCOINUSDT",
+   "vol_m": 77.2
+  },
+  {
+   "age_days": 948,
+   "current": false,
+   "excluded": false,
+   "rank": 33,
+   "symbol": "ONDOUSDT",
+   "vol_m": 73.1
+  },
+  {
+   "age_days": 711,
+   "current": false,
+   "excluded": false,
+   "rank": 34,
+   "symbol": "POLUSDT",
+   "vol_m": 69.8
+  },
+  {
+   "age_days": 516,
+   "current": false,
+   "excluded": true,
+   "rank": 35,
+   "symbol": "PAXGUSDT",
+   "vol_m": 69.4
+  },
+  {
+   "age_days": 2140,
+   "current": false,
+   "excluded": false,
+   "rank": 36,
+   "symbol": "FILUSDT",
+   "vol_m": 68.3
+  },
+  {
+   "age_days": 2415,
+   "current": false,
+   "excluded": false,
+   "rank": 37,
+   "symbol": "TRXUSDT",
+   "vol_m": 66.5
+  },
+  {
+   "age_days": 2442,
+   "current": false,
+   "excluded": false,
+   "rank": 38,
+   "symbol": "BCHUSDT",
+   "vol_m": 61.6
+  },
+  {
+   "age_days": 981,
+   "current": false,
+   "excluded": false,
+   "rank": 39,
+   "symbol": "ACEUSDT",
+   "vol_m": 60.7
+  },
+  {
+   "age_days": 2410,
+   "current": false,
+   "excluded": false,
+   "rank": 40,
+   "symbol": "XLMUSDT",
+   "vol_m": 59.1
+  },
+  {
+   "age_days": 1471,
+   "current": false,
+   "excluded": false,
+   "rank": 41,
+   "symbol": "INJUSDT",
+   "vol_m": 57.2
+  },
+  {
+   "age_days": 908,
+   "current": false,
+   "excluded": false,
+   "rank": 42,
+   "symbol": "PORTALUSDT",
+   "vol_m": 55.1
+  },
+  {
+   "age_days": 1934,
+   "current": false,
+   "excluded": true,
+   "rank": 43,
+   "symbol": "1000SHIBUSDT",
+   "vol_m": 45.3
+  },
+  {
+   "age_days": 2396,
+   "current": false,
+   "excluded": false,
+   "rank": 44,
+   "symbol": "XMRUSDT",
+   "vol_m": 43.1
+  },
+  {
+   "age_days": 368,
+   "current": false,
+   "excluded": false,
+   "rank": 45,
+   "symbol": "XPLUSDT",
+   "vol_m": 40.7
+  },
+  {
+   "age_days": 2195,
+   "current": true,
+   "excluded": false,
+   "rank": 46,
+   "symbol": "DOTUSDT",
+   "vol_m": 40.6
+  },
+  {
+   "age_days": 950,
+   "current": false,
+   "excluded": false,
+   "rank": 47,
+   "symbol": "WIFUSDT",
+   "vol_m": 39.8
+  },
+  {
+   "age_days": 1408,
+   "current": false,
+   "excluded": false,
+   "rank": 48,
+   "symbol": "APTUSDT",
+   "vol_m": 39.5
+  },
+  {
+   "age_days": 623,
+   "current": false,
+   "excluded": false,
+   "rank": 49,
+   "symbol": "VIRTUALUSDT",
+   "vol_m": 39.1
+  },
+  {
+   "age_days": 574,
+   "current": false,
+   "excluded": false,
+   "rank": 50,
+   "symbol": "VVVUSDT",
+   "vol_m": 38.2
+  },
+  {
+   "age_days": 2395,
+   "current": false,
+   "excluded": false,
+   "rank": 51,
+   "symbol": "DASHUSDT",
+   "vol_m": 37.8
+  },
+  {
+   "age_days": 623,
+   "current": false,
+   "excluded": false,
+   "rank": 52,
+   "symbol": "SPXUSDT",
+   "vol_m": 35.1
+  },
+  {
+   "age_days": 1246,
+   "current": false,
+   "excluded": false,
+   "rank": 53,
+   "symbol": "TLMUSDT",
+   "vol_m": 34.2
+  },
+  {
+   "age_days": 522,
+   "current": false,
+   "excluded": false,
+   "rank": 54,
+   "symbol": "BRUSDT",
+   "vol_m": 33.5
+  },
+  {
+   "age_days": 1707,
+   "current": false,
+   "excluded": false,
+   "rank": 55,
+   "symbol": "PEOPLEUSDT",
+   "vol_m": 33.0
+  },
+  {
+   "age_days": 368,
+   "current": false,
+   "excluded": false,
+   "rank": 56,
+   "symbol": "WLFIUSDT",
+   "vol_m": 31.4
+  },
+  {
+   "age_days": 1319,
+   "current": false,
+   "excluded": false,
+   "rank": 57,
+   "symbol": "FETUSDT",
+   "vol_m": 31.3
+  },
+  {
+   "age_days": 2414,
+   "current": false,
+   "excluded": false,
+   "rank": 58,
+   "symbol": "ETCUSDT",
+   "vol_m": 31.1
+  },
+  {
+   "age_days": 1988,
+   "current": false,
+   "excluded": false,
+   "rank": 59,
+   "symbol": "HBARUSDT",
+   "vol_m": 30.3
+  },
+  {
+   "age_days": 1590,
+   "current": false,
+   "excluded": false,
+   "rank": 60,
+   "symbol": "JASMYUSDT",
+   "vol_m": 30.2
+  },
+  {
+   "age_days": 890,
+   "current": false,
+   "excluded": false,
+   "rank": 61,
+   "symbol": "ETHFIUSDT",
+   "vol_m": 27.0
+  },
+  {
+   "age_days": 1435,
+   "current": false,
+   "excluded": false,
+   "rank": 62,
+   "symbol": "LDOUSDT",
+   "vol_m": 26.8
+  },
+  {
+   "age_days": 1029,
+   "current": false,
+   "excluded": false,
+   "rank": 63,
+   "symbol": "TIAUSDT",
+   "vol_m": 25.2
+  },
+  {
+   "age_days": 2388,
+   "current": false,
+   "excluded": false,
+   "rank": 64,
+   "symbol": "ONTUSDT",
+   "vol_m": 24.3
+  },
+  {
+   "age_days": 991,
+   "current": false,
+   "excluded": false,
+   "rank": 65,
+   "symbol": "JTOUSDT",
+   "vol_m": 20.9
+  },
+  {
+   "age_days": 1007,
+   "current": false,
+   "excluded": true,
+   "rank": 66,
+   "symbol": "1000BONKUSDT",
+   "vol_m": 20.7
+  },
+  {
+   "age_days": 636,
+   "current": false,
+   "excluded": false,
+   "rank": 67,
+   "symbol": "MORPHOUSDT",
+   "vol_m": 20.5
+  },
+  {
+   "age_days": 2391,
+   "current": false,
+   "excluded": false,
+   "rank": 68,
+   "symbol": "ATOMUSDT",
+   "vol_m": 20.4
+  },
+  {
+   "age_days": 2185,
+   "current": false,
+   "excluded": false,
+   "rank": 69,
+   "symbol": "CRVUSDT",
+   "vol_m": 20.3
+  },
+  {
+   "age_days": 629,
+   "current": false,
+   "excluded": false,
+   "rank": 70,
+   "symbol": "AEROUSDT",
+   "vol_m": 20.2
+  },
+  {
+   "age_days": 1252,
+   "current": false,
+   "excluded": false,
+   "rank": 71,
+   "symbol": "ARBUSDT",
+   "vol_m": 20.0
+  },
+  {
+   "age_days": 469,
+   "current": false,
+   "excluded": false,
+   "rank": 72,
+   "symbol": "SKYAIUSDT",
+   "vol_m": 19.6
+  },
+  {
+   "age_days": 1853,
+   "current": false,
+   "excluded": false,
+   "rank": 73,
+   "symbol": "ICPUSDT",
+   "vol_m": 19.0
+  },
+  {
+   "age_days": 1007,
+   "current": false,
+   "excluded": false,
+   "rank": 74,
+   "symbol": "PYTHUSDT",
+   "vol_m": 18.8
+  },
+  {
+   "age_days": 624,
+   "current": false,
+   "excluded": false,
+   "rank": 75,
+   "symbol": "MOVEUSDT",
+   "vol_m": 17.8
+  },
+  {
+   "age_days": 1996,
+   "current": false,
+   "excluded": false,
+   "rank": 76,
+   "symbol": "COTIUSDT",
+   "vol_m": 17.7
+  },
+  {
+   "age_days": 1062,
+   "current": false,
+   "excluded": false,
+   "rank": 77,
+   "symbol": "BICOUSDT",
+   "vol_m": 17.2
+  },
+  {
+   "age_days": 551,
+   "current": false,
+   "excluded": false,
+   "rank": 78,
+   "symbol": "KAITOUSDT",
+   "vol_m": 17.1
+  },
+  {
+   "age_days": 1547,
+   "current": false,
+   "excluded": false,
+   "rank": 79,
+   "symbol": "OPUSDT",
+   "vol_m": 17.0
+  },
+  {
+   "age_days": 441,
+   "current": false,
+   "excluded": false,
+   "rank": 80,
+   "symbol": "HOMEUSDT",
+   "vol_m": 16.8
+  },
+  {
+   "age_days": 733,
+   "current": false,
+   "excluded": true,
+   "rank": 81,
+   "symbol": "POPCATUSDT",
+   "vol_m": 16.2
+  },
+  {
+   "age_days": 559,
+   "current": false,
+   "excluded": false,
+   "rank": 82,
+   "symbol": "HEIUSDT",
+   "vol_m": 16.1
+  },
+  {
+   "age_days": 657,
+   "current": false,
+   "excluded": false,
+   "rank": 83,
+   "symbol": "COWUSDT",
+   "vol_m": 16.0
+  },
+  {
+   "age_days": 494,
+   "current": false,
+   "excluded": false,
+   "rank": 84,
+   "symbol": "BANKUSDT",
+   "vol_m": 15.7
+  },
+  {
+   "age_days": 760,
+   "current": false,
+   "excluded": false,
+   "rank": 85,
+   "symbol": "RENDERUSDT",
+   "vol_m": 15.4
+  },
+  {
+   "age_days": 440,
+   "current": false,
+   "excluded": false,
+   "rank": 86,
+   "symbol": "SQDUSDT",
+   "vol_m": 15.4
+  },
+  {
+   "age_days": 937,
+   "current": false,
+   "excluded": false,
+   "rank": 87,
+   "symbol": "JUPUSDT",
+   "vol_m": 15.0
+  },
+  {
+   "age_days": 892,
+   "current": false,
+   "excluded": true,
+   "rank": 88,
+   "symbol": "BOMEUSDT",
+   "vol_m": 14.6
+  },
+  {
+   "age_days": 526,
+   "current": false,
+   "excluded": true,
+   "rank": 89,
+   "symbol": "MUBARAKUSDT",
+   "vol_m": 14.4
+  },
+  {
+   "age_days": 554,
+   "current": false,
+   "excluded": false,
+   "rank": 90,
+   "symbol": "GPSUSDT",
+   "vol_m": 14.3
+  },
+  {
+   "age_days": 426,
+   "current": false,
+   "excluded": false,
+   "rank": 91,
+   "symbol": "HUSDT",
+   "vol_m": 13.2
+  },
+  {
+   "age_days": 1125,
+   "current": false,
+   "excluded": false,
+   "rank": 92,
+   "symbol": "PENDLEUSDT",
+   "vol_m": 13.0
+  },
+  {
+   "age_days": 1022,
+   "current": false,
+   "excluded": false,
+   "rank": 93,
+   "symbol": "ORDIUSDT",
+   "vol_m": 12.9
+  },
+  {
+   "age_days": 435,
+   "current": false,
+   "excluded": false,
+   "rank": 94,
+   "symbol": "SPKUSDT",
+   "vol_m": 12.7
+  },
+  {
+   "age_days": 1026,
+   "current": false,
+   "excluded": false,
+   "rank": 95,
+   "symbol": "TWTUSDT",
+   "vol_m": 12.4
+  },
+  {
+   "age_days": 613,
+   "current": false,
+   "excluded": false,
+   "rank": 96,
+   "symbol": "KMNOUSDT",
+   "vol_m": 12.2
+  },
+  {
+   "age_days": 585,
+   "current": false,
+   "excluded": false,
+   "rank": 97,
+   "symbol": "SOLVUSDT",
+   "vol_m": 12.1
+  },
+  {
+   "age_days": 2046,
+   "current": false,
+   "excluded": false,
+   "rank": 98,
+   "symbol": "SANDUSDT",
+   "vol_m": 11.8
+  },
+  {
+   "age_days": 655,
+   "current": false,
+   "excluded": false,
+   "rank": 99,
+   "symbol": "GRASSUSDT",
+   "vol_m": 11.7
+  },
+  {
+   "age_days": 1804,
+   "current": false,
+   "excluded": false,
+   "rank": 100,
+   "symbol": "GALAUSDT",
+   "vol_m": 11.5
+  },
+  {
+   "age_days": 1731,
+   "current": false,
+   "excluded": false,
+   "rank": 101,
+   "symbol": "ENSUSDT",
+   "vol_m": 10.7
+  },
+  {
+   "age_days": 623,
+   "current": false,
+   "excluded": true,
+   "rank": 102,
+   "symbol": "KOMAUSDT",
+   "vol_m": 10.4
+  },
+  {
+   "age_days": 1105,
+   "current": false,
+   "excluded": false,
+   "rank": 103,
+   "symbol": "SEIUSDT",
+   "vol_m": 10.2
+  },
+  {
+   "age_days": 694,
+   "current": false,
+   "excluded": false,
+   "rank": 104,
+   "symbol": "EIGENUSDT",
+   "vol_m": 9.8
+  },
+  {
+   "age_days": 1003,
+   "current": false,
+   "excluded": false,
+   "rank": 105,
+   "symbol": "SUPERUSDT",
+   "vol_m": 9.7
+  },
+  {
+   "age_days": 2262,
+   "current": false,
+   "excluded": false,
+   "rank": 106,
+   "symbol": "ALGOUSDT",
+   "vol_m": 9.5
+  },
+  {
+   "age_days": 943,
+   "current": false,
+   "excluded": false,
+   "rank": 107,
+   "symbol": "LSKUSDT",
+   "vol_m": 9.3
+  },
+  {
+   "age_days": 537,
+   "current": false,
+   "excluded": false,
+   "rank": 108,
+   "symbol": "REDUSDT",
+   "vol_m": 9.3
+  },
+  {
+   "age_days": 2183,
+   "current": false,
+   "excluded": false,
+   "rank": 109,
+   "symbol": "TRBUSDT",
+   "vol_m": 9.0
+  },
+  {
+   "age_days": 917,
+   "current": false,
+   "excluded": false,
+   "rank": 110,
+   "symbol": "STRKUSDT",
+   "vol_m": 9.0
+  },
+  {
+   "age_days": 708,
+   "current": false,
+   "excluded": true,
+   "rank": 111,
+   "symbol": "NEIROUSDT",
+   "vol_m": 8.2
+  },
+  {
+   "age_days": 609,
+   "current": false,
+   "excluded": false,
+   "rank": 112,
+   "symbol": "DEXEUSDT",
+   "vol_m": 8.2
+  },
+  {
+   "age_days": 482,
+   "current": false,
+   "excluded": false,
+   "rank": 113,
+   "symbol": "PUNDIXUSDT",
+   "vol_m": 8.1
+  },
+  {
+   "age_days": 1208,
+   "current": false,
+   "excluded": true,
+   "rank": 114,
+   "symbol": "1000FLOKIUSDT",
+   "vol_m": 7.6
+  },
+  {
+   "age_days": 392,
+   "current": false,
+   "excluded": false,
+   "rank": 115,
+   "symbol": "ESPORTSUSDT",
+   "vol_m": 7.4
+  },
+  {
+   "age_days": 670,
+   "current": false,
+   "excluded": false,
+   "rank": 116,
+   "symbol": "GOATUSDT",
+   "vol_m": 7.1
+  },
+  {
+   "age_days": 476,
+   "current": false,
+   "excluded": false,
+   "rank": 117,
+   "symbol": "B2USDT",
+   "vol_m": 7.1
+  },
+  {
+   "age_days": 1990,
+   "current": false,
+   "excluded": false,
+   "rank": 118,
+   "symbol": "ALICEUSDT",
+   "vol_m": 7.0
+  },
+  {
+   "age_days": 1626,
+   "current": false,
+   "excluded": false,
+   "rank": 119,
+   "symbol": "GMTUSDT",
+   "vol_m": 6.9
+  },
+  {
+   "age_days": 562,
+   "current": false,
+   "excluded": false,
+   "rank": 120,
+   "symbol": "TSTUSDT",
+   "vol_m": 6.9
+  },
+  {
+   "age_days": 2101,
+   "current": false,
+   "excluded": false,
+   "rank": 121,
+   "symbol": "ZENUSDT",
+   "vol_m": 6.6
+  },
+  {
+   "age_days": 438,
+   "current": false,
+   "excluded": false,
+   "rank": 122,
+   "symbol": "PUMPBTCUSDT",
+   "vol_m": 6.5
+  },
+  {
+   "age_days": 375,
+   "current": false,
+   "excluded": false,
+   "rank": 123,
+   "symbol": "USELESSUSDT",
+   "vol_m": 6.5
+  },
+  {
+   "age_days": 1463,
+   "current": false,
+   "excluded": false,
+   "rank": 124,
+   "symbol": "STGUSDT",
+   "vol_m": 6.4
+  },
+  {
+   "age_days": 2385,
+   "current": false,
+   "excluded": false,
+   "rank": 125,
+   "symbol": "VETUSDT",
+   "vol_m": 6.2
+  },
+  {
+   "age_days": 1027,
+   "current": false,
+   "excluded": false,
+   "rank": 126,
+   "symbol": "CAKEUSDT",
+   "vol_m": 6.1
+  },
+  {
+   "age_days": 1013,
+   "current": false,
+   "excluded": false,
+   "rank": 127,
+   "symbol": "KASUSDT",
+   "vol_m": 6.1
+  },
+  {
+   "age_days": 1793,
+   "current": false,
+   "excluded": false,
+   "rank": 128,
+   "symbol": "ARUSDT",
+   "vol_m": 5.7
+  },
+  {
+   "age_days": 599,
+   "current": false,
+   "excluded": false,
+   "rank": 129,
+   "symbol": "BIOUSDT",
+   "vol_m": 5.7
+  },
+  {
+   "age_days": 2077,
+   "current": false,
+   "excluded": false,
+   "rank": 130,
+   "symbol": "GRTUSDT",
+   "vol_m": 5.6
+  },
+  {
+   "age_days": 2105,
+   "current": false,
+   "excluded": false,
+   "rank": 131,
+   "symbol": "AXSUSDT",
+   "vol_m": 5.5
+  },
+  {
+   "age_days": 1693,
+   "current": false,
+   "excluded": false,
+   "rank": 132,
+   "symbol": "DUSKUSDT",
+   "vol_m": 5.5
+  },
+  {
+   "age_days": 2043,
+   "current": false,
+   "excluded": false,
+   "rank": 133,
+   "symbol": "CHZUSDT",
+   "vol_m": 5.3
+  },
+  {
+   "age_days": 669,
+   "current": false,
+   "excluded": false,
+   "rank": 134,
+   "symbol": "MOODENGUSDT",
+   "vol_m": 5.1
+  },
+  {
+   "age_days": 390,
+   "current": false,
+   "excluded": false,
+   "rank": 135,
+   "symbol": "PLAYUSDT",
+   "vol_m": 5.1
+  },
+  {
+   "age_days": 973,
+   "current": false,
+   "excluded": false,
+   "rank": 136,
+   "symbol": "MOVRUSDT",
+   "vol_m": 5.0
+  },
+  {
+   "age_days": 519,
+   "current": false,
+   "excluded": false,
+   "rank": 137,
+   "symbol": "NILUSDT",
+   "vol_m": 5.0
+  },
+  {
+   "age_days": 652,
+   "current": false,
+   "excluded": false,
+   "rank": 138,
+   "symbol": "PNUTUSDT",
+   "vol_m": 4.9
+  },
+  {
+   "age_days": 582,
+   "current": false,
+   "excluded": false,
+   "rank": 139,
+   "symbol": "MELANIAUSDT",
+   "vol_m": 4.9
+  },
+  {
+   "age_days": 1284,
+   "current": false,
+   "excluded": false,
+   "rank": 140,
+   "symbol": "CFXUSDT",
+   "vol_m": 4.8
+  },
+  {
+   "age_days": 623,
+   "current": false,
+   "excluded": false,
+   "rank": 141,
+   "symbol": "RAYSOLUSDT",
+   "vol_m": 4.8
+  },
+  {
+   "age_days": 1448,
+   "current": false,
+   "excluded": false,
+   "rank": 142,
+   "symbol": "1000LUNCUSDT",
+   "vol_m": 4.7
+  },
+  {
+   "age_days": 396,
+   "current": false,
+   "excluded": false,
+   "rank": 143,
+   "symbol": "ZORAUSDT",
+   "vol_m": 4.7
+  },
+  {
+   "age_days": 586,
+   "current": false,
+   "excluded": false,
+   "rank": 144,
+   "symbol": "SUSDT",
+   "vol_m": 4.5
+  },
+  {
+   "age_days": 578,
+   "current": false,
+   "excluded": false,
+   "rank": 145,
+   "symbol": "PIPPINUSDT",
+   "vol_m": 4.5
+  },
+  {
+   "age_days": 531,
+   "current": false,
+   "excluded": false,
+   "rank": 146,
+   "symbol": "EPICUSDT",
+   "vol_m": 4.5
+  },
+  {
+   "age_days": 476,
+   "current": false,
+   "excluded": false,
+   "rank": 147,
+   "symbol": "SYRUPUSDT",
+   "vol_m": 4.5
+  },
+  {
+   "age_days": 1039,
+   "current": false,
+   "excluded": false,
+   "rank": 148,
+   "symbol": "RIFUSDT",
+   "vol_m": 4.4
+  },
+  {
+   "age_days": 629,
+   "current": false,
+   "excluded": false,
+   "rank": 149,
+   "symbol": "KAIAUSDT",
+   "vol_m": 4.4
+  },
+  {
+   "age_days": 525,
+   "current": false,
+   "excluded": false,
+   "rank": 150,
+   "symbol": "FORMUSDT",
+   "vol_m": 4.3
+  }
+ ]
+}
